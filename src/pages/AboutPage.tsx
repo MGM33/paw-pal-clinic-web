@@ -14,7 +14,7 @@ const AboutPage = () => {
           
           <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-12">
             <img 
-              src="https://source.unsplash.com/random/1200x600/?veterinary-clinic" 
+              src="https://images.unsplash.com/photo-1581888227599-779811939961?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
               alt="Veterinary Clinic" 
               className="w-full h-80 object-cover"
             />

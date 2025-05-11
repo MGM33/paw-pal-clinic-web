@@ -9,7 +9,7 @@ const FeaturedPets = () => {
       id: 'dogs',
       name: 'Dogs',
       icon: <Dog size={40} />,
-      image: 'https://images.unsplash.com/photo-1598133894008-61f7fdb8cc3a?q=80&w=2776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      image: 'https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       description: 'Complete healthcare solutions for your canine companions.',
       color: 'bg-vet-blue',
       hoverColor: 'hover:bg-vet-darkblue'
@@ -27,7 +27,7 @@ const FeaturedPets = () => {
       id: 'birds',
       name: 'Birds',
       icon: <Bird size={40} />,
-      image: 'https://images.unsplash.com/photo-1522858547137-f1dcec554f26?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      image: 'https://images.unsplash.com/photo-1444464666168-49d633b86797?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       description: 'Expert medical attention for your avian pets.',
       color: 'bg-vet-orange',
       hoverColor: 'hover:bg-vet-darkorange'

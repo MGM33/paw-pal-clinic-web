@@ -1,9 +1,22 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Dog, Cat, Bird, Home, Phone } from 'lucide-react';
 
 const Navbar = () => {
+  const location = useLocation();
+  const currentPath = location.pathname;
+  
+  const isActive = (path: string) => {
+    if (path === '/' && currentPath === '/') {
+      return true;
+    }
+    if (path !== '/' && currentPath.startsWith(path)) {
+      return true;
+    }
+    return false;
+  };
+
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4">
@@ -14,13 +27,24 @@ const Navbar = () => {
           </Link>
           
           <div className="hidden md:flex space-x-8">
-            <Link to="/" className="flex items-center space-x-1 text-gray-600 hover:text-vet-blue transition-colors">
+            <Link 
+              to="/" 
+              className={`flex items-center space-x-1 transition-colors ${isActive('/') ? 'text-vet-blue font-semibold' : 'text-gray-600 hover:text-vet-blue'}`}
+            >
               <Home size={18} />
               <span>Home</span>
             </Link>
-            <Link to="/services" className="text-gray-600 hover:text-vet-blue transition-colors">Services</Link>
+            <Link 
+              to="/services" 
+              className={`transition-colors ${isActive('/services') ? 'text-vet-blue font-semibold' : 'text-gray-600 hover:text-vet-blue'}`}
+            >
+              Services
+            </Link>
             <div className="group relative">
-              <Link to="/dogs" className="flex items-center space-x-1 text-gray-600 hover:text-vet-blue transition-colors">
+              <Link 
+                to="/dogs" 
+                className={`flex items-center space-x-1 transition-colors ${isActive('/dogs') ? 'text-vet-blue font-semibold' : 'text-gray-600 hover:text-vet-blue'}`}
+              >
                 <Dog size={18} />
                 <span>Dogs</span>
               </Link>
@@ -29,7 +53,10 @@ const Navbar = () => {
               </div>
             </div>
             <div className="group relative">
-              <Link to="/cats" className="flex items-center space-x-1 text-gray-600 hover:text-vet-blue transition-colors">
+              <Link 
+                to="/cats" 
+                className={`flex items-center space-x-1 transition-colors ${isActive('/cats') ? 'text-vet-blue font-semibold' : 'text-gray-600 hover:text-vet-blue'}`}
+              >
                 <Cat size={18} />
                 <span>Cats</span>
               </Link>
@@ -38,7 +65,10 @@ const Navbar = () => {
               </div>
             </div>
             <div className="group relative">
-              <Link to="/birds" className="flex items-center space-x-1 text-gray-600 hover:text-vet-blue transition-colors">
+              <Link 
+                to="/birds" 
+                className={`flex items-center space-x-1 transition-colors ${isActive('/birds') ? 'text-vet-blue font-semibold' : 'text-gray-600 hover:text-vet-blue'}`}
+              >
                 <Bird size={18} />
                 <span>Birds</span>
               </Link>
@@ -46,8 +76,16 @@ const Navbar = () => {
                 <Link to="/birds/medicines" className="block px-4 py-2 text-sm text-gray-700 hover:bg-vet-blue hover:text-white">Medicines</Link>
               </div>
             </div>
-            <Link to="/about" className="text-gray-600 hover:text-vet-blue transition-colors">About Us</Link>
-            <Link to="/contact" className="flex items-center space-x-1 text-gray-600 hover:text-vet-blue transition-colors">
+            <Link 
+              to="/about" 
+              className={`transition-colors ${isActive('/about') ? 'text-vet-blue font-semibold' : 'text-gray-600 hover:text-vet-blue'}`}
+            >
+              About Us
+            </Link>
+            <Link 
+              to="/contact" 
+              className={`flex items-center space-x-1 transition-colors ${isActive('/contact') ? 'text-vet-blue font-semibold' : 'text-gray-600 hover:text-vet-blue'}`}
+            >
               <Phone size={18} />
               <span>Contact</span>
             </Link>
