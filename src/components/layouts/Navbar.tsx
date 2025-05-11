@@ -1,11 +1,20 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Dog, Cat, Bird, Home, Phone } from 'lucide-react';
+import { Dog, Cat, Bird, Home, Phone, Menu } from 'lucide-react';
+import { 
+  Drawer, 
+  DrawerTrigger, 
+  DrawerContent,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerClose
+} from "@/components/ui/drawer";
 
 const Navbar = () => {
   const location = useLocation();
   const currentPath = location.pathname;
+  const [isOpen, setIsOpen] = useState(false);
   
   const isActive = (path: string) => {
     if (path === '/' && currentPath === '/') {
@@ -15,6 +24,20 @@ const Navbar = () => {
       return true;
     }
     return false;
+  };
+
+  const NavLink = ({ to, children, icon: Icon, dropdown = false }: { to: string; children: React.ReactNode; icon?: React.ElementType; dropdown?: boolean }) => {
+    const active = isActive(to);
+    return (
+      <Link
+        to={to}
+        className={`flex items-center space-x-1 transition-colors ${active ? 'text-vet-blue font-semibold' : 'text-gray-600 hover:text-vet-blue'}`}
+        onClick={() => setIsOpen(false)}
+      >
+        {Icon && <Icon size={18} />}
+        <span>{children}</span>
+      </Link>
+    );
   };
 
   return (
@@ -27,76 +50,79 @@ const Navbar = () => {
           </Link>
           
           <div className="hidden md:flex space-x-8">
-            <Link 
-              to="/" 
-              className={`flex items-center space-x-1 transition-colors ${isActive('/') ? 'text-vet-blue font-semibold' : 'text-gray-600 hover:text-vet-blue'}`}
-            >
-              <Home size={18} />
-              <span>Home</span>
-            </Link>
-            <Link 
-              to="/services" 
-              className={`transition-colors ${isActive('/services') ? 'text-vet-blue font-semibold' : 'text-gray-600 hover:text-vet-blue'}`}
-            >
-              Services
-            </Link>
+            <NavLink to="/" icon={Home}>Home</NavLink>
+            <NavLink to="/services">Services</NavLink>
             <div className="group relative">
-              <Link 
-                to="/dogs" 
-                className={`flex items-center space-x-1 transition-colors ${isActive('/dogs') ? 'text-vet-blue font-semibold' : 'text-gray-600 hover:text-vet-blue'}`}
-              >
-                <Dog size={18} />
-                <span>Dogs</span>
-              </Link>
+              <NavLink to="/dogs" icon={Dog} dropdown>Dogs</NavLink>
               <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md hidden group-hover:block">
                 <Link to="/dogs/medicines" className="block px-4 py-2 text-sm text-gray-700 hover:bg-vet-blue hover:text-white">Medicines</Link>
               </div>
             </div>
             <div className="group relative">
-              <Link 
-                to="/cats" 
-                className={`flex items-center space-x-1 transition-colors ${isActive('/cats') ? 'text-vet-blue font-semibold' : 'text-gray-600 hover:text-vet-blue'}`}
-              >
-                <Cat size={18} />
-                <span>Cats</span>
-              </Link>
+              <NavLink to="/cats" icon={Cat} dropdown>Cats</NavLink>
               <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md hidden group-hover:block">
                 <Link to="/cats/medicines" className="block px-4 py-2 text-sm text-gray-700 hover:bg-vet-blue hover:text-white">Medicines</Link>
               </div>
             </div>
             <div className="group relative">
-              <Link 
-                to="/birds" 
-                className={`flex items-center space-x-1 transition-colors ${isActive('/birds') ? 'text-vet-blue font-semibold' : 'text-gray-600 hover:text-vet-blue'}`}
-              >
-                <Bird size={18} />
-                <span>Birds</span>
-              </Link>
+              <NavLink to="/birds" icon={Bird} dropdown>Birds</NavLink>
               <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md hidden group-hover:block">
                 <Link to="/birds/medicines" className="block px-4 py-2 text-sm text-gray-700 hover:bg-vet-blue hover:text-white">Medicines</Link>
               </div>
             </div>
-            <Link 
-              to="/about" 
-              className={`transition-colors ${isActive('/about') ? 'text-vet-blue font-semibold' : 'text-gray-600 hover:text-vet-blue'}`}
-            >
-              About Us
-            </Link>
-            <Link 
-              to="/contact" 
-              className={`flex items-center space-x-1 transition-colors ${isActive('/contact') ? 'text-vet-blue font-semibold' : 'text-gray-600 hover:text-vet-blue'}`}
-            >
-              <Phone size={18} />
-              <span>Contact</span>
-            </Link>
+            <NavLink to="/about">About Us</NavLink>
+            <NavLink to="/contact" icon={Phone}>Contact</NavLink>
           </div>
           
           <div className="md:hidden">
-            <button className="text-gray-600 focus:outline-none">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
-              </svg>
-            </button>
+            <Drawer>
+              <DrawerTrigger asChild>
+                <button className="text-gray-600 focus:outline-none">
+                  <Menu className="w-6 h-6" />
+                </button>
+              </DrawerTrigger>
+              <DrawerContent className="px-4 py-6">
+                <DrawerHeader>
+                  <DrawerTitle className="text-center text-vet-blue">Menu</DrawerTitle>
+                </DrawerHeader>
+                <div className="flex flex-col space-y-4 mt-4">
+                  <NavLink to="/" icon={Home}>Home</NavLink>
+                  <NavLink to="/services">Services</NavLink>
+                  <NavLink to="/dogs" icon={Dog}>Dogs</NavLink>
+                  <div className="pl-6">
+                    <Link 
+                      to="/dogs/medicines" 
+                      className="block py-2 text-sm text-gray-700 hover:text-vet-blue"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Medicines
+                    </Link>
+                  </div>
+                  <NavLink to="/cats" icon={Cat}>Cats</NavLink>
+                  <div className="pl-6">
+                    <Link 
+                      to="/cats/medicines" 
+                      className="block py-2 text-sm text-gray-700 hover:text-vet-blue"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Medicines
+                    </Link>
+                  </div>
+                  <NavLink to="/birds" icon={Bird}>Birds</NavLink>
+                  <div className="pl-6">
+                    <Link 
+                      to="/birds/medicines" 
+                      className="block py-2 text-sm text-gray-700 hover:text-vet-blue"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Medicines
+                    </Link>
+                  </div>
+                  <NavLink to="/about">About Us</NavLink>
+                  <NavLink to="/contact" icon={Phone}>Contact</NavLink>
+                </div>
+              </DrawerContent>
+            </Drawer>
           </div>
         </div>
       </div>
