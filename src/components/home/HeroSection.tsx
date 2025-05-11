@@ -27,7 +27,7 @@ const HeroSection = () => {
           </div>
           <div className="md:w-1/2">
             <img 
-              src="https://source.unsplash.com/random/800x600/?veterinarian" 
+              src="https://images.unsplash.com/photo-1599443015574-be5fe8a05783?q=80&w=1000&auto=format&fit=crop" 
               alt="Veterinary Care" 
               className="rounded-lg shadow-xl w-full h-auto"
             />

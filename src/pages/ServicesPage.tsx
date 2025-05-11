@@ -13,7 +13,7 @@ const ServicesPage = () => {
       id: 'dogs',
       name: 'Dogs',
       icon: <Dog size={64} className="text-white" />,
-      image: 'https://source.unsplash.com/random/800x600/?dog',
+      image: 'https://images.unsplash.com/photo-1598133894008-61f7fdb8cc3a?q=80&w=2776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       description: 'Comprehensive veterinary care services for dogs including vaccinations, health check-ups, treatments and specialized surgeries.',
       color: 'bg-vet-blue',
       hoverColor: 'hover:bg-vet-darkblue'
@@ -22,7 +22,7 @@ const ServicesPage = () => {
       id: 'cats',
       name: 'Cats',
       icon: <Cat size={64} className="text-white" />,
-      image: 'https://source.unsplash.com/random/800x600/?cat',
+      image: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=2786&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       description: 'Complete feline healthcare including preventative care, dental treatments, and specialized medicine for various cat conditions.',
       color: 'bg-vet-green',
       hoverColor: 'hover:bg-vet-darkgreen'
@@ -31,7 +31,7 @@ const ServicesPage = () => {
       id: 'birds',
       name: 'Birds',
       icon: <Bird size={64} className="text-white" />,
-      image: 'https://source.unsplash.com/random/800x600/?bird',
+      image: 'https://images.unsplash.com/photo-1522858547137-f1dcec554f26?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       description: 'Expert avian care with specialized treatments, nutritional guidance, and preventive measures for birds of all species.',
       color: 'bg-vet-orange',
       hoverColor: 'hover:bg-vet-darkorange'

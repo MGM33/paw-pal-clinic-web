@@ -39,13 +39,13 @@ const PetCategoryPage = () => {
   const getPetImage = () => {
     switch (petType) {
       case 'dogs':
-        return "https://source.unsplash.com/random/1200x600/?dog";
+        return "https://images.unsplash.com/photo-1598133894008-61f7fdb8cc3a?q=80&w=2776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
       case 'cats':
-        return "https://source.unsplash.com/random/1200x600/?cat";
+        return "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=2786&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
       case 'birds':
-        return "https://source.unsplash.com/random/1200x600/?bird";
+        return "https://images.unsplash.com/photo-1522858547137-f1dcec554f26?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
       default:
-        return "https://source.unsplash.com/random/1200x600/?pet";
+        return "https://images.unsplash.com/photo-1599443015574-be5fe8a05783?q=80&w=1000&auto=format&fit=crop";
     }
   };
   
