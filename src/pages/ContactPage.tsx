@@ -127,9 +127,7 @@ const ContactPage = () => {
                   <div>
                     <h3 className="text-lg font-medium mb-2">Address</h3>
                     <p className="text-gray-600">
-                      123 Pet Street<br />
-                      Vet City, VC 12345<br />
-                      United States
+                      J7F9+WP8, El Sheikh Zayed, Ismailia 3, Ismailia Governorate 8366004
                     </p>
                   </div>
 
