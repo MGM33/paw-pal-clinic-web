@@ -1,11 +1,41 @@
 import React, { useState } from 'react';
 
 const ContactPage = () => {
-  const [submitted, setSubmitted] = useState(false);
-
   React.useEffect(() => {
     document.title = "PetCare Vet | Contact Us";
   }, []);
+
+  const [notification, setNotification] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setNotification('');
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/m.dgamal456@gmail.com', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: formData
+      });
+
+      if (response.ok) {
+        setNotification('Thank you! We will reply to you as soon as possible.');
+        form.reset();
+      } else {
+        const data = await response.json();
+        setNotification(data.message || 'Oops! Something went wrong.');
+      }
+    } catch (error) {
+      setNotification('Oops! Something went wrong.');
+    }
+
+    setLoading(false);
+  };
 
   return (
     <div className="py-12 bg-gray-50">
@@ -13,43 +43,14 @@ const ContactPage = () => {
         <div className="max-w-5xl mx-auto">
           <h1 className="text-4xl font-bold mb-8 text-center">Contact Us</h1>
 
-          {submitted && (
-            <div className="mb-6 text-center">
-              <p className="text-green-600 font-medium bg-green-100 px-4 py-2 rounded-md inline-block">
-                Thank you! We will reply to you as soon as possible.
-              </p>
-            </div>
-          )}
-
           <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-8">
             <div className="md:flex">
               <div className="md:w-1/2 p-8">
                 <h2 className="text-2xl font-semibold mb-6">Get In Touch</h2>
 
-                <form 
-                  className="space-y-4"
-                  action="https://formsubmit.co/ajax/m.dgamal456@gmail.com"
-                  method="POST"
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    const formData = new FormData(e.target);
-
-                    fetch(e.target.action, {
-                      method: 'POST',
-                      body: formData,
-                      headers: {
-                        'Accept': 'application/json'
-                      }
-                    })
-                      .then(response => {
-                        if (response.ok) {
-                          setSubmitted(true);
-                          e.target.reset();
-                        }
-                      })
-                      .catch(error => console.error('Error:', error));
-                  }}
-                >
+                {/* Form with AJAX submission */}
+                <form className="space-y-4" onSubmit={handleSubmit}>
+                  {/* Hide captcha */}
                   <input type="hidden" name="_captcha" value="false" />
 
                   <div>
@@ -103,14 +104,22 @@ const ContactPage = () => {
                   <div>
                     <button
                       type="submit"
-                      className="bg-vet-blue hover:bg-vet-darkblue text-white px-6 py-3 rounded-md font-semibold transition-colors"
+                      disabled={loading}
+                      className="bg-vet-blue hover:bg-vet-darkblue text-white px-6 py-3 rounded-md font-semibold transition-colors disabled:opacity-50"
                     >
-                      Send Message
+                      {loading ? 'Sending...' : 'Send Message'}
                     </button>
                   </div>
                 </form>
+
+                {notification && (
+                  <div className="mt-4 p-3 bg-green-100 text-green-800 rounded">
+                    {notification}
+                  </div>
+                )}
               </div>
 
+              {/* ... rest of your contact info and map stay unchanged ... */}
               <div className="md:w-1/2 bg-gray-100 p-8">
                 <h2 className="text-2xl font-semibold mb-6">Contact Information</h2>
 
