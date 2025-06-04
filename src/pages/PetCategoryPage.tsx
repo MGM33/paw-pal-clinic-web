@@ -148,33 +148,44 @@ const PetCategoryPage = () => {
               </div>
               
               <div className="text-center">
-                <h3 className="text-2xl font-semibold mb-6">Browse Our Products</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <Link 
-                    to={`/${petType}/medicines`}
-                    className={`${getPetColor()} text-white px-6 py-4 rounded-md font-semibold transition-colors block`}
-                  >
-                    {getPetTypeTitle()} Medicines
-                  </Link>
-                  
-                  {petType !== 'birds' && (
-                    <>
-                      <Link 
-                        to={`/${petType}/vaccines`}
-                        className={`${getPetColor()} text-white px-6 py-4 rounded-md font-semibold transition-colors block`}
-                      >
-                        {getPetTypeTitle()} Vaccines
-                      </Link>
-                      
-                      <Link 
-                        to={`/${petType}/cosmetics-supplements`}
-                        className={`${getPetColor()} text-white px-6 py-4 rounded-md font-semibold transition-colors block`}
-                      >
-                        Cosmetics & Supplements
-                      </Link>
-                    </>
-                  )}
-                </div>
+                <h3 className="text-2xl font-semibold mb-6">{petType === 'local-brand' ? 'Browse Our Local Brand Products' : 'Browse Our Products'}</h3>
+                {petType === 'local-brand' ? (
+                  <div className="grid grid-cols-1 gap-4">
+                    <Link 
+                      to={`/${petType}/medicines`}
+                      className={`${getPetColor()} text-white px-6 py-4 rounded-md font-semibold transition-colors block`}
+                    >
+                      Local Brand Products
+                    </Link>
+                  </div>
+                ) : (
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <Link 
+                      to={`/${petType}/medicines`}
+                      className={`${getPetColor()} text-white px-6 py-4 rounded-md font-semibold transition-colors block`}
+                    >
+                      {getPetTypeTitle()} Medicines
+                    </Link>
+                    
+                    {petType !== 'birds' && (
+                      <>
+                        <Link 
+                          to={`/${petType}/vaccines`}
+                          className={`${getPetColor()} text-white px-6 py-4 rounded-md font-semibold transition-colors block`}
+                        >
+                          {getPetTypeTitle()} Vaccines
+                        </Link>
+                        
+                        <Link 
+                          to={`/${petType}/cosmetics-supplements`}
+                          className={`${getPetColor()} text-white px-6 py-4 rounded-md font-semibold transition-colors block`}
+                        >
+                          Cosmetics & Supplements
+                        </Link>
+                      </>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
           </div>

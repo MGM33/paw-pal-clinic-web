@@ -69,7 +69,7 @@ const Navbar = () => {
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="flex items-center space-x-1 text-gray-600 hover:text-vet-blue">
+                  <NavigationMenuTrigger className="flex items-center space-x-1 text-gray-600 hover:text-vet-blue font-normal">
                     <Grid3X3 size={18} />
                     <span>Categories</span>
                   </NavigationMenuTrigger>

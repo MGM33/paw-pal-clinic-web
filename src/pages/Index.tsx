@@ -1,6 +1,6 @@
 
 import React from 'react';
-import HeroSection from '../components/home/HeroSection';
+import CategorySlideshow from '../components/home/CategorySlideshow';
 import FeaturedPets from '../components/home/FeaturedPets';
 import ServicesOverview from '../components/home/ServicesOverview';
 
@@ -12,7 +12,7 @@ const Index = () => {
   
   return (
     <div>
-      <HeroSection />
+      <CategorySlideshow />
       <FeaturedPets />
       <ServicesOverview />
     </div>
