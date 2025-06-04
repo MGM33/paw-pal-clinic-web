@@ -14,6 +14,8 @@ import PetCategoryPage from "./pages/PetCategoryPage";
 import MedicineListPage from "./pages/MedicineListPage";
 import MedicineDetailPage from "./pages/MedicineDetailPage";
 import MedicineCategoryPage from "./pages/MedicineCategoryPage";
+import VaccinesPage from "./pages/VaccinesPage";
+import CosmeticsSupplementsPage from "./pages/CosmeticsSupplementsPage";
 import NotFound from "./pages/NotFound";
 
 // Layout Components
@@ -38,6 +40,8 @@ const App = () => (
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/:petType" element={<PetCategoryPage />} />
               <Route path="/:petType/medicines" element={<MedicineListPage />} />
+              <Route path="/:petType/vaccines" element={<VaccinesPage />} />
+              <Route path="/:petType/cosmetics-supplements" element={<CosmeticsSupplementsPage />} />
               <Route path="/:petType/medicines/category/:categoryId" element={<MedicineCategoryPage />} />
               <Route path="/:petType/medicines/:medicineId" element={<MedicineDetailPage />} />
               <Route path="*" element={<NotFound />} />

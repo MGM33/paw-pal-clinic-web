@@ -113,13 +113,34 @@ const PetCategoryPage = () => {
                 </div>
               </div>
               
-              <div className="flex justify-center">
-                <Link 
-                  to={`/${petType}/medicines`}
-                  className={`${getPetColor()} text-white px-6 py-3 rounded-md font-semibold transition-colors`}
-                >
-                  Browse {getPetTypeTitle()} Medicines
-                </Link>
+              <div className="text-center">
+                <h3 className="text-2xl font-semibold mb-6">Browse Our Products</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <Link 
+                    to={`/${petType}/medicines`}
+                    className={`${getPetColor()} text-white px-6 py-4 rounded-md font-semibold transition-colors block`}
+                  >
+                    {getPetTypeTitle()} Medicines
+                  </Link>
+                  
+                  {petType !== 'birds' && (
+                    <>
+                      <Link 
+                        to={`/${petType}/vaccines`}
+                        className={`${getPetColor()} text-white px-6 py-4 rounded-md font-semibold transition-colors block`}
+                      >
+                        {getPetTypeTitle()} Vaccines
+                      </Link>
+                      
+                      <Link 
+                        to={`/${petType}/cosmetics-supplements`}
+                        className={`${getPetColor()} text-white px-6 py-4 rounded-md font-semibold transition-colors block`}
+                      >
+                        Cosmetics & Supplements
+                      </Link>
+                    </>
+                  )}
+                </div>
               </div>
             </div>
           </div>
