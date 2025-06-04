@@ -1,13 +1,19 @@
 
 import React from 'react';
 import MedicineCard from './MedicineCard';
+import PoultryMedicineCategories from './PoultryMedicineCategories';
 
 interface MedicineGridProps {
   petType: string;
 }
 
 const MedicineGrid: React.FC<MedicineGridProps> = ({ petType }) => {
-  // Generate placeholder data for 20 medicines
+  // For birds, show categories instead of individual medicines
+  if (petType === 'birds') {
+    return <PoultryMedicineCategories />;
+  }
+
+  // Generate placeholder data for 20 medicines for other pet types
   const generateMedicines = () => {
     const medicines = [];
     for (let i = 1; i <= 20; i++) {

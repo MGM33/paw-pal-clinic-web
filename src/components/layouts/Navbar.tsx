@@ -54,19 +54,19 @@ const Navbar = () => {
             <NavLink to="/services">Services</NavLink>
             <div className="group relative">
               <NavLink to="/dogs" icon={Dog} dropdown>Dogs</NavLink>
-              <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md hidden group-hover:block">
+              <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md hidden group-hover:block z-50">
                 <Link to="/dogs/medicines" className="block px-4 py-2 text-sm text-gray-700 hover:bg-vet-blue hover:text-white">Medicines</Link>
               </div>
             </div>
             <div className="group relative">
               <NavLink to="/cats" icon={Cat} dropdown>Cats</NavLink>
-              <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md hidden group-hover:block">
+              <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md hidden group-hover:block z-50">
                 <Link to="/cats/medicines" className="block px-4 py-2 text-sm text-gray-700 hover:bg-vet-blue hover:text-white">Medicines</Link>
               </div>
             </div>
             <div className="group relative">
-              <NavLink to="/birds" icon={Bird} dropdown>Birds</NavLink>
-              <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md hidden group-hover:block">
+              <NavLink to="/birds" icon={Bird} dropdown>Poultry Birds</NavLink>
+              <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md hidden group-hover:block z-50">
                 <Link to="/birds/medicines" className="block px-4 py-2 text-sm text-gray-700 hover:bg-vet-blue hover:text-white">Medicines</Link>
               </div>
             </div>
@@ -108,7 +108,7 @@ const Navbar = () => {
                       Medicines
                     </Link>
                   </div>
-                  <NavLink to="/birds" icon={Bird}>Birds</NavLink>
+                  <NavLink to="/birds" icon={Bird}>Poultry Birds</NavLink>
                   <div className="pl-6">
                     <Link 
                       to="/birds/medicines" 

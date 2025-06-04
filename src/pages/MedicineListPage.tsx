@@ -18,7 +18,7 @@ const MedicineListPage = () => {
       case 'cats':
         return 'Cat';
       case 'birds':
-        return 'Bird';
+        return 'Poultry Bird';
       default:
         return 'Pet';
     }

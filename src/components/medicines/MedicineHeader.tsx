@@ -27,7 +27,7 @@ const MedicineHeader: React.FC<MedicineHeaderProps> = ({ petType }) => {
       case 'cats':
         return 'Cat Medicines';
       case 'birds':
-        return 'Bird Medicines';
+        return 'Poultry Bird Medicines';
       default:
         return 'Pet Medicines';
     }
@@ -40,7 +40,7 @@ const MedicineHeader: React.FC<MedicineHeaderProps> = ({ petType }) => {
       case 'cats':
         return 'Discover our selection of high-quality medicines designed for cats.';
       case 'birds':
-        return 'Explore our specialized medicines for birds to keep your avian friends healthy.';
+        return 'Explore our specialized medicines for poultry birds to keep your farm birds healthy.';
       default:
         return 'View our collection of pet medicines.';
     }

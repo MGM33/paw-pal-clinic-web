@@ -29,10 +29,10 @@ const ServicesPage = () => {
     },
     {
       id: 'birds',
-      name: 'Birds',
+      name: 'Poultry Birds',
       icon: <Bird size={64} className="text-white" />,
-      image: 'https://images.unsplash.com/photo-1444464666168-49d633b86797?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      description: 'Expert avian care with specialized treatments, nutritional guidance, and preventive measures for birds of all species.',
+      image: 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      description: 'Expert poultry care with specialized treatments, nutritional guidance, and preventive measures for chickens, ducks, and other farm birds.',
       color: 'bg-vet-orange',
       hoverColor: 'hover:bg-vet-darkorange'
     }

@@ -17,7 +17,7 @@ const PetCategoryPage = () => {
       case 'cats':
         return 'Cat';
       case 'birds':
-        return 'Bird';
+        return 'Poultry Bird';
       default:
         return 'Pet';
     }
@@ -43,7 +43,7 @@ const PetCategoryPage = () => {
       case 'cats':
         return "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=2786&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
       case 'birds':
-        return "https://images.unsplash.com/photo-1444464666168-49d633b86797?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+        return "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
       default:
         return "https://images.unsplash.com/photo-1599443015574-be5fe8a05783?q=80&w=1000&auto=format&fit=crop";
     }
@@ -89,7 +89,7 @@ const PetCategoryPage = () => {
             <div className="p-8">
               <h2 className="text-2xl font-semibold mb-4">Our {getPetTypeTitle()} Services</h2>
               <p className="text-gray-600 mb-6">
-                At PetCare Vet, we offer comprehensive healthcare for {petType}. Our team of experienced 
+                At PetCare Vet, we offer comprehensive healthcare for {petType === 'birds' ? 'poultry birds' : petType}. Our team of experienced 
                 veterinarians provides preventive care, diagnostics, treatments, and surgeries specifically 
                 tailored to meet the unique needs of your {getPetTypeTitle().toLowerCase()} companions.
               </p>
@@ -104,8 +104,8 @@ const PetCategoryPage = () => {
                   <p className="text-gray-600">Essential vaccinations to protect your {getPetTypeTitle().toLowerCase()} from common diseases.</p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-medium mb-3">Dental Care</h3>
-                  <p className="text-gray-600">Comprehensive dental services to maintain your {getPetTypeTitle().toLowerCase()}'s oral health.</p>
+                  <h3 className="text-xl font-medium mb-3">{petType === 'birds' ? 'Nutritional Care' : 'Dental Care'}</h3>
+                  <p className="text-gray-600">{petType === 'birds' ? 'Specialized nutrition plans for optimal poultry health.' : `Comprehensive dental services to maintain your ${getPetTypeTitle().toLowerCase()}'s oral health.`}</p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h3 className="text-xl font-medium mb-3">Specialized Treatments</h3>
