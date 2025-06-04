@@ -1,4 +1,4 @@
-
+import { useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -24,34 +24,52 @@ import Footer from "./components/layouts/Footer";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <div className="flex flex-col min-h-screen">
-          <Navbar />
-          <main className="flex-grow">
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/:petType" element={<PetCategoryPage />} />
-              <Route path="/:petType/medicines" element={<MedicineListPage />} />
-              <Route path="/:petType/vaccines" element={<VaccinesPage />} />
-              <Route path="/:petType/cosmetics-supplements" element={<CosmeticsSupplementsPage />} />
-              <Route path="/:petType/medicines/category/:categoryId" element={<MedicineCategoryPage />} />
-              <Route path="/:petType/medicines/:medicineId" element={<MedicineDetailPage />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+const App = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "//code.tidio.co/wbhserfmj8jhuim5jxs0yp5iyrukyei8.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <div className="flex flex-col min-h-screen">
+            <Navbar />
+            <main className="flex-grow">
+              <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/:petType" element={<PetCategoryPage />} />
+                <Route path="/:petType/medicines" element={<MedicineListPage />} />
+                <Route path="/:petType/vaccines" element={<VaccinesPage />} />
+                <Route
+                  path="/:petType/cosmetics-supplements"
+                  element={<CosmeticsSupplementsPage />}
+                />
+                <Route
+                  path="/:petType/medicines/category/:categoryId"
+                  element={<MedicineCategoryPage />}
+                />
+                <Route
+                  path="/:petType/medicines/:medicineId"
+                  element={<MedicineDetailPage />}
+                />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </main>
+            <Footer />
+          </div>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;
