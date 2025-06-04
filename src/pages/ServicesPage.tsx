@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Dog, Cat, Bird } from 'lucide-react';
+import { Dog, Cat, Bird, Package } from 'lucide-react';
 
 const ServicesPage = () => {
   React.useEffect(() => {
@@ -35,6 +35,15 @@ const ServicesPage = () => {
       description: 'Expert poultry care with specialized treatments, nutritional guidance, and preventive measures for chickens, ducks, and other farm birds.',
       color: 'bg-vet-orange',
       hoverColor: 'hover:bg-vet-darkorange'
+    },
+    {
+      id: 'local-brand',
+      name: 'Local Brand',
+      icon: <Package size={64} className="text-white" />,
+      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      description: 'Our exclusive line of veterinary products, specially formulated and created by our team for optimal pet health and care.',
+      color: 'bg-purple-600',
+      hoverColor: 'hover:bg-purple-700'
     }
   ];
 
@@ -65,7 +74,7 @@ const ServicesPage = () => {
                     <h2 className="text-3xl font-bold">{petType.name}</h2>
                   </div>
                   <p className="text-gray-600 mb-8 text-lg">{petType.description}</p>
-                  <div className="flex space-x-4">
+                  <div className="flex flex-wrap gap-4">
                     <Link 
                       to={`/${petType.id}`} 
                       className={`${petType.color} ${petType.hoverColor} text-white px-6 py-3 rounded-md font-semibold transition-colors`}
@@ -78,6 +87,22 @@ const ServicesPage = () => {
                     >
                       Browse Medicines
                     </Link>
+                    {petType.id !== 'birds' && (
+                      <>
+                        <Link 
+                          to={`/${petType.id}/vaccines`} 
+                          className="border border-gray-300 hover:border-gray-400 px-6 py-3 rounded-md font-semibold transition-colors"
+                        >
+                          Browse Vaccines
+                        </Link>
+                        <Link 
+                          to={`/${petType.id}/cosmetics-supplements`} 
+                          className="border border-gray-300 hover:border-gray-400 px-6 py-3 rounded-md font-semibold transition-colors"
+                        >
+                          Cosmetics & Supplements
+                        </Link>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>

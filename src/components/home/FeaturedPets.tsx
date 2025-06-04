@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Dog, Cat, Bird } from 'lucide-react';
+import { Dog, Cat, Bird, Package } from 'lucide-react';
 
 const FeaturedPets = () => {
   const petCategories = [
@@ -31,6 +31,15 @@ const FeaturedPets = () => {
       description: 'Expert medical attention for your poultry and farm birds.',
       color: 'bg-vet-orange',
       hoverColor: 'hover:bg-vet-darkorange'
+    },
+    {
+      id: 'local-brand',
+      name: 'Local Brand',
+      icon: <Package size={40} />,
+      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      description: 'Our exclusive veterinary products created with care.',
+      color: 'bg-purple-600',
+      hoverColor: 'hover:bg-purple-700'
     }
   ];
 
@@ -39,7 +48,7 @@ const FeaturedPets = () => {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">Our Pet Categories</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {petCategories.map((category) => (
             <Link 
               key={category.id}
