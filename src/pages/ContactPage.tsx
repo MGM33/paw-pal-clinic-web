@@ -153,10 +153,6 @@ const ContactPage = () => {
                         <span>Friday:</span>
                         <span>Closed</span>
                       </li>
-                      <li className="flex justify-between">
-                        <span>Sunday:</span>
-                        <span>Closed</span>
-                      </li>
                     </ul>
                   </div>
                 </div>
