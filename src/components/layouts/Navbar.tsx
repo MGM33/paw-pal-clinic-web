@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Dog, Cat, Bird, Home, Phone, Menu, Settings, Info, Package, Grid3X3 } from 'lucide-react';
+import { Dog, Cat, Bird, Home, Phone, Menu, Settings, Info, Package, Grid3X3, Heart } from 'lucide-react';
 import { 
   Drawer, 
   DrawerTrigger, 
@@ -38,7 +38,7 @@ const Navbar = () => {
     return (
       <Link
         to={to}
-        className={`flex items-center space-x-1 transition-colors ${active ? 'text-vet-blue font-semibold' : 'text-gray-600 hover:text-vet-blue'}`}
+        className={`flex items-center space-x-1 transition-all duration-300 ${active ? 'text-theme-deepsky font-semibold scale-105' : 'text-gray-700 hover:text-theme-deepsky hover:scale-105'}`}
         onClick={() => setIsOpen(false)}
       >
         {Icon && <Icon size={18} />}
@@ -55,11 +55,12 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-white shadow-md sticky top-0 z-50">
+    <nav className="glass-effect shadow-lg sticky top-0 z-50 border-b border-theme-sky/30">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          <Link to="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold text-vet-blue">VetCare</span>
+          <Link to="/" className="flex items-center space-x-3 group">
+            <div className="text-3xl animate-float">🏥</div>
+            <span className="text-3xl font-bold bg-gradient-to-r from-theme-deepsky to-theme-sky bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">VetCare</span>
           </Link>
           
           <div className="hidden md:flex space-x-8 items-center">
@@ -69,17 +70,17 @@ const Navbar = () => {
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="flex items-center space-x-1 text-gray-600 hover:text-vet-blue font-normal">
+                  <NavigationMenuTrigger className="flex items-center space-x-1 text-gray-700 hover:text-theme-deepsky font-normal transition-colors duration-300">
                     <Grid3X3 size={18} />
                     <span>Categories</span>
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="grid w-48 gap-2 p-4">
+                    <div className="grid w-48 gap-2 p-4 glass-effect">
                       {categories.map((category) => (
                         <Link
                           key={category.to}
                           to={category.to}
-                          className="flex items-center space-x-2 rounded-md p-2 text-sm hover:bg-accent hover:text-accent-foreground"
+                          className="flex items-center space-x-2 rounded-md p-2 text-sm hover:bg-theme-sky/20 hover:text-theme-deepsky transition-all duration-300 hover:scale-105"
                         >
                           <category.icon size={16} />
                           <span>{category.name}</span>
@@ -98,13 +99,16 @@ const Navbar = () => {
           <div className="md:hidden">
             <Drawer>
               <DrawerTrigger asChild>
-                <button className="text-gray-600 focus:outline-none">
+                <button className="text-gray-700 focus:outline-none hover:text-theme-deepsky transition-colors duration-300">
                   <Menu className="w-6 h-6" />
                 </button>
               </DrawerTrigger>
-              <DrawerContent className="px-4 py-6">
+              <DrawerContent className="px-4 py-6 glass-effect">
                 <DrawerHeader>
-                  <DrawerTitle className="text-center text-vet-blue">Menu</DrawerTitle>
+                  <DrawerTitle className="text-center text-theme-deepsky flex items-center justify-center space-x-2">
+                    <span className="text-2xl">🏥</span>
+                    <span>VetCare Menu</span>
+                  </DrawerTitle>
                 </DrawerHeader>
                 <div className="flex flex-col space-y-4 mt-4">
                   <NavLink to="/" icon={Home}>Home</NavLink>

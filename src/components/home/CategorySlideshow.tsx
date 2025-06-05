@@ -10,46 +10,46 @@ const CategorySlideshow = () => {
     {
       id: 'hero',
       title: 'Your Pet\'s Health Is Our Priority',
-      description: 'Professional veterinary care for your dogs, cats, and birds. We offer quality medical services and treatments.',
+      description: 'Professional veterinary care for your dogs, cats, and birds. We offer quality medical services and treatments with modern facilities and expert care.',
       image: 'https://images.unsplash.com/photo-1599443015574-be5fe8a05783?q=80&w=1000&auto=format&fit=crop',
       link: '/services',
       buttonText: 'Our Services',
-      color: 'bg-vet-blue'
+      color: 'bg-theme-deepsky'
     },
     {
       id: 'dogs',
-      title: 'Dog Care',
-      description: 'Complete healthcare solutions for your canine companions.',
+      title: 'Dog Care Excellence',
+      description: 'Complete healthcare solutions for your canine companions with specialized treatments and preventive care.',
       image: 'https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       icon: <Dog size={40} />,
       link: '/dogs',
       buttonText: 'View Dog Care',
-      color: 'bg-vet-blue'
+      color: 'bg-theme-deepsky'
     },
     {
       id: 'cats',
-      title: 'Cat Care',
-      description: 'Specialized treatments and care for your feline friends.',
+      title: 'Feline Health Specialists',
+      description: 'Specialized treatments and care for your feline friends with gentle handling and expert knowledge.',
       image: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=2786&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       icon: <Cat size={40} />,
       link: '/cats',
       buttonText: 'View Cat Care',
-      color: 'bg-vet-green'
+      color: 'bg-theme-sky'
     },
     {
       id: 'birds',
-      title: 'Poultry Bird Care',
-      description: 'Expert medical attention for your poultry and farm birds.',
+      title: 'Avian Care Experts',
+      description: 'Expert medical attention for your poultry and farm birds with specialized equipment and knowledge.',
       image: 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       icon: <Bird size={40} />,
       link: '/birds',
       buttonText: 'View Bird Care',
-      color: 'bg-vet-orange'
+      color: 'bg-orange-500'
     },
     {
       id: 'local-brand',
-      title: 'Local Brand Products',
-      description: 'Our exclusive veterinary products created with care.',
+      title: 'Premium Local Products',
+      description: 'Our exclusive veterinary products created with care and backed by years of expertise.',
       image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       icon: <Package size={40} />,
       link: '/local-brand',
@@ -67,14 +67,14 @@ const CategorySlideshow = () => {
   };
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 5000);
+    const timer = setInterval(nextSlide, 6000);
     return () => clearInterval(timer);
   }, []);
 
   const currentSlideData = slides[currentSlide];
 
   return (
-    <div className="relative h-[80vh] w-full overflow-hidden">
+    <div className="relative h-[90vh] w-full overflow-hidden">
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center z-0 transition-all duration-1000"
@@ -84,35 +84,42 @@ const CategorySlideshow = () => {
           backgroundPosition: 'center'
         }}
       >
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+      </div>
+
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 z-5">
+        <div className="absolute top-20 left-10 w-20 h-20 bg-theme-sky/20 rounded-full animate-float"></div>
+        <div className="absolute top-40 right-20 w-16 h-16 bg-theme-lightsky/30 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-40 left-20 w-12 h-12 bg-white/20 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
       </div>
 
       {/* Content */}
       <div className="container relative z-10 mx-auto px-4 h-full flex items-center">
-        <div className="text-white max-w-2xl">
+        <div className="text-white max-w-3xl animate-slide-in">
           {currentSlideData.icon && (
-            <div className="mb-4">
+            <div className="mb-6 animate-bounce-in" style={{ animationDelay: '0.5s' }}>
               {currentSlideData.icon}
             </div>
           )}
-          <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 font-serif">
+          <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 font-serif animate-fade-in-up">
             {currentSlideData.title}
           </h1>
-          <p className="text-xl md:text-2xl mb-8 font-light">
+          <p className="text-xl md:text-2xl mb-8 font-light leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
             {currentSlideData.description}
           </p>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
             <Link 
               to={currentSlideData.link} 
-              className={`${currentSlideData.color} hover:opacity-90 text-white px-8 py-3 rounded-md font-semibold transition-colors text-lg`}
+              className={`${currentSlideData.color} hover:scale-105 hover:shadow-xl text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 text-lg shadow-lg`}
             >
               {currentSlideData.buttonText}
             </Link>
             {currentSlide === 0 && (
               <Link 
                 to="/contact" 
-                className="border-2 border-white hover:bg-white hover:text-vet-blue px-8 py-3 rounded-md font-semibold transition-colors text-lg"
+                className="border-2 border-white hover:bg-white hover:text-theme-deepsky px-8 py-4 rounded-full font-semibold transition-all duration-300 text-lg hover:scale-105"
               >
                 Contact Us
               </Link>
@@ -124,25 +131,25 @@ const CategorySlideshow = () => {
       {/* Navigation Arrows */}
       <button 
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-40 text-white p-2 rounded-full transition-all z-20"
+        className="absolute left-6 top-1/2 transform -translate-y-1/2 glass-effect hover:bg-white/40 text-white p-3 rounded-full transition-all duration-300 z-20 hover:scale-110"
       >
-        <ChevronLeft size={24} />
+        <ChevronLeft size={28} />
       </button>
       <button 
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-40 text-white p-2 rounded-full transition-all z-20"
+        className="absolute right-6 top-1/2 transform -translate-y-1/2 glass-effect hover:bg-white/40 text-white p-3 rounded-full transition-all duration-300 z-20 hover:scale-110"
       >
-        <ChevronRight size={24} />
+        <ChevronRight size={32} />
       </button>
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all ${
-              index === currentSlide ? 'bg-white' : 'bg-white bg-opacity-50'
+            className={`w-4 h-4 rounded-full transition-all duration-300 ${
+              index === currentSlide ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'
             }`}
           />
         ))}

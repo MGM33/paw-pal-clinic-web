@@ -3,18 +3,26 @@ import React from 'react';
 import CategorySlideshow from '../components/home/CategorySlideshow';
 import FeaturedPets from '../components/home/FeaturedPets';
 import ServicesOverview from '../components/home/ServicesOverview';
+import Features from '../components/home/Features';
+import StatsSection from '../components/home/StatsSection';
+import Testimonials from '../components/home/Testimonials';
+import LocationSection from '../components/home/LocationSection';
 
 const Index = () => {
   // Set page title
   React.useEffect(() => {
-    document.title = "PetCare Vet | Home";
+    document.title = "🏥 VetCare | Professional Veterinary Services";
   }, []);
   
   return (
-    <div>
+    <div className="min-h-screen">
       <CategorySlideshow />
+      <Features />
       <FeaturedPets />
+      <StatsSection />
       <ServicesOverview />
+      <Testimonials />
+      <LocationSection />
     </div>
   );
 };
