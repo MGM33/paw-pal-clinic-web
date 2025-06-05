@@ -146,12 +146,12 @@ const ContactPage = () => {
                     <h3 className="text-lg font-medium mb-2">Business Hours</h3>
                     <ul className="text-gray-600">
                       <li className="flex justify-between">
-                        <span>Monday - Friday:</span>
-                        <span>8:00 AM - 6:00 PM</span>
+                        <span>Sunday - Wednesday:</span>
+                        <span>8:00 AM - 11:00 PM</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Saturday:</span>
-                        <span>9:00 AM - 4:00 PM</span>
+                        <span>Friday:</span>
+                        <span>Closed</span>
                       </li>
                       <li className="flex justify-between">
                         <span>Sunday:</span>
