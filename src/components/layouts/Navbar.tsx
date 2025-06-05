@@ -69,7 +69,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="text-3xl animate-float">🏥</div>
+            <div className="text-3xl animate-float">🐾</div>
             <span className="text-3xl font-bold bg-gradient-to-r from-theme-deepsky to-theme-sky bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">VetCare</span>
           </Link>
           
@@ -126,7 +126,7 @@ const Navbar = () => {
               <DrawerContent className="px-4 py-6 glass-effect">
                 <DrawerHeader>
                   <DrawerTitle className="text-center text-theme-deepsky flex items-center justify-center space-x-2">
-                    <span className="text-2xl">🏥</span>
+                    <span className="text-2xl">🐾</span>
                     <span>VetCare Menu</span>
                   </DrawerTitle>
                 </DrawerHeader>
