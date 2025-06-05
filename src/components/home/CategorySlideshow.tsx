@@ -1,10 +1,14 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Dog, Cat, Bird, Package, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Dog, Cat, Bird, Package } from 'lucide-react';
 
 const CategorySlideshow = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isManualChange, setIsManualChange] = useState(false);
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const slides = [
     {
@@ -58,23 +62,74 @@ const CategorySlideshow = () => {
     }
   ];
 
+  const startTimer = () => {
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+    }
+    timerRef.current = setInterval(() => {
+      if (!isManualChange) {
+        setCurrentSlide((prev) => (prev + 1) % slides.length);
+      }
+    }, 8000); // Increased from 6000ms to 8000ms
+  };
+
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
+    setIsManualChange(true);
+    setTimeout(() => setIsManualChange(false), 8000); // Reset manual change flag after 8 seconds
   };
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    setIsManualChange(true);
+    setTimeout(() => setIsManualChange(false), 8000); // Reset manual change flag after 8 seconds
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+    
+    const distance = touchStartX.current - touchEndX.current;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      nextSlide();
+    } else if (isRightSwipe) {
+      prevSlide();
+    }
+  };
+
+  const handleDoubleClick = () => {
+    nextSlide();
   };
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 6000);
-    return () => clearInterval(timer);
-  }, []);
+    startTimer();
+    return () => {
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+      }
+    };
+  }, [isManualChange]);
 
   const currentSlideData = slides[currentSlide];
 
   return (
-    <div className="relative h-[90vh] w-full overflow-hidden">
+    <div 
+      className="relative h-[90vh] w-full overflow-hidden cursor-pointer"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+      onDoubleClick={handleDoubleClick}
+    >
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center z-0 transition-all duration-1000"
@@ -128,26 +183,16 @@ const CategorySlideshow = () => {
         </div>
       </div>
 
-      {/* Navigation Arrows */}
-      <button 
-        onClick={prevSlide}
-        className="absolute left-6 top-1/2 transform -translate-y-1/2 glass-effect hover:bg-white/40 text-white p-3 rounded-full transition-all duration-300 z-20 hover:scale-110"
-      >
-        <ChevronLeft size={28} />
-      </button>
-      <button 
-        onClick={nextSlide}
-        className="absolute right-6 top-1/2 transform -translate-y-1/2 glass-effect hover:bg-white/40 text-white p-3 rounded-full transition-all duration-300 z-20 hover:scale-110"
-      >
-        <ChevronRight size={32} />
-      </button>
-
       {/* Slide Indicators */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
         {slides.map((_, index) => (
           <button
             key={index}
-            onClick={() => setCurrentSlide(index)}
+            onClick={() => {
+              setCurrentSlide(index);
+              setIsManualChange(true);
+              setTimeout(() => setIsManualChange(false), 8000);
+            }}
             className={`w-4 h-4 rounded-full transition-all duration-300 ${
               index === currentSlide ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'
             }`}
