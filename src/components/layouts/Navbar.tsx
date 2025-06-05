@@ -53,9 +53,6 @@ const Navbar = () => {
       >
         {Icon && <Icon size={18} />}
         <span>{children}</span>
-        {active && (
-          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-8 h-1 bg-theme-deepsky rounded-full"></div>
-        )}
       </Link>
     );
   };
@@ -84,17 +81,14 @@ const Navbar = () => {
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger 
-                    className={`relative flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 font-medium border-none ${
+                    className={`relative flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 font-medium bg-transparent border-none hover:bg-theme-lightsky/20 data-[state=open]:bg-theme-lightsky/20 ${
                       isCategoryActive() 
                         ? 'bg-theme-sky/30 text-theme-deepsky shadow-md scale-105' 
-                        : 'text-gray-700 hover:text-theme-deepsky hover:bg-theme-lightsky/20 hover:scale-105'
+                        : 'text-gray-700 hover:text-theme-deepsky hover:scale-105'
                     }`}
                   >
                     <Grid3X3 size={18} />
                     <span>Categories</span>
-                    {isCategoryActive() && (
-                      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-8 h-1 bg-theme-deepsky rounded-full"></div>
-                    )}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="grid w-48 gap-2 p-4 glass-effect border border-theme-sky/20">

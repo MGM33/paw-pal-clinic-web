@@ -70,19 +70,19 @@ const CategorySlideshow = () => {
       if (!isManualChange) {
         setCurrentSlide((prev) => (prev + 1) % slides.length);
       }
-    }, 8000); // Increased from 6000ms to 8000ms
+    }, 8000);
   };
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
     setIsManualChange(true);
-    setTimeout(() => setIsManualChange(false), 8000); // Reset manual change flag after 8 seconds
+    setTimeout(() => setIsManualChange(false), 8000);
   };
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
     setIsManualChange(true);
-    setTimeout(() => setIsManualChange(false), 8000); // Reset manual change flag after 8 seconds
+    setTimeout(() => setIsManualChange(false), 8000);
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -107,8 +107,16 @@ const CategorySlideshow = () => {
     }
   };
 
-  const handleDoubleClick = () => {
-    nextSlide();
+  const handleDoubleClick = (e: React.MouseEvent) => {
+    const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
+    const clickX = e.clientX - rect.left;
+    const containerWidth = rect.width;
+    
+    if (clickX > containerWidth / 2) {
+      nextSlide();
+    } else {
+      prevSlide();
+    }
   };
 
   useEffect(() => {
