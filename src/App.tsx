@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -16,6 +17,7 @@ import MedicineDetailPage from "./pages/MedicineDetailPage";
 import MedicineCategoryPage from "./pages/MedicineCategoryPage";
 import VaccinesPage from "./pages/VaccinesPage";
 import CosmeticsSupplementsPage from "./pages/CosmeticsSupplementsPage";
+import LocalBrandPage from "./pages/LocalBrandPage";
 import NotFound from "./pages/NotFound";
 
 // Layout Components
@@ -46,6 +48,8 @@ const App = () => {
                 <Route path="/services" element={<ServicesPage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
+                <Route path="/local-brand" element={<PetCategoryPage />} />
+                <Route path="/local-brand/medicines" element={<LocalBrandPage />} />
                 <Route path="/:petType" element={<PetCategoryPage />} />
                 <Route path="/:petType/medicines" element={<MedicineListPage />} />
                 <Route path="/:petType/vaccines" element={<VaccinesPage />} />
