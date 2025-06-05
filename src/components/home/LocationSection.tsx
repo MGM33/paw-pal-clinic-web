@@ -20,7 +20,7 @@ const LocationSection = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-theme-deepsky">Address</h3>
-                  <p className="text-gray-600">123 Pet Care Street, Veterinary District, VC 12345</p>
+                  <p className="text-gray-600">J7F9+WP8, El Sheikh Zayed, Ismailia 3, Ismailia Governorate 8366004</p>
                 </div>
               </div>
             </div>
@@ -32,8 +32,8 @@ const LocationSection = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-theme-deepsky">Opening Hours</h3>
-                  <p className="text-gray-600">Mon-Fri: 8:00 AM - 8:00 PM</p>
-                  <p className="text-gray-600">Sat-Sun: 9:00 AM - 6:00 PM</p>
+                  <p className="text-gray-600">Sun-Wed: 8:00 AM - 11:00 PM</p>
+                  <p className="text-gray-600">Fri: Closed</p>
                 </div>
               </div>
             </div>
@@ -54,7 +54,7 @@ const LocationSection = () => {
           
           <div className="glass-effect rounded-lg overflow-hidden hover-lift">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.123456789!2d-73.987654!3d40.712345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzQ0LjQiTiA3M8KwNTknMTUuNiJX!5e0!3m2!1sen!2sus!4v1234567890123"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3433.32581284351!2d32.267235870015476!3d30.624774064139142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f85981bc0575c9%3A0x79c5e695041c526d!2z2YPZhNmK2Kkg2KfZhNi32Kgg2KfZhNio2YrYt9ix2Yk!5e0!3m2!1sen!2seg!4v1749036344795!5m2!1sen!2seg"
               width="100%"
               height="400"
               style={{ border: 0 }}
