@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <span className="text-3xl animate-float">🏥</span>
+              <span className="text-3xl animate-float">🐾</span>
               <h3 className="text-2xl font-bold">VetCare</h3>
             </div>
             <p className="text-white/90 leading-relaxed">Professional veterinary care for your beloved pets. We provide the best medical treatments for dogs, cats, and birds with modern facilities and compassionate care.</p>
