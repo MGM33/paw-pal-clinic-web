@@ -6,12 +6,8 @@ import LocalBrandPage from './LocalBrandPage';
 const PetCategoryPage = () => {
   const { petType } = useParams<{ petType: string }>();
   
-  React.useEffect(() => {
-    document.title = `PetCare Vet | ${getPetTypeTitle()} Care`;
-  }, [petType]);
-  
-  // For local-brand, redirect directly to the products page
-  if (petType === 'local-brand') {
+  // For our-products, redirect directly to the products page
+  if (petType === 'our-products') {
     return <LocalBrandPage />;
   }
 
@@ -23,12 +19,16 @@ const PetCategoryPage = () => {
         return 'Cat';
       case 'birds':
         return 'Poultry Bird';
-      case 'local-brand':
+      case 'our-products':
         return 'Our Products';
       default:
         return 'Pet';
     }
   };
+  
+  React.useEffect(() => {
+    document.title = `PetCare Vet | ${getPetTypeTitle()} Care`;
+  }, [petType]);
   
   const getPetIcon = () => {
     switch (petType) {
@@ -38,7 +38,7 @@ const PetCategoryPage = () => {
         return <Cat size={48} className="text-vet-green" />;
       case 'birds':
         return <Bird size={48} className="text-vet-orange" />;
-      case 'local-brand':
+      case 'our-products':
         return <Package size={48} className="text-purple-600" />;
       default:
         return null;
@@ -53,7 +53,7 @@ const PetCategoryPage = () => {
         return "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=2786&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
       case 'birds':
         return "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
-      case 'local-brand':
+      case 'our-products':
         return "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
       default:
         return "https://images.unsplash.com/photo-1599443015574-be5fe8a05783?q=80&w=1000&auto=format&fit=crop";
@@ -68,7 +68,7 @@ const PetCategoryPage = () => {
         return 'bg-vet-green hover:bg-vet-darkgreen';
       case 'birds':
         return 'bg-vet-orange hover:bg-vet-darkorange';
-      case 'local-brand':
+      case 'our-products':
         return 'bg-purple-600 hover:bg-purple-700';
       default:
         return 'bg-gray-800 hover:bg-gray-900';
@@ -77,7 +77,7 @@ const PetCategoryPage = () => {
 
   const getDescription = () => {
     switch (petType) {
-      case 'local-brand':
+      case 'our-products':
         return 'Our exclusive collection of premium pet care products for all your needs.';
       default:
         return `Specialized veterinary services for your ${getPetTypeTitle().toLowerCase()} companions.`;
@@ -86,7 +86,7 @@ const PetCategoryPage = () => {
 
   const getServiceDescription = () => {
     switch (petType) {
-      case 'local-brand':
+      case 'our-products':
         return `Explore our carefully curated selection of premium pet care products. 
                 Each item is chosen for its quality, effectiveness, and safety to ensure 
                 your pets receive the best care possible.`;
