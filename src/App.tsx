@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -19,6 +18,7 @@ import VaccinesPage from "./pages/VaccinesPage";
 import CosmeticsSupplementsPage from "./pages/CosmeticsSupplementsPage";
 import LocalBrandPage from "./pages/LocalBrandPage";
 import NotFound from "./pages/NotFound";
+import OurProductsAboutPage from "./pages/OurProductsAboutPage";
 
 // Layout Components
 import Navbar from "./components/layouts/Navbar";
@@ -60,8 +60,9 @@ const App = () => {
                 <Route path="/services" element={<ServicesPage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
-                <Route path="/local-brand" element={<LocalBrandPage />} />
-                <Route path="/local-brand/products/:productId" element={<MedicineDetailPage />} />
+                <Route path="/our-products" element={<LocalBrandPage />} />
+                <Route path="/our-products/about" element={<OurProductsAboutPage />} />
+                <Route path="/our-products/products/:productId" element={<MedicineDetailPage />} />
                 <Route path="/:petType" element={<PetCategoryPage />} />
                 <Route path="/:petType/medicines" element={<MedicineListPage />} />
                 <Route path="/:petType/vaccines" element={<VaccinesPage />} />

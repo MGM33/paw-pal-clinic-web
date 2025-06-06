@@ -37,8 +37,8 @@ const ServicesPage = () => {
       hoverColor: 'hover:bg-vet-darkorange'
     },
     {
-      id: 'local-brand',
-      name: 'Local Brand',
+      id: 'our-products',
+      name: 'Our Products',
       icon: <Package size={64} className="text-white" />,
       image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       description: 'Our exclusive line of veterinary products, specially formulated and created by our team for optimal pet health and care.',
@@ -75,32 +75,51 @@ const ServicesPage = () => {
                   </div>
                   <p className="text-gray-600 mb-8 text-lg">{petType.description}</p>
                   <div className="flex flex-wrap gap-4">
-                    <Link 
-                      to={`/${petType.id}`} 
-                      className={`${petType.color} ${petType.hoverColor} text-white px-6 py-3 rounded-md font-semibold transition-colors`}
-                    >
-                      Learn More
-                    </Link>
-                    <Link 
-                      to={`/${petType.id}/medicines`} 
-                      className="border border-gray-300 hover:border-gray-400 px-6 py-3 rounded-md font-semibold transition-colors"
-                    >
-                      Browse Medicines
-                    </Link>
-                    {petType.id !== 'birds' && (
+                    {petType.id === 'our-products' ? (
                       <>
                         <Link 
-                          to={`/${petType.id}/vaccines`} 
-                          className="border border-gray-300 hover:border-gray-400 px-6 py-3 rounded-md font-semibold transition-colors"
+                          to="/our-products/about" 
+                          className={`${petType.color} ${petType.hoverColor} text-white px-6 py-3 rounded-md font-semibold transition-colors`}
                         >
-                          Browse Vaccines
+                          Learn More
                         </Link>
                         <Link 
-                          to={`/${petType.id}/cosmetics-supplements`} 
+                          to="/our-products" 
                           className="border border-gray-300 hover:border-gray-400 px-6 py-3 rounded-md font-semibold transition-colors"
                         >
-                          Cosmetics & Supplements
+                          Browse Our Products
                         </Link>
+                      </>
+                    ) : (
+                      <>
+                        <Link 
+                          to={`/${petType.id}`} 
+                          className={`${petType.color} ${petType.hoverColor} text-white px-6 py-3 rounded-md font-semibold transition-colors`}
+                        >
+                          Learn More
+                        </Link>
+                        <Link 
+                          to={`/${petType.id}/medicines`} 
+                          className="border border-gray-300 hover:border-gray-400 px-6 py-3 rounded-md font-semibold transition-colors"
+                        >
+                          Browse Medicines
+                        </Link>
+                        {petType.id !== 'birds' && (
+                          <>
+                            <Link 
+                              to={`/${petType.id}/vaccines`} 
+                              className="border border-gray-300 hover:border-gray-400 px-6 py-3 rounded-md font-semibold transition-colors"
+                            >
+                              Browse Vaccines
+                            </Link>
+                            <Link 
+                              to={`/${petType.id}/cosmetics-supplements`} 
+                              className="border border-gray-300 hover:border-gray-400 px-6 py-3 rounded-md font-semibold transition-colors"
+                            >
+                              Cosmetics & Supplements
+                            </Link>
+                          </>
+                        )}
                       </>
                     )}
                   </div>
