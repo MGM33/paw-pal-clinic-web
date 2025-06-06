@@ -16,7 +16,7 @@ const Footer = () => {
             <p className="text-white/90 leading-relaxed">Professional veterinary care for your beloved pets. We provide the best medical treatments for dogs, cats, and birds with modern facilities and compassionate care.</p>
             <div className="flex items-center space-x-2 text-white/80">
               <Heart size={16} className="text-red-400" />
-              <span className="text-sm">Caring for pets since 2008</span>
+              <span className="text-sm">Caring for pets since 2020</span>
             </div>
           </div>
           
@@ -36,7 +36,7 @@ const Footer = () => {
               <li><Link to="/dogs" className="text-white/80 hover:text-white transition-colors duration-300 hover:translate-x-1 inline-block">Dogs</Link></li>
               <li><Link to="/cats" className="text-white/80 hover:text-white transition-colors duration-300 hover:translate-x-1 inline-block">Cats</Link></li>
               <li><Link to="/birds" className="text-white/80 hover:text-white transition-colors duration-300 hover:translate-x-1 inline-block">Birds</Link></li>
-              <li><Link to="/local-brand" className="text-white/80 hover:text-white transition-colors duration-300 hover:translate-x-1 inline-block">Our Products</Link></li>
+              <li><Link to="/our-products/about" className="text-white/80 hover:text-white transition-colors duration-300 hover:translate-x-1 inline-block">Our Local Brand Products</Link></li>
             </ul>
           </div>
           
@@ -46,13 +46,13 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin size={18} className="text-theme-lightsky mt-1 flex-shrink-0" />
                 <div>
-                  <p>123 Pet Care Street</p>
-                  <p>Veterinary District, VC 12345</p>
+                  <p>J7F9+WP8, El Sheikh Zayed</p>
+                  <p>Ismailia 3, Ismailia Governorate 8366004</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={18} className="text-theme-lightsky flex-shrink-0" />
-                <p>info@vetcare.com</p>
+                <p>info@petcarevet.com</p>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone size={18} className="text-theme-lightsky flex-shrink-0" />
@@ -61,8 +61,8 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <Clock size={18} className="text-theme-lightsky mt-1 flex-shrink-0" />
                 <div>
-                  <p>Mon-Fri: 8:00 AM - 8:00 PM</p>
-                  <p>Sat-Sun: 9:00 AM - 6:00 PM</p>
+                  <p>Sunday - Wednesday: 8:00 AM - 11:00 PM</p>
+                  <p>Friday: Closed</p>
                 </div>
               </div>
             </address>
