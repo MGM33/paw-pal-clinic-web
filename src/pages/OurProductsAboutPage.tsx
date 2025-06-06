@@ -9,7 +9,7 @@ const OurProductsAboutPage = () => {
   }, []);
 
   return (
-    <div className="py-12 bg-gray-50">
+    <div className="py-12">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-12">

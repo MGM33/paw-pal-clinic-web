@@ -26,7 +26,7 @@ const MedicineListPage = () => {
   };
 
   return (
-    <div className="py-12 bg-gray-50">
+    <div className="py-12">
       <div className="container mx-auto px-4">
         <MedicineHeader petType={petType || ''} />
         
