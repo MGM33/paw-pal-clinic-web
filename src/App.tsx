@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
 // Pages
 import Index from "./pages/Index";
@@ -26,6 +26,17 @@ import Footer from "./components/layouts/Footer";
 
 const queryClient = new QueryClient();
 
+// Component to handle scroll to top on route change
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
 const App = () => {
   useEffect(() => {
     const script = document.createElement("script");
@@ -40,6 +51,7 @@ const App = () => {
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <div className="flex flex-col min-h-screen">
             <Navbar />
             <main className="flex-grow">
@@ -48,8 +60,7 @@ const App = () => {
                 <Route path="/services" element={<ServicesPage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
-                <Route path="/local-brand" element={<PetCategoryPage />} />
-                <Route path="/local-brand/medicines" element={<LocalBrandPage />} />
+                <Route path="/local-brand" element={<LocalBrandPage />} />
                 <Route path="/local-brand/products/:productId" element={<MedicineDetailPage />} />
                 <Route path="/:petType" element={<PetCategoryPage />} />
                 <Route path="/:petType/medicines" element={<MedicineListPage />} />
