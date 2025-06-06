@@ -36,7 +36,7 @@ const Navbar = () => {
     return currentPath.startsWith('/dogs') || 
            currentPath.startsWith('/cats') || 
            currentPath.startsWith('/birds') || 
-           currentPath.startsWith('/local-brand');
+           currentPath.startsWith('/our-products');
   };
 
   const NavLink = ({ to, children, icon: Icon }: { to: string; children: React.ReactNode; icon?: React.ElementType }) => {
@@ -61,7 +61,7 @@ const Navbar = () => {
     { to: '/dogs', icon: Dog, name: 'Dogs' },
     { to: '/cats', icon: Cat, name: 'Cats' },
     { to: '/birds', icon: Bird, name: 'Poultry Birds' },
-    { to: '/local-brand', icon: Package, name: 'Our Products' }
+    { to: '/our-products/about', icon: Package, name: 'Local Brand' }
   ];
 
   return (
