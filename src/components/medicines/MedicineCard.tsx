@@ -11,9 +11,23 @@ interface MedicineCardProps {
 }
 
 const MedicineCard: React.FC<MedicineCardProps> = ({ id, name, description, image, petType }) => {
+  // Generate the correct route based on pet type
+  const getDetailRoute = () => {
+    switch (petType) {
+      case 'dogs':
+        return `/dogs/medicines/${id}`;
+      case 'cats':
+        return `/cats/medicines/${id}`;
+      case 'birds':
+        return `/birds/medicines/${id}`;
+      default:
+        return `/${petType}/medicines/${id}`;
+    }
+  };
+
   return (
     <Link 
-      to={`/${petType}/medicines/${id}`} 
+      to={getDetailRoute()} 
       className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow"
     >
       <div className="h-48 overflow-hidden">
