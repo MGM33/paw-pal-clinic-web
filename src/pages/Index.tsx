@@ -15,7 +15,7 @@ const Index = () => {
   }, []);
   
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-br from-theme-lightsky/30 to-theme-powder/30">
       <CategorySlideshow />
       <Features />
       <FeaturedPets />

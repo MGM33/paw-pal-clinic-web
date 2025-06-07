@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Dog, Cat, Bird, Package } from 'lucide-react';
@@ -6,11 +7,6 @@ import LocalBrandPage from './LocalBrandPage';
 const PetCategoryPage = () => {
   const { petType } = useParams<{ petType: string }>();
   
-  // For our-products, redirect directly to the products page
-  if (petType === 'our-products') {
-    return <LocalBrandPage />;
-  }
-
   const getPetTypeTitle = () => {
     switch (petType) {
       case 'dogs':
@@ -26,6 +22,11 @@ const PetCategoryPage = () => {
     }
   };
   
+  // For our-products, redirect directly to the products page
+  if (petType === 'our-products') {
+    return <LocalBrandPage />;
+  }
+
   React.useEffect(() => {
     document.title = `PetCare Vet | ${getPetTypeTitle()} Care`;
   }, [petType]);
@@ -98,10 +99,10 @@ const PetCategoryPage = () => {
   };
 
   return (
-    <div className="py-12 bg-gray-50">
+    <div className="py-12 bg-gradient-to-br from-theme-lightsky/30 to-theme-powder/30 min-h-screen">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-12">
+          <div className="bg-white/80 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden mb-12">
             <div className="relative h-96">
               <img 
                 src={getPetImage()} 
@@ -148,32 +149,39 @@ const PetCategoryPage = () => {
               
               <div className="text-center">
                 <h3 className="text-2xl font-semibold mb-6">Browse Our Products</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <Link 
-                    to={`/${petType}/medicines`}
-                    className={`${getPetColor()} text-white px-6 py-4 rounded-md font-semibold transition-colors block`}
-                  >
-                    {getPetTypeTitle()} Medicines
-                  </Link>
-                  
-                  {petType !== 'birds' && (
-                    <>
-                      <Link 
-                        to={`/${petType}/vaccines`}
-                        className={`${getPetColor()} text-white px-6 py-4 rounded-md font-semibold transition-colors block`}
-                      >
-                        {getPetTypeTitle()} Vaccines
-                      </Link>
-                      
-                      <Link 
-                        to={`/${petType}/cosmetics-supplements`}
-                        className={`${getPetColor()} text-white px-6 py-4 rounded-md font-semibold transition-colors block`}
-                      >
-                        Cosmetics & Supplements
-                      </Link>
-                    </>
-                  )}
-                </div>
+                {petType === 'birds' ? (
+                  <div className="flex justify-center">
+                    <Link 
+                      to={`/${petType}/medicines`}
+                      className={`${getPetColor()} text-white px-6 py-4 rounded-md font-semibold transition-colors block`}
+                    >
+                      {getPetTypeTitle()} Medicines
+                    </Link>
+                  </div>
+                ) : (
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <Link 
+                      to={`/${petType}/medicines`}
+                      className={`${getPetColor()} text-white px-6 py-4 rounded-md font-semibold transition-colors block`}
+                    >
+                      {getPetTypeTitle()} Medicines
+                    </Link>
+                    
+                    <Link 
+                      to={`/${petType}/vaccines`}
+                      className={`${getPetColor()} text-white px-6 py-4 rounded-md font-semibold transition-colors block`}
+                    >
+                      {getPetTypeTitle()} Vaccines
+                    </Link>
+                    
+                    <Link 
+                      to={`/${petType}/cosmetics-supplements`}
+                      className={`${getPetColor()} text-white px-6 py-4 rounded-md font-semibold transition-colors block`}
+                    >
+                      Cosmetics & Supplements
+                    </Link>
+                  </div>
+                )}
               </div>
             </div>
           </div>

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Dog, Cat, Bird, Package } from 'lucide-react';
@@ -56,7 +55,7 @@ const CategorySlideshow = () => {
       description: 'Our exclusive veterinary products created with care and backed by years of expertise.',
       image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       icon: <Package size={40} />,
-      link: '/local-brand',
+      link: '/our-products/about',
       buttonText: 'View Products',
       color: 'bg-purple-600'
     }

@@ -48,7 +48,7 @@ const ServicesPage = () => {
   ];
 
   return (
-    <div className="py-12">
+    <div className="py-12 bg-gradient-to-br from-theme-lightsky/30 to-theme-powder/30 min-h-screen">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">Our Services</h1>
@@ -57,9 +57,9 @@ const ServicesPage = () => {
         
         <div className="space-y-16">
           {petTypes.map((petType) => (
-            <div key={petType.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div key={petType.id} className="bg-white/80 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden">
               <div className="md:flex">
-                <div className="md:w-1/2">
+                <div className="md:w-1/2 h-64 md:h-auto">
                   <img 
                     src={petType.image} 
                     alt={petType.name} 

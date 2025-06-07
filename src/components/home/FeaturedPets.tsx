@@ -44,7 +44,7 @@ const FeaturedPets = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gradient-to-br from-theme-lightsky/30 to-theme-powder/30">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">Our Pet Categories</h2>
         
@@ -53,7 +53,7 @@ const FeaturedPets = () => {
             <Link 
               key={category.id}
               to={`/${category.id}`} 
-              className="group bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:-translate-y-2"
+              className="group bg-white/80 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden transform transition-transform hover:-translate-y-2"
             >
               <div className="relative h-48 overflow-hidden">
                 <img 
@@ -70,7 +70,7 @@ const FeaturedPets = () => {
                   {category.icon}
                 </div>
                 <p className="text-gray-600 mb-4">{category.description}</p>
-                <div className={`flex justify-end ${category.color} ${category.hoverColor} text-white rounded px-4 py-2 transition-colors`}>
+                <div className={`flex justify-center ${category.color} ${category.hoverColor} text-white rounded px-4 py-2 transition-colors`}>
                   View Details
                 </div>
               </div>
