@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -20,10 +19,26 @@ import LocalBrandPage from "./pages/LocalBrandPage";
 import NotFound from "./pages/NotFound";
 import OurProductsAboutPage from "./pages/OurProductsAboutPage";
 
-// New individual medicine detail pages
+// Individual medicine detail pages for dogs
 import DogMedicineDetailPage from "./pages/DogMedicineDetailPage";
+import DogVaccineDetailPage from "./pages/DogVaccineDetailPage";
+import DogCosmeticsDetailPage from "./pages/DogCosmeticsDetailPage";
+
+// Individual medicine detail pages for cats
 import CatMedicineDetailPage from "./pages/CatMedicineDetailPage";
+import CatVaccineDetailPage from "./pages/CatVaccineDetailPage";
+import CatCosmeticsDetailPage from "./pages/CatCosmeticsDetailPage";
+
+// Individual medicine detail pages for birds (original)
 import BirdMedicineDetailPage from "./pages/BirdMedicineDetailPage";
+
+// Individual category detail pages for birds
+import BirdAntibioticsDetailPage from "./pages/BirdAntibioticsDetailPage";
+import BirdAntiCoccidialDetailPage from "./pages/BirdAntiCoccidialDetailPage";
+import BirdMineralsVitaminsDetailPage from "./pages/BirdMineralsVitaminsDetailPage";
+import BirdAntiStressDetailPage from "./pages/BirdAntiStressDetailPage";
+
+// Local brand detail page
 import LocalBrandProductDetailPage from "./pages/LocalBrandProductDetailPage";
 
 // Layout Components
@@ -80,19 +95,59 @@ const App = () => {
                   path="/:petType/medicines/category/:categoryId"
                   element={<MedicineCategoryPage />}
                 />
-                {/* Individual medicine detail routes for each pet type */}
+                
+                {/* Individual medicine detail routes for dogs */}
                 <Route
                   path="/dogs/medicines/:medicineId"
                   element={<DogMedicineDetailPage />}
                 />
                 <Route
+                  path="/dogs/vaccines/:vaccineId"
+                  element={<DogVaccineDetailPage />}
+                />
+                <Route
+                  path="/dogs/cosmetics-supplements/:cosmeticId"
+                  element={<DogCosmeticsDetailPage />}
+                />
+                
+                {/* Individual medicine detail routes for cats */}
+                <Route
                   path="/cats/medicines/:medicineId"
                   element={<CatMedicineDetailPage />}
                 />
                 <Route
+                  path="/cats/vaccines/:vaccineId"
+                  element={<CatVaccineDetailPage />}
+                />
+                <Route
+                  path="/cats/cosmetics-supplements/:cosmeticId"
+                  element={<CatCosmeticsDetailPage />}
+                />
+                
+                {/* Individual category detail routes for birds */}
+                <Route
+                  path="/birds/medicines/category/antibiotics/:medicineId"
+                  element={<BirdAntibioticsDetailPage />}
+                />
+                <Route
+                  path="/birds/medicines/category/anti-coccidial/:medicineId"
+                  element={<BirdAntiCoccidialDetailPage />}
+                />
+                <Route
+                  path="/birds/medicines/category/minerals-vitamins/:medicineId"
+                  element={<BirdMineralsVitaminsDetailPage />}
+                />
+                <Route
+                  path="/birds/medicines/category/anti-stress/:medicineId"
+                  element={<BirdAntiStressDetailPage />}
+                />
+                
+                {/* Keep the original bird medicine route for backward compatibility */}
+                <Route
                   path="/birds/medicines/:medicineId"
                   element={<BirdMedicineDetailPage />}
                 />
+                
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>
