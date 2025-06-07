@@ -292,7 +292,7 @@ const LocalBrandPage = () => {
                 <div className="flex justify-between items-center">
                   <span className="text-2xl font-bold text-theme-deepsky">{product.price}</span>
                   <Link
-                    to={`/local-brand/products/${product.id}`}
+                    to={`/our-products/products/${product.id}`}
                     className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:scale-105 ${
                       product.inStock 
                         ? 'bg-theme-deepsky hover:bg-theme-sky text-white' 
