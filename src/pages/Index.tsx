@@ -11,7 +11,7 @@ import LocationSection from '../components/home/LocationSection';
 const Index = () => {
   // Set page title
   React.useEffect(() => {
-    document.title = "🏥 VetCare | Professional Veterinary Services";
+    document.title = "VetCare | Professional Veterinary Services";
   }, []);
   
   return (
