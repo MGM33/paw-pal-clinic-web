@@ -97,9 +97,9 @@ const CategorySlideshow = () => {
   };
 
   const handleTouchEnd = () => {
-    if (dragDistance > 100) {
+    if (dragDistance > 50) {
       prevSlide();
-    } else if (dragDistance < -100) {
+    } else if (dragDistance < -50) {
       nextSlide();
     }
     setDragStartX(null);
