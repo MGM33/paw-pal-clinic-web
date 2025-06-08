@@ -82,7 +82,7 @@ const CategorySlideshow = () => {
       if (!isManualChange) {
         setCurrentSlide((prev) => (prev + 1) % slides.length);
       }
-    }, 8000);
+    }, 5000);
   };
 
   const handleTouchStart = (e: React.TouchEvent | React.MouseEvent) => {
