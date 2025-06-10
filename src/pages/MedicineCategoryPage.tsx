@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import MedicineCard from '../components/medicines/MedicineCard';
+import PoultryDrawer from '../components/medicines/PoultryDrawer';
 
 const MedicineCategoryPage = () => {
   const { petType, categoryId } = useParams<{ petType: string; categoryId: string }>();
@@ -84,8 +84,13 @@ const MedicineCategoryPage = () => {
       <div className="container mx-auto px-4">
         <div className="bg-gradient-to-r from-vet-orange to-vet-darkorange text-white py-12 rounded-lg mb-8">
           <div className="container mx-auto px-4">
-            <h1 className="text-3xl md:text-4xl font-bold mb-2">{getCategoryTitle()}</h1>
-            <p className="text-lg opacity-90">Specialized {getCategoryTitle().toLowerCase()} medicines for poultry birds</p>
+            <div className="flex justify-between items-center">
+              <div>
+                <h1 className="text-3xl md:text-4xl font-bold mb-2">{getCategoryTitle()}</h1>
+                <p className="text-lg opacity-90">Specialized {getCategoryTitle().toLowerCase()} medicines for poultry birds</p>
+              </div>
+              <PoultryDrawer />
+            </div>
           </div>
         </div>
         

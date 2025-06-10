@@ -141,6 +141,30 @@ const App = () => {
                   path="/birds/medicines/category/anti-stress/:medicineId"
                   element={<BirdAntiStressDetailPage />}
                 />
+                <Route
+                  path="/birds/medicines/category/hepatorenal-tonics/:medicineId"
+                  element={<BirdHepatoRenalTonicDetailPage />}
+                />
+                <Route
+                  path="/birds/medicines/category/anti-mycotoxin/:medicineId"
+                  element={<BirdAntiMycotoxinDetailPage />}
+                />
+                <Route
+                  path="/birds/medicines/category/growth-promotors/:medicineId"
+                  element={<BirdGrowthPromotorDetailPage />}
+                />
+                <Route
+                  path="/birds/medicines/category/immunostimulants/:medicineId"
+                  element={<BirdImmunostimulantDetailPage />}
+                />
+                <Route
+                  path="/birds/medicines/category/mucolytics-expectorants/:medicineId"
+                  element={<BirdMucolyticsExpectorantDetailPage />}
+                />
+                <Route
+                  path="/birds/medicines/category/anti-clostridial/:medicineId"
+                  element={<BirdAntiClostridialDetailPage />}
+                />
                 
                 {/* Keep the original bird medicine route for backward compatibility */}
                 <Route
