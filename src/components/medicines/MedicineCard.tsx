@@ -8,20 +8,28 @@ interface MedicineCardProps {
   description: string;
   image: string;
   petType: string;
+  itemType?: 'medicines' | 'vaccines' | 'cosmetics-supplements';
 }
 
-const MedicineCard: React.FC<MedicineCardProps> = ({ id, name, description, image, petType }) => {
-  // Generate the correct route based on pet type
+const MedicineCard: React.FC<MedicineCardProps> = ({ 
+  id, 
+  name, 
+  description, 
+  image, 
+  petType, 
+  itemType = 'medicines' 
+}) => {
+  // Generate the correct route based on pet type and item type
   const getDetailRoute = () => {
     switch (petType) {
       case 'dogs':
-        return `/dogs/medicines/${id}`;
+        return `/dogs/${itemType}/${id}`;
       case 'cats':
-        return `/cats/medicines/${id}`;
+        return `/cats/${itemType}/${id}`;
       case 'birds':
         return `/birds/medicines/${id}`;
       default:
-        return `/${petType}/medicines/${id}`;
+        return `/${petType}/${itemType}/${id}`;
     }
   };
 
