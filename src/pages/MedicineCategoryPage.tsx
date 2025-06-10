@@ -99,6 +99,7 @@ const MedicineCategoryPage = () => {
                 description={medicine.description}
                 image={medicine.image}
                 petType={petType || 'birds'}
+                itemType={`medicines/category/${categoryId}`}
               />
             ))}
           </div>

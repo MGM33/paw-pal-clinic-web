@@ -1,7 +1,9 @@
+
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import MedicineHeader from '../components/medicines/MedicineHeader';
 import MedicineCard from '../components/medicines/MedicineCard';
+import CategoryNavigation from '../components/medicines/CategoryNavigation';
 
 const VaccinesPage = () => {
   const { petType } = useParams<{ petType: string }>();
@@ -81,6 +83,12 @@ const VaccinesPage = () => {
         <MedicineHeader petType={petType || ''} />
         
         <div className="bg-white rounded-lg shadow-lg p-8">
+          {petType !== 'birds' && (
+            <div className="text-center mb-8">
+              <CategoryNavigation petType={petType || ''} currentCategory="vaccines" />
+            </div>
+          )}
+          
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold mb-4">{getPetTypeTitle()} Vaccines</h2>
           </div>

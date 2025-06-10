@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Dog, Cat, Bird, Home, Phone, Menu, Settings, Info, Package, Grid3X3 } from 'lucide-react';
 import { 
-  Drawer, 
-  DrawerTrigger, 
-  DrawerContent,
-  DrawerHeader,
-  DrawerTitle
-} from "@/components/ui/drawer";
+  Sheet, 
+  SheetTrigger, 
+  SheetContent,
+  SheetHeader,
+  SheetTitle
+} from "@/components/ui/sheet";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -117,19 +117,19 @@ const Navbar = () => {
           </div>
           
           <div className="md:hidden">
-            <Drawer>
-              <DrawerTrigger asChild>
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
                 <button className="text-gray-700 focus:outline-none hover:text-theme-deepsky transition-colors duration-300 p-2 rounded-lg hover:bg-theme-lightsky/20">
                   <Menu className="w-6 h-6" />
                 </button>
-              </DrawerTrigger>
-              <DrawerContent className="px-4 py-6 glass-effect">
-                <DrawerHeader>
-                  <DrawerTitle className="text-center text-theme-deepsky flex items-center justify-center space-x-2">
+              </SheetTrigger>
+              <SheetContent side="top" className="px-4 py-6 glass-effect">
+                <SheetHeader>
+                  <SheetTitle className="text-center text-theme-deepsky flex items-center justify-center space-x-2">
                     <span className="text-2xl">🐾</span>
                     <span>VetCare Menu</span>
-                  </DrawerTitle>
-                </DrawerHeader>
+                  </SheetTitle>
+                </SheetHeader>
                 <div className="flex flex-col space-y-3 mt-4">
                   <NavLink to="/" icon={Home}>Home</NavLink>
                   <NavLink to="/services" icon={Settings}>Services</NavLink>
@@ -151,8 +151,8 @@ const Navbar = () => {
                   <NavLink to="/about" icon={Info}>About Us</NavLink>
                   <NavLink to="/contact" icon={Phone}>Contact</NavLink>
                 </div>
-              </DrawerContent>
-            </Drawer>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </div>
