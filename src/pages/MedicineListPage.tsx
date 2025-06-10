@@ -3,7 +3,6 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import MedicineHeader from '../components/medicines/MedicineHeader';
 import MedicineGrid from '../components/medicines/MedicineGrid';
-import CategoryNavigation from '../components/medicines/CategoryNavigation';
 
 const MedicineListPage = () => {
   const { petType } = useParams<{ petType: string }>();
@@ -31,12 +30,6 @@ const MedicineListPage = () => {
         <MedicineHeader petType={petType || ''} />
         
         <div className="bg-white rounded-lg shadow-lg p-8">
-          {petType !== 'birds' && (
-            <div className="text-center mb-8">
-              <CategoryNavigation petType={petType || ''} currentCategory="medicines" />
-            </div>
-          )}
-          
           <MedicineGrid petType={petType || ''} />
         </div>
       </div>
