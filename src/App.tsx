@@ -10,7 +10,6 @@ import Index from "./pages/Index";
 import ServicesPage from "./pages/ServicesPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
-import PetCategoryPage from "./pages/PetCategoryPage";
 import MedicineListPage from "./pages/MedicineListPage";
 import MedicineCategoryPage from "./pages/MedicineCategoryPage";
 import VaccinesPage from "./pages/VaccinesPage";
@@ -84,69 +83,40 @@ const App = () => {
                 <Route path="/our-products" element={<LocalBrandPage />} />
                 <Route path="/our-products/about" element={<OurProductsAboutPage />} />
                 <Route path="/our-products/products/:productId" element={<LocalBrandProductDetailPage />} />
-                <Route path="/:petType" element={<PetCategoryPage />} />
-                <Route path="/:petType/medicines" element={<MedicineListPage />} />
-                <Route path="/:petType/vaccines" element={<VaccinesPage />} />
-                <Route
-                  path="/:petType/cosmetics-supplements"
-                  element={<CosmeticsSupplementsPage />}
-                />
-                <Route
-                  path="/:petType/medicines/category/:categoryId"
-                  element={<MedicineCategoryPage />}
-                />
+                
+                {/* Direct routes to medicine/vaccine/cosmetics pages */}
+                <Route path="/dogs/medicines" element={<MedicineListPage />} />
+                <Route path="/dogs/vaccines" element={<VaccinesPage />} />
+                <Route path="/dogs/cosmetics-supplements" element={<CosmeticsSupplementsPage />} />
+                
+                <Route path="/cats/medicines" element={<MedicineListPage />} />
+                <Route path="/cats/vaccines" element={<VaccinesPage />} />
+                <Route path="/cats/cosmetics-supplements" element={<CosmeticsSupplementsPage />} />
+                
+                <Route path="/birds/medicines" element={<MedicineListPage />} />
+                <Route path="/birds/vaccines" element={<VaccinesPage />} />
+                <Route path="/birds/cosmetics-supplements" element={<CosmeticsSupplementsPage />} />
+                
+                <Route path="/birds/medicines/category/:categoryId" element={<MedicineCategoryPage />} />
                 
                 {/* Individual medicine detail routes for dogs */}
-                <Route
-                  path="/dogs/medicines/:medicineId"
-                  element={<DogMedicineDetailPage />}
-                />
-                <Route
-                  path="/dogs/vaccines/:vaccineId"
-                  element={<DogVaccineDetailPage />}
-                />
-                <Route
-                  path="/dogs/cosmetics-supplements/:cosmeticId"
-                  element={<DogCosmeticsDetailPage />}
-                />
+                <Route path="/dogs/medicines/:medicineId" element={<DogMedicineDetailPage />} />
+                <Route path="/dogs/vaccines/:vaccineId" element={<DogVaccineDetailPage />} />
+                <Route path="/dogs/cosmetics-supplements/:cosmeticId" element={<DogCosmeticsDetailPage />} />
                 
                 {/* Individual medicine detail routes for cats */}
-                <Route
-                  path="/cats/medicines/:medicineId"
-                  element={<CatMedicineDetailPage />}
-                />
-                <Route
-                  path="/cats/vaccines/:vaccineId"
-                  element={<CatVaccineDetailPage />}
-                />
-                <Route
-                  path="/cats/cosmetics-supplements/:cosmeticId"
-                  element={<CatCosmeticsDetailPage />}
-                />
+                <Route path="/cats/medicines/:medicineId" element={<CatMedicineDetailPage />} />
+                <Route path="/cats/vaccines/:vaccineId" element={<CatVaccineDetailPage />} />
+                <Route path="/cats/cosmetics-supplements/:cosmeticId" element={<CatCosmeticsDetailPage />} />
                 
                 {/* Individual category detail routes for birds */}
-                <Route
-                  path="/birds/medicines/category/antibiotics/:medicineId"
-                  element={<BirdAntibioticsDetailPage />}
-                />
-                <Route
-                  path="/birds/medicines/category/anti-coccidial/:medicineId"
-                  element={<BirdAntiCoccidialDetailPage />}
-                />
-                <Route
-                  path="/birds/medicines/category/minerals-vitamins/:medicineId"
-                  element={<BirdMineralsVitaminsDetailPage />}
-                />
-                <Route
-                  path="/birds/medicines/category/anti-stress/:medicineId"
-                  element={<BirdAntiStressDetailPage />}
-                />
+                <Route path="/birds/medicines/category/antibiotics/:medicineId" element={<BirdAntibioticsDetailPage />} />
+                <Route path="/birds/medicines/category/anti-coccidial/:medicineId" element={<BirdAntiCoccidialDetailPage />} />
+                <Route path="/birds/medicines/category/minerals-vitamins/:medicineId" element={<BirdMineralsVitaminsDetailPage />} />
+                <Route path="/birds/medicines/category/anti-stress/:medicineId" element={<BirdAntiStressDetailPage />} />
                 
                 {/* Keep the original bird medicine route for backward compatibility */}
-                <Route
-                  path="/birds/medicines/:medicineId"
-                  element={<BirdMedicineDetailPage />}
-                />
+                <Route path="/birds/medicines/:medicineId" element={<BirdMedicineDetailPage />} />
                 
                 <Route path="*" element={<NotFound />} />
               </Routes>

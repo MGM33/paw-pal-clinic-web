@@ -58,9 +58,9 @@ const Navbar = () => {
   };
 
   const categories = [
-    { to: '/dogs', icon: Dog, name: 'Dogs' },
-    { to: '/cats', icon: Cat, name: 'Cats' },
-    { to: '/birds', icon: Bird, name: 'Poultry Birds' },
+    { to: '/dogs/medicines', icon: Dog, name: 'Dogs' },
+    { to: '/cats/medicines', icon: Cat, name: 'Cats' },
+    { to: '/birds/medicines', icon: Bird, name: 'Poultry Birds' },
     { to: '/our-products/about', icon: Package, name: 'Local Brand' }
   ];
 
