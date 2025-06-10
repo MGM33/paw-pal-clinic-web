@@ -8,7 +8,7 @@ interface MedicineCardProps {
   description: string;
   image: string;
   petType: string;
-  itemType?: 'medicines' | 'vaccines' | 'cosmetics-supplements';
+  itemType?: string; // Changed from specific literals to string to allow category paths
 }
 
 const MedicineCard: React.FC<MedicineCardProps> = ({ 
@@ -27,6 +27,10 @@ const MedicineCard: React.FC<MedicineCardProps> = ({
       case 'cats':
         return `/cats/${itemType}/${id}`;
       case 'birds':
+        if (itemType.startsWith('medicines/category/')) {
+          // For bird category medicines, use the category-specific route
+          return `/birds/${itemType}/${id}`;
+        }
         return `/birds/medicines/${id}`;
       default:
         return `/${petType}/${itemType}/${id}`;
