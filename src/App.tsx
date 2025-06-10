@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -37,6 +38,12 @@ import BirdAntibioticsDetailPage from "./pages/BirdAntibioticsDetailPage";
 import BirdAntiCoccidialDetailPage from "./pages/BirdAntiCoccidialDetailPage";
 import BirdMineralsVitaminsDetailPage from "./pages/BirdMineralsVitaminsDetailPage";
 import BirdAntiStressDetailPage from "./pages/BirdAntiStressDetailPage";
+import BirdHepatoRenalTonicDetailPage from "./pages/BirdHepatoRenalTonicDetailPage";
+import BirdAntiMycotoxinDetailPage from "./pages/BirdAntiMycotoxinDetailPage";
+import BirdGrowthPromotorDetailPage from "./pages/BirdGrowthPromotorDetailPage";
+import BirdImmunostimulantDetailPage from "./pages/BirdImmunostimulantDetailPage";
+import BirdMucolyticsExpectorantDetailPage from "./pages/BirdMucolyticsExpectorantDetailPage";
+import BirdAntiClostridialDetailPage from "./pages/BirdAntiClostridialDetailPage";
 
 // Local brand detail page
 import LocalBrandProductDetailPage from "./pages/LocalBrandProductDetailPage";
