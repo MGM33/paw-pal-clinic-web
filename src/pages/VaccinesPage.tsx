@@ -1,9 +1,10 @@
-
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import MedicineHeader from '../components/medicines/MedicineHeader';
 import MedicineCard from '../components/medicines/MedicineCard';
 import CategoryNavigation from '../components/medicines/CategoryNavigation';
+import DogMedicineDrawer from '../components/medicines/DogMedicineDrawer';
+import CatMedicineDrawer from '../components/medicines/CatMedicineDrawer';
 
 const VaccinesPage = () => {
   const { petType } = useParams<{ petType: string }>();
@@ -21,6 +22,15 @@ const VaccinesPage = () => {
       default:
         return 'Pet';
     }
+  };
+
+  const renderCategoryDrawer = () => {
+    if (petType === 'dogs') {
+      return <DogMedicineDrawer />;
+    } else if (petType === 'cats') {
+      return <CatMedicineDrawer />;
+    }
+    return null;
   };
 
   const getVaccines = () => {
@@ -84,8 +94,9 @@ const VaccinesPage = () => {
         
         <div className="bg-white rounded-lg shadow-lg p-8">
           {petType !== 'birds' && (
-            <div className="text-center mb-8">
+            <div className="flex justify-between items-center mb-8">
               <CategoryNavigation petType={petType || ''} currentCategory="vaccines" />
+              {renderCategoryDrawer()}
             </div>
           )}
           
