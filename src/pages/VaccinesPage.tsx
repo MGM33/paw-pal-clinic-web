@@ -1,11 +1,8 @@
-
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import MedicineHeader from '../components/medicines/MedicineHeader';
 import MedicineCard from '../components/medicines/MedicineCard';
 import CategoryNavigation from '../components/medicines/CategoryNavigation';
-import DogMedicineDrawer from '../components/medicines/DogMedicineDrawer';
-import CatMedicineDrawer from '../components/medicines/CatMedicineDrawer';
 
 const VaccinesPage = () => {
   const { petType } = useParams<{ petType: string }>();

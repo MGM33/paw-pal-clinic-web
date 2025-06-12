@@ -4,8 +4,6 @@ import { useParams } from 'react-router-dom';
 import MedicineHeader from '../components/medicines/MedicineHeader';
 import MedicineGrid from '../components/medicines/MedicineGrid';
 import CategoryNavigation from '../components/medicines/CategoryNavigation';
-import DogMedicineDrawer from '../components/medicines/DogMedicineDrawer';
-import CatMedicineDrawer from '../components/medicines/CatMedicineDrawer';
 
 const MedicineListPage = () => {
   const { petType } = useParams<{ petType: string }>();

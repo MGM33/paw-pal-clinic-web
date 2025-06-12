@@ -1,11 +1,8 @@
-
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import MedicineHeader from '../components/medicines/MedicineHeader';
 import MedicineCard from '../components/medicines/MedicineCard';
 import CategoryNavigation from '../components/medicines/CategoryNavigation';
-import DogMedicineDrawer from '../components/medicines/DogMedicineDrawer';
-import CatMedicineDrawer from '../components/medicines/CatMedicineDrawer';
 
 const CosmeticsSupplementsPage = () => {
   const { petType } = useParams<{ petType: string }>();
@@ -25,7 +22,7 @@ const CosmeticsSupplementsPage = () => {
     }
   };
 
-  const getProducts = () => {
+  const getCosmetics = () => {
     if (petType === 'dogs') {
       return [
         { id: 1, name: 'Omega-3 Skin & Coat Oil', description: 'Premium fish oil supplement for lustrous coat and healthy skin with EPA and DHA.', image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop&sig=41' },
@@ -77,7 +74,7 @@ const CosmeticsSupplementsPage = () => {
     return [];
   };
 
-  const products = getProducts();
+  const cosmetics = getCosmetics();
 
   return (
     <div className="py-12 bg-gray-50">
@@ -93,29 +90,16 @@ const CosmeticsSupplementsPage = () => {
           
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold mb-4">{getPetTypeTitle()} Cosmetics & Supplements</h2>
-            
-            {/* Add drawer for dogs and cats above the items */}
-            {petType === 'dogs' && (
-              <div className="mb-6">
-                <DogMedicineDrawer currentCategory="cosmetics-supplements" />
-              </div>
-            )}
-            
-            {petType === 'cats' && (
-              <div className="mb-6">
-                <CatMedicineDrawer currentCategory="cosmetics-supplements" />
-              </div>
-            )}
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {products.map((product) => (
+            {cosmetics.map((cosmetic) => (
               <MedicineCard
-                key={product.id}
-                id={product.id}
-                name={product.name}
-                description={product.description}
-                image={product.image}
+                key={cosmetic.id}
+                id={cosmetic.id}
+                name={cosmetic.name}
+                description={cosmetic.description}
+                image={cosmetic.image}
                 petType={petType || ''}
                 itemType="cosmetics-supplements"
               />
