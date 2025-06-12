@@ -47,39 +47,61 @@ const AboutPage = () => {
           
           <div className="bg-white rounded-lg shadow-lg p-8">
             <h2 className="text-2xl font-semibold mb-6">Our Team</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="text-center">
                 <div className="rounded-full overflow-hidden w-40 h-40 mx-auto mb-4">
                   <img 
                     src="https://source.unsplash.com/random/200x200/?veterinarian-1" 
-                    alt="Dr. Smith" 
+                    alt="Mohamed Hesham" 
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-medium">Dr. John Smith</h3>
+                <h3 className="text-xl font-medium">Mohamed Hesham</h3>
                 <p className="text-gray-600">Chief Veterinarian</p>
               </div>
               <div className="text-center">
                 <div className="rounded-full overflow-hidden w-40 h-40 mx-auto mb-4">
                   <img 
                     src="https://source.unsplash.com/random/200x200/?veterinarian-2" 
-                    alt="Dr. Johnson" 
+                    alt="Mahmoud" 
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-medium">Dr. Sarah Johnson</h3>
+                <h3 className="text-xl font-medium">Mahmoud</h3>
                 <p className="text-gray-600">Specialist in Avian Medicine</p>
               </div>
               <div className="text-center">
                 <div className="rounded-full overflow-hidden w-40 h-40 mx-auto mb-4">
                   <img 
                     src="https://source.unsplash.com/random/200x200/?veterinarian-3" 
-                    alt="Dr. Martinez" 
+                    alt="Fatma Kamal" 
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-medium">Dr. Carlos Martinez</h3>
+                <h3 className="text-xl font-medium">Fatma Kamal</h3>
                 <p className="text-gray-600">Feline Medicine Specialist</p>
+              </div>
+              <div className="text-center">
+                <div className="rounded-full overflow-hidden w-40 h-40 mx-auto mb-4">
+                  <img 
+                    src="https://source.unsplash.com/random/200x200/?veterinarian-4" 
+                    alt="Rodiana Saif" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-xl font-medium">Rodiana Saif</h3>
+                <p className="text-gray-600">Canine Medicine Specialist</p>
+              </div>
+              <div className="text-center md:col-span-2 lg:col-span-1 lg:col-start-2">
+                <div className="rounded-full overflow-hidden w-40 h-40 mx-auto mb-4">
+                  <img 
+                    src="https://source.unsplash.com/random/200x200/?veterinarian-5" 
+                    alt="Team Member 5" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-xl font-medium">Dr. Sarah Ahmed</h3>
+                <p className="text-gray-600">Veterinary Surgeon</p>
               </div>
             </div>
           </div>
