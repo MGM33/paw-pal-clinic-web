@@ -91,21 +91,21 @@ const CosmeticsSupplementsPage = () => {
             </div>
           )}
           
-          {/* Add drawer for dogs and cats */}
-          {petType === 'dogs' && (
-            <div className="mb-6 flex justify-center">
-              <DogMedicineDrawer currentCategory="cosmetics-supplements" />
-            </div>
-          )}
-          
-          {petType === 'cats' && (
-            <div className="mb-6 flex justify-center">
-              <CatMedicineDrawer currentCategory="cosmetics-supplements" />
-            </div>
-          )}
-          
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold mb-4">{getPetTypeTitle()} Cosmetics & Supplements</h2>
+            
+            {/* Add drawer for dogs and cats above the items */}
+            {petType === 'dogs' && (
+              <div className="mb-6">
+                <DogMedicineDrawer currentCategory="cosmetics-supplements" />
+              </div>
+            )}
+            
+            {petType === 'cats' && (
+              <div className="mb-6">
+                <CatMedicineDrawer currentCategory="cosmetics-supplements" />
+              </div>
+            )}
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">

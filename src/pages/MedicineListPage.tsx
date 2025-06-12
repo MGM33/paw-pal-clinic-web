@@ -39,19 +39,6 @@ const MedicineListPage = () => {
             </div>
           )}
           
-          {/* Add drawer for dogs and cats */}
-          {petType === 'dogs' && (
-            <div className="mb-6 flex justify-center">
-              <DogMedicineDrawer currentCategory="medicines" />
-            </div>
-          )}
-          
-          {petType === 'cats' && (
-            <div className="mb-6 flex justify-center">
-              <CatMedicineDrawer currentCategory="medicines" />
-            </div>
-          )}
-          
           <MedicineGrid petType={petType || ''} />
         </div>
       </div>
