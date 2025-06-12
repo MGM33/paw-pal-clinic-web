@@ -4,6 +4,8 @@ import { useParams } from 'react-router-dom';
 import MedicineHeader from '../components/medicines/MedicineHeader';
 import MedicineGrid from '../components/medicines/MedicineGrid';
 import CategoryNavigation from '../components/medicines/CategoryNavigation';
+import DogMedicineDrawer from '../components/medicines/DogMedicineDrawer';
+import CatMedicineDrawer from '../components/medicines/CatMedicineDrawer';
 
 const MedicineListPage = () => {
   const { petType } = useParams<{ petType: string }>();
@@ -34,6 +36,19 @@ const MedicineListPage = () => {
           {petType !== 'birds' && (
             <div className="text-center mb-8">
               <CategoryNavigation petType={petType || ''} currentCategory="medicines" />
+            </div>
+          )}
+          
+          {/* Add drawer for dogs and cats */}
+          {petType === 'dogs' && (
+            <div className="mb-6 flex justify-center">
+              <DogMedicineDrawer currentCategory="medicines" />
+            </div>
+          )}
+          
+          {petType === 'cats' && (
+            <div className="mb-6 flex justify-center">
+              <CatMedicineDrawer currentCategory="medicines" />
             </div>
           )}
           
