@@ -332,10 +332,11 @@ const CatVaccineDetailPage = () => {
               </div>
               <Link
                 to="/cats/vaccines"
-                className="inline-block mt-4 text-blue-500 underline"
-              >
+                className="bg-vet-green hover:bg-vet-darkgreen text-white px-6 py-3 rounded-md font-semibold transition-colors inline-block"
+                >
                 Back to Cat Vaccines
               </Link>
+
             </div>
           </div>
         </div>
