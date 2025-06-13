@@ -44,7 +44,18 @@ const VaccinesPage = () => {
         { id: 17, name: 'Regional Disease Vaccine', description: 'Geographic-specific protection against local endemic diseases.', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=300&fit=crop&sig=17' },
         { id: 18, name: 'Breeder Package Vaccine', description: 'Specialized vaccination program for breeding dogs and pregnant females.', image: 'https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=400&h=300&fit=crop&sig=18' },
         { id: 19, name: 'Working Dog Vaccine', description: 'Enhanced protection for police, military, and service dogs.', image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop&sig=19' },
-        { id: 20, name: 'Emergency Vaccine Kit', description: 'Rapid protection vaccination for rescue dogs or emergency situations.', image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&h=300&fit=crop&sig=20' }
+        { id: 20, name: 'Emergency Vaccine Kit', description: 'Rapid protection vaccination for rescue dogs or emergency situations.', image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&h=300&fit=crop&sig=20' },
+        { id: 21, name: 'Heartworm Preventative', description: 'Monthly vaccine alternative for heartworm prevention in dogs.', image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop&sig=41' },
+{ id: 22, name: 'Tick-Borne Disease Combo', description: 'Dual protection against multiple tick-borne diseases beyond Lyme.', image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=400&h=300&fit=crop&sig=42' },
+{ id: 23, name: 'Puppy Boost Booster', description: 'Second round of essential core vaccines for puppies.', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=300&fit=crop&sig=43' },
+{ id: 24, name: 'Social Dog Vaccine Set', description: 'Recommended for dogs frequently attending parks and group activities.', image: 'https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=400&h=300&fit=crop&sig=44' },
+{ id: 25, name: 'Allergen Desensitization Shot', description: 'Vaccine-like treatment for common canine environmental allergens.', image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop&sig=45' },
+{ id: 26, name: 'Canine Parainfluenza Vaccine', description: 'Standalone protection against parainfluenza virus.', image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&h=300&fit=crop&sig=46' },
+{ id: 27, name: 'Dermatophyte Fungal Vaccine', description: 'For dogs prone to skin fungal infections in humid climates.', image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&sig=47' },
+{ id: 28, name: 'Canine Hepatitis Vaccine', description: 'Protection against infectious canine hepatitis (CAV-1).', image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop&sig=48' },
+{ id: 29, name: 'Adventure Dog Pack', description: 'Vaccine bundle for hiking, camping, and outdoor adventure dogs.', image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=400&h=300&fit=crop&sig=49' },
+{ id: 30, name: 'Urban Exposure Vaccine Set', description: 'Specialized for city dogs exposed to dense dog populations.', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=300&fit=crop&sig=50' }
+
       ];
     } else if (petType === 'cats') {
       return [
@@ -67,7 +78,18 @@ const VaccinesPage = () => {
         { id: 17, name: 'Shelter Cat Vaccine', description: 'Rapid protection protocol for newly rescued or adopted cats.', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=300&fit=crop&sig=37' },
         { id: 18, name: 'Travel Vaccination', description: 'International travel requirements and health certificate preparation.', image: 'https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=400&h=300&fit=crop&sig=38' },
         { id: 19, name: 'Show Cat Package', description: 'Competition-ready vaccination schedule for cats in shows and exhibitions.', image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop&sig=39' },
-        { id: 20, name: 'Emergency Vaccine Kit', description: 'Immediate protection for cats in emergency or high-risk situations.', image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&h=300&fit=crop&sig=40' }
+        { id: 20, name: 'Emergency Vaccine Kit', description: 'Immediate protection for cats in emergency or high-risk situations.', image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&h=300&fit=crop&sig=40' },
+        { id: 21, name: 'Feline Heartworm Preventative', description: 'Optional vaccine alternative for heartworm disease prevention.', image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop&sig=51' },
+{ id: 22, name: 'Feline Giardia Vaccine', description: 'Protection against intestinal parasite Giardia in at-risk cats.', image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=400&h=300&fit=crop&sig=52' },
+{ id: 23, name: 'High-Risk Outdoor Booster', description: 'Annual booster for cats with significant outdoor exposure.', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=300&fit=crop&sig=53' },
+{ id: 24, name: 'Feline Dermatophyte Vaccine', description: 'Prevention and treatment of ringworm in cats.', image: 'https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=400&h=300&fit=crop&sig=54' },
+{ id: 25, name: 'Cattery Protection Package', description: 'Full vaccine protocol for cats in breeding catteries.', image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop&sig=55' },
+{ id: 26, name: 'Senior Cat Immunity Booster', description: 'Additional immune support for aging felines.', image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&h=300&fit=crop&sig=56' },
+{ id: 27, name: 'Shelter Intake Vaccine Set', description: 'Immediate protection protocol for shelter-intake cats.', image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&sig=57' },
+{ id: 28, name: 'Feline Calicivirus Boost', description: 'Enhanced protection against evolving calicivirus strains.', image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop&sig=58' },
+{ id: 29, name: 'Urban Cat Protection', description: 'Vaccine bundle for cats in high-density urban environments.', image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=400&h=300&fit=crop&sig=59' },
+{ id: 30, name: 'Emergency Rescue Package', description: 'Rapid protection vaccine set for rescued or displaced cats.', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=300&fit=crop&sig=60' }
+
       ];
     }
     
