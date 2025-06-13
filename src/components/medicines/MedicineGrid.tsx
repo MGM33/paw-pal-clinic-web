@@ -38,6 +38,16 @@ const MedicineGrid: React.FC<MedicineGridProps> = ({ petType }) => {
         { id: 18, name: 'HipFlex Support Formula', description: 'Specialized supplement with MSM and turmeric for dogs with hip dysplasia and joint issues.', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=300&fit=crop' },
         { id: 19, name: 'TravelEase Motion Sickness', description: 'Ginger-based motion sickness medication for dogs who experience car or travel anxiety.', image: 'https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=400&h=300&fit=crop' },
         { id: 20, name: 'RecoveryMax Post-Surgery Kit', description: 'Complete post-operative care kit with pain relief, antibiotics, and healing supplements.', image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop' }
+        { id: 21, name: 'PawGuard Protective Balm', description: 'Natural wax-based paw balm to protect against hot pavement, ice, and rough terrain.', image: 'https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?w=400&h=300&fit=crop' },
+        { id: 22, name: 'LiverHealth Detox Support', description: 'Herbal supplement with milk thistle to support healthy liver function in dogs.', image: 'https://images.unsplash.com/photo-1507146426996-ef05306b995a?w=400&h=300&fit=crop' },
+        { id: 23, name: 'BladderEase Incontinence Aid', description: 'Chewable tablets formulated to help reduce urinary incontinence in senior dogs.', image: 'https://images.unsplash.com/photo-1543852786-1cf6624b9987?w=400&h=300&fit=crop' },
+        { id: 24, name: 'VisionBoost Omega Formula', description: 'Omega-3 rich supplement to promote healthy eyesight and reduce age-related degeneration.', image: 'https://images.unsplash.com/photo-1517849845537-4d257902454a?w=400&h=300&fit=crop' },
+        { id: 25, name: 'DermRelief Allergy Shampoo', description: 'Medicated shampoo to soothe itchy, irritated skin caused by environmental allergies.', image: 'https://images.unsplash.com/photo-1601758123927-196f6b9f7b3f?w=400&h=300&fit=crop' },
+        { id: 26, name: 'HydraCare Electrolyte Solution', description: 'Rehydration formula for dogs experiencing dehydration from heat or illness.', image: 'https://images.unsplash.com/photo-1596495577886-d920f1fb7238?w=400&h=300&fit=crop' },
+        { id: 27, name: 'ProJoint Recovery Chews', description: 'Soft chews with green-lipped mussel extract for post-injury joint recovery support.', image: 'https://images.unsplash.com/photo-1572715376041-6d374f580bd7?w=400&h=300&fit=crop' },
+        { id: 28, name: 'ThyroBalance Thyroid Tabs', description: 'Prescription-strength tablets to support dogs with hypothyroidism.', image: 'https://images.unsplash.com/photo-1558788353-f76d92427f16?w=400&h=300&fit=crop' },
+        { id: 29, name: 'CardioCare Heart Support', description: 'Nutritional supplement with taurine and L-carnitine to support cardiac health.', image: 'https://images.unsplash.com/photo-1561037404-61cd46aa6153?w=400&h=300&fit=crop' },
+        { id: 30, name: 'RespiraEase Cough Suppressant', description: 'Veterinary-formulated syrup for relief of kennel cough and minor respiratory irritation.', image: 'https://images.unsplash.com/photo-1560807707-8cc77767d783?w=400&h=300&fit=crop' }
       ];
     } else if (petType === 'cats') {
       return [
@@ -61,6 +71,16 @@ const MedicineGrid: React.FC<MedicineGridProps> = ({ petType }) => {
         { id: 18, name: 'StressAway Natural Relaxer', description: 'Herbal stress relief supplement with passionflower for cats during transitions or travel.', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=300&fit=crop' },
         { id: 19, name: 'AppetiteMax Stimulant', description: 'Safe appetite stimulant with B-vitamins for cats recovering from illness or surgery.', image: 'https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=400&h=300&fit=crop' },
         { id: 20, name: 'PostOp Recovery Support', description: 'Complete post-operative nutrition and pain management system for surgical recovery.', image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop' }
+        { id: 21, name: 'PurrPaws Protective Balm', description: 'Non-toxic balm for soothing and protecting cracked or dry paw pads.', image: 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=400&h=300&fit=crop' },
+        { id: 22, name: 'LiverShield Formula', description: 'Milk thistle and turmeric blend for liver detox and support.', image: 'https://images.unsplash.com/photo-1574158622682-e40e69881006?w=400&h=300&fit=crop' },
+        { id: 23, name: 'CalmKit Stress Drops', description: 'Liquid herbal stress relief for nervous or anxious cats.', image: 'https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?w=400&h=300&fit=crop' },
+        { id: 24, name: 'BladderSupport Urinary Aid', description: 'Cranberry and D-mannose blend for healthy bladder function.', image: 'https://images.unsplash.com/photo-1508615039623-a25605d2b022?w=400&h=300&fit=crop' },
+        { id: 25, name: 'OmegaFur Skin & Coat Oil', description: 'Omega-rich oil supplement for shiny coat and reduced shedding.', image: 'https://images.unsplash.com/photo-1601758123837-1ec2e1e8eaf8?w=400&h=300&fit=crop' },
+        { id: 26, name: 'HydraPurr Electrolyte Formula', description: 'Oral hydration support for cats during illness or heat stress.', image: 'https://images.unsplash.com/photo-1517849845537-4d257902454a?w=400&h=300&fit=crop' },
+        { id: 27, name: 'SeniorFlex Mobility Aid', description: 'Joint supplement with glucosamine and MSM for senior cats.', image: 'https://images.unsplash.com/photo-1583337130417-3346a1f3e3c4?w=400&h=300&fit=crop' },
+        { id: 28, name: 'ThyroidCare Feline Support', description: 'Special formula for cats with thyroid imbalance.', image: 'https://images.unsplash.com/photo-1601233741466-019d7d33d59b?w=400&h=300&fit=crop' },
+        { id: 29, name: 'HeartEase Taurine Chews', description: 'Taurine-enriched chews for supporting feline heart health.', image: 'https://images.unsplash.com/photo-1543852786-1cf6624b9987?w=400&h=300&fit=crop' },
+        { id: 30, name: 'RespiraPurr Cough Remedy', description: 'Mild herbal remedy for occasional coughing and throat irritation.', image: 'https://images.unsplash.com/photo-1572715376041-6d374f580bd7?w=400&h=300&fit=crop' }
       ];
     }
     
