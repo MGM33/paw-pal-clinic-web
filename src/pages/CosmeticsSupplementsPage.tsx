@@ -44,7 +44,18 @@ const CosmeticsSupplementsPage = () => {
         { id: 17, name: 'Eye Area Gentle Cleanser', description: 'Tear-free formula specifically designed for cleaning sensitive eye areas.', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=300&fit=crop&sig=57' },
         { id: 18, name: 'Coat Color Enhancer', description: 'Natural supplement that intensifies and maintains coat color vibrancy.', image: 'https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=400&h=300&fit=crop&sig=58' },
         { id: 19, name: 'Paw Wax Protection', description: 'Weather-resistant wax barrier to protect paws from salt, ice, and rough surfaces.', image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop&sig=59' },
-        { id: 20, name: 'Complete Grooming Kit', description: 'Professional grooming set with brushes, combs, nail clippers, and storage case.', image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&h=300&fit=crop&sig=60' }
+        { id: 20, name: 'Complete Grooming Kit', description: 'Professional grooming set with brushes, combs, nail clippers, and storage case.', image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&h=300&fit=crop&sig=60' },
+        { id: 21, name: 'Herbal Ear Cleaner', description: 'Gentle herbal formula to cleanse and deodorize dog ears.', image: 'https://images.unsplash.com/photo-1560807707-8cc77767d783?w=400&h=300&fit=crop&sig=81' },
+{ id: 22, name: 'Joint Support Chews', description: 'Glucosamine and chondroitin chews for joint health and mobility.', image: 'https://images.unsplash.com/photo-1560807707-8cc77767d783?w=400&h=300&fit=crop&sig=82' },
+{ id: 23, name: 'Waterproof Paw Booties', description: 'Durable booties for protecting paws during walks in rough terrain.', image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=400&h=300&fit=crop&sig=83' },
+{ id: 24, name: 'Sensitive Skin Wipes', description: 'Fragrance-free wipes for quick clean-ups of sensitive areas.', image: 'https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?w=400&h=300&fit=crop&sig=84' },
+{ id: 25, name: 'Portable Grooming Comb', description: 'Compact comb for detangling fur on the go.', image: 'https://images.unsplash.com/photo-1592194996308-7b43878e84a6?w=400&h=300&fit=crop&sig=85' },
+{ id: 26, name: 'Hydration Booster', description: 'Electrolyte water additive to encourage hydration.', image: 'https://images.unsplash.com/photo-1560807707-8cc77767d783?w=400&h=300&fit=crop&sig=86' },
+{ id: 27, name: 'All-Natural Flea Spray', description: 'Chemical-free flea repellent with essential oils.', image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=400&h=300&fit=crop&sig=87' },
+{ id: 28, name: 'Chew-Resistant Collar', description: 'Durable, chew-proof collar for active dogs.', image: 'https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?w=400&h=300&fit=crop&sig=88' },
+{ id: 29, name: 'Brightening Coat Mist', description: 'Spray that enhances coat shine and brightness.', image: 'https://images.unsplash.com/photo-1592194996308-7b43878e84a6?w=400&h=300&fit=crop&sig=89' },
+{ id: 30, name: 'Soothing Paw Soak', description: 'Epsom salt blend for tired, achy paws.', image: 'https://images.unsplash.com/photo-1560807707-8cc77767d783?w=400&h=300&fit=crop&sig=90' },
+
       ];
     } else if (petType === 'cats') {
       return [
@@ -67,7 +78,18 @@ const CosmeticsSupplementsPage = () => {
         { id: 17, name: 'Gentle Eye Makeup Remover', description: 'Specially formulated to safely remove stubborn eye discharge and stains.', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=300&fit=crop&sig=77' },
         { id: 18, name: 'Color Protection Shampoo', description: 'UV-protective formula that maintains coat color and prevents fading.', image: 'https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=400&h=300&fit=crop&sig=78' },
         { id: 19, name: 'Winter Paw Protection', description: 'Protective balm to shield paws from cold weather and harsh surfaces.', image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop&sig=79' },
-        { id: 20, name: 'Premium Grooming Set', description: 'Complete grooming kit with slicker brush, nail clippers, and storage pouch.', image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&h=300&fit=crop&sig=80' }
+        { id: 20, name: 'Premium Grooming Set', description: 'Complete grooming kit with slicker brush, nail clippers, and storage pouch.', image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&h=300&fit=crop&sig=80' },
+        { id: 21, name: 'Herbal Ear Wipes', description: 'Natural wipes to clean and freshen up cat ears gently.', image: 'https://images.unsplash.com/photo-1560807707-8cc77767d783?w=400&h=300&fit=crop&sig=91' },
+{ id: 22, name: 'Anti-Scratch Spray', description: 'Safe spray to discourage scratching on furniture.', image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=400&h=300&fit=crop&sig=92' },
+{ id: 23, name: 'Soft Paw Socks', description: 'Comfy socks for paw protection indoors.', image: 'https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?w=400&h=300&fit=crop&sig=93' },
+{ id: 24, name: 'Hydrating Coat Serum', description: 'Leave-in serum that deeply moisturizes cat fur.', image: 'https://images.unsplash.com/photo-1592194996308-7b43878e84a6?w=400&h=300&fit=crop&sig=94' },
+{ id: 25, name: 'Litter Box Deodorizer', description: 'Natural deodorizer powder for fresher litter boxes.', image: 'https://images.unsplash.com/photo-1560807707-8cc77767d783?w=400&h=300&fit=crop&sig=95' },
+{ id: 26, name: 'Calming Collar', description: 'Pheromone collar to reduce stress and anxiety.', image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=400&h=300&fit=crop&sig=96' },
+{ id: 27, name: 'Tooth & Gum Powder', description: 'Easy-to-use powder for dental health.', image: 'https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?w=400&h=300&fit=crop&sig=97' },
+{ id: 28, name: 'Anti-Hairball Treats', description: 'Tasty functional treats to minimize hairballs.', image: 'https://images.unsplash.com/photo-1592194996308-7b43878e84a6?w=400&h=300&fit=crop&sig=98' },
+{ id: 29, name: 'Shiny Coat Drops', description: 'Liquid supplement for skin and coat health.', image: 'https://images.unsplash.com/photo-1560807707-8cc77767d783?w=400&h=300&fit=crop&sig=99' },
+{ id: 30, name: 'Indoor Fur Control Spray', description: 'Helps reduce shedding in indoor cats.', image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=400&h=300&fit=crop&sig=100' },
+
       ];
     }
     
