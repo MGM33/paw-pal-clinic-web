@@ -243,6 +243,156 @@ const medicinesData: Record<string, any> = {
     benefits: 'Benefits description.',
     image: 'https://images.unsplash.com/photo-1601758175510-80d1d4f36e4e?w=600&h=400&fit=crop'
   }
+  '21': {
+  name: 'Dog Joint Support - FlexiMove',
+  description: 'Advanced joint care supplement for dogs with arthritis or mobility issues.',
+  features: [
+    'Glucosamine & Chondroitin blend',
+    'Supports cartilage health',
+    'Strengthens joints',
+    'Easy chewable form',
+    'Vet-approved formula'
+  ],
+  usage: 'One chew per 10kg body weight daily.',
+  ingredients: 'Glucosamine, Chondroitin, MSM, Omega-3.',
+  benefits: 'Improves flexibility, reduces joint pain.',
+  image: 'https://images.unsplash.com/photo-1601758191470-cb10898382ac?w=600&h=400&fit=crop'
+},
+'22': {
+  name: 'Dog Dental Chews - FreshBreath Bites',
+  description: 'Dental chews that clean teeth and freshen breath.',
+  features: [
+    'Removes plaque',
+    'Fights tartar',
+    'Fresh mint flavor',
+    'Wheat-free',
+    'Recommended for daily use'
+  ],
+  usage: 'One chew per day.',
+  ingredients: 'Mint, parsley, rice flour, glycerin.',
+  benefits: 'Cleaner teeth, fresher breath.',
+  image: 'https://images.unsplash.com/photo-1601758103309-df1e602b2a76?w=600&h=400&fit=crop'
+},
+'23': {
+  name: 'Dog Urinary Health Support',
+  description: 'Supplement supporting urinary tract health in dogs.',
+  features: [
+    'Cranberry extract',
+    'Reduces risk of UTIs',
+    'Powder form',
+    'No artificial preservatives',
+    'Vet-recommended'
+  ],
+  usage: 'Sprinkle 1 scoop onto food daily.',
+  ingredients: 'Cranberry extract, Vitamin C, probiotics.',
+  benefits: 'Promotes healthy urinary tract function.',
+  image: 'https://images.unsplash.com/photo-1601758200726-0c61f6775ea3?w=600&h=400&fit=crop'
+},
+'24': {
+  name: 'Dog Appetite Stimulant - YummyBites',
+  description: 'Boosts appetite in dogs recovering from illness.',
+  features: [
+    'Highly palatable',
+    'Soft chew',
+    'Rich in nutrients',
+    'No artificial flavors',
+    'Gentle on stomach'
+  ],
+  usage: 'One chew twice daily until appetite improves.',
+  ingredients: 'Chicken liver, vitamins, amino acids.',
+  benefits: 'Encourages eating, supports recovery.',
+  image: 'https://images.unsplash.com/photo-1601758144700-6b6ab1e91d6d?w=600&h=400&fit=crop'
+},
+'25': {
+  name: 'Dog Anti-Diarrhea Paste',
+  description: 'Fast-acting paste to relieve diarrhea.',
+  features: [
+    'Soothes digestive tract',
+    'Easy to administer',
+    'Works within hours',
+    'Suitable for all breeds',
+    'Natural ingredients'
+  ],
+  usage: 'Give recommended dose based on weight twice daily.',
+  ingredients: 'Kaolin, pectin, electrolytes.',
+  benefits: 'Firm stools, rehydrates body.',
+  image: 'https://images.unsplash.com/photo-1601758028271-3a68c54d9f27?w=600&h=400&fit=crop'
+},
+'26': {
+  name: 'Dog Immune Booster - VitaPup',
+  description: 'Vitamin blend for stronger immune defenses.',
+  features: [
+    'Rich in antioxidants',
+    'Supports immune response',
+    'Tasty chewable',
+    'For all ages',
+    'No added sugar'
+  ],
+  usage: 'One chew per day.',
+  ingredients: 'Vitamin C, E, selenium, zinc.',
+  benefits: 'Boosts immunity and general health.',
+  image: 'https://images.unsplash.com/photo-1601758131186-79fc8fc1b90c?w=600&h=400&fit=crop'
+},
+'27': {
+  name: 'Dog Hot Spot Spray',
+  description: 'Soothing spray for itchy and irritated skin.',
+  features: [
+    'Reduces redness',
+    'Promotes healing',
+    'Alcohol-free',
+    'Safe if licked',
+    'Fast relief'
+  ],
+  usage: 'Spray directly on affected area 2-3 times daily.',
+  ingredients: 'Aloe vera, tea tree oil, chamomile.',
+  benefits: 'Calms itching and supports skin recovery.',
+  image: 'https://images.unsplash.com/photo-1601758156657-99c72a3e9c2d?w=600&h=400&fit=crop'
+},
+'28': {
+  name: 'Dog Liver Support Tablets',
+  description: 'Herbal liver support for detox and health.',
+  features: [
+    'Milk thistle based',
+    'Supports detox',
+    'Easy-to-swallow tablets',
+    'Natural ingredients',
+    'For all sizes'
+  ],
+  usage: 'One tablet per 10kg once daily.',
+  ingredients: 'Milk thistle, turmeric, dandelion root.',
+  benefits: 'Promotes healthy liver function.',
+  image: 'https://images.unsplash.com/photo-1601758097615-b2eb738e2c5a?w=600&h=400&fit=crop'
+},
+'29': {
+  name: 'Dog Allergy Shampoo',
+  description: 'Gentle shampoo for dogs with sensitive skin.',
+  features: [
+    'Hypoallergenic',
+    'Soothes itching',
+    'Fragrance-free',
+    'Oatmeal-based',
+    'pH balanced'
+  ],
+  usage: 'Lather and rinse thoroughly once weekly or as needed.',
+  ingredients: 'Colloidal oatmeal, aloe vera, coconut extract.',
+  benefits: 'Cleanses and calms irritated skin.',
+  image: 'https://images.unsplash.com/photo-1601758180679-3b01b83515a9?w=600&h=400&fit=crop'
+},
+'30': {
+  name: 'Dog Recovery Kit',
+  description: 'Complete post-op care kit for dogs after surgery.',
+  features: [
+    'Includes pain relief',
+    'Wound care ointment',
+    'Antibiotic course',
+    'Healing support supplement',
+    'Vet-designed pack'
+  ],
+  usage: 'Use as directed by vet.',
+  ingredients: 'Varies per product (NSAID, antibiotics, vitamins).',
+  benefits: 'Speeds recovery, reduces complications.',
+  image: 'https://images.unsplash.com/photo-1601758067804-6b876f5f5f03?w=600&h=400&fit=crop'
+}
 };
 
 const DogMedicineDetailPage = () => {
