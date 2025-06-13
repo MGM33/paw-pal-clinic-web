@@ -242,7 +242,7 @@ const medicinesData: Record<string, any> = {
     ingredients: 'Ingredients list.',
     benefits: 'Benefits description.',
     image: 'https://images.unsplash.com/photo-1601758175510-80d1d4f36e4e?w=600&h=400&fit=crop'
-  }
+  },
   '21': {
   name: 'Dog Joint Support - FlexiMove',
   description: 'Advanced joint care supplement for dogs with arthritis or mobility issues.',
