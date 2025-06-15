@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 
 const medicinesData: Record<string, any> = {
-  '1': {
+ '1': {
   name: 'Meloxicam - Non-steroidal Veterinary Drug',
   description: 'Inhibits cyclooxygenase (COX), mainly COX-2, reducing inflammation, pain, and fever.',
   features: [
@@ -17,6 +17,8 @@ const medicinesData: Record<string, any> = {
 - Maintenance dose: 0.1 mg/kg orally once daily
 - Injection (SC/IV): 0.2 mg/kg as a single dose
 
+Cats:
+- 0.1 mg/kg once daily`,
   ingredients: 'Meloxicam',
   benefits: 'Reduces pain, inflammation, and fever while supporting recovery in dogs and cats.',
   image: 'https://images.unsplash.com/photo-1601758123927-196c7e44e30c?w=600&h=400&fit=crop',
