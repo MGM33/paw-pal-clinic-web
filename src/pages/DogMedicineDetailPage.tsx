@@ -2,40 +2,41 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 
 const medicinesData: Record<string, any> = {
- '1': {
+'1': {
   name: 'Meloxicam - Non-steroidal Veterinary Drug',
   description: 'Inhibits cyclooxygenase (COX), mainly COX-2, reducing inflammation, pain, and fever.',
   features: [
-    'Pain management (especially musculoskeletal disorders)',
-    'Postoperative pain relief',
-    'Osteoarthritis treatment (dogs)',
-    'Acute and chronic musculoskeletal disorder support',
-    'Available as oral suspension and injectable solution'
+    'Pain management',
+    'Inflammation (especially in musculoskeletal disorders)',
+    'Postoperative pain',
+    'Osteoarthritis (dogs)',
+    'Acute and chronic musculoskeletal disorders'
   ],
-  usage: `Dogs:
-- Initial dose: 0.2 mg/kg orally on first day
+  usage: `Dosage:
+- Initial dose: 0.2 mg/kg orally on the first day
 - Maintenance dose: 0.1 mg/kg orally once daily
-- Injection (SC/IV): 0.2 mg/kg as a single dose
-
-Cats:
-- 0.1 mg/kg once daily`,
+- Injection (SC/IV): 0.2 mg/kg as a single dose`,
   ingredients: 'Meloxicam',
-  benefits: 'Reduces pain, inflammation, and fever while supporting recovery in dogs and cats.',
-  image: 'https://images.unsplash.com/photo-1601758123927-196c7e44e30c?w=600&h=400&fit=crop',
+  benefits: 'Reduces inflammation, pain, and fever while supporting recovery in musculoskeletal disorders.',
+  administrationForms: [
+    'Oral Suspension',
+    'Injectable solution (Subcutaneous, Intravenous)'
+  ],
   sideEffects: [
     'Common: Vomiting, Diarrhea, Loss of appetite, Lethargy',
-    'Serious: GI ulceration/bleeding, Kidney or liver dysfunction, Increased thirst/urination, Jaundice'
+    'Serious (less common but urgent): GI ulceration/bleeding, Kidney or liver dysfunction, Increased thirst or urination, Jaundice'
   ],
   precautions: [
-    'Use with caution in patients with GI bleeding history',
+    'Use with caution in patients with a history of gastrointestinal bleeding or ulcers',
     'Monitor kidney and liver function during long-term use',
     'Avoid in patients with cardiovascular risk factors or heart disease'
   ],
   contraindications: [
     'Allergy to meloxicam or other NSAIDs',
-    'Active GI bleeding or peptic ulcer',
+    'Active gastrointestinal bleeding or peptic ulcer',
     'Severe renal or hepatic impairment'
-  ]
+  ],
+  image: 'https://images.unsplash.com/photo-1601758123927-196c7e44e30c?w=600&h=400&fit=crop'
 },
 
   '2': {
