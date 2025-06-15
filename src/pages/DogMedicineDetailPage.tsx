@@ -34,7 +34,7 @@ const medicinesData: Record<string, any> = {
     'Active GI bleeding or peptic ulcer',
     'Severe renal or hepatic impairment'
   ]
-}
+},
 
   '2': {
     name: 'Dog Dewormer - WormAway XL',
