@@ -486,6 +486,50 @@ const DogMedicineDetailPage = () => {
                       </ul>
                     </div>
                   )}
+
+                  {medicineData.administrationForms && (
+                    <div>
+                      <h2 className="text-xl font-semibold mb-2 text-theme-deepsky">Administration Forms</h2>
+                      <ul className="list-disc list-inside text-gray-600">
+                        {medicineData.administrationForms.map((form: string, index: number) => (
+                          <li key={index}>{form}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {medicineData.sideEffects && (
+                    <div>
+                      <h2 className="text-xl font-semibold mb-2 text-theme-deepsky">Side Effects</h2>
+                      <ul className="list-disc list-inside text-gray-600">
+                        {medicineData.sideEffects.map((effect: string, index: number) => (
+                          <li key={index}>{effect}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {medicineData.precautions && (
+                    <div>
+                      <h2 className="text-xl font-semibold mb-2 text-theme-deepsky">Precautions</h2>
+                      <ul className="list-disc list-inside text-gray-600">
+                        {medicineData.precautions.map((precaution: string, index: number) => (
+                          <li key={index}>{precaution}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {medicineData.contraindications && (
+                    <div>
+                      <h2 className="text-xl font-semibold mb-2 text-theme-deepsky">Contraindications</h2>
+                      <ul className="list-disc list-inside text-gray-600">
+                        {medicineData.contraindications.map((contra: string, index: number) => (
+                          <li key={index}>{contra}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
 
                 <Link
@@ -504,3 +548,4 @@ const DogMedicineDetailPage = () => {
 };
 
 export default DogMedicineDetailPage;
+
