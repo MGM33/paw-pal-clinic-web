@@ -3,20 +3,39 @@ import { useParams, Link } from 'react-router-dom';
 
 const medicinesData: Record<string, any> = {
   '1': {
-    name: 'Canine Antibiotic - AmoxiVet 250mg',
-    description: 'Broad-spectrum antibiotic for treating respiratory, urinary, and skin infections in dogs.',
-    features: [
-      'Veterinary-grade Amoxicillin',
-      'Fast-acting and safe',
-      'Twice daily dosage',
-      'Treats multiple infections',
-      'Vet recommended'
-    ],
-    usage: 'One capsule every 12 hours with food for 7-10 days.',
-    ingredients: 'Amoxicillin trihydrate, cellulose, gelatin.',
-    benefits: 'Eliminates bacterial infections and promotes healing.',
-    image: 'https://images.unsplash.com/photo-1601758123927-196c7e44e30c?w=600&h=400&fit=crop'
-  },
+  name: 'Meloxicam - Non-steroidal Veterinary Drug',
+  description: 'Inhibits cyclooxygenase (COX), mainly COX-2, reducing inflammation, pain, and fever.',
+  features: [
+    'Pain management (especially musculoskeletal disorders)',
+    'Postoperative pain relief',
+    'Osteoarthritis treatment (dogs)',
+    'Acute and chronic musculoskeletal disorder support',
+    'Available as oral suspension and injectable solution'
+  ],
+  usage: `Dogs:
+- Initial dose: 0.2 mg/kg orally on first day
+- Maintenance dose: 0.1 mg/kg orally once daily
+- Injection (SC/IV): 0.2 mg/kg as a single dose
+
+  ingredients: 'Meloxicam',
+  benefits: 'Reduces pain, inflammation, and fever while supporting recovery in dogs and cats.',
+  image: 'https://images.unsplash.com/photo-1601758123927-196c7e44e30c?w=600&h=400&fit=crop',
+  sideEffects: [
+    'Common: Vomiting, Diarrhea, Loss of appetite, Lethargy',
+    'Serious: GI ulceration/bleeding, Kidney or liver dysfunction, Increased thirst/urination, Jaundice'
+  ],
+  precautions: [
+    'Use with caution in patients with GI bleeding history',
+    'Monitor kidney and liver function during long-term use',
+    'Avoid in patients with cardiovascular risk factors or heart disease'
+  ],
+  contraindications: [
+    'Allergy to meloxicam or other NSAIDs',
+    'Active GI bleeding or peptic ulcer',
+    'Severe renal or hepatic impairment'
+  ]
+}
+
   '2': {
     name: 'Dog Dewormer - WormAway XL',
     description: 'Effective treatment for roundworms, hookworms, and tapeworms.',
