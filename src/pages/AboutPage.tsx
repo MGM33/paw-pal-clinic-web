@@ -56,7 +56,7 @@ const AboutPage = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-medium">Mohamed Hesham</h3>
+                <h3 className="text-xl font-medium">Dr. Mohamed Hesham</h3>
                 <p className="text-gray-600">Chief Veterinarian</p>
               </div>
               <div className="text-center">
@@ -67,7 +67,7 @@ const AboutPage = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-medium">Mahmoud</h3>
+                <h3 className="text-xl font-medium">Dr. Mahmoud</h3>
                 <p className="text-gray-600">Specialist in Avian Medicine</p>
               </div>
               <div className="text-center">
@@ -78,7 +78,7 @@ const AboutPage = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-medium">Fatma Kamal</h3>
+                <h3 className="text-xl font-medium">Dr. Fatma</h3>
                 <p className="text-gray-600">Feline Medicine Specialist</p>
               </div>
               <div className="text-center">
@@ -89,7 +89,7 @@ const AboutPage = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-medium">Rodiana Saif</h3>
+                <h3 className="text-xl font-medium">Dr. Rodiana Saif</h3>
                 <p className="text-gray-600">Canine Medicine Specialist</p>
               </div>
               <div className="text-center md:col-span-2 lg:col-span-1 lg:col-start-2">
@@ -100,7 +100,7 @@ const AboutPage = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-medium">Dr. Sarah Ahmed</h3>
+                <h3 className="text-xl font-medium">Dr. Mariam</h3>
                 <p className="text-gray-600">Veterinary Surgeon</p>
               </div>
             </div>
