@@ -242,171 +242,534 @@ It reduces the production of pro-inflammatory cytokines, inhibits prostaglandins
   ],
   image: 'https://images.unsplash.com/photo-1601758003122-58f67e7c304d?w=600&h=400&fit=crop'
 },
-  '9': {
-    name: 'Dog Probiotic Digestive Aid',
-    description: 'Supports gut health and digestion in dogs.',
-    features: [
-      'Improves stool consistency',
-      'Restores gut flora after antibiotics',
-      'Powder for easy mixing',
-      'Contains live cultures',
-      'Non-GMO'
-    ],
-    usage: 'Add 1 scoop daily to food.',
-    ingredients: 'Lactobacillus, Inulin, digestive enzymes.',
-    benefits: 'Improves digestion and reduces bloating.',
-    image: 'https://images.unsplash.com/photo-1548191265-cc70d3d45ba1?w=600&h=400&fit=crop'
-  },
-  '10': {
-    name: 'Dog Eye Drops - ClearVision',
-    description: 'Lubricating and antibacterial eye drops for dogs.',
-    features: [
-      'Soothes dry, itchy eyes',
-      'Prevents eye infections',
-      'Safe for daily use',
-      'Sterile formula',
-      'Easy applicator'
-    ],
-    usage: '1-2 drops per eye twice daily.',
-    ingredients: 'Purified water, sodium chloride, chamomile extract.',
-    benefits: 'Relieves irritation and maintains eye health.',
-    image: 'https://images.unsplash.com/photo-1601758143920-043b6a3e0b40?w=600&h=400&fit=crop'
-  },
-  // Medicines 11 to 20 (placeholders with basic content)
-  '11': {
-    name: 'Dog Medicine 11',
-    description: 'Description for dog medicine 11.',
-    features: ['Feature 1', 'Feature 2'],
-    usage: 'Usage instructions.',
-    ingredients: 'Ingredients list.',
-    benefits: 'Benefits description.',
-    image: 'https://images.unsplash.com/photo-1601758174610-d7ec04bb3ec5?w=600&h=400&fit=crop'
-  },
-  '12': {
-    name: 'Dog Medicine 12',
-    description: 'Description for dog medicine 12.',
-    features: ['Feature 1', 'Feature 2'],
-    usage: 'Usage instructions.',
-    ingredients: 'Ingredients list.',
-    benefits: 'Benefits description.',
-    image: 'https://images.unsplash.com/photo-1601758025810-6a3db74b7867?w=600&h=400&fit=crop'
-  },
-  '13': {
-    name: 'Dog Medicine 13',
-    description: 'Description for dog medicine 13.',
-    features: ['Feature 1', 'Feature 2'],
-    usage: 'Usage instructions.',
-    ingredients: 'Ingredients list.',
-    benefits: 'Benefits description.',
-    image: 'https://images.unsplash.com/photo-1601758013926-e377fb1d94fc?w=600&h=400&fit=crop'
-  },
-  '14': {
-    name: 'Dog Medicine 14',
-    description: 'Description for dog medicine 14.',
-    features: ['Feature 1', 'Feature 2'],
-    usage: 'Usage instructions.',
-    ingredients: 'Ingredients list.',
-    benefits: 'Benefits description.',
-    image: 'https://images.unsplash.com/photo-1601758171875-3e0c39b6b7d1?w=600&h=400&fit=crop'
-  },
-  '15': {
-    name: 'Dog Medicine 15',
-    description: 'Description for dog medicine 15.',
-    features: ['Feature 1', 'Feature 2'],
-    usage: 'Usage instructions.',
-    ingredients: 'Ingredients list.',
-    benefits: 'Benefits description.',
-    image: 'https://images.unsplash.com/photo-1601758056423-7b5b3f1fcf7e?w=600&h=400&fit=crop'
-  },
-  '16': {
-    name: 'Dog Medicine 16',
-    description: 'Description for dog medicine 16.',
-    features: ['Feature 1', 'Feature 2'],
-    usage: 'Usage instructions.',
-    ingredients: 'Ingredients list.',
-    benefits: 'Benefits description.',
-    image: 'https://images.unsplash.com/photo-1601758163820-5d78f6cf6f2a?w=600&h=400&fit=crop'
-  },
-  '17': {
-    name: 'Dog Medicine 17',
-    description: 'Description for dog medicine 17.',
-    features: ['Feature 1', 'Feature 2'],
-    usage: 'Usage instructions.',
-    ingredients: 'Ingredients list.',
-    benefits: 'Benefits description.',
-    image: 'https://images.unsplash.com/photo-1601758114519-1e7d640fbb0b?w=600&h=400&fit=crop'
-  },
-  '18': {
-    name: 'Dog Medicine 18',
-    description: 'Description for dog medicine 18.',
-    features: ['Feature 1', 'Feature 2'],
-    usage: 'Usage instructions.',
-    ingredients: 'Ingredients list.',
-    benefits: 'Benefits description.',
-    image: 'https://images.unsplash.com/photo-1601758016972-52830a9c3ac7?w=600&h=400&fit=crop'
-  },
-  '19': {
-    name: 'Dog Medicine 19',
-    description: 'Description for dog medicine 19.',
-    features: ['Feature 1', 'Feature 2'],
-    usage: 'Usage instructions.',
-    ingredients: 'Ingredients list.',
-    benefits: 'Benefits description.',
-    image: 'https://images.unsplash.com/photo-1601758153120-7e4f5dbf3bc2?w=600&h=400&fit=crop'
-  },
-  '20': {
-    name: 'Dog Medicine 20',
-    description: 'Description for dog medicine 20.',
-    features: ['Feature 1', 'Feature 2'],
-    usage: 'Usage instructions.',
-    ingredients: 'Ingredients list.',
-    benefits: 'Benefits description.',
-    image: 'https://images.unsplash.com/photo-1601758175510-80d1d4f36e4e?w=600&h=400&fit=crop'
-  },
-  '21': {
-  name: 'Dog Joint Support - FlexiMove',
-  description: 'Advanced joint care supplement for dogs with arthritis or mobility issues.',
-  features: [
-    'Glucosamine & Chondroitin blend',
-    'Supports cartilage health',
-    'Strengthens joints',
-    'Easy chewable form',
-    'Vet-approved formula'
+ '9': {
+  name: 'Drontal (Praziquantel + Pyrantel + Febantel)',
+  type: 'Anti-parasitics: (Internal Parasites (Worms))',
+  description: `Drontal is a broad-spectrum anthelmintic medication primarily used for deworming in pets (especially dogs and cats).
+Praziquantel paralyzes and destroys the outer layer of flatworms (tapeworms).
+Pyrantel pamoate targets roundworms and hookworms, paralyzing them and causing them to be expelled from the intestines.
+Febantel interferes with the worm's metabolism and inhibits its ability to reproduce.`,
+  dosage: 'Administered orally as tablets or chewable tablets. Dosage depends on weight and species; follow veterinary guidance.',
+  benefits: 'Effective against tapeworms, roundworms, hookworms, and whipworms. Easy to administer with minimal side effects.',
+  administrationForms: [
+    'Oral tablets',
+    'Chewable tablets'
   ],
-  usage: 'One chew per 10kg body weight daily.',
-  ingredients: 'Glucosamine, Chondroitin, MSM, Omega-3.',
-  benefits: 'Improves flexibility, reduces joint pain.',
-  image: 'https://images.unsplash.com/photo-1601758191470-cb10898382ac?w=600&h=400&fit=crop'
+  sideEffects: [
+    'Possible vomiting',
+    'Diarrhea',
+    'Lethargy'
+  ],
+  precautions: [
+    'Use with caution in pregnant or lactating animals, especially during the first trimester',
+    'Ensure accurate weight-based dosing to avoid underdosing or toxicity',
+    'Monitor for side effects like vomiting, diarrhea, or lethargy, especially in sensitive pets'
+  ],
+  contraindications: [
+    'Do not use in puppies or kittens under 2 weeks old or under 2 lbs (check product-specific label)',
+    'Avoid in animals with known hypersensitivity to any of the active ingredients',
+    'Not recommended for severely debilitated or sick animals unless directed by a vet'
+  ],
+  image: 'https://images.unsplash.com/photo-1615461066841-bd5c02ca681f?w=600&h=400&fit=crop'
+},
+  '10': {
+  name: 'Milbemax (Milbemycin oxime + Praziquantel)',
+  type: 'Anti-parasitics: (Internal Parasites (Worms))',
+  description: `Milbemax combines two active ingredients for broad-spectrum deworming. 
+Milbemycin oxime binds to glutamate-gated chloride channels in parasite nerve cells, causing hyperpolarization, paralysis, and death.
+Praziquantel damages parasite cell membranes, causing muscle paralysis and structural disintegration, leading to immune elimination of the parasite.`,
+  dosage: 'Administered orally as tablets; dosage based on weight and species as prescribed by a veterinarian.',
+  benefits: `✔️ Broad-spectrum efficacy against multiple types of internal parasites (worms).
+✔️ Good safety profile for most pets.
+✔️ Convenient single-dose administration.
+❌ Not suitable for very young or pregnant pets in certain dosages.
+❌ Possible side effects include vomiting, diarrhea, or loss of appetite.
+❌ Requires precise weight-based dosing to avoid overdose, especially in small animals.`,
+  administrationForms: [
+    'Oral tablets'
+  ],
+  sideEffects: [
+    'Vomiting',
+    'Diarrhea',
+    'Loss of appetite'
+  ],
+  precautions: [
+    'Use with caution in breeds sensitive to avermectins (e.g., Collies)',
+    'Ensure accurate dosing to avoid overdose',
+    'Avoid in severely debilitated or underweight animals unless directed by a vet'
+  ],
+  contraindications: [
+    'Do not use in puppies or kittens under the minimum recommended age/weight',
+    'Contraindicated in animals with known hypersensitivity to any ingredient',
+    'Avoid in animals with pre-existing liver or kidney issues without veterinary guidance'
+  ],
+  image: 'https://images.unsplash.com/photo-1581091870632-7c81499e66e0?w=600&h=400&fit=crop'
+},
+  '11': {
+  name: 'Panacur (Fenbendazole)',
+  type: 'Anti-parasitics: (Internal Parasites (Worms))',
+  description: `Panacur contains fenbendazole, a broad-spectrum anthelmintic that inhibits tubulin polymerization into microtubules, disrupting parasite intestinal cell function.
+This leads to nutrient absorption failure and parasite death. Effective against roundworms, hookworms, whipworms, and some tapeworms.`,
+  dosage: 'Administered orally via suspension, paste, granules, or tablets; dosage based on species and weight as prescribed by a veterinarian.',
+  benefits: `✔️ Broad-spectrum efficacy against various intestinal worms.
+✔️ High safety margin when used properly.
+✔️ Multiple administration forms for easier dosing.
+✔️ Low resistance risk compared to some other antiparasitics.
+✔️ Effective in pets and livestock.
+❌ May not be effective against all parasites (e.g., some tapeworms, fleas).
+❌ Potential side effects include GI upset, lethargy, and allergic reactions.
+❌ Overdose risk if not dosed correctly.`,
+  administrationForms: [
+    'Oral suspension',
+    'Oral paste',
+    'Oral granules',
+    'Tablets'
+  ],
+  sideEffects: [
+    'Vomiting',
+    'Diarrhea',
+    'Lethargy',
+    'Rare allergic reactions'
+  ],
+  precautions: [
+    'Use cautiously in pregnant or lactating animals due to limited safety data',
+    'Ensure accurate weight-based dosing to avoid toxicity',
+    'Monitor for adverse reactions such as GI upset during treatment'
+  ],
+  contraindications: [
+    'Do not use in animals with known hypersensitivity to fenbendazole',
+    'Avoid use in animals with liver or kidney diseases unless prescribed by a vet',
+    'Not recommended for animals under 6 weeks of age'
+  ],
+  image: 'https://images.unsplash.com/photo-1606890737304-57f2b4e31cf2?w=600&h=400&fit=crop'
+},
+'12': {
+  name: 'Albendazole (Local Brands)',
+  type: 'Anti-parasitics: (Internal Parasites (Worms))',
+  description: `Albendazole inhibits the polymerization of tubulin into microtubules in parasitic cells, disrupting their structure and metabolism, leading to parasite death.
+It also impairs glucose uptake, starving and eliminating the parasite.`,
+  dosage: 'Administered orally as tablets (e.g., 200 mg, 400 mg) or suspension; dosage as prescribed by a veterinarian based on species and weight.',
+  benefits: `✔️ Broad-spectrum activity against various internal parasites.
+✔️ Single-dose treatment effective for many conditions.
+✔️ Low cost compared to many antiparasitic drugs.
+❌ Side effects may include stomach pain, nausea, vomiting, and headaches.
+❌ Not safe during pregnancy, especially in the first trimester (risk of birth defects).
+❌ Risk of resistance with overuse or improper use.`,
+  administrationForms: [
+    'Oral tablets (commonly 200 mg or 400 mg)',
+    'Oral suspension (for those unable to swallow tablets)'
+  ],
+  sideEffects: [
+    'Stomach pain',
+    'Nausea',
+    'Vomiting',
+    'Headaches'
+  ],
+  precautions: [
+    'Use with caution in animals with liver impairment (risk of liver toxicity)',
+    'Avoid use during pregnancy, especially in the first trimester, unless absolutely necessary',
+    'Monitor for drug interactions that may increase side effect risks (e.g., with cimetidine)'
+  ],
+  contraindications: [
+    'Known hypersensitivity to albendazole or its components',
+    'Severe liver impairment',
+    'Pregnancy during the first trimester (teratogenic risk)'
+  ],
+  image: 'https://images.unsplash.com/photo-1618498082410-1b63a5f43f5b?w=600&h=400&fit=crop'
+},
+ '13': {
+  name: 'Metronidazole',
+  type: 'Anti-parasitics: (Internal Parasites (Worms))',
+  description: `Metronidazole disrupts DNA synthesis in anaerobic microorganisms.
+It is reduced to reactive nitro radicals inside the microorganism, which bind to DNA, causing strand breakage and cell death.
+It is effective mainly against anaerobic bacteria and protozoa.`,
+  dosage: `Amebiasis (Entamoeba histolytica): 500–750 mg orally every 8 hours for 7–10 days.
+Giardiasis (Giardia lamblia): 250 mg orally every 8 hours for 5–7 days.
+Trichomoniasis (Trichomonas vaginalis): Single dose of 2 g orally once.`,
+  benefits: `✔️ Effective against anaerobic bacteria and protozoa.
+✔️ Available in multiple formulations for different types of infections.
+✔️ Cost-effective and widely accessible.
+❌ May cause metallic taste, nausea, or headache.
+❌ Alcohol use during treatment can cause severe disulfiram-like reaction (nausea, vomiting, flushing).
+❌ Prolonged use may lead to peripheral neuropathy.`,
+  administrationForms: [
+    'Oral tablets or capsules (most common for systemic infections)',
+    'Topical creams/gels (for skin or vaginal infections)',
+    'Intravenous (IV) injection (for severe infections)',
+    'Vaginal suppositories or gels (for Trichomonas or bacterial vaginosis)'
+  ],
+  sideEffects: [
+    'Metallic taste',
+    'Nausea',
+    'Headache',
+    'Peripheral neuropathy (with prolonged use)'
+  ],
+  precautions: [
+    'Avoid alcohol during and 48 hours after treatment (disulfiram-like reaction risk)',
+    'Use cautiously in patients with liver disease (hepatic metabolism)',
+    'May interact with warfarin (increased bleeding risk)',
+    'Monitor for peripheral neuropathy during long-term use'
+  ],
+  contraindications: [
+    'Hypersensitivity to metronidazole or other nitroimidazoles',
+    'First trimester of pregnancy (especially in high doses)',
+    'Caution in CNS disorders (e.g., epilepsy) as it may worsen symptoms'
+  ],
+  image: 'https://images.unsplash.com/photo-1597071117588-5df25f7d5047?w=600&h=400&fit=crop'
+},
+  '14': {
+  name: 'Imidocarb dipropionate',
+  type: 'Anti-parasitics: (Internal Parasites (Worms))',
+  description: `Imidocarb interferes with nucleic acid metabolism of protozoa by binding to DNA, disrupting replication and transcription.
+It may also inhibit polyamine synthesis, impairing parasite growth and viability.
+It is particularly effective against Babesia spp. due to accumulation in infected erythrocytes.`,
+  dosage: `Cattle (Babesia): 1.2 mg/kg IM or SC (single dose).
+Dogs (Babesia canis): 6.6 mg/kg IM or SC.
+Horses (Babesia equi): 2.4 mg/kg IM or SC.
+Always follow veterinary prescription.`,
+  benefits: `✔️ Effective against Babesia spp. and other protozoa.
+✔️ Single-dose treatments available for some species.
+✔️ Long duration of action against certain infections.
+❌ Pain at injection site common.
+❌ Risk of cholinergic effects (e.g., salivation, vomiting).
+❌ IV use highly toxic; overdose can be dangerous.`,
+  administrationForms: [
+    'Parenteral injection (IM or SC)',
+    'Available as sterile solution for veterinary use'
+  ],
+  sideEffects: [
+    'Pain at injection site',
+    'Salivation',
+    'Vomiting',
+    'Rare: liver or kidney damage'
+  ],
+  precautions: [
+    'Avoid intravenous use due to severe toxicity risk',
+    'Do not mix with other drugs in the same syringe',
+    'Use cautiously in animals with liver or kidney disease',
+    'Monitor for cholinergic signs after administration'
+  ],
+  contraindications: [
+    'IV administration (risk of severe adverse effects)',
+    'Known hypersensitivity to imidocarb or related compounds',
+    'Caution in pregnant animals (safety not fully established)',
+    'Severe liver or kidney disease'
+  ],
+  image: 'https://images.unsplash.com/photo-1580281657527-47c796bb3120?w=600&h=400&fit=crop'
+},
+  '15': {
+  name: 'Clindamycin',
+  type: 'Anti-parasitics: (Internal Parasites (Worms))',
+  description: `Clindamycin is a lincosamide antibiotic that inhibits protein synthesis in susceptible organisms.
+It binds to the 50S ribosomal subunit, blocking translocation during protein synthesis.
+In protozoa like Toxoplasma gondii and Plasmodium falciparum, it disrupts apicoplast function, leading to parasite death.`,
+  dosage: `Toxoplasmosis (adults): 300–450 mg orally every 6–8 hours (with pyrimethamine + folinic acid).
+Malaria:
+• Children: 20 mg/kg/day divided every 8 hours orally for 7 days.
+• Adults: 450–600 mg orally every 8 hours for 7 days.`,
+  benefits: `✔️ Effective against Toxoplasma gondii and Plasmodium falciparum.
+✔️ Available in multiple formulations for flexible administration.
+✔️ Useful as part of combination therapy.
+❌ Risk of Clostridioides difficile-associated diarrhea (CDAD).
+❌ Possible hypersensitivity reactions (rash, anaphylaxis).
+❌ Requires combination therapy for protozoal infections; not effective as monotherapy.`,
+  administrationForms: [
+    'Oral capsules or solution',
+    'Intravenous injection (for severe infections)',
+    'Topical forms (not for protozoal use)',
+    'Vaginal forms (not for protozoal use in animals)'
+  ],
+  sideEffects: [
+    'GI upset (nausea, vomiting, diarrhea)',
+    'Risk of C. difficile-associated diarrhea',
+    'Rash, itching, or other allergic reactions',
+    'Rare: liver dysfunction, jaundice'
+  ],
+  precautions: [
+    'Monitor liver and kidney function in long-term or high-dose therapy',
+    'Caution in elderly or immunocompromised patients',
+    'Avoid prolonged use to minimize resistance development',
+    'Watch for signs of severe diarrhea (possible CDAD)'
+  ],
+  contraindications: [
+    'Known hypersensitivity to clindamycin or lincomycin',
+    'History of antibiotic-associated colitis',
+    'Use caution in pregnancy; only if clearly needed',
+    'Avoid in severe hepatic impairment unless necessary'
+  ],
+  image: 'https://images.unsplash.com/photo-1580281657527-47c796bb3120?w=600&h=400&fit=crop'
+},
+ '16': {
+  name: 'Itraconazole',
+  type: 'Anti-fungals',
+  description: `Itraconazole is an azole antifungal that inhibits the fungal cytochrome P450 enzyme (14α-demethylase).
+This prevents the conversion of lanosterol to ergosterol, an essential component of the fungal cell membrane.
+Disruption of ergosterol synthesis leads to increased membrane permeability and fungal cell death.`,
+  dosage: `Blastomycosis, histoplasmosis, aspergillosis: 200 mg once or twice daily (often for several months).
+Always follow veterinary or medical prescription for specific species and conditions.`,
+  benefits: `Broad-spectrum antifungal activity (effective against blastomycosis, histoplasmosis, aspergillosis, and others).
+Available in multiple formulations (oral, IV).
+Good option for long-term treatment of systemic mycoses.`,
+  administrationForms: [
+    'Oral capsules (best absorbed with food and acidic environment)',
+    'Oral solution (better bioavailability; taken on empty stomach)',
+    'Intravenous form (for hospitalized patients when oral is not possible)'
+  ],
+  sideEffects: [
+    'GI upset (nausea, vomiting, diarrhea)',
+    'Liver enzyme elevation or hepatotoxicity',
+    'Edema, hypertension',
+    'Rash or allergic reactions'
+  ],
+  precautions: [
+    'Monitor liver function before and during treatment',
+    'Use cautiously in patients with heart disease',
+    'Check for drug interactions with medications metabolized by CYP3A4',
+    'Avoid in pregnancy unless necessary for life-threatening infection'
+  ],
+  contraindications: [
+    'Congestive heart failure (especially for onychomycosis)',
+    'Known hypersensitivity to itraconazole',
+    'Pregnancy (except in life-threatening infections)',
+    'Co-administration with quinidine, dofetilide, ergot alkaloids, midazolam, triazolam'
+  ],
+  image: 'https://images.unsplash.com/photo-1601758123927-1961b4172a8e?w=600&h=400&fit=crop'
+},
+'17': {
+  name: 'Ketoconazole',
+  type: 'Anti-fungals',
+  description: `Ketoconazole is an azole antifungal that inhibits lanosterol 14-α-demethylase (a cytochrome P450 enzyme),
+blocking the conversion of lanosterol to ergosterol. This destabilizes the fungal cell membrane and leads to fungal cell death.`,
+  dosage: `Topical: 
+Cream 2% — apply once or twice daily for 2–6 weeks depending on the infection type.
+Shampoo 1%-2% — use twice weekly for 2-4 weeks, then once every 1–2 weeks for maintenance.`,
+  benefits: `Effective for skin and scalp fungal infections (tinea, seborrheic dermatitis, dandruff). 
+Available in various topical forms (cream, shampoo). 
+Can be used long-term for maintenance. 
+Cons: Oral form has significant liver toxicity risk, potential hormonal effects (e.g., gynecomastia), and many drug interactions.`,
+  administrationForms: [
+    'Topical creams (2%) for skin infections',
+    'Shampoo (1%-2%) for scalp conditions',
+    'Oral tablets (rarely used today due to safety concerns)'
+  ],
+  sideEffects: [
+    'Topical: local irritation, burning, or rash',
+    'Oral: liver toxicity, GI upset, hormonal disturbances (gynecomastia, menstrual irregularities)',
+    'Potential for severe drug interactions (oral form)'
+  ],
+  precautions: [
+    'Monitor liver function if oral form is used',
+    'Avoid oral use in patients with liver disease',
+    'Be cautious in patients using drugs metabolized by CYP3A4',
+    'Oral absorption reduced by antacids or acid-reducing medications'
+  ],
+  contraindications: [
+    'Active liver disease (oral use)',
+    'Known hypersensitivity to ketoconazole',
+    'Co-administration with certain drugs (e.g., cisapride, dofetilide, quinidine)',
+    'Pregnancy (oral form — topical is safer but still used cautiously)'
+  ],
+  image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85d?w=600&h=400&fit=crop'
+},
+ '18': {
+  name: 'Miconazole',
+  type: 'Anti-fungals',
+  description: `Miconazole is an imidazole antifungal that inhibits ergosterol synthesis,
+a key component of fungal cell membranes. This disrupts membrane integrity, leading to increased permeability and fungal cell death.`,
+  dosage: `Topical: apply once or twice daily for 2–4 weeks (e.g., athlete’s foot, ringworm, candidiasis).
+Vaginal: 
+- 2% cream: 5g once daily at bedtime for 7 days.
+- 4% cream: 5g once daily at bedtime for 3 days.
+- 1200 mg ovule: single dose at bedtime.`,
+  benefits: `Effective for various skin and mucosal fungal infections (e.g., athlete’s foot, candidiasis).
+Available in multiple forms (topical cream, vaginal suppositories, powders).
+Generally well-tolerated when used topically.
+Cons: Risk of local irritation or rash; potential drug interactions (especially with warfarin); systemic absorption possible with prolonged use or use on broken skin.`,
+  administrationForms: [
+    'Topical creams, ointments, powders for skin infections',
+    'Vaginal creams, suppositories, tablets for yeast infections'
+  ],
+  sideEffects: [
+    'Local irritation, burning, or rash at application site',
+    'Rare systemic effects if absorbed: headache, GI upset',
+    'Potential for elevated levels of co-administered drugs (e.g., warfarin)'
+  ],
+  precautions: [
+    'Avoid prolonged use on large or damaged skin areas to reduce risk of systemic absorption',
+    'Use cautiously in pregnancy and breastfeeding (topical forms generally safe)',
+    'Monitor patients on warfarin or other CYP2C9/CYP3A4-metabolized drugs'
+  ],
+  contraindications: [
+    'Known hypersensitivity to miconazole or other imidazole antifungals',
+    'Systemic use contraindicated with drugs highly dependent on CYP3A4/CYP2C9',
+    'Avoid intravaginal use during the first trimester unless necessary'
+  ],
+  image: 'https://images.unsplash.com/photo-1606925797307-3aa8c13f88fa?w=600&h=400&fit=crop'
+},
+'19': {
+  name: 'Clavamox (Amoxicillin + Clavulanic Acid)',
+  type: 'Antibiotics / Amoxicillin',
+  description: `Clavamox combines amoxicillin (a penicillin-type beta-lactam antibiotic) with clavulanic acid (a beta-lactamase inhibitor).
+Amoxicillin inhibits bacterial cell wall synthesis, causing cell lysis and death.
+Clavulanic acid protects amoxicillin from being broken down by beta-lactamase enzymes produced by resistant bacteria.`,
+  dosage: `6.25 mg per pound (13.75 mg/kg) of body weight, administered twice daily (every 12 hours). 
+Exact dose and duration depend on the infection and veterinary guidance.`,
+  benefits: `Effective against skin, gum, and urinary tract infections caused by beta-lactamase-producing bacteria.
+Broad-spectrum activity covers many gram-positive and gram-negative bacteria.
+Available in convenient forms for pets (tablets, oral drops).`,
+  administrationForms: [
+    'Oral tablets',
+    'Oral suspension (drops)'
+  ],
+  sideEffects: [
+    'Gastrointestinal upset (vomiting, diarrhea)',
+    'Rare allergic reactions (rash, swelling, breathing difficulty)',
+    'Occasional loss of appetite'
+  ],
+  precautions: [
+    'Use cautiously in animals with known penicillin allergy',
+    'Adjust dose in animals with significant kidney impairment',
+    'Complete full course to prevent resistance'
+  ],
+  contraindications: [
+    'Known hypersensitivity to amoxicillin, clavulanic acid, or other beta-lactam antibiotics'
+  ],
+  image: 'https://images.unsplash.com/photo-1580281658629-80d0ca5fdd29?w=600&h=400&fit=crop'
+},
+
+'20': {
+  name: 'Amoxi-Tabs / Amoxi-Drops',
+  type: 'Antibiotics / Amoxicillin',
+  description: `Amoxi-Tabs and Amoxi-Drops are amoxicillin-only formulations. 
+Amoxicillin works by inhibiting bacterial cell wall synthesis, leading to cell lysis and death. 
+These forms are commonly prescribed for infections where beta-lactamase resistance is not a concern.`,
+  dosage: `5–10 mg per pound (10–20 mg/kg) of body weight, every 12 to 24 hours depending on infection severity and veterinary prescription.`,
+  benefits: `Used to treat respiratory infections (e.g., bronchitis, pneumonia), urinary tract infections, and certain skin infections.
+Available in easy-to-administer tablets and oral drops for pets.`,
+  administrationForms: [
+    'Oral tablets (Amoxi-Tabs)',
+    'Oral suspension (Amoxi-Drops)'
+  ],
+  sideEffects: [
+    'Mild gastrointestinal upset (vomiting, diarrhea)',
+    'Rare allergic reactions',
+    'Occasionally drooling or changes in appetite'
+  ],
+  precautions: [
+    'Use with caution in animals with penicillin allergy',
+    'Dose adjustments may be needed in severe renal dysfunction',
+    'Finish prescribed course to prevent bacterial resistance'
+  ],
+  contraindications: [
+    'Known hypersensitivity to amoxicillin or other beta-lactam antibiotics'
+  ],
+  image: 'https://images.unsplash.com/photo-1611175694981-7ff46fa9bb68?w=600&h=400&fit=crop'
+},
+ '21': {
+  name: 'Ceftriaxone',
+  type: 'Antibiotics',
+  description: `Ceftriaxone is a broad-spectrum third-generation cephalosporin antibiotic used off-label in veterinary medicine, particularly for dogs and cats.
+It works by inhibiting bacterial cell wall synthesis through binding to penicillin-binding proteins (PBPs), leading to disruption of the cell wall, cell lysis, and bacterial death.`,
+  dosage: `Dogs and Cats: 20–50 mg/kg once daily (IV or IM), depending on the severity of the infection and veterinary guidance.
+Duration of therapy varies based on the type and severity of the infection.`,
+  benefits: `Effective against a wide range of gram-positive and gram-negative bacteria.
+Used for skin infections, urinary tract infections, respiratory infections, bone and joint infections, and sepsis.`,
+  administrationForms: [
+    'Intramuscular (IM) injection',
+    'Intravenous (IV) injection'
+  ],
+  sideEffects: [
+    'Gastrointestinal upset (diarrhea, nausea, vomiting, abdominal pain)',
+    'Allergic reactions (rash, itching, fever, rare cases of anaphylaxis)',
+    'Injection site pain, swelling, or inflammation'
+  ],
+  precautions: [
+    'Use cautiously in animals with known beta-lactam antibiotic allergy',
+    'Adjust dose in animals with significant renal impairment',
+    'Monitor for signs of hypersensitivity reactions during treatment'
+  ],
+  contraindications: [
+    'Known hypersensitivity to cephalosporins or penicillins'
+  ],
+  image: 'https://images.unsplash.com/photo-1603398938378-f4e0b4d21cf0?w=600&h=400&fit=crop'
 },
 '22': {
-  name: 'Dog Dental Chews - FreshBreath Bites',
-  description: 'Dental chews that clean teeth and freshen breath.',
-  features: [
-    'Removes plaque',
-    'Fights tartar',
-    'Fresh mint flavor',
-    'Wheat-free',
-    'Recommended for daily use'
+  name: 'Metronidazole',
+  type: 'Antibiotics',
+  description: `Metronidazole is a widely used antibiotic and antiprotozoal agent. It is effective against anaerobic bacteria and protozoa. 
+It works by being reduced inside anaerobic cells to reactive nitro radicals, which damage DNA, inhibit nucleic acid synthesis, and cause cell death. 
+It selectively targets organisms with nitroreductase enzymes (anaerobes and protozoa).
+It has trade name of Flagyl (original brand by Sanofi).`,
+  dosage: `Dogs: 5–25 mg/kg per day, given every 12–24 hours as directed by a veterinarian.
+Mild infections: 5–10 mg/kg every 12 hours.
+Severe conditions (e.g., giardiasis, severe colitis): 15–25 mg/kg every 12–24 hours.`,
+  benefits: `Used for treating giardiasis (intestinal parasite), anaerobic bacterial infections, inflammatory bowel disease (IBD), periodontal disease, liver infections (hepatic encephalopathy), and chronic diarrhea or colitis.`,
+  administrationForms: [
+    'Oral tablets',
+    'Oral suspension',
+    'Injectable form (for hospital use in severe cases)'
   ],
-  usage: 'One chew per day.',
-  ingredients: 'Mint, parsley, rice flour, glycerin.',
-  benefits: 'Cleaner teeth, fresher breath.',
-  image: 'https://images.unsplash.com/photo-1601758103309-df1e602b2a76?w=600&h=400&fit=crop'
+  sideEffects: [
+    'Nausea',
+    'Vomiting',
+    'Metallic taste',
+    'Diarrhea or abdominal discomfort',
+    'Headache',
+    'Dizziness',
+    'Peripheral neuropathy (with long-term use)',
+    'Seizures (rare)',
+    'Rash',
+    'Pruritus',
+    'Urticaria'
+  ],
+  precautions: [
+    'Use with caution in animals with liver disease (adjust dose as needed)',
+    'Prolonged use increases risk of neurotoxicity',
+    'Avoid use in pregnant or lactating animals unless essential',
+    'Monitor for signs of neurological side effects with long-term use'
+  ],
+  contraindications: [
+    'Known hypersensitivity to metronidazole',
+    'Severe liver dysfunction (without dose adjustment and vet supervision)'
+  ],
+  image: 'https://images.unsplash.com/photo-1597071341506-0d1f9d2ec1a5?w=600&h=400&fit=crop',
 },
 '23': {
-  name: 'Dog Urinary Health Support',
-  description: 'Supplement supporting urinary tract health in dogs.',
-  features: [
-    'Cranberry extract',
-    'Reduces risk of UTIs',
-    'Powder form',
-    'No artificial preservatives',
-    'Vet-recommended'
+  name: 'Enrofloxacin',
+  type: 'Antibiotic',
+  description: `Enrofloxacin is a broad-spectrum fluoroquinolone antibiotic used primarily in veterinary medicine. 
+It inhibits bacterial DNA gyrase and topoisomerase IV, enzymes crucial for DNA replication, transcription, repair, and recombination. 
+This action disrupts DNA processes, causing bacterial cell death (bactericidal effect). 
+It is effective mainly against Gram-negative bacteria, with activity against some Gram-positive bacteria and Mycoplasma species. 
+Common trade names include Baytril (Bayer Animal Health) and Enrofloks.`,
+  dosage: `Dogs: 5–20 mg/kg once daily (typically 10 mg/kg for most infections). Duration: 5–30 days depending on the infection type and response.
+Cats: 5–10 mg/kg once daily. Duration: 5–30 days depending on the condition and veterinary guidance.`,
+  benefits: `Used to treat bacterial infections such as pneumonia, urinary tract infections, skin infections, and gastrointestinal infections in animals.`,
+  administrationForms: [
+    'Oral tablets',
+    'Oral liquid',
+    'Injectable solution (for certain conditions or hospitalized animals)'
   ],
-  usage: 'Sprinkle 1 scoop onto food daily.',
-  ingredients: 'Cranberry extract, Vitamin C, probiotics.',
-  benefits: 'Promotes healthy urinary tract function.',
-  image: 'https://images.unsplash.com/photo-1601758200726-0c61f6775ea3?w=600&h=400&fit=crop'
+  sideEffects: [
+    'Gastrointestinal upset (vomiting, diarrhea)',
+    'Lethargy',
+    'Loss of appetite',
+    'Cartilage damage in young, growing animals (especially dogs)',
+    'CNS toxicity (seizures in predisposed animals)',
+    'Retinal degeneration and blindness in cats (dose-dependent)'
+  ],
+  precautions: [
+    'Avoid use in young growing animals (risk of cartilage damage)',
+    'Use with caution in animals with seizure disorders',
+    'In cats, strict adherence to dosing is critical to avoid retinal damage',
+    'Adjust dose in animals with kidney dysfunction'
+  ],
+  contraindications: [
+    'Known hypersensitivity to fluoroquinolones',
+    'Use in puppies during rapid growth phase (due to cartilage damage risk)',
+    'High-dose use in cats (due to retinal toxicity risk)'
+  ],
+  image: 'https://images.unsplash.com/photo-1611741286785-1d38d01b4d1e?w=600&h=400&fit=crop'
 },
 '24': {
   name: 'Dog Appetite Stimulant - YummyBites',
