@@ -65,8 +65,8 @@ This leads to its anti-inflammatory, analgesic (pain-relieving), and antipyretic
       'Contraindicated in individuals allergic to NSAIDs or aspirin',
       'Avoid during late pregnancy due to risk of fetal harm'
     ]
-  }
-},
+  },
+
   '3': {
     name: 'Canine Allergy Relief - AllerEase',
     description: 'Reduces itching, redness, and other allergy symptoms in dogs.',
