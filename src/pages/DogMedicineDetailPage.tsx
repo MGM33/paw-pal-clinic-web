@@ -567,7 +567,7 @@ const DogMedicineDetailPage = () => {
 
                 <div className="space-y-4 mb-8">
                   <div>
-                    <h2 className="text-xl font-semibold mb-2 text-theme-deepsky">Usage</h2>
+                    <h2 className="text-xl font-semibold mb-2 text-theme-deepsky">Dosage</h2>
                     <p className="text-gray-600">{medicineData.Dosage}</p>
                   </div>
 
