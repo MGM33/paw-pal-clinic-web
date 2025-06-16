@@ -68,95 +68,180 @@ This leads to its anti-inflammatory, analgesic (pain-relieving), and antipyretic
   },
 
   '3': {
-    name: 'Canine Allergy Relief - AllerEase',
-    description: 'Reduces itching, redness, and other allergy symptoms in dogs.',
-    features: [
-      'Fast itch relief',
-      'Reduces skin inflammation',
-      'Non-drowsy formula',
-      'Safe for long-term use',
-      'Veterinarian developed'
+    name: 'Alphachymotrypsin - Proteolytic Enzyme',
+    description: `Alpha-chymotrypsin is a serine protease that breaks down proteins by cleaving peptide bonds, especially at aromatic amino acids (tyrosine, phenylalanine, tryptophan).
+It helps reduce inflammation, aid tissue repair, and decrease edema (swelling) in conditions like trauma or surgery.`,
+    usage: '1-5 mg/kg',
+    ingredients: 'Alphachymotrypsin',
+    benefits: 'Reduces inflammation and swelling, supports tissue repair after trauma or surgery.',
+    image: 'https://images.unsplash.com/photo-1588776814546-ec7e40f96ecf?w=600&h=400&fit=crop',
+    administrationForms: ['Injectable form', 'Oral form'],
+    sideEffects: [
+      'Common: Injection site reactions (pain, swelling, or redness)',
+      'Common: Gastrointestinal issues (vomiting or diarrhea)',
+      'Common: Systemic effects like weakness or lethargy'
     ],
-    usage: 'One chew daily during allergy season or as advised.',
-    ingredients: 'Loratadine, fish oil, Vitamin E.',
-    benefits: 'Minimizes allergic reactions and soothes skin.',
-    image: 'https://images.unsplash.com/photo-1601758003122-58f67e7c304d?w=600&h=400&fit=crop'
-  },
-  '4': {
-    name: 'Puppy Multivitamin Drops',
-    description: 'Essential vitamins and minerals to support healthy puppy growth.',
-    features: [
-      'For puppies under 1 year',
-      'Supports bone and brain development',
-      'Easy liquid format',
-      'Natural beef flavor',
-      'No artificial colors'
+    precautions: [
+      'Use with caution in patients with bleeding disorders',
+      'Avoid contact with eyes and mucous membranes when using topically',
+      'Monitor for allergic reactions in sensitive individuals'
     ],
-    usage: 'Add 1ml to food daily for puppies under 10kg.',
-    ingredients: 'Vitamin A, D3, B12, Zinc, Iron.',
-    benefits: 'Boosts immunity and promotes healthy growth.',
-    image: 'https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=600&h=400&fit=crop'
+    contraindications: [
+      'Hypersensitivity to Alphachymotrypsin',
+      'Presence of active bleeding or bleeding tendencies',
+      'Recent surgery involving vital organs (e.g., brain, eyes)'
+    ]
   },
+ '4': {
+  name: 'Carprofen - Nonsteroidal Anti-inflammatory Drug (NSAID)',
+  description: `Carprofen works by inhibiting cyclooxygenase (COX) enzymes, particularly COX-2, 
+which reduces the production of prostaglandins—chemicals responsible for pain, inflammation, and fever. 
+This leads to reduced pain and inflammation, especially in conditions like arthritis or post-surgery recovery.`,
+  usage: `Dosage:
+- 2 mg/kg given once daily, but it may be given twice a day for more severe pain.`,
+  ingredients: 'Carprofen',
+  benefits: 'Reduces pain and inflammation, particularly in arthritis or after surgery.',
+  administrationForms: [
+    'Chewable Tablets',
+    'Injectable Form',
+    'Oral Tablet'
+  ],
+  sideEffects: [
+    'Common: Vomiting, Diarrhea, Decreased appetite, Lethargy',
+    'Serious (rare): Kidney or liver damage (especially with prolonged use or in animals with pre-existing conditions), Gastrointestinal ulcers or bleeding, Skin reactions (rash, itching)'
+  ],
+  precautions: [
+    'Use with caution in animals with liver, kidney, or heart problems',
+    'Monitor for gastrointestinal issues like vomiting or diarrhea',
+    'Regular blood work is recommended during long-term use'
+  ],
+  contraindications: [
+    'Do not use in animals allergic to NSAIDs',
+    'Avoid in pregnant, lactating, or breeding animals',
+    'Not for use in animals with bleeding disorders or active ulcers'
+  ],
+  image: 'https://images.unsplash.com/photo-1601758123927-196c7e44e30c?w=600&h=400&fit=crop'
+},
   '5': {
-    name: 'Dog Pain Relief Chews - ComfortCanine',
-    description: 'Chewable pain relievers for joint discomfort and minor injuries.',
-    features: [
-      'Chewable beef flavor',
-      'NSAID-free natural formula',
-      'Great for older dogs',
-      'Reduces inflammation',
-      'Fast action within 30 minutes'
-    ],
-    usage: 'One chew per 15kg body weight every 8 hours.',
-    ingredients: 'Turmeric, Glucosamine, Devil’s Claw, Omega 3.',
-    benefits: 'Relieves joint and muscle pain, improves mobility.',
-    image: 'https://images.unsplash.com/photo-1604503468508-b3c0f5d4f43d?w=600&h=400&fit=crop'
-  },
-  '6': {
-    name: 'Dog Ear Cleaner - OtoCleanse',
-    description: 'Antibacterial solution to clean and protect dog ears.',
-    features: [
-      'Reduces odor and wax buildup',
-      'Soothes irritation',
-      'Alcohol-free',
-      'Gentle for daily use',
-      'Prevents ear infections'
-    ],
-    usage: 'Apply to ear canal and massage gently. Wipe excess fluid.',
-    ingredients: 'Aloe vera, chlorhexidine, salicylic acid.',
-    benefits: 'Keeps ears clean and healthy, prevents infections.',
-    image: 'https://images.unsplash.com/photo-1583337130417-3346a1b2e22c?w=600&h=400&fit=crop'
-  },
+  name: 'Dexamethasone - Potent Corticosteroid',
+  description: `Dexamethasone works by binding to glucocorticoid receptors, leading to suppression of inflammation and immune responses.
+It decreases the production of inflammatory cytokines, inhibits prostaglandin synthesis, and reduces immune cell activity, 
+making it effective for treating allergies, autoimmune diseases, and inflammation.`,
+  usage: `Dosage:
+- 0.1 – 0.3 mg/kg orally, IM, or IV (short-term use)
+- Lower doses for long-term use`,
+  ingredients: 'Dexamethasone',
+  benefits: 'Effective for managing inflammation, allergies, autoimmune diseases, and some cancers.',
+  administrationForms: [
+    'Tablets (oral)',
+    'Injectable solution (IV, IM, SC)',
+    'Ophthalmic and otic preparations (eye/ear drops)'
+  ],
+  sideEffects: [
+    'Common: Increased thirst and urination, Increased appetite, Panting',
+    'Long-term/high-dose: Immunosuppression, Muscle wasting, Delayed wound healing, Increased risk of infections, GI ulcers or bleeding, Behavioral changes, Iatrogenic Cushing’s disease'
+  ],
+  precautions: [
+    'Use cautiously in patients with infections, as it may suppress immune response',
+    'Monitor blood sugar levels in diabetics — it can cause hyperglycemia',
+    'Long-term use may lead to osteoporosis and adrenal suppression'
+  ],
+  contraindications: [
+    'Contraindicated in systemic fungal infections',
+    'Avoid in patients with known hypersensitivity to dexamethasone',
+    'Should not be used in those receiving live or live-attenuated vaccines'
+  ],
+  image: 'https://images.unsplash.com/photo-1601758123927-196c7e44e30c?w=600&h=400&fit=crop'
+},
+ '6': {
+  name: 'Prednisolone - Synthetic Glucocorticoid (Corticosteroid)',
+  description: `Prednisolone works by binding to glucocorticoid receptors, leading to reduced inflammation and immune response.
+It inhibits the production of inflammatory mediators like prostaglandins and cytokines, helping to control conditions such as allergies, asthma, and autoimmune diseases.`,
+  usage: '0.5–1 mg/kg orally every 12–24 hours',
+  ingredients: 'Prednisolone',
+  benefits: 'Controls inflammation, suppresses overactive immune responses, and helps manage conditions like allergies, asthma, and autoimmune diseases.',
+  administrationForms: [
+    'Tablets (most common)',
+    'Oral liquid',
+    'Injectable solution',
+    'Topical creams (for dermatologic use, less common systemically)'
+  ],
+  sideEffects: [
+    'Common: Increased thirst and urination (PU/PD), Increased appetite, Panting (especially in dogs), Weight gain, Behavioral changes, GI upset (vomiting, diarrhea)',
+    'Long-term/high-dose: Immune suppression, Muscle wasting, Thinning skin, Diabetes (especially in cats), Cushing’s disease, Delayed wound healing'
+  ],
+  precautions: [
+    'May cause osteoporosis, glaucoma, or adrenal suppression with prolonged use',
+    'Suppresses immune response, increasing infection risk',
+    'Can raise blood sugar levels; monitor in diabetic patients'
+  ],
+  contraindications: [
+    'Systemic fungal infections (can worsen due to immune suppression)',
+    'Avoid live vaccines during treatment',
+    'Contraindicated in patients allergic to prednisolone or other corticosteroids'
+  ],
+  image: 'https://images.unsplash.com/photo-1601758123927-196c7e44e30c?w=600&h=400&fit=crop'
+},
   '7': {
-    name: 'Dog Skin & Coat Supplement',
-    description: 'Improves skin condition and enhances coat shine.',
-    features: [
-      'High in Omega-3 & 6',
-      'Reduces dry skin',
-      'Supports shedding control',
-      'Natural salmon oil',
-      'Vet-approved'
-    ],
-    usage: 'Mix with food once daily (1 tsp per 10kg body weight).',
-    ingredients: 'Salmon oil, flaxseed, biotin, zinc.',
-    benefits: 'Healthier skin, shiny coat, reduced itching.',
-    image: 'https://images.unsplash.com/photo-1608500219845-38349f58a39e?w=600&h=400&fit=crop'
-  },
+  name: 'Hydrocortisone - Natural Glucocorticoid (Corticosteroid)',
+  description: `Hydrocortisone works by activating glucocorticoid receptors, leading to suppression of inflammation and immune responses.
+It decreases the production of pro-inflammatory cytokines and inhibits prostaglandin synthesis, helping manage conditions like skin inflammation, allergies, and adrenal insufficiency.`,
+  usage: 'Dogs: 0.5–1.0 mg/kg every 12–24 hours; Cats: lower doses due to increased sensitivity',
+  ingredients: 'Hydrocortisone',
+  benefits: 'Manages inflammation, reduces allergic reactions, and helps treat adrenal insufficiency.',
+  administrationForms: [
+    'Topical creams, ointments, sprays',
+    'Oral tablets (less common)',
+    'Injectable solutions (for emergencies or systemic treatment)',
+    'Otic drops (for ear infections)',
+    'Ophthalmic solutions (for eye inflammation)'
+  ],
+  sideEffects: [
+    'Topical: Skin thinning, Delayed wound healing, Increased risk of local infections, Hair loss at application site (prolonged use)',
+    'Systemic: Increased thirst/urination (PU/PD), Increased appetite, Behavioral changes (restlessness, aggression)',
+    'Systemic: Immune suppression, Vomiting/diarrhea (rare), Cushing-like symptoms (chronic use), Liver enzyme elevation (especially in dogs)'
+  ],
+  precautions: [
+    'May cause osteoporosis, glaucoma, or adrenal suppression with prolonged use',
+    'Suppresses immune response, increasing infection risk',
+    'Can raise blood sugar levels; monitor in diabetic patients'
+  ],
+  contraindications: [
+    'Systemic fungal infections (immune suppression risk)',
+    'Avoid live vaccines during treatment',
+    'Contraindicated in patients allergic to hydrocortisone or other corticosteroids'
+  ],
+  image: 'https://images.unsplash.com/photo-1601758003122-58f67e7c304d?w=600&h=400&fit=crop'
+},
   '8': {
-    name: 'CalmPaws - Dog Calming Tablets',
-    description: 'Natural calming aid for dogs with anxiety or hyperactivity.',
-    features: [
-      'Non-sedative calming formula',
-      'Ideal for fireworks, travel, vet visits',
-      'Chamomile & L-Theanine',
-      'Chewable tablets',
-      'No side effects'
-    ],
-    usage: 'Give 30 minutes before stressful event.',
-    ingredients: 'Chamomile, Valerian Root, L-Theanine, Passionflower.',
-    benefits: 'Reduces stress, anxiety, and nervousness.',
-    image: 'https://images.unsplash.com/photo-1558944351-94ae5f7b631d?w=600&h=400&fit=crop'
-  },
+  name: 'Triamcinolone - Synthetic Glucocorticoid (Corticosteroid)',
+  description: `Triamcinolone binds to glucocorticoid receptors, leading to suppression of inflammation and immune responses.
+It reduces the production of pro-inflammatory cytokines, inhibits prostaglandins, and decreases immune cell activity, making it effective for treating allergies, skin conditions, arthritis, and asthma.`,
+  usage: 'Dogs: 0.005–0.1 mg/kg orally, IM, or SC (often once every 1–2 days or less frequently); Cats: similar range',
+  ingredients: 'Triamcinolone',
+  benefits: 'Controls inflammation, reduces allergic reactions, and manages autoimmune conditions.',
+  administrationForms: [
+    'Oral tablets (for long-term control)',
+    'Injectable (IM/SC, long-acting depot form for acute issues)',
+    'Topical sprays or creams (for localized skin conditions)'
+  ],
+  sideEffects: [
+    'Short-term: Increased thirst/urination (PU/PD), Increased appetite, Behavioral changes (restlessness, aggression), GI upset (vomiting, diarrhea)',
+    'Long-term: Immunosuppression (infection risk), Muscle wasting, Liver enlargement, Delayed wound healing',
+    'Long-term: Diabetes mellitus (especially in cats), Iatrogenic Cushing’s disease (chronic use)'
+  ],
+  precautions: [
+    'Use cautiously in patients with infections (immune suppression risk)',
+    'Monitor blood sugar in diabetic patients',
+    'Taper dosage gradually after long-term use to avoid adrenal suppression'
+  ],
+  contraindications: [
+    'Systemic fungal infections',
+    'Known hypersensitivity to corticosteroids or Triamcinolone',
+    'Avoid live vaccines during treatment (immune suppression risk)'
+  ],
+  image: 'https://images.unsplash.com/photo-1601758003122-58f67e7c304d?w=600&h=400&fit=crop'
+},
   '9': {
     name: 'Dog Probiotic Digestive Aid',
     description: 'Supports gut health and digestion in dogs.',
