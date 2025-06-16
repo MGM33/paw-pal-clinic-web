@@ -571,10 +571,10 @@ const DogMedicineDetailPage = () => {
                     <p className="text-gray-600">{medicineData.Dosage}</p>
                   </div>
 
-                  <div>
+{/*                   <div>
                     <h2 className="text-xl font-semibold mb-2 text-theme-deepsky">Ingredients</h2>
                     <p className="text-gray-600">{medicineData.ingredients}</p>
-                  </div>
+                  </div> */}
 
                   <div>
                     <h2 className="text-xl font-semibold mb-2 text-theme-deepsky">Benefits</h2>
