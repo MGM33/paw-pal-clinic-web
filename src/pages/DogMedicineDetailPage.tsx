@@ -40,20 +40,33 @@ const medicinesData: Record<string, any> = {
 },
 
   '2': {
-    name: 'Dog Dewormer - WormAway XL',
-    description: 'Effective treatment for roundworms, hookworms, and tapeworms.',
-    features: [
-      'Covers all major parasites',
-      'Single-dose tablet',
-      'Tasty liver flavor',
-      'For dogs 4 weeks and older',
-      'No fasting required'
+    name: 'Ketoprofen - Nonsteroidal Anti-inflammatory Drug (NSAID)',
+    description: `It inhibits the cyclooxygenase enzymes (COX-1 and COX-2), reducing the production of prostaglandins — chemicals responsible for inflammation, pain, and fever.
+This leads to its anti-inflammatory, analgesic (pain-relieving), and antipyretic (fever-reducing) effects.`,
+    usage: '1-2 mg/kg once or twice a day, depending on the severity of the condition.',
+    ingredients: 'Ketoprofen',
+    benefits: 'Anti-inflammatory, analgesic (pain-relieving), and antipyretic (fever-reducing) effects.',
+    image: 'https://images.unsplash.com/photo-1560743641-3914f2c45636?w=600&h=400&fit=crop',
+    administrationForms: ['Oral tablets', 'Injectable', 'Suspension'],
+    sideEffects: [
+      'Common: Gastrointestinal issues (vomiting, diarrhea, loss of appetite, ulcers)',
+      'Common: Kidney and liver toxicity with prolonged use (monitoring advised)',
+      'Common: Behavioral changes (lethargy or unusual behavior)',
+      'Serious: Gastric ulceration or bleeding (long-term use risk)',
+      'Serious: Renal failure (especially in dehydrated or compromised animals)'
     ],
-    usage: 'One tablet per 10kg body weight. Repeat after 14 days.',
-    ingredients: 'Praziquantel, Pyrantel, Febantel.',
-    benefits: 'Removes parasites, improves digestion, restores energy.',
-    image: 'https://images.unsplash.com/photo-1560743641-3914f2c45636?w=600&h=400&fit=crop'
-  },
+    precautions: [
+      'Use with caution in patients with kidney, liver, or heart problems',
+      'Take with food or milk to reduce stomach irritation',
+      'Avoid alcohol and other NSAIDs to prevent gastrointestinal bleeding'
+    ],
+    contraindications: [
+      'Do not use in patients with active peptic ulcers or GI bleeding',
+      'Contraindicated in individuals allergic to NSAIDs or aspirin',
+      'Avoid during late pregnancy due to risk of fetal harm'
+    ]
+  }
+},
   '3': {
     name: 'Canine Allergy Relief - AllerEase',
     description: 'Reduces itching, redness, and other allergy symptoms in dogs.',
