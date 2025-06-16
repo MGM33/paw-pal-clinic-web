@@ -13,11 +13,10 @@ const medicinesData: Record<string, any> = {
     'Osteoarthritis (dogs)',
     'Acute and chronic musculoskeletal disorders'
   ],
-  usage: `Dosage:
+  Dosage: `
 - Initial dose: 0.2 mg/kg orally on the first day
 - Maintenance dose: 0.1 mg/kg orally once daily
 - Injection (SC/IV): 0.2 mg/kg as a single dose`,
-  ingredients: 'Meloxicam',
   benefits: 'Reduces inflammation, pain, and fever while supporting recovery in musculoskeletal disorders.',
   administrationForms: [
     'Oral Suspension',
@@ -45,8 +44,7 @@ const medicinesData: Record<string, any> = {
     type: 'Anti-Inflammatories',
     description: `It inhibits the cyclooxygenase enzymes (COX-1 and COX-2), reducing the production of prostaglandins — chemicals responsible for inflammation, pain, and fever.
 This leads to its anti-inflammatory, analgesic (pain-relieving), and antipyretic (fever-reducing) effects.`,
-    usage: '1-2 mg/kg once or twice a day, depending on the severity of the condition.',
-    ingredients: 'Ketoprofen',
+    Dosage: '1-2 mg/kg once or twice a day, depending on the severity of the condition.',
     benefits: 'Anti-inflammatory, analgesic (pain-relieving), and antipyretic (fever-reducing) effects.',
     image: 'https://images.unsplash.com/photo-1560743641-3914f2c45636?w=600&h=400&fit=crop',
     administrationForms: ['Oral tablets', 'Injectable', 'Suspension'],
@@ -74,8 +72,7 @@ This leads to its anti-inflammatory, analgesic (pain-relieving), and antipyretic
     type: 'Anti-Inflammatories',
     description: `Alpha-chymotrypsin is a serine protease that breaks down proteins by cleaving peptide bonds, especially at aromatic amino acids (tyrosine, phenylalanine, tryptophan).
 It helps reduce inflammation, aid tissue repair, and decrease edema (swelling) in conditions like trauma or surgery.`,
-    usage: '1-5 mg/kg',
-    ingredients: 'Alphachymotrypsin',
+    Dosage: '1-5 mg/kg',
     benefits: 'Reduces inflammation and swelling, supports tissue repair after trauma or surgery.',
     image: 'https://images.unsplash.com/photo-1588776814546-ec7e40f96ecf?w=600&h=400&fit=crop',
     administrationForms: ['Injectable form', 'Oral form'],
@@ -101,9 +98,8 @@ It helps reduce inflammation, aid tissue repair, and decrease edema (swelling) i
   description: `Carprofen works by inhibiting cyclooxygenase (COX) enzymes, particularly COX-2, 
 which reduces the production of prostaglandins—chemicals responsible for pain, inflammation, and fever. 
 This leads to reduced pain and inflammation, especially in conditions like arthritis or post-surgery recovery.`,
-  usage: `Dosage:
+  Dosage: `
 - 2 mg/kg given once daily, but it may be given twice a day for more severe pain.`,
-  ingredients: 'Carprofen',
   benefits: 'Reduces pain and inflammation, particularly in arthritis or after surgery.',
   administrationForms: [
     'Chewable Tablets',
@@ -132,10 +128,9 @@ This leads to reduced pain and inflammation, especially in conditions like arthr
   description: `Dexamethasone works by binding to glucocorticoid receptors, leading to suppression of inflammation and immune responses.
 It decreases the production of inflammatory cytokines, inhibits prostaglandin synthesis, and reduces immune cell activity, 
 making it effective for treating allergies, autoimmune diseases, and inflammation.`,
-  usage: `Dosage:
+  Dosage: `
 - 0.1 – 0.3 mg/kg orally, IM, or IV (short-term use)
 - Lower doses for long-term use`,
-  ingredients: 'Dexamethasone',
   benefits: 'Effective for managing inflammation, allergies, autoimmune diseases, and some cancers.',
   administrationForms: [
     'Tablets (oral)',
@@ -164,7 +159,6 @@ making it effective for treating allergies, autoimmune diseases, and inflammatio
   description: `Prednisolone works by binding to glucocorticoid receptors, leading to reduced inflammation and immune response.
 It inhibits the production of inflammatory mediators like prostaglandins and cytokines, helping to control conditions such as allergies, asthma, and autoimmune diseases.`,
   usage: '0.5–1 mg/kg orally every 12–24 hours',
-  ingredients: 'Prednisolone',
   benefits: 'Controls inflammation, suppresses overactive immune responses, and helps manage conditions like allergies, asthma, and autoimmune diseases.',
   administrationForms: [
     'Tablets (most common)',
@@ -193,8 +187,7 @@ It inhibits the production of inflammatory mediators like prostaglandins and cyt
   type: 'Anti-Inflammatories',  
   description: `Hydrocortisone works by activating glucocorticoid receptors, leading to suppression of inflammation and immune responses.
 It decreases the production of pro-inflammatory cytokines and inhibits prostaglandin synthesis, helping manage conditions like skin inflammation, allergies, and adrenal insufficiency.`,
-  usage: 'Dogs: 0.5–1.0 mg/kg every 12–24 hours; Cats: lower doses due to increased sensitivity',
-  ingredients: 'Hydrocortisone',
+  Dosage: ' 0.5–1.0 mg/kg every 12–24 hours',
   benefits: 'Manages inflammation, reduces allergic reactions, and helps treat adrenal insufficiency.',
   administrationForms: [
     'Topical creams, ointments, sprays',
@@ -225,8 +218,7 @@ It decreases the production of pro-inflammatory cytokines and inhibits prostagla
   type: 'Anti-Inflammatories',  
   description: `Triamcinolone binds to glucocorticoid receptors, leading to suppression of inflammation and immune responses.
 It reduces the production of pro-inflammatory cytokines, inhibits prostaglandins, and decreases immune cell activity, making it effective for treating allergies, skin conditions, arthritis, and asthma.`,
-  usage: 'Dogs: 0.005–0.1 mg/kg orally, IM, or SC (often once every 1–2 days or less frequently); Cats: similar range',
-  ingredients: 'Triamcinolone',
+  Dosage: '0.005–0.1 mg/kg orally, IM, or SC (often once every 1–2 days or less frequently)',
   benefits: 'Controls inflammation, reduces allergic reactions, and manages autoimmune conditions.',
   administrationForms: [
     'Oral tablets (for long-term control)',
@@ -576,7 +568,7 @@ const DogMedicineDetailPage = () => {
                 <div className="space-y-4 mb-8">
                   <div>
                     <h2 className="text-xl font-semibold mb-2 text-theme-deepsky">Usage</h2>
-                    <p className="text-gray-600">{medicineData.usage}</p>
+                    <p className="text-gray-600">{medicineData.Dosage}</p>
                   </div>
 
                   <div>
