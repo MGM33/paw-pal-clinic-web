@@ -386,12 +386,12 @@ It is effective mainly against anaerobic bacteria and protozoa.`,
   dosage: `Amebiasis (Entamoeba histolytica): 500–750 mg orally every 8 hours for 7–10 days.
 Giardiasis (Giardia lamblia): 250 mg orally every 8 hours for 5–7 days.
 Trichomoniasis (Trichomonas vaginalis): Single dose of 2 g orally once.`,
-  benefits: `✔️ Effective against anaerobic bacteria and protozoa.
-✔️ Available in multiple formulations for different types of infections.
-✔️ Cost-effective and widely accessible.
-❌ May cause metallic taste, nausea, or headache.
-❌ Alcohol use during treatment can cause severe disulfiram-like reaction (nausea, vomiting, flushing).
-❌ Prolonged use may lead to peripheral neuropathy.`,
+  benefits: [ '✔️ Effective against anaerobic bacteria and protozoa.',
+'✔️ Available in multiple formulations for different types of infections.',
+'✔️ Cost-effective and widely accessible.',
+'❌ May cause metallic taste, nausea, or headache.',
+'❌ Alcohol use during treatment can cause severe disulfiram-like reaction (nausea, vomiting, flushing).',
+'❌ Prolonged use may lead to peripheral neuropathy.'],
   administrationForms: [
     'Oral tablets or capsules (most common for systemic infections)',
     'Topical creams/gels (for skin or vaginal infections)',
@@ -427,12 +427,12 @@ It is particularly effective against Babesia spp. due to accumulation in infecte
 Dogs (Babesia canis): 6.6 mg/kg IM or SC.
 Horses (Babesia equi): 2.4 mg/kg IM or SC.
 Always follow veterinary prescription.`,
-  benefits: `✔️ Effective against Babesia spp. and other protozoa.
-✔️ Single-dose treatments available for some species.
-✔️ Long duration of action against certain infections.
-❌ Pain at injection site common.
-❌ Risk of cholinergic effects (e.g., salivation, vomiting).
-❌ IV use highly toxic; overdose can be dangerous.`,
+  benefits:[ '✔️ Effective against Babesia spp. and other protozoa.',
+'✔️ Single-dose treatments available for some species.',
+'✔️ Long duration of action against certain infections.',
+'❌ Pain at injection site common.',
+'❌ Risk of cholinergic effects (e.g., salivation, vomiting).',
+'❌ IV use highly toxic; overdose can be dangerous.',],
   administrationForms: [
     'Parenteral injection (IM or SC)',
     'Available as sterile solution for veterinary use'
@@ -467,12 +467,12 @@ In protozoa like Toxoplasma gondii and Plasmodium falciparum, it disrupts apicop
 Malaria:
 • Children: 20 mg/kg/day divided every 8 hours orally for 7 days.
 • Adults: 450–600 mg orally every 8 hours for 7 days.`,
-  benefits: `✔️ Effective against Toxoplasma gondii and Plasmodium falciparum.
-✔️ Available in multiple formulations for flexible administration.
-✔️ Useful as part of combination therapy.
-❌ Risk of Clostridioides difficile-associated diarrhea (CDAD).
-❌ Possible hypersensitivity reactions (rash, anaphylaxis).
-❌ Requires combination therapy for protozoal infections; not effective as monotherapy.`,
+  benefits: ['✔️ Effective against Toxoplasma gondii and Plasmodium falciparum.',
+'✔️ Available in multiple formulations for flexible administration.',
+'✔️ Useful as part of combination therapy.',
+'❌ Risk of Clostridioides difficile-associated diarrhea (CDAD).',
+'❌ Possible hypersensitivity reactions (rash, anaphylaxis).',
+'❌ Requires combination therapy for protozoal infections; not effective as monotherapy.'],
   administrationForms: [
     'Oral capsules or solution',
     'Intravenous injection (for severe infections)',
@@ -735,56 +735,90 @@ Severe conditions (e.g., giardiasis, severe colitis): 15–25 mg/kg every 12–2
   image: 'https://images.unsplash.com/photo-1597071341506-0d1f9d2ec1a5?w=600&h=400&fit=crop',
 },
 '23': {
-  name: 'Enrofloxacin',
-  type: 'Antibiotic',
-  description: `Enrofloxacin is a broad-spectrum fluoroquinolone antibiotic used primarily in veterinary medicine. 
-It inhibits bacterial DNA gyrase and topoisomerase IV, enzymes crucial for DNA replication, transcription, repair, and recombination. 
-This action disrupts DNA processes, causing bacterial cell death (bactericidal effect). 
-It is effective mainly against Gram-negative bacteria, with activity against some Gram-positive bacteria and Mycoplasma species. 
-Common trade names include Baytril (Bayer Animal Health) and Enrofloks.`,
-  dosage: `Dogs: 5–20 mg/kg once daily (typically 10 mg/kg for most infections). Duration: 5–30 days depending on the infection type and response.
-Cats: 5–10 mg/kg once daily. Duration: 5–30 days depending on the condition and veterinary guidance.`,
-  benefits: `Used to treat bacterial infections such as pneumonia, urinary tract infections, skin infections, and gastrointestinal infections in animals.`,
+  name: 'Baytril',
+  type: 'Antibiotic / Enrofloxacin',
+  description: `Baytril is the brand name for enrofloxacin, a fluoroquinolone antibiotic.
+It works by inhibiting bacterial DNA gyrase and topoisomerase IV, enzymes necessary for DNA replication, transcription, and repair.
+This leads to bacterial cell death, making it bactericidal (kills bacteria rather than just inhibiting growth).
+It is widely used in dogs, cats, and other animals (including exotic species) for bacterial infections, especially when resistant to other antibiotics.
+Common indications include urinary tract infections (UTIs), skin infections (pyoderma), respiratory tract infections, wound infections, ear infections (otitis externa), gastrointestinal infections, prostatitis, and infections caused by Pseudomonas, E. coli, Staphylococcus, and other gram-negative and gram-positive bacteria.
+Baytril is not effective against anaerobic bacteria or fungi.`,
+  dosage: `Dogs: 5–20 mg/kg once daily. Example: a 20 kg dog might receive 100–200 mg per day.
+Duration: typically 5–10 days, or longer for chronic infections.`,
+  benefits: `Used to treat UTIs, skin infections, respiratory infections, wound infections, ear infections, gastrointestinal infections, prostatitis, and various infections caused by Pseudomonas, E. coli, Staphylococcus, and others.`,
   administrationForms: [
-    'Oral tablets',
-    'Oral liquid',
-    'Injectable solution (for certain conditions or hospitalized animals)'
+    'Oral tablets (flavored or unflavored)',
+    'Injectable solution (subcutaneous or intramuscular)',
+    'Topical (in ear drops, sometimes in combination products)'
   ],
   sideEffects: [
-    'Gastrointestinal upset (vomiting, diarrhea)',
-    'Lethargy',
+    'Vomiting',
+    'Diarrhea',
     'Loss of appetite',
-    'Cartilage damage in young, growing animals (especially dogs)',
-    'CNS toxicity (seizures in predisposed animals)',
-    'Retinal degeneration and blindness in cats (dose-dependent)'
+    'Lethargy',
+    'Cartilage damage in young animals (especially dogs under 8 months)',
+    'Retinal degeneration and blindness in cats at high doses',
+    'Seizures (rare, mostly in pets with existing neurological conditions)',
+    'Allergic reactions',
+    'Rare liver or kidney issues (monitor in long-term use)'
   ],
   precautions: [
-    'Avoid use in young growing animals (risk of cartilage damage)',
-    'Use with caution in animals with seizure disorders',
-    'In cats, strict adherence to dosing is critical to avoid retinal damage',
-    'Adjust dose in animals with kidney dysfunction'
+    'Avoid in pregnant or nursing animals',
+    'Avoid in growing puppies (due to cartilage damage risk)',
+    'Avoid high doses in cats (to prevent retinal toxicity)',
+    'Use with caution in animals with existing neurological conditions'
   ],
   contraindications: [
     'Known hypersensitivity to fluoroquinolones',
-    'Use in puppies during rapid growth phase (due to cartilage damage risk)',
-    'High-dose use in cats (due to retinal toxicity risk)'
+    'Use in young growing animals (due to cartilage damage risk)',
+    'Use in pregnant or lactating animals',
+    'Use in cats at doses exceeding 5 mg/kg/day'
   ],
   image: 'https://images.unsplash.com/photo-1611741286785-1d38d01b4d1e?w=600&h=400&fit=crop'
 },
+
 '24': {
-  name: 'Dog Appetite Stimulant - YummyBites',
-  description: 'Boosts appetite in dogs recovering from illness.',
-  features: [
-    'Highly palatable',
-    'Soft chew',
-    'Rich in nutrients',
-    'No artificial flavors',
-    'Gentle on stomach'
+  name: 'Enroflox',
+  type: 'Antibiotic / Enrofloxacin',
+  description: `Enroflox is a brand or generic name for enrofloxacin, a fluoroquinolone antibiotic.
+It inhibits bacterial DNA gyrase and topoisomerase IV — essential enzymes for DNA replication, transcription, and repair.
+This leads to rapid bacterial cell death (bactericidal).
+It is effective primarily against aerobic Gram-negative bacteria, and some Gram-positive bacteria.
+Enroflox is used in dogs, cats, and sometimes exotic animals or livestock.
+Common indications include skin infections (pyoderma, wounds), UTIs, respiratory infections, ear infections (otitis externa), gastrointestinal infections, bone and joint infections, prostatitis, and infections caused by E. coli, Klebsiella, Pasteurella, Staphylococcus, Pseudomonas, etc.
+Not effective against anaerobic bacteria or fungal infections.`,
+  dosage: `Dogs: 5–20 mg/kg once daily depending on infection type/severity.
+Duration: 5–10 days or longer for chronic infections.`,
+  benefits: `Used to treat skin infections, UTIs, respiratory infections, ear infections, gastrointestinal infections, bone and joint infections, prostatitis, and various infections caused by susceptible bacteria.`,
+  administrationForms: [
+    'Oral tablets (various strengths, including flavored forms)',
+    'Oral suspension',
+    'Injectable solution (subcutaneous or intramuscular)',
+    'Topical (in combination ear products)'
   ],
-  usage: 'One chew twice daily until appetite improves.',
-  ingredients: 'Chicken liver, vitamins, amino acids.',
-  benefits: 'Encourages eating, supports recovery.',
-  image: 'https://images.unsplash.com/photo-1601758144700-6b6ab1e91d6d?w=600&h=400&fit=crop'
+  sideEffects: [
+    'Vomiting',
+    'Diarrhea',
+    'Decreased appetite',
+    'Lethargy',
+    'Retinal toxicity in cats (even at moderate doses >5 mg/kg/day)',
+    'Seizures (rare, mostly in pets with seizure history)',
+    'Cartilage damage in growing puppies',
+    'Liver or kidney dysfunction (rare)',
+    'Hypersensitivity reactions (hives, facial swelling)'
+  ],
+  precautions: [
+    'Avoid use in young, pregnant, or lactating animals',
+    'Caution in animals with seizure disorders',
+    'Avoid doses over 5 mg/kg/day in cats to prevent retinal damage'
+  ],
+  contraindications: [
+    'Known hypersensitivity to fluoroquinolones',
+    'Use in young growing animals (due to cartilage damage risk)',
+    'Use in pregnant or lactating animals',
+    'High-dose use in cats (risk of retinal degeneration)'
+  ],
+  image: 'https://images.unsplash.com/photo-1611741286785-1d38d01b4d1e?w=600&h=400&fit=crop'
 },
 '25': {
   name: 'Dog Anti-Diarrhea Paste',
