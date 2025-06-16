@@ -4,6 +4,7 @@ import { useParams, Link } from 'react-router-dom';
 const medicinesData: Record<string, any> = {
 '1': {
   name: 'Meloxicam - Non-steroidal Veterinary Drug',
+  type: 'Anti-Inflammatories',
   description: 'Inhibits cyclooxygenase (COX), mainly COX-2, reducing inflammation, pain, and fever.',
   features: [
     'Pain management',
@@ -41,6 +42,7 @@ const medicinesData: Record<string, any> = {
 
   '2': {
     name: 'Ketoprofen - Nonsteroidal Anti-inflammatory Drug (NSAID)',
+    type: 'Anti-Inflammatories',
     description: `It inhibits the cyclooxygenase enzymes (COX-1 and COX-2), reducing the production of prostaglandins — chemicals responsible for inflammation, pain, and fever.
 This leads to its anti-inflammatory, analgesic (pain-relieving), and antipyretic (fever-reducing) effects.`,
     usage: '1-2 mg/kg once or twice a day, depending on the severity of the condition.',
@@ -69,6 +71,7 @@ This leads to its anti-inflammatory, analgesic (pain-relieving), and antipyretic
 
   '3': {
     name: 'Alphachymotrypsin - Proteolytic Enzyme',
+    type: 'Anti-Inflammatories',
     description: `Alpha-chymotrypsin is a serine protease that breaks down proteins by cleaving peptide bonds, especially at aromatic amino acids (tyrosine, phenylalanine, tryptophan).
 It helps reduce inflammation, aid tissue repair, and decrease edema (swelling) in conditions like trauma or surgery.`,
     usage: '1-5 mg/kg',
@@ -94,6 +97,7 @@ It helps reduce inflammation, aid tissue repair, and decrease edema (swelling) i
   },
  '4': {
   name: 'Carprofen - Nonsteroidal Anti-inflammatory Drug (NSAID)',
+  type: 'Anti-Inflammatories',
   description: `Carprofen works by inhibiting cyclooxygenase (COX) enzymes, particularly COX-2, 
 which reduces the production of prostaglandins—chemicals responsible for pain, inflammation, and fever. 
 This leads to reduced pain and inflammation, especially in conditions like arthritis or post-surgery recovery.`,
@@ -124,6 +128,7 @@ This leads to reduced pain and inflammation, especially in conditions like arthr
 },
   '5': {
   name: 'Dexamethasone - Potent Corticosteroid',
+  type: 'Anti-Inflammatories',
   description: `Dexamethasone works by binding to glucocorticoid receptors, leading to suppression of inflammation and immune responses.
 It decreases the production of inflammatory cytokines, inhibits prostaglandin synthesis, and reduces immune cell activity, 
 making it effective for treating allergies, autoimmune diseases, and inflammation.`,
@@ -155,6 +160,7 @@ making it effective for treating allergies, autoimmune diseases, and inflammatio
 },
  '6': {
   name: 'Prednisolone - Synthetic Glucocorticoid (Corticosteroid)',
+  type: 'Anti-Inflammatories',
   description: `Prednisolone works by binding to glucocorticoid receptors, leading to reduced inflammation and immune response.
 It inhibits the production of inflammatory mediators like prostaglandins and cytokines, helping to control conditions such as allergies, asthma, and autoimmune diseases.`,
   usage: '0.5–1 mg/kg orally every 12–24 hours',
@@ -184,6 +190,7 @@ It inhibits the production of inflammatory mediators like prostaglandins and cyt
 },
   '7': {
   name: 'Hydrocortisone - Natural Glucocorticoid (Corticosteroid)',
+  type: 'Anti-Inflammatories',  
   description: `Hydrocortisone works by activating glucocorticoid receptors, leading to suppression of inflammation and immune responses.
 It decreases the production of pro-inflammatory cytokines and inhibits prostaglandin synthesis, helping manage conditions like skin inflammation, allergies, and adrenal insufficiency.`,
   usage: 'Dogs: 0.5–1.0 mg/kg every 12–24 hours; Cats: lower doses due to increased sensitivity',
@@ -215,6 +222,7 @@ It decreases the production of pro-inflammatory cytokines and inhibits prostagla
 },
   '8': {
   name: 'Triamcinolone - Synthetic Glucocorticoid (Corticosteroid)',
+  type: 'Anti-Inflammatories',  
   description: `Triamcinolone binds to glucocorticoid receptors, leading to suppression of inflammation and immune responses.
 It reduces the production of pro-inflammatory cytokines, inhibits prostaglandins, and decreases immune cell activity, making it effective for treating allergies, skin conditions, arthritis, and asthma.`,
   usage: 'Dogs: 0.005–0.1 mg/kg orally, IM, or SC (often once every 1–2 days or less frequently); Cats: similar range',
@@ -556,6 +564,13 @@ const DogMedicineDetailPage = () => {
 
               <div className="md:w-1/2 p-8">
                 <h1 className="text-3xl font-bold mb-4 text-theme-deepsky">{medicineData.name}</h1>
+
+                {medicineData.type && (
+                  <p className="text-sm font-medium text-theme-deepsky mb-2">
+                    Type: <span className="text-gray-600">{medicineData.type}</span>
+                  </p>
+                )}
+
                 <p className="text-gray-600 mb-6">{medicineData.description}</p>
 
                 <div className="space-y-4 mb-8">
