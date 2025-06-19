@@ -821,49 +821,140 @@ Duration: 5–10 days or longer for chronic infections.`,
   image: 'https://images.unsplash.com/photo-1611741286785-1d38d01b4d1e?w=600&h=400&fit=crop'
 },
 '25': {
-  name: 'Dog Anti-Diarrhea Paste',
-  description: 'Fast-acting paste to relieve diarrhea.',
-  features: [
-    'Soothes digestive tract',
-    'Easy to administer',
-    'Works within hours',
-    'Suitable for all breeds',
-    'Natural ingredients'
+  name: 'Cipromed',
+  type: 'Antibiotic / Ciprofloxacin',
+  description: `Cipromed contains ciprofloxacin, a fluoroquinolone antibiotic.
+It inhibits bacterial enzymes: DNA gyrase and topoisomerase IV, which are essential for DNA replication, repair, and transcription.
+Inhibition of these enzymes leads to bacterial DNA damage and cell death.
+Ciprofloxacin is bactericidal, primarily targeting aerobic gram-negative bacteria, and some gram-positive bacteria.
+Cipromed is primarily used in pets as an ophthalmic (eye drop) solution, though it may be prescribed off-label for other uses.`,
+  Dosage: `For Eye Infections (Dogs & Cats): 1–2 drops into the affected eye(s) every 8–12 hours.
+Duration: 5–10 days, or as prescribed.
+Always complete the full course, even if symptoms improve.
+❌ Not typically used orally in animals due to poor bioavailability and better veterinary alternatives (like enrofloxacin).
+
+Ingredients (Eye Drops 0.3%):
+- Active: Ciprofloxacin hydrochloride 0.3%
+- Inactive: Benzalkonium chloride (preservative), Sodium chloride, Disodium edetate (EDTA), Hydrochloric acid/sodium hydroxide (pH adjusters), Purified water.`,
+  benefits: `Used to treat conjunctivitis, blepharitis, keratitis, corneal ulcers, post-operative infections, and bacterial eye infections caused by Pseudomonas aeruginosa, Staphylococcus aureus, Escherichia coli, and others.`,
+  administrationForms: [
+    'Topical (ophthalmic eye drops)'
   ],
-  usage: 'Give recommended dose based on weight twice daily.',
-  ingredients: 'Kaolin, pectin, electrolytes.',
-  benefits: 'Firm stools, rehydrates body.',
-  image: 'https://images.unsplash.com/photo-1601758028271-3a68c54d9f27?w=600&h=400&fit=crop'
+  sideEffects: [
+    'Mild stinging or irritation',
+    'Temporary blurred vision',
+    'Increased tearing or ocular discharge',
+    'Local allergic reactions (rare)',
+    'Vomiting or diarrhea (in off-label oral use)',
+    'Cartilage damage in growing puppies (oral)',
+    'Possible neurotoxicity (high oral doses)',
+    'Retinal toxicity (especially in cats, rare but serious)'
+  ],
+  precautions: [
+    'Use with caution in young, growing animals (risk of cartilage damage if used orally)',
+    'Avoid oral use unless prescribed by a vet',
+    'Not FDA-approved for animals but used off-label in veterinary medicine'
+  ],
+  contraindications: [
+    'Known hypersensitivity to ciprofloxacin or other fluoroquinolones',
+    'Do not use orally in animals with seizure disorders or during rapid growth phases',
+    'Avoid ophthalmic use if allergic reactions occur'
+  ],
+  image: 'https://images.unsplash.com/photo-1580281657527-47a8c6b4aaf3?w=600&h=400&fit=crop'
 },
 '26': {
-  name: 'Dog Immune Booster - VitaPup',
-  description: 'Vitamin blend for stronger immune defenses.',
-  features: [
-    'Rich in antioxidants',
-    'Supports immune response',
-    'Tasty chewable',
-    'For all ages',
-    'No added sugar'
+  name: 'Ciprovet',
+  type: 'Antibiotic / Ciprofloxacin',
+  description: `Ciprovet contains ciprofloxacin, a fluoroquinolone antibiotic.
+It inhibits bacterial DNA gyrase and topoisomerase IV, enzymes required for bacterial DNA replication, repair, and transcription.
+This disruption leads to bacterial cell death. It is bactericidal and mainly effective against aerobic gram-negative bacteria and some gram-positive strains.
+Ciprovet is primarily used in dogs and cats for treating bacterial eye infections, though oral ciprofloxacin may occasionally be used off-label.`,
+  Dosage: `For Eye Drops (Dogs & Cats): Instill 1–2 drops into the affected eye(s) every 8–12 hours.
+Duration: Typically 5–10 days depending on response.
+
+Ingredients (Ciprovet Eye Drops):
+- Active: Ciprofloxacin hydrochloride (usually 0.3%)
+- Inactive: Benzalkonium chloride (preservative), Sodium chloride, Purified water, Buffered solution (for pH balance)
+
+⚠ Oral ciprofloxacin is not commonly used in pets unless specifically prescribed. Alternatives like enrofloxacin are preferred.`,
+  benefits: `Used to treat conjunctivitis, keratitis, blepharitis, corneal ulcers, post-surgical eye infections, and infectious inflammation of the eyelids and conjunctiva.
+Off-label oral use may include UTIs, respiratory infections, and skin infections.`,
+  administrationForms: [
+    'Topical (ophthalmic eye drops)',
+    'Oral tablets (rare off-label use)'
   ],
-  usage: 'One chew per day.',
-  ingredients: 'Vitamin C, E, selenium, zinc.',
-  benefits: 'Boosts immunity and general health.',
-  image: 'https://images.unsplash.com/photo-1601758131186-79fc8fc1b90c?w=600&h=400&fit=crop'
+  sideEffects: [
+    'Mild eye irritation',
+    'Temporary blurred vision',
+    'Increased tearing or discharge',
+    'Redness',
+    'Allergic reaction (rare)',
+    'Vomiting (oral use)',
+    'Diarrhea (oral use)',
+    'Loss of appetite (oral use)',
+    'Joint/cartilage damage in growing animals (oral)',
+    'Retinal damage in cats (less common than enrofloxacin but possible)'
+  ],
+  precautions: [
+    'Monitor for signs of local eye irritation or allergic reaction',
+    'Use oral ciprofloxacin only under veterinary supervision',
+    'Avoid oral use in young animals (due to cartilage damage risk)',
+    'Use cautiously in cats (monitor for retinal side effects)'
+  ],
+  contraindications: [
+    'Known hypersensitivity to ciprofloxacin or fluoroquinolones',
+    'Avoid oral use in growing animals, pregnant or nursing pets unless absolutely necessary',
+    'Do not continue use if ocular allergy symptoms persist'
+  ],
+  image: 'https://images.unsplash.com/photo-1606811881663-3a5f06a89ea4?w=600&h=400&fit=crop'
 },
 '27': {
-  name: 'Dog Hot Spot Spray',
-  description: 'Soothing spray for itchy and irritated skin.',
-  features: [
-    'Reduces redness',
-    'Promotes healing',
-    'Alcohol-free',
-    'Safe if licked',
-    'Fast relief'
+  name: 'Amiglyde-V',
+  type: 'Antibiotic / Amikacin',
+  description: `Amiglyde-V contains amikacin sulfate, an aminoglycoside antibiotic.
+It works by binding irreversibly to the 30S ribosomal subunit of susceptible bacteria, inhibiting protein synthesis and producing faulty proteins, which leads to bacterial cell death.
+Amikacin is bactericidal and effective primarily against aerobic Gram-negative bacteria and some Gram-positive strains.
+It is typically reserved for serious infections that are resistant to other antibiotics.`,
+  Dosage: `Dogs and Cats:
+10–15 mg/kg body weight once daily via injection.
+Alternatively, 5–7.5 mg/kg every 12 hours may be used depending on the severity of infection.
+Duration: Typically 7–14 days based on infection and clinical response.
+
+Ingredients:
+- Active: Amikacin sulfate
+- Inactive: May include sterile water for injection, stabilizers, and preservatives depending on the formulation.`,
+  benefits: `Used for serious or resistant infections including:
+- Severe urinary tract infections
+- Respiratory infections
+- Skin and soft tissue infections
+- Bone and joint infections
+- Post-surgical infections
+- Infections caused by Pseudomonas, E. coli, Klebsiella, Proteus, Staphylococcus, and other resistant strains.`,
+  administrationForms: [
+    'Intramuscular (IM) injection',
+    'Intravenous (IV) injection',
+    'Occasionally subcutaneous (SC) injection'
   ],
-  usage: 'Spray directly on affected area 2-3 times daily.',
-  ingredients: 'Aloe vera, tea tree oil, chamomile.',
-  benefits: 'Calms itching and supports skin recovery.',
-  image: 'https://images.unsplash.com/photo-1601758156657-99c72a3e9c2d?w=600&h=400&fit=crop'
+  sideEffects: [
+    'Pain or irritation at the injection site',
+    'Mild allergic reactions (rare)',
+    'Nephrotoxicity (kidney damage)',
+    'Ototoxicity (hearing or balance issues)',
+    'Neurological signs (rare)',
+    'Muscle weakness (rare)'
+  ],
+  precautions: [
+    'Monitor kidney function before and during treatment',
+    'Avoid prolonged or high-dose therapy to reduce risk of nephrotoxicity and ototoxicity',
+    'Adjust dosage in animals with renal impairment',
+    'Use cautiously in older animals or those with pre-existing kidney conditions'
+  ],
+  contraindications: [
+    'Known hypersensitivity to aminoglycosides',
+    'Existing renal failure or significant kidney dysfunction (without dose adjustment)',
+    'Concurrent use with other nephrotoxic or ototoxic drugs unless supervised closely by a veterinarian'
+  ],
+  image: 'https://images.unsplash.com/photo-1588776814546-b79de5f9b6a7?w=600&h=400&fit=crop'
 },
 '28': {
   name: 'Dog Liver Support Tablets',
