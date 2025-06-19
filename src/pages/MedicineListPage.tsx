@@ -1,12 +1,14 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import MedicineHeader from '../components/medicines/MedicineHeader';
 import MedicineGrid from '../components/medicines/MedicineGrid';
 import CategoryNavigation from '../components/medicines/CategoryNavigation';
+import MedicineCategories from '../components/medicines/MedicineCategories';
 
 const MedicineListPage = () => {
   const { petType } = useParams<{ petType: string }>();
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
   
   React.useEffect(() => {
     document.title = `PetCare Vet | ${getPetTypeTitle()} Medicines`;
@@ -26,7 +28,7 @@ const MedicineListPage = () => {
   };
 
   return (
-    <div className="py-12">
+    <div className="min-h-screen bg-gradient-to-br from-theme-lightsky/30 to-theme-powder/30 py-12">
       <div className="container mx-auto px-4">
         <MedicineHeader petType={petType || ''} />
         
@@ -37,7 +39,14 @@ const MedicineListPage = () => {
             </div>
           )}
           
-          <MedicineGrid petType={petType || ''} />
+          {(petType === 'dogs' || petType === 'cats') && (
+            <MedicineCategories 
+              selectedCategory={selectedCategory}
+              onCategoryChange={setSelectedCategory}
+            />
+          )}
+          
+          <MedicineGrid petType={petType || ''} selectedCategory={selectedCategory} />
         </div>
       </div>
     </div>
