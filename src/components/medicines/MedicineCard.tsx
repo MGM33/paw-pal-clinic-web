@@ -1,45 +1,42 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 interface MedicineCardProps {
-  id: number;
+  medicineId: number;
   name: string;
   description: string;
   image: string;
   petType: string;
-  itemType?: string; // Changed from specific literals to string to allow category paths
+  itemType?: string;
 }
 
-const MedicineCard: React.FC<MedicineCardProps> = ({ 
-  id, 
-  name, 
-  description, 
-  image, 
-  petType, 
-  itemType = 'medicines' 
+const MedicineCard: React.FC<MedicineCardProps> = ({
+  medicineId,
+  name,
+  description,
+  image,
+  petType,
+  itemType = 'medicines'
 }) => {
-  // Generate the correct route based on pet type and item type
   const getDetailRoute = () => {
     switch (petType) {
       case 'dogs':
-        return `/dogs/${itemType}/${id}`;
+        return `/dogs/${itemType}/${medicineId}`;
       case 'cats':
-        return `/cats/${itemType}/${id}`;
+        return `/cats/${itemType}/${medicineId}`;
       case 'birds':
         if (itemType.startsWith('medicines/category/')) {
-          // For bird category medicines, use the category-specific route
-          return `/birds/${itemType}/${id}`;
+          return `/birds/${itemType}/${medicineId}`;
         }
-        return `/birds/medicines/${id}`;
+        return `/birds/medicines/${medicineId}`;
       default:
-        return `/${petType}/${itemType}/${id}`;
+        return `/${petType}/${itemType}/${medicineId}`;
     }
   };
 
   return (
-    <Link 
-      to={getDetailRoute()} 
+    <Link
+      to={getDetailRoute()}
       className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow"
     >
       <div className="h-48 overflow-hidden">
