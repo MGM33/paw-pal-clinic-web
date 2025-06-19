@@ -957,50 +957,484 @@ Ingredients:
   image: 'https://images.unsplash.com/photo-1588776814546-b79de5f9b6a7?w=600&h=400&fit=crop'
 },
 '28': {
-  name: 'Dog Liver Support Tablets',
-  description: 'Herbal liver support for detox and health.',
-  features: [
-    'Milk thistle based',
-    'Supports detox',
-    'Easy-to-swallow tablets',
-    'Natural ingredients',
-    'For all sizes'
+  name: 'Doxyvet',
+  type: 'Antibiotic / Doxycycline',
+  description: `Doxyvet contains doxycycline, a broad-spectrum tetracycline-class antibiotic.
+It works by binding to the 30S ribosomal subunit in bacteria, preventing the addition of amino acids to the growing peptide chain and inhibiting protein synthesis.
+This action is bacteriostatic—halting bacterial growth and replication without directly killing the organism.`,
+  Dosage: `Dogs:
+- Initial Dose: 1 mL per 22 lbs (10 kg) body weight on the first day.
+- Maintenance Dose: 0.5 mL per 22 lbs every 12 hours.
+- Duration: Typically 7–10 days or as directed by a veterinarian.
+
+Ingredients:
+- Active Ingredient: Doxycycline Hydrochloride (50 mg/mL)
+- Formulation: Liquid, water-soluble solution suitable for oral administration.`,
+  benefits: `Used in dogs and cats to treat:
+- Skin infections (e.g., pyoderma, folliculitis)
+- Respiratory infections
+- Genitourinary infections
+- Otitis externa and media
+- Osteomyelitis
+- Puerperal infections`,
+  administrationForms: [
+    'Oral liquid solution',
+    'Can be given directly by syringe or mixed into food/drinking water'
   ],
-  usage: 'One tablet per 10kg once daily.',
-  ingredients: 'Milk thistle, turmeric, dandelion root.',
-  benefits: 'Promotes healthy liver function.',
-  image: 'https://images.unsplash.com/photo-1601758097615-b2eb738e2c5a?w=600&h=400&fit=crop'
+  sideEffects: [
+    'Gastrointestinal upset (vomiting, diarrhea, loss of appetite)',
+    'Esophageal irritation or ulceration (especially in cats)',
+    'Photosensitivity or sunburn (increased sensitivity to sunlight)',
+    'Elevated liver enzymes (in some cases)'
+  ],
+  precautions: [
+    'Administer with food to reduce GI upset',
+    'Always follow tablets or capsules with water to avoid esophageal damage, especially in cats',
+    'Avoid use in pregnant or young growing animals unless prescribed',
+    'Monitor liver function with prolonged use or in animals with liver conditions'
+  ],
+  contraindications: [
+    'Known hypersensitivity to tetracyclines',
+    'Concurrent use with antacids or dairy products (reduces absorption)',
+    'Caution in pregnant or nursing animals due to effects on developing bones and teeth'
+  ],
+  image: 'https://images.unsplash.com/photo-1588776814477-19c6726ddec0?w=600&h=400&fit=crop'
 },
 '29': {
-  name: 'Dog Allergy Shampoo',
-  description: 'Gentle shampoo for dogs with sensitive skin.',
-  features: [
-    'Hypoallergenic',
-    'Soothes itching',
-    'Fragrance-free',
-    'Oatmeal-based',
-    'pH balanced'
+  name: 'Doxyirobe',
+  type: 'Antibiotic / Doxycycline + Metronidazole',
+  description: `Doxyirobe typically combines doxycycline (a tetracycline antibiotic) with metronidazole or a similar antimicrobial agent. 
+Doxycycline works by binding to the 30S ribosomal subunit in bacteria, inhibiting protein synthesis and exerting a bacteriostatic effect (stopping bacterial growth).
+Metronidazole, if present, disrupts DNA synthesis in anaerobic bacteria and protozoa, resulting in a bactericidal effect.
+This combination provides broad-spectrum antimicrobial coverage, targeting both aerobic and anaerobic bacteria.`,
+  Dosage: `Dogs:
+- Doxycycline: 5–10 mg/kg once or twice daily.
+- Metronidazole (if included): 10–25 mg/kg twice daily.
+- Formulation and route vary depending on infection type and veterinary direction.
+
+Ingredients:
+- Doxycycline hyclate (commonly in oral or gel form)
+- Metronidazole or similar nitroimidazole compound
+- Inactive excipients: flavoring agents, cellulose, lactose, stabilizers, or gel base for dental formulations.`,
+  benefits: `Used in dogs and cats to treat:
+- Periodontal disease
+- Skin and soft tissue infections
+- Respiratory infections
+- Tick-borne diseases (e.g., ehrlichiosis, anaplasmosis)
+- Gastrointestinal infections
+- Wound and bone infections (as adjunct therapy)`,
+  administrationForms: [
+    'Oral tablets or capsules',
+    'Oral suspension',
+    'Topical dental gel (e.g., Doxyirobe Gel for periodontal pockets)'
   ],
-  usage: 'Lather and rinse thoroughly once weekly or as needed.',
-  ingredients: 'Colloidal oatmeal, aloe vera, coconut extract.',
-  benefits: 'Cleanses and calms irritated skin.',
-  image: 'https://images.unsplash.com/photo-1601758180679-3b01b83515a9?w=600&h=400&fit=crop'
+  sideEffects: [
+    'Nausea',
+    'Vomiting',
+    'Diarrhea',
+    'Mild GI upset (especially when used long-term or at higher doses)'
+  ],
+  precautions: [
+    'Avoid in pregnant or nursing animals unless directed by a veterinarian',
+    'Administer tablets with water or food to reduce esophageal irritation, especially in cats',
+    'Monitor for signs of GI upset or allergic reaction',
+    'Adjust dose in animals with liver dysfunction (especially for metronidazole)'
+  ],
+  contraindications: [
+    'Known hypersensitivity to tetracyclines or nitroimidazoles',
+    'Caution in young animals (doxycycline may affect teeth and bone development)',
+    'Avoid combining with antacids or dairy products (reduces doxycycline absorption)'
+  ],
+  image: 'https://images.unsplash.com/photo-1636391040813-4a7399d0537d?w=600&h=400&fit=crop'
 },
 '30': {
-  name: 'Dog Recovery Kit',
-  description: 'Complete post-op care kit for dogs after surgery.',
-  features: [
-    'Includes pain relief',
-    'Wound care ointment',
-    'Antibiotic course',
-    'Healing support supplement',
-    'Vet-designed pack'
+  name: 'Zyrtec',
+  type: 'Antihistaminic / Cetirizine',
+  description: `Zyrtec contains cetirizine hydrochloride, a second-generation antihistamine.
+It works by selectively blocking histamine H1 receptors, reducing allergic symptoms such as itching, swelling, redness, and inflammation.
+Unlike first-generation antihistamines (e.g., diphenhydramine), cetirizine has limited penetration of the blood-brain barrier, causing less sedation.`,
+  Dosage: `Dogs:
+- 0.5–1 mg/kg once daily
+- Common dose: 5–10 mg per day depending on weight (e.g., 5 mg for small dogs, 10 mg for medium–large dogs)
+
+Ingredients:
+- Active: Cetirizine hydrochloride (typically 5 mg or 10 mg/tablet)
+- Inactive: Lactose, cellulose, starch, magnesium stearate, hypromellose (coating agents)
+
+⚠ Avoid using Zyrtec-D (contains pseudoephedrine, which is toxic to pets)`,
+  benefits: `Used to manage allergic conditions in pets, including:
+- Atopic dermatitis (skin allergies)
+- Environmental allergies (dust, pollen)
+- Food allergies (supportive role)
+- Insect bite hypersensitivity
+- Seasonal allergies
+- Allergic rhinitis or conjunctivitis
+- Urticaria (hives) and anaphylaxis recovery (adjunct treatment)`,
+  administrationForms: [
+    'Oral tablet (crushed or whole)',
+    'Oral liquid (must not contain xylitol)'
   ],
-  usage: 'Use as directed by vet.',
-  ingredients: 'Varies per product (NSAID, antibiotics, vitamins).',
-  benefits: 'Speeds recovery, reduces complications.',
-  image: 'https://images.unsplash.com/photo-1601758067804-6b876f5f5f03?w=600&h=400&fit=crop'
-}
+  sideEffects: [
+    'Mild drowsiness (less than first-generation antihistamines)',
+    'Dry mouth',
+    'Vomiting (rare)',
+    'Diarrhea (rare)'
+  ],
+  precautions: [
+    'Avoid Zyrtec-D (pseudoephedrine formulation) — toxic to pets',
+    'Monitor for unusual sedation or GI signs',
+    'Use under veterinary guidance, especially for long-term allergy control',
+    'Check ingredients if using liquid formulations (avoid xylitol)'
+  ],
+  contraindications: [
+    'Known hypersensitivity to cetirizine or hydroxyzine',
+    'Do not use Zyrtec-D in animals',
+    'Caution in animals with liver or kidney disease (dose adjustment may be required)'
+  ],
+  image: 'https://images.unsplash.com/photo-1584306674640-f1861b28c0a7?w=600&h=400&fit=crop'
+},
+'31': {
+  name: 'Diphenhydramine',
+  type: 'Antihistaminic / Diphenhydramine',
+  description: `Diphenhydramine is a first-generation antihistamine that acts as a competitive H1 receptor antagonist, blocking the effects of histamine released during allergic reactions.
+It also has anticholinergic and sedative properties due to its ability to cross the blood-brain barrier.
+This results in reduced symptoms like itching, swelling, hives, and mild sedation.`,
+  Dosage: `Dogs:
+- 1–2 mg/kg every 8–12 hours
+- Example: A 25 kg (55 lb) dog may receive 25–50 mg
+
+Ingredients:
+- Active: Diphenhydramine HCl
+- Inactive (varies by brand):
+  • Tablets: Lactose, starch, dyes (some may be unsuitable for pets)
+  • Liquid: May contain xylitol, alcohol, or sugar — not safe unless vet-approved
+
+> Always consult your vet before use. Avoid human liquid forms unless clearly pet-safe.`,
+  benefits: `Used to manage allergic and inflammatory conditions, including:
+- Insect bite or vaccine reactions
+- Urticaria (hives)
+- Itching and dermatitis
+- Motion sickness or travel anxiety
+- Mild sedation
+- Anti-nausea
+- Cough suppression (some respiratory cases)
+- Pre-treatment before chemotherapy or vaccines`,
+  administrationForms: [
+    'Oral tablet (most common)',
+    'Oral liquid (must be free of xylitol/alcohol)',
+    'Injectable (SC or IM, in clinical settings)',
+    'Topical cream (for mild localized reactions)'
+  ],
+  sideEffects: [
+    'Drowsiness or sedation',
+    'Dry mouth',
+    'Urinary retention',
+    'Mild gastrointestinal upset',
+    'Hyperexcitability (especially in cats)',
+    'Allergic reactions (rare)',
+    'Rapid heart rate',
+    'Agitation in sensitive animals'
+  ],
+  precautions: [
+    'Use with caution in pets with glaucoma, heart disease, or urinary issues',
+    'Monitor cats for hyperactivity or agitation',
+    'Do not use liquid forms containing xylitol or alcohol',
+    'Avoid prolonged use unless directed by a vet'
+  ],
+  contraindications: [
+    'Known hypersensitivity to diphenhydramine',
+    'Use of human liquid formulations with toxic ingredients',
+    'Pets with pre-existing glaucoma, prostate disease, or seizure disorders without veterinary supervision'
+  ],
+  image: 'https://images.unsplash.com/photo-1584306675119-ec51b3e0418b?w=600&h=400&fit=crop'
+},
+'32': {
+  name: 'Claritine',
+  type: 'Antihistaminic / Loratadine',
+  description: `Loratadine (commonly known by the brand name Claritin) is a second-generation antihistamine.
+It works by selectively blocking histamine H₁ receptors, preventing histamine from binding during allergic reactions.
+Unlike first-generation antihistamines (e.g., diphenhydramine), it does not readily cross the blood-brain barrier, resulting in less sedation.
+It effectively reduces symptoms like itching, swelling, redness, and mild allergic responses.`,
+  Dosage: `Dogs:
+- 0.1–0.5 mg/kg once daily
+- Common range: 5–10 mg once daily for medium to large dogs
+
+Ingredients:
+- Active: Loratadine (10 mg per tablet)
+- Inactive (may vary): Lactose monohydrate, corn starch, magnesium stearate, cellulose
+
+> ⚠ Avoid Claritin-D, which contains pseudoephedrine — toxic to pets.`,
+  benefits: `Used off-label to treat mild to moderate allergic symptoms in pets:
+- Environmental allergies (pollen, dust mites)
+- Insect bite reactions
+- Skin itching (pruritus)
+- Mild allergic dermatitis
+- Hives (urticaria)
+- Post-vaccine allergic reactions
+- Part of long-term management of atopic dermatitis`,
+  administrationForms: [
+    'Oral tablets (regular or chewable)',
+    'Oral liquid (must be xylitol-free for pet use)'
+  ],
+  sideEffects: [
+    'Lethargy or mild drowsiness (rare)',
+    'Dry mouth',
+    'Vomiting or diarrhea (rare)',
+    'Hyperactivity (paradoxical, uncommon)',
+    'Serious effects if accidentally given Claritin-D (with pseudoephedrine)'
+  ],
+  precautions: [
+    'Do not use Claritin-D in pets — pseudoephedrine is highly toxic',
+    'Always check for xylitol-free formulations when using liquid',
+    'Not effective for severe allergic reactions or anaphylaxis',
+    'Avoid long-term use without veterinary guidance'
+  ],
+  contraindications: [
+    'Known allergy to loratadine or formulation components',
+    'Use of Claritin-D (contains pseudoephedrine)',
+    'Severe hepatic conditions (requires vet dose adjustment)',
+    'Puppies or kittens without vet approval'
+  ],
+  image: 'https://images.unsplash.com/photo-1618917003173-89ff58fcbacb?w=600&h=400&fit=crop'
+},
+'33': {
+  name: 'Chlor-Trimeton',
+  type: 'Antihistaminic / Chlorpheniramine',
+  description: `Chlorpheniramine (brand name Chlor-Trimeton®) is a first-generation H₁ antihistamine.
+It works by competitively blocking histamine receptors, helping to reduce allergic symptoms like itching, redness, and swelling.
+Although older than second-generation antihistamines, it's still used in veterinary medicine due to its effectiveness in mild to moderate allergic reactions.
+It also has mild sedative and anticholinergic effects.`,
+  Dosage: `Dogs:
+- 4–8 mg every 8 hours, depending on size and vet guidance
+
+> Always consult a veterinarian before beginning antihistamine therapy.`,
+  benefits: `Used to treat allergic reactions in dogs:
+- Itching and skin irritation
+- Allergic dermatitis
+- Insect bite hypersensitivity
+- Hives (urticaria)
+- Mild seasonal or environmental allergies`,
+  administrationForms: [
+    'Oral tablets',
+    'Oral liquid (must be xylitol-free)',
+    'Injectable (used in clinical settings)'
+  ],
+  sideEffects: [
+    'Sedation or drowsiness',
+    'Dry mouth',
+    'Gastrointestinal upset (vomiting, diarrhea)',
+    'Occasional hyperexcitability in cats or small dogs',
+    'Urinary retention (rare)'
+  ],
+  precautions: [
+    'Use with caution in older pets or those with urinary or prostate issues',
+    'Avoid in pets with glaucoma or heart disease unless supervised by a vet',
+    'Monitor for sedation or agitation, especially at first use',
+    'Ensure liquid formulations are free of xylitol or alcohol'
+  ],
+  contraindications: [
+    'Known hypersensitivity to chlorpheniramine or related compounds',
+    'Use in animals with glaucoma or urinary retention conditions',
+    'Do not combine with other CNS depressants without vet guidance',
+    'Caution in animals with seizures or cardiovascular disorders'
+  ],
+  image: 'https://images.unsplash.com/photo-1626785774573-4b799315345b?w=600&h=400&fit=crop'
+},
+'34': {
+  name: 'Atarax',
+  type: 'Antihistaminic / Hydroxyzine',
+  description: `Hydroxyzine (commonly sold under brand names like Atarax® or Vistaril®) is a first-generation H₁ antihistamine.
+It functions by blocking histamine receptors, thus reducing allergic symptoms such as itching, swelling, and hives.
+Hydroxyzine also has significant sedative, anxiolytic, and antiemetic properties, making it useful in both dermatologic and behavioral veterinary applications.`,
+  Dosage: `Dogs and Cats:
+- 2 mg/kg every 8 hours (or as prescribed)
+
+> Hydroxyzine is available by prescription and should be dosed under veterinary guidance.
+It is available in Egypt and other regions as a human-label medication, sometimes used off-label in pets.`,
+  benefits: `- Manages severe pruritus (itching) due to allergic dermatitis
+- Reduces symptoms of atopic dermatitis, insect bite hypersensitivity, and hives
+- Acts as a mild sedative for anxiety-related symptoms or travel anxiety
+- Adjunct for allergic reactions like urticaria and anaphylaxis recovery`,
+  administrationForms: [
+    'Oral tablets',
+    'Oral suspension (if compounded)',
+    'Injectable (primarily human-use, rarely used in pets)'
+  ],
+  sideEffects: [
+    'Sedation or drowsiness',
+    'Dry mouth',
+    'Gastrointestinal upset (vomiting, diarrhea)',
+    'Occasional agitation (especially in cats)',
+    'Urinary retention (rare)'
+  ],
+  precautions: [
+    'Use with caution in animals with glaucoma or urinary retention issues',
+    'Monitor in pets with liver or kidney dysfunction',
+    'May cause increased sedation if combined with other CNS depressants',
+    'May affect older pets differently—start with lower doses if needed'
+  ],
+  contraindications: [
+    'Known allergy to hydroxyzine or other antihistamines',
+    'Do not use with MAO inhibitors',
+    'Avoid in pregnant or lactating animals unless clearly needed',
+    'Caution in pets with seizure disorders'
+  ],
+  image: 'https://images.unsplash.com/photo-1617864063650-6dbb36491e1f?w=600&h=400&fit=crop'
+},
+  '35': {
+  name: 'Bromhexine hydrochloride',
+  type: 'Mucolytics / Bromhexine',
+  description: `Bromhexine hydrochloride is a mucolytic agent commonly used in veterinary medicine to assist with respiratory conditions.
+It acts by depolymerizing mucopolysaccharide fibers in mucus, reducing its viscosity and aiding in its clearance from the respiratory tract.
+It also stimulates ciliary activity in the airways, promoting expectoration and improving breathing efficiency.
+In some cases, bromhexine enhances the penetration of antibiotics into bronchial secretions.`,
+  Dosage: `Dogs:
+0.5–1 mg/kg orally twice daily
+
+> Always follow the veterinarian’s prescription regarding dose, frequency, and duration.
+Formulations include palatable syrups or tablets, with flavoring and sweeteners such as sorbitol or sucrose.`,
+  benefits: `- Helps manage respiratory tract infections with thick or sticky mucus
+- Used in bronchitis, pneumonia, tracheitis, and sinusitis
+- Supportive care for kennel cough
+- Improves antibiotic efficacy in deep lung infections
+- Aids mucus clearance post-surgery or during chronic respiratory illness`,
+  administrationForms: [
+    'Oral syrup (most common)',
+    'Oral tablets',
+    'Injectable solution (rarely used in pets, more in livestock)',
+    'Nebulization (off-label use)'
+  ],
+  sideEffects: [
+    'Mild gastrointestinal upset (nausea, vomiting)',
+    'Rare allergic or hypersensitivity reactions'
+  ],
+  precautions: [
+    'Use cautiously in pets with known gastrointestinal sensitivity',
+    'Ensure adequate hydration to support mucus thinning',
+    'Monitor for allergic reactions, especially on first use'
+  ],
+  contraindications: [
+    'Known hypersensitivity to bromhexine or related compounds',
+    'Use cautiously in pregnant or lactating animals unless prescribed'
+  ],
+  image: 'https://images.unsplash.com/photo-1616077168042-0b29b7ac814f?w=600&h=400&fit=crop'
+},
+'36': {
+  name: 'Taurines',
+  type: 'Mucolytics / N acetylcysteine',
+  description: `Taurine (2-aminoethanesulfonic acid) is a sulfur-containing amino acid that exists freely in animal tissues.
+It plays a critical role in several physiological functions including:
+- **Cardiac function**: Supports myocardial contractility and helps prevent dilated cardiomyopathy (DCM).
+- **Retinal health**: Maintains photoreceptor cell function in the retina, preventing degeneration.
+- **Neurological development**: Supports brain development and neurotransmission.
+- **Bile acid conjugation**: Assists in fat digestion by forming bile salts.
+- **Antioxidant activity**: Helps protect cells from oxidative stress.
+Cats **cannot synthesize taurine** and require it from dietary sources, while some dog breeds may have reduced endogenous synthesis.`,
+  Dosage: `Dosage should always be tailored by a veterinarian. General guidelines:
+- Small Dogs: 500 mg once daily
+- Medium Dogs: 1,000 mg once daily
+- Large Dogs: 2,000 mg once daily
+
+Taurine can be administered with or without food. If gastrointestinal discomfort occurs, giving it with food is advised.
+
+Taurine is available in tablets, capsules, powders, or liquid forms. Pet food may also be fortified with taurine, especially feline diets.`,
+  benefits: `- Prevents or manages breed-specific dilated cardiomyopathy (DCM), especially in Golden Retrievers, Newfoundlands, and Cocker Spaniels
+- Provides general cardiac support in taurine-deficient dogs
+- Essential for retinal maintenance and neurological health in cats
+- Supports liver function and fat metabolism`,
+  administrationForms: [
+    'Oral tablets',
+    'Oral capsules',
+    'Oral powder (mixed with food)',
+    'Liquid drops or solution',
+    'Dietary inclusion in commercial pet food (especially cat food)'
+  ],
+  sideEffects: [
+    'Mild gastrointestinal upset (vomiting or diarrhea – rare)'
+  ],
+  precautions: [
+    'Use under veterinary supervision to determine appropriate dose',
+    'Monitor pets with heart disease regularly during taurine supplementation',
+    'Consult a vet before combining with other heart medications or supplements'
+  ],
+  contraindications: [
+    'Known hypersensitivity to taurine (very rare)',
+    'Avoid unnecessary supplementation in pets with normal taurine levels unless prescribed'
+  ],
+  image: 'https://images.unsplash.com/photo-1612349317150-dfb1f1dc70ba?w=600&h=400&fit=crop'
+},
+  '37': {
+  name: 'Mucomucil',
+  type: 'Mucolytic / Carbocysteine',
+  description: `Mucomucil® is a veterinary mucolytic syrup formulated with L-Carbocysteine.
+It is used in the treatment of respiratory conditions in dogs and cats that involve thick or excessive mucus.
+Each 100 mL contains 20 g of L-Carbocysteine. The syrup works by reducing mucus viscosity, promoting clearance of secretions, and improving breathing.
+It is especially helpful in conditions involving **mucoid or mucopurulent secretions**, making it easier for pets to expel phlegm and reduce airway obstruction.`,
+  Dosage: `- Dosage: 10 mg/kg of body weight
+- Frequency: Twice daily
+- Route: Oral
+- Presentation: 50 mL bottle
+
+Formulated and manufactured by **Vetnil**, this product is available in veterinary pharmacies and distributors across Egypt.`,
+  benefits: `- Helps clear thick mucus from the respiratory tract
+- Supports breathing in respiratory infections or chronic airway disease
+- Reduces airway obstruction and enhances mucus drainage`,
+  administrationForms: [
+    'Oral syrup'
+  ],
+  sideEffects: [
+    'Occasional gastrointestinal upset (vomiting or diarrhea)',
+    'Hypersensitivity (rare)'
+  ],
+  precautions: [
+    'Use with caution in animals with a history of gastrointestinal ulcers',
+    'Ensure proper hydration to assist mucolytic activity',
+    'Follow dosing guidelines strictly to avoid overdose'
+  ],
+  contraindications: [
+    'Hypersensitivity to carbocysteine or any syrup excipients',
+    'Do not use in animals with active peptic ulcers'
+  ],
+  image: 'https://images.unsplash.com/photo-1612349317150-dfb1f1dc70ba?w=600&h=400&fit=crop'
+},
+  '38': {
+  name: 'Ambroxol',
+  type: 'Mucolytic / Ambroxol',
+  description: `Ambroxol is a mucolytic agent used in veterinary medicine to manage respiratory conditions in dogs and cats.
+It stimulates the production and release of surfactant in the respiratory tract, reducing the viscosity of mucus and enhancing its clearance.
+Ambroxol also supports ciliary movement and has mild anti-inflammatory and antioxidant effects on the respiratory mucosa.
+It is commonly used as a supportive treatment in bronchitis, pneumonia, tracheitis, and chronic respiratory disorders.`,
+  Dosage: `- Oral Dose (Dogs & Cats): 1–3 mg/kg every 12 hours
+- Duration: Typically 5–7 days or as directed by a veterinarian
+- Route: Oral (tablets, capsules, syrups, solutions)
+- Injectable form: Less commonly used in pets, but may be available for clinical use`,
+  benefits: `- Reduces mucus thickness, facilitating easier expectoration
+- Supports respiratory clearance and reduces coughing
+- Aids recovery from bronchitis, tracheitis, and pneumonia
+- Mild anti-inflammatory and antioxidant action on respiratory mucosa`,
+  administrationForms: [
+    'Oral tablets',
+    'Oral syrups or solutions',
+    'Injectable solution (rare use in pets)'
+  ],
+  sideEffects: [
+    'Mild gastrointestinal upset (vomiting, diarrhea)',
+    'Allergic reactions (rare)',
+    'Hypersalivation (excess drooling)',
+    'Drowsiness or lethargy (infrequent)'
+  ],
+  precautions: [
+    'Use cautiously in pets with known gastrointestinal sensitivity',
+    'Ensure adequate hydration to support mucolytic effects',
+    'Monitor closely if used with other respiratory medications'
+  ],
+  contraindications: [
+    'Known hypersensitivity to ambroxol or formulation components',
+    'Use with caution in severely debilitated or dehydrated animals'
+  ],
+  image: 'https://images.unsplash.com/photo-1594633312681-425b533859e8?w=600&h=400&fit=crop'
+},
+
 };
 
 const DogMedicineDetailPage = () => {
