@@ -60,7 +60,6 @@ const MedicineGrid: React.FC<MedicineGridProps> = ({ petType }) => {
         { id: 40, name: 'ThyroidCare Feline Support', description: 'Special formula for cats with thyroid imbalance.', image: 'https://images.unsplash.com/photo-1601233741466-019d7d33d59b?w=400&h=300&fit=crop' },
         { id: 41, name: 'HeartEase Taurine Chews', description: 'Taurine-enriched chews for supporting feline heart health.', image: 'https://images.unsplash.com/photo-1543852786-1cf6624b9987?w=400&h=300&fit=crop' },
         { id: 42, name: 'RespiraPurr Cough Remedy', description: 'Mild herbal remedy for occasional coughing and throat irritation.', image: 'https://images.unsplash.com/photo-1572715376041-6d374f580bd7?w=400&h=300&fit=crop' },
-        { id: 43, name: 'OmegaFur Skin & Coat Oil', description: 'Omega-rich oil supplement for shiny coat and reduced shedding.', image: 'https://images.unsplash.com/photo-1601758123837-1ec2e1e8eaf8?w=400&h=300&fit=crop' },
       ];
     } else if (petType === 'cats') {
       return [
@@ -106,7 +105,6 @@ const MedicineGrid: React.FC<MedicineGridProps> = ({ petType }) => {
         { id: 40, name: 'ThyroidCare Feline Support', description: 'Special formula for cats with thyroid imbalance.', image: 'https://images.unsplash.com/photo-1601233741466-019d7d33d59b?w=400&h=300&fit=crop' },
         { id: 41, name: 'HeartEase Taurine Chews', description: 'Taurine-enriched chews for supporting feline heart health.', image: 'https://images.unsplash.com/photo-1543852786-1cf6624b9987?w=400&h=300&fit=crop' },
         { id: 42, name: 'RespiraPurr Cough Remedy', description: 'Mild herbal remedy for occasional coughing and throat irritation.', image: 'https://images.unsplash.com/photo-1572715376041-6d374f580bd7?w=400&h=300&fit=crop' },
-        { id: 43, name: 'OmegaFur Skin & Coat Oil', description: 'Omega-rich oil supplement for shiny coat and reduced shedding.', image: 'https://images.unsplash.com/photo-1601758123837-1ec2e1e8eaf8?w=400&h=300&fit=crop' },
       ];
     }
     
