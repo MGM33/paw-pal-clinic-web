@@ -158,7 +158,7 @@ making it effective for treating allergies, autoimmune diseases, and inflammatio
   type: 'Anti-Inflammatories',
   description: `Prednisolone works by binding to glucocorticoid receptors, leading to reduced inflammation and immune response.
 It inhibits the production of inflammatory mediators like prostaglandins and cytokines, helping to control conditions such as allergies, asthma, and autoimmune diseases.`,
-  usage: '0.5–1 mg/kg orally every 12–24 hours',
+  Dosage: '0.5–1 mg/kg orally every 12–24 hours',
   benefits: 'Controls inflammation, suppresses overactive immune responses, and helps manage conditions like allergies, asthma, and autoimmune diseases.',
   administrationForms: [
     'Tablets (most common)',
@@ -249,7 +249,7 @@ It reduces the production of pro-inflammatory cytokines, inhibits prostaglandins
 Praziquantel paralyzes and destroys the outer layer of flatworms (tapeworms).
 Pyrantel pamoate targets roundworms and hookworms, paralyzing them and causing them to be expelled from the intestines.
 Febantel interferes with the worm's metabolism and inhibits its ability to reproduce.`,
-  dosage: 'Administered orally as tablets or chewable tablets. Dosage depends on weight and species; follow veterinary guidance.',
+  Dosage: 'Administered orally as tablets or chewable tablets. Dosage depends on weight and species; follow veterinary guidance.',
   benefits: 'Effective against tapeworms, roundworms, hookworms, and whipworms. Easy to administer with minimal side effects.',
   administrationForms: [
     'Oral tablets',
@@ -278,7 +278,7 @@ Febantel interferes with the worm's metabolism and inhibits its ability to repro
   description: `Milbemax combines two active ingredients for broad-spectrum deworming. 
 Milbemycin oxime binds to glutamate-gated chloride channels in parasite nerve cells, causing hyperpolarization, paralysis, and death.
 Praziquantel damages parasite cell membranes, causing muscle paralysis and structural disintegration, leading to immune elimination of the parasite.`,
-  dosage: 'Administered orally as tablets; dosage based on weight and species as prescribed by a veterinarian.',
+  Dosage: 'Administered orally as tablets; dosage based on weight and species as prescribed by a veterinarian.',
   benefits: `✔️ Broad-spectrum efficacy against multiple types of internal parasites (worms).
 ✔️ Good safety profile for most pets.
 ✔️ Convenient single-dose administration.
@@ -310,7 +310,7 @@ Praziquantel damages parasite cell membranes, causing muscle paralysis and struc
   type: 'Anti-parasitics: (Internal Parasites (Worms))',
   description: `Panacur contains fenbendazole, a broad-spectrum anthelmintic that inhibits tubulin polymerization into microtubules, disrupting parasite intestinal cell function.
 This leads to nutrient absorption failure and parasite death. Effective against roundworms, hookworms, whipworms, and some tapeworms.`,
-  dosage: 'Administered orally via suspension, paste, granules, or tablets; dosage based on species and weight as prescribed by a veterinarian.',
+  Dosage: 'Administered orally via suspension, paste, granules, or tablets; dosage based on species and weight as prescribed by a veterinarian.',
   benefits: `✔️ Broad-spectrum efficacy against various intestinal worms.
 ✔️ High safety margin when used properly.
 ✔️ Multiple administration forms for easier dosing.
@@ -348,7 +348,7 @@ This leads to nutrient absorption failure and parasite death. Effective against 
   type: 'Anti-parasitics: (Internal Parasites (Worms))',
   description: `Albendazole inhibits the polymerization of tubulin into microtubules in parasitic cells, disrupting their structure and metabolism, leading to parasite death.
 It also impairs glucose uptake, starving and eliminating the parasite.`,
-  dosage: 'Administered orally as tablets (e.g., 200 mg, 400 mg) or suspension; dosage as prescribed by a veterinarian based on species and weight.',
+  Dosage: 'Administered orally as tablets (e.g., 200 mg, 400 mg) or suspension; dosage as prescribed by a veterinarian based on species and weight.',
   benefits: `✔️ Broad-spectrum activity against various internal parasites.
 ✔️ Single-dose treatment effective for many conditions.
 ✔️ Low cost compared to many antiparasitic drugs.
@@ -383,7 +383,7 @@ It also impairs glucose uptake, starving and eliminating the parasite.`,
   description: `Metronidazole disrupts DNA synthesis in anaerobic microorganisms.
 It is reduced to reactive nitro radicals inside the microorganism, which bind to DNA, causing strand breakage and cell death.
 It is effective mainly against anaerobic bacteria and protozoa.`,
-  dosage: `Amebiasis (Entamoeba histolytica): 500–750 mg orally every 8 hours for 7–10 days.
+  Dosage: `Amebiasis (Entamoeba histolytica): 500–750 mg orally every 8 hours for 7–10 days.
 Giardiasis (Giardia lamblia): 250 mg orally every 8 hours for 5–7 days.
 Trichomoniasis (Trichomonas vaginalis): Single dose of 2 g orally once.`,
   benefits: [ '✔️ Effective against anaerobic bacteria and protozoa.',
@@ -423,7 +423,7 @@ Trichomoniasis (Trichomonas vaginalis): Single dose of 2 g orally once.`,
   description: `Imidocarb interferes with nucleic acid metabolism of protozoa by binding to DNA, disrupting replication and transcription.
 It may also inhibit polyamine synthesis, impairing parasite growth and viability.
 It is particularly effective against Babesia spp. due to accumulation in infected erythrocytes.`,
-  dosage: `Cattle (Babesia): 1.2 mg/kg IM or SC (single dose).
+  Dosage: `Cattle (Babesia): 1.2 mg/kg IM or SC (single dose).
 Dogs (Babesia canis): 6.6 mg/kg IM or SC.
 Horses (Babesia equi): 2.4 mg/kg IM or SC.
 Always follow veterinary prescription.`,
@@ -463,7 +463,7 @@ Always follow veterinary prescription.`,
   description: `Clindamycin is a lincosamide antibiotic that inhibits protein synthesis in susceptible organisms.
 It binds to the 50S ribosomal subunit, blocking translocation during protein synthesis.
 In protozoa like Toxoplasma gondii and Plasmodium falciparum, it disrupts apicoplast function, leading to parasite death.`,
-  dosage: `Toxoplasmosis (adults): 300–450 mg orally every 6–8 hours (with pyrimethamine + folinic acid).
+  Dosage: `Toxoplasmosis (adults): 300–450 mg orally every 6–8 hours (with pyrimethamine + folinic acid).
 Malaria:
 • Children: 20 mg/kg/day divided every 8 hours orally for 7 days.
 • Adults: 450–600 mg orally every 8 hours for 7 days.`,
@@ -505,7 +505,7 @@ Malaria:
   description: `Itraconazole is an azole antifungal that inhibits the fungal cytochrome P450 enzyme (14α-demethylase).
 This prevents the conversion of lanosterol to ergosterol, an essential component of the fungal cell membrane.
 Disruption of ergosterol synthesis leads to increased membrane permeability and fungal cell death.`,
-  dosage: `Blastomycosis, histoplasmosis, aspergillosis: 200 mg once or twice daily (often for several months).
+  Dosage: `Blastomycosis, histoplasmosis, aspergillosis: 200 mg once or twice daily (often for several months).
 Always follow veterinary or medical prescription for specific species and conditions.`,
   benefits: `Broad-spectrum antifungal activity (effective against blastomycosis, histoplasmosis, aspergillosis, and others).
 Available in multiple formulations (oral, IV).
@@ -540,7 +540,7 @@ Good option for long-term treatment of systemic mycoses.`,
   type: 'Anti-fungals',
   description: `Ketoconazole is an azole antifungal that inhibits lanosterol 14-α-demethylase (a cytochrome P450 enzyme),
 blocking the conversion of lanosterol to ergosterol. This destabilizes the fungal cell membrane and leads to fungal cell death.`,
-  dosage: `Topical: 
+  Dosage: `Topical: 
 Cream 2% — apply once or twice daily for 2–6 weeks depending on the infection type.
 Shampoo 1%-2% — use twice weekly for 2-4 weeks, then once every 1–2 weeks for maintenance.`,
   benefits: `Effective for skin and scalp fungal infections (tinea, seborrheic dermatitis, dandruff). 
@@ -576,7 +576,7 @@ Cons: Oral form has significant liver toxicity risk, potential hormonal effects 
   type: 'Anti-fungals',
   description: `Miconazole is an imidazole antifungal that inhibits ergosterol synthesis,
 a key component of fungal cell membranes. This disrupts membrane integrity, leading to increased permeability and fungal cell death.`,
-  dosage: `Topical: apply once or twice daily for 2–4 weeks (e.g., athlete’s foot, ringworm, candidiasis).
+  Dosage: `Topical: apply once or twice daily for 2–4 weeks (e.g., athlete’s foot, ringworm, candidiasis).
 Vaginal: 
 - 2% cream: 5g once daily at bedtime for 7 days.
 - 4% cream: 5g once daily at bedtime for 3 days.
@@ -612,7 +612,7 @@ Cons: Risk of local irritation or rash; potential drug interactions (especially 
   description: `Clavamox combines amoxicillin (a penicillin-type beta-lactam antibiotic) with clavulanic acid (a beta-lactamase inhibitor).
 Amoxicillin inhibits bacterial cell wall synthesis, causing cell lysis and death.
 Clavulanic acid protects amoxicillin from being broken down by beta-lactamase enzymes produced by resistant bacteria.`,
-  dosage: `6.25 mg per pound (13.75 mg/kg) of body weight, administered twice daily (every 12 hours). 
+  Dosage: `6.25 mg per pound (13.75 mg/kg) of body weight, administered twice daily (every 12 hours). 
 Exact dose and duration depend on the infection and veterinary guidance.`,
   benefits: `Effective against skin, gum, and urinary tract infections caused by beta-lactamase-producing bacteria.
 Broad-spectrum activity covers many gram-positive and gram-negative bacteria.
@@ -643,7 +643,7 @@ Available in convenient forms for pets (tablets, oral drops).`,
   description: `Amoxi-Tabs and Amoxi-Drops are amoxicillin-only formulations. 
 Amoxicillin works by inhibiting bacterial cell wall synthesis, leading to cell lysis and death. 
 These forms are commonly prescribed for infections where beta-lactamase resistance is not a concern.`,
-  dosage: `5–10 mg per pound (10–20 mg/kg) of body weight, every 12 to 24 hours depending on infection severity and veterinary prescription.`,
+  Dosage: `5–10 mg per pound (10–20 mg/kg) of body weight, every 12 to 24 hours depending on infection severity and veterinary prescription.`,
   benefits: `Used to treat respiratory infections (e.g., bronchitis, pneumonia), urinary tract infections, and certain skin infections.
 Available in easy-to-administer tablets and oral drops for pets.`,
   administrationForms: [
@@ -670,7 +670,7 @@ Available in easy-to-administer tablets and oral drops for pets.`,
   type: 'Antibiotics',
   description: `Ceftriaxone is a broad-spectrum third-generation cephalosporin antibiotic used off-label in veterinary medicine, particularly for dogs and cats.
 It works by inhibiting bacterial cell wall synthesis through binding to penicillin-binding proteins (PBPs), leading to disruption of the cell wall, cell lysis, and bacterial death.`,
-  dosage: `Dogs and Cats: 20–50 mg/kg once daily (IV or IM), depending on the severity of the infection and veterinary guidance.
+  Dosage: `Dogs and Cats: 20–50 mg/kg once daily (IV or IM), depending on the severity of the infection and veterinary guidance.
 Duration of therapy varies based on the type and severity of the infection.`,
   benefits: `Effective against a wide range of gram-positive and gram-negative bacteria.
 Used for skin infections, urinary tract infections, respiratory infections, bone and joint infections, and sepsis.`,
@@ -700,7 +700,7 @@ Used for skin infections, urinary tract infections, respiratory infections, bone
 It works by being reduced inside anaerobic cells to reactive nitro radicals, which damage DNA, inhibit nucleic acid synthesis, and cause cell death. 
 It selectively targets organisms with nitroreductase enzymes (anaerobes and protozoa).
 It has trade name of Flagyl (original brand by Sanofi).`,
-  dosage: `Dogs: 5–25 mg/kg per day, given every 12–24 hours as directed by a veterinarian.
+  Dosage: `Dogs: 5–25 mg/kg per day, given every 12–24 hours as directed by a veterinarian.
 Mild infections: 5–10 mg/kg every 12 hours.
 Severe conditions (e.g., giardiasis, severe colitis): 15–25 mg/kg every 12–24 hours.`,
   benefits: `Used for treating giardiasis (intestinal parasite), anaerobic bacterial infections, inflammatory bowel disease (IBD), periodontal disease, liver infections (hepatic encephalopathy), and chronic diarrhea or colitis.`,
@@ -743,7 +743,7 @@ This leads to bacterial cell death, making it bactericidal (kills bacteria rathe
 It is widely used in dogs, cats, and other animals (including exotic species) for bacterial infections, especially when resistant to other antibiotics.
 Common indications include urinary tract infections (UTIs), skin infections (pyoderma), respiratory tract infections, wound infections, ear infections (otitis externa), gastrointestinal infections, prostatitis, and infections caused by Pseudomonas, E. coli, Staphylococcus, and other gram-negative and gram-positive bacteria.
 Baytril is not effective against anaerobic bacteria or fungi.`,
-  dosage: `Dogs: 5–20 mg/kg once daily. Example: a 20 kg dog might receive 100–200 mg per day.
+  Dosage: `Dogs: 5–20 mg/kg once daily. Example: a 20 kg dog might receive 100–200 mg per day.
 Duration: typically 5–10 days, or longer for chronic infections.`,
   benefits: `Used to treat UTIs, skin infections, respiratory infections, wound infections, ear infections, gastrointestinal infections, prostatitis, and various infections caused by Pseudomonas, E. coli, Staphylococcus, and others.`,
   administrationForms: [
@@ -787,7 +787,7 @@ It is effective primarily against aerobic Gram-negative bacteria, and some Gram-
 Enroflox is used in dogs, cats, and sometimes exotic animals or livestock.
 Common indications include skin infections (pyoderma, wounds), UTIs, respiratory infections, ear infections (otitis externa), gastrointestinal infections, bone and joint infections, prostatitis, and infections caused by E. coli, Klebsiella, Pasteurella, Staphylococcus, Pseudomonas, etc.
 Not effective against anaerobic bacteria or fungal infections.`,
-  dosage: `Dogs: 5–20 mg/kg once daily depending on infection type/severity.
+  Dosage: `Dogs: 5–20 mg/kg once daily depending on infection type/severity.
 Duration: 5–10 days or longer for chronic infections.`,
   benefits: `Used to treat skin infections, UTIs, respiratory infections, ear infections, gastrointestinal infections, bone and joint infections, prostatitis, and various infections caused by susceptible bacteria.`,
   administrationForms: [
