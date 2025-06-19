@@ -1,3 +1,4 @@
+
 import React from 'react';
 import DogMedicineCard from './DogMedicineCard';
 import CatMedicineCard from './CatMedicineCard';
@@ -45,13 +46,13 @@ const MedicineGrid: React.FC<MedicineGridProps> = ({ petType, selectedCategory =
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-      {medicineIds.map((id) =>
+      {medicineIds.map((id) => (
         petType === 'dogs' ? (
           <DogMedicineCard key={id} medicineId={id.toString()} />
         ) : (
           <CatMedicineCard key={id} medicineId={id.toString()} />
         )
-      )}
+      ))}
     </div>
   );
 };
