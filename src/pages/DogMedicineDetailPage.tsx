@@ -1434,6 +1434,176 @@ It is commonly used as a supportive treatment in bronchitis, pneumonia, tracheit
   ],
   image: 'https://images.unsplash.com/photo-1594633312681-425b533859e8?w=600&h=400&fit=crop'
 },
+'39': {
+  name: 'Furosemide',
+  type: 'Diuretic / Furosemide',
+  description: `Furosemide is a loop diuretic commonly used in veterinary medicine to treat fluid accumulation and related conditions. 
+It acts on the thick ascending limb of the loop of Henle in the kidney, inhibiting the sodium-potassium-chloride (Na⁺-K⁺-2Cl⁻) co-transporter. 
+This action prevents reabsorption of sodium and chloride, resulting in increased excretion of sodium, chloride, potassium, and water.
+The result is increased urine production, which helps reduce fluid overload in conditions such as congestive heart failure, pulmonary edema, and ascites.`,
+  Dosage: `Dogs:
+- Oral: 1–4 mg/kg every 8 to 12 hours
+- Injectable (IV or IM): 1–2 mg/kg, repeated as needed
+- Dose frequency and duration depend on the severity of the condition and clinical response.
+
+Ingredients:
+- Active: Furosemide
+- Inactive (vary by form): Lactose, corn starch, magnesium stearate, water (for injectables), preservatives or stabilizers in liquids`,
+  benefits: `- Reduces fluid buildup in the lungs and body
+- Manages congestive heart failure and pulmonary edema
+- Helps treat ascites, edema, and hypertension
+- Can stimulate urine output in some kidney conditions`,
+  administrationForms: [
+    'Oral tablets',
+    'Oral liquids',
+    'Injectable solution (IV, IM, SC)'
+  ],
+  sideEffects: [
+    'Increased urination (polyuria)',
+    'Increased thirst (polydipsia)',
+    'Dehydration',
+    'Electrolyte imbalances (especially low potassium)',
+    'Muscle weakness or arrhythmias from hypokalemia',
+    'Ototoxicity (rare)',
+    'Gastrointestinal upset (vomiting, diarrhea)',
+    'Hypotension (low blood pressure)'
+  ],
+  precautions: [
+    'Ensure adequate hydration during treatment',
+    'Monitor electrolyte levels and kidney function regularly',
+    'Avoid high doses in patients at risk of hearing damage',
+    'Use cautiously with other nephrotoxic or ototoxic drugs'
+  ],
+  contraindications: [
+    'Known hypersensitivity to furosemide or sulfonamides',
+    'Severe dehydration or electrolyte imbalances',
+    'Anuria (complete lack of urine production) without reversible cause'
+  ],
+  image: 'https://images.unsplash.com/photo-1580281657527-dc59c54be3c4?w=600&h=400&fit=crop'
+},
+'40': {
+  name: 'Spironolactone',
+  type: 'Diuretic / Spironolactone',
+  description: `Spironolactone is a potassium-sparing diuretic and aldosterone antagonist used in veterinary medicine. 
+It works by blocking aldosterone receptors in the distal tubules of the kidneys, preventing sodium and water retention while promoting potassium conservation. 
+This leads to increased urine output (diuresis) without potassium loss. 
+It is especially useful in managing fluid overload and edema in conditions like congestive heart failure, liver disease, and hypertension.`,
+  Dosage: `Dogs: 1–2 mg/kg orally once or twice daily.
+Duration: Often used long-term in chronic conditions like heart failure.
+Ingredients:
+- Active: Spironolactone
+- Inactive: Lactose, cellulose, and common binders or fillers depending on tablet formulation.`,
+  benefits: `- Manages congestive heart failure
+- Reduces ascites due to liver or cardiac causes
+- Helps treat systemic hypertension
+- Used in hyperaldosteronism and sometimes kidney disease`,
+  administrationForms: [
+    'Oral tablets',
+    'Oral capsules'
+  ],
+  sideEffects: [
+    'Increased urination',
+    'Mild gastrointestinal upset (vomiting, diarrhea)',
+    'Weakness or lethargy',
+    'Hyperkalemia (high potassium levels)',
+    'Electrolyte imbalances',
+    'Dehydration',
+    'Rare allergic reactions'
+  ],
+  precautions: [
+    'Monitor blood potassium levels regularly',
+    'Avoid combining with potassium supplements unless prescribed',
+    'Regular kidney function tests recommended during prolonged use'
+  ],
+  contraindications: [
+    'Known hypersensitivity to spironolactone',
+    'Severe kidney dysfunction or anuria',
+    'Hyperkalemia or high risk for potassium retention'
+  ],
+  image: 'https://images.unsplash.com/photo-1603366615917-1fa6dad5c4f4?w=600&h=400&fit=crop'
+},
+'41': {
+  name: 'Hydrochlorothiazide',
+  type: 'Diuretic / Thiazide',
+  description: `Hydrochlorothiazide is a thiazide diuretic commonly used in veterinary medicine. 
+It works by inhibiting the sodium-chloride symporter in the distal convoluted tubule of the kidney, promoting sodium and chloride excretion. 
+Water follows sodium by osmosis, leading to increased urine output (diuresis). 
+It also enhances potassium and magnesium excretion, helping reduce blood volume, lower blood pressure, and manage fluid overload.`,
+  Dosage: `Dogs: 0.5–3 mg/kg orally every 12–24 hours depending on the condition and veterinary direction.
+Ingredients:
+- Active: Hydrochlorothiazide (may be combined with potassium-sparing agents in some formulations)
+- Inactive: Varies depending on the manufacturer and tablet formulation.`,
+  benefits: `- Used as adjunct treatment in congestive heart failure
+- Helps manage hypertension (high blood pressure)
+- Reduces edema associated with kidney, liver, or heart disease
+- Occasionally used for calcium-containing urinary stones`,
+  administrationForms: [
+    'Oral tablets',
+    'Oral capsules'
+  ],
+  sideEffects: [
+    'Electrolyte imbalances (hypokalemia, hyponatremia)',
+    'Increased urination and thirst',
+    'Weakness or lethargy',
+    'Gastrointestinal upset (vomiting, diarrhea)',
+    'Dehydration (if over-diuresis occurs)',
+    'Rare: pancreatitis or blood sugar changes (hyperglycemia)'
+  ],
+  precautions: [
+    'Monitor electrolyte levels regularly',
+    'Ensure adequate hydration during treatment',
+    'Avoid use in severely dehydrated animals',
+    'Use with caution in diabetic pets (may affect blood glucose)'
+  ],
+  contraindications: [
+    'Known allergy to sulfonamides (thiazides are sulfa derivatives)',
+    'Severe electrolyte imbalances',
+    'Anuria (lack of urine production)',
+    'Severe kidney or liver dysfunction without close monitoring'
+  ],
+  image: 'https://images.unsplash.com/photo-1628771065518-0d82f1938462?w=600&h=400&fit=crop'
+},
+  '42': {
+  name: 'Mannitol',
+  type: 'Diuretic / Osmotic (Mannitol)',
+  description: `Mannitol is a sugar alcohol osmotic diuretic used in emergency and critical care veterinary medicine. 
+It increases the osmolarity of blood and renal filtrate, drawing water from tissues into the bloodstream. 
+This promotes diuresis and reduces intracranial pressure (ICP) and intraocular pressure (IOP). 
+It is especially useful in cases of brain edema, glaucoma, and acute kidney injury, and is excreted unchanged by the kidneys.`,
+  Dosage: `Dogs and Cats: 0.5–1 g/kg IV over 15–30 minutes.
+Repeat every 6–8 hours if needed, depending on the clinical condition and hydration status.
+Ingredients:
+- Active: Mannitol (typically 10%, 15%, or 20% aqueous solution)
+- Inactive: Sterile water for injection; preservatives depending on brand`,
+  benefits: `- Reduces intracranial pressure (e.g., brain trauma, edema)
+- Lowers intraocular pressure in glaucoma emergencies
+- Promotes diuresis in acute kidney injury and toxicities
+- Helps assess renal function in diagnostic testing`,
+  administrationForms: [
+    'Intravenous (IV) injection or infusion'
+  ],
+  sideEffects: [
+    'Electrolyte imbalances (e.g., sodium, potassium)',
+    'Dehydration',
+    'Hypovolemia (low blood volume)',
+    'Pulmonary edema (especially in heart failure cases)',
+    'Vomiting or diarrhea',
+    'Rare: acute kidney injury in pre-existing renal disease'
+  ],
+  precautions: [
+    'Monitor hydration and electrolytes regularly',
+    'Use cautiously in patients with heart disease',
+    'Administer slowly over 15–30 minutes to reduce adverse effects',
+    'Avoid in anuric animals (no urine output)'
+  ],
+  contraindications: [
+    'Severe dehydration',
+    'Pulmonary edema or congestive heart failure',
+    'Intracranial hemorrhage (may worsen condition)',
+    'Anuria or severe kidney dysfunction without urine production'
+  ],
+  image: 'https://images.unsplash.com/photo-1621882488483-48a41ef31ce6?w=600&h=400&fit=crop'
+}
 
 };
 
