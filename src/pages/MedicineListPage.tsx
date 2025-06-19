@@ -12,7 +12,7 @@ const MedicineListPage = () => {
     document.title = `PetCare Vet | ${getPetTypeTitle()} Medicines`;
   }, [petType]);
   
-  const getPetTypeTitle = () => 
+  const getPetTypeTitle = () => {
     switch (petType) {
       case 'dogs':
         return 'Dog';
