@@ -7,9 +7,10 @@ import CategoryNavigation from '../components/medicines/CategoryNavigation';
 const VaccinesPage = () => {
   const { petType } = useParams<{ petType: string }>();
   
-  React.useEffect(() => {
-    document.title = PetCare Vet | ${getPetTypeTitle()} Vaccines;
-  }, [petType]);
+ React.useEffect(() => {
+  document.title = `PetCare Vet | ${getPetTypeTitle()} Vaccines`;
+}, [petType]);
+
   
   const getPetTypeTitle = () => {
     switch (petType) {
