@@ -8,7 +8,7 @@ const VaccinesPage = () => {
   const { petType } = useParams<{ petType: string }>();
   
   React.useEffect(() => {
-    document.title = `PetCare Vet | ${getPetTypeTitle()} Vaccines`;
+    document.title = PetCare Vet | ${getPetTypeTitle()} Vaccines;
   }, [petType]);
   
   const getPetTypeTitle = () => {
@@ -25,15 +25,15 @@ const VaccinesPage = () => {
   const getVaccines = () => {
     if (petType === 'dogs') {
       return [
-        { id: 1, name: 'Rabies Vaccine', description: 'Essential rabies vaccination for dogs - annual booster required by law in most areas.', image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop&sig=1' },
-        { id: 2, name: 'DHPP Core Vaccine', description: 'Combination vaccine protecting against Distemper, Hepatitis, Parvovirus, and Parainfluenza.', image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=400&h=300&fit=crop&sig=2' },
-        { id: 3, name: 'Bordetella Vaccine', description: 'Kennel cough prevention vaccine recommended for dogs in social environments.', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=300&fit=crop&sig=3' },
+        { id: 1, name: 'Nobivac DHPPi', description: 'Nobivac DHPPi protects dogs against distemper, hepatitis, parvovirus, and parainfluenza. It helps build strong immunity against these serious viral infections.', image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop&sig=1' },
+        { id: 2, name: 'Nobivac Lepto', description: 'Nobivac Lepto protects dogs against leptospirosis, a bacterial disease that can affect the liver and kidneys. It also helps prevent transmission to humans.', image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=400&h=300&fit=crop&sig=2' },
+        { id: 3, name: 'Nobivac Rabies', description: 'Nobivac Lepto protects dogs against leptospirosis, a bacterial disease that can affect the liver and kidneys. It also helps prevent transmission to humans.', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=300&fit=crop&sig=3' },
        ];
     } else if (petType === 'cats') {
       return [
-        { id: 1, name: 'Rabies Vaccine', description: 'Essential rabies vaccination for cats - required by law and highly effective protection.', image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop&sig=21' },
-        { id: 2, name: 'FVRCP Core Vaccine', description: 'Combination vaccine against Feline Viral Rhinotracheitis, Calicivirus, and Panleukopenia.', image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=400&h=300&fit=crop&sig=22' },
-        { id: 3, name: 'FeLV Vaccine', description: 'Feline Leukemia Virus protection for cats with outdoor access or multi-cat households.', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=300&fit=crop&sig=23' },
+        { id: 1, name: 'Nobivac Tricat Trio', description: 'Nobivac Tricat Trio protects cats against feline calicivirus, herpesvirus, and panleukopenia. It helps prevent respiratory and gastrointestinal infections.', image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop&sig=21' },
+        { id: 2, name: 'Nobivac Rabies', description: 'Nobivac Rabies provides protection against rabies, a deadly viral disease affecting the nervous system. It’s essential for both pet and public health.', image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=400&h=300&fit=crop&sig=22' },
+        { id: 3, name: 'Nobivac FeLV', description: 'Nobivac FeLV protects cats against feline leukemia virus, which can cause immune suppression and cancer. It helps reduce virus spread and serious illness.', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=300&fit=crop&sig=23' },
       ];
     }
     
