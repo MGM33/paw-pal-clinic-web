@@ -5,7 +5,7 @@ export const articlesData = [
     author: "د. سارة جونسون",
     description: "دليل شامل لفهم احتياجات حيوانك الأليف الغذائية حسب السلالة والعمر والحالة الصحية.",
     image: "https://images.unsplash.com/photo-1598137261030-dc5f7f1b22c7?q=80&w=2070&auto=format&fit=crop",
-    videoUrl: "<iframe width="560" height="315" src="https://www.youtube.com/embed/SLJlXMCzGB8?si=ZHizt_OcgkeER5jo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>", // optional
+    videoUrl: "https://www.youtube.com/embed/SLJlXMCzGB8?si=ZHizt_OcgkeER5jo", // optional
     pdf: "https://example.com/article1.pdf", // replace with real PDF link if needed
     content: `### كيفية اختيار الطعام المناسب لحيوانك الأليف
 
