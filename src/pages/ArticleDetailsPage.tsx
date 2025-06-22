@@ -22,8 +22,8 @@ const ArticleDetailPage = () => {
 
   return (
     <section className="py-12 px-4 max-w-3xl mx-auto" dir="rtl">
-    {article.videoUrl ? (
-  <div className="aspect-w-16 aspect-h-20 mb-6">
+   {article.videoUrl ? (
+  <div className="aspect-video mb-6">
     <iframe
       src={article.videoUrl}
       title={article.title}
@@ -40,6 +40,7 @@ const ArticleDetailPage = () => {
     className="rounded-xl shadow mb-6 w-full max-h-[400px] object-cover"
   />
 )}
+
 
 
 
