@@ -22,8 +22,31 @@ const ArticleDetailPage = () => {
 
   return (
     <section className="py-12 px-4 max-w-3xl mx-auto">
-      <img src={article.image} alt={article.title} className="rounded-xl shadow mb-8 w-full max-h-[400px] object-cover" />
-      <h1 className="text-4xl font-bold mb-4 text-theme-deepsky">{article.title}</h1>
+      <img
+        src={article.image}
+        alt={article.title}
+        className="rounded-xl shadow mb-6 w-full max-h-[400px] object-cover"
+      />
+      
+      <div className="flex justify-between items-center mb-4">
+        <h1 className="text-4xl font-bold text-theme-deepsky">{article.title}</h1>
+      </div>
+
+      <p className="text-sm text-gray-500 mb-2">By <span className="font-semibold">{article.author}</span></p>
+
+      {article.pdf && (
+        <div className="mb-6">
+          <a
+            href={article.pdf}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-theme-deepsky text-white px-4 py-2 rounded-lg shadow hover:bg-theme-sky transition"
+          >
+            📄 View Full Article (PDF)
+          </a>
+        </div>
+      )}
+
       <div className="prose max-w-none text-gray-700 text-lg whitespace-pre-wrap">
         {article.content}
       </div>
