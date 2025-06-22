@@ -1,13 +1,17 @@
 export const articlesData = [
   {
     id: "1",
-    title: "Choosing the Right Food for Your Pet",
-    author: "Dr. Sarah Thompson",
-    pdf: "https://example.com/pet-food-guide.pdf",
+    title: "كيفية اختيار الطعام المناسب لحيوانك الأليف",
+    author: "د. سارة جونسون",
+    description: "دليل شامل لفهم احتياجات حيوانك الأليف الغذائية حسب السلالة والعمر والحالة الصحية.",
     image: "https://images.unsplash.com/photo-1598137261030-dc5f7f1b22c7?q=80&w=2070&auto=format&fit=crop",
-    content: `### Choosing the Right Food for Your Pet
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // optional
+    pdf: "https://example.com/article1.pdf", // replace with real PDF link if needed
+    content: `### كيفية اختيار الطعام المناسب لحيوانك الأليف
 
-Feeding your pet isn't just about buying any kibble off the shelf. Factors like breed, age, and specific medical conditions greatly affect dietary needs. In this article, we explore how to select optimal nutrition for dogs, cats, and even birds. Learn how to read labels, spot harmful ingredients, and provide balanced meals that promote longevity and vitality.`
+تغذية حيوانك الأليف ليست مجرد اختيار أي طعام جاهز من الرف. تؤثر عوامل مثل السلالة، والعمر، والحالات الطبية بشكل كبير على احتياجاته الغذائية.
+
+في هذا المقال، نستعرض كيفية اختيار التغذية المثلى للكلاب والقطط وحتى الطيور. سنتعلم كيف نقرأ الملصقات، ونتعرف على المكونات الضارة، ونوفر وجبات متوازنة تعزز الصحة وطول العمر.`,
   },
   {
     id: "2",
