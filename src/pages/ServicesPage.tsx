@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Dog, Cat, Bird, Package } from 'lucide-react';
+import { Dog, Cat, Bird, Package, FileText } from 'lucide-react'; // ✅ Added FileText
 
 const ServicesPage = () => {
   React.useEffect(() => {
@@ -44,6 +43,15 @@ const ServicesPage = () => {
       description: 'Our exclusive line of veterinary products, specially formulated and created by our team for optimal pet health and care.',
       color: 'bg-purple-600',
       hoverColor: 'hover:bg-purple-700'
+    },
+    {
+      id: 'articles',
+      name: 'Articles',
+      icon: <FileText size={64} className="text-white" />,
+      image: 'https://images.unsplash.com/photo-1603570419966-9dd6b83a7c4f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      description: 'Explore helpful veterinary articles about pet care, vaccinations, nutrition, health tips, and more. Written by professionals to keep your pet safe and happy.',
+      color: 'bg-yellow-500',
+      hoverColor: 'hover:bg-yellow-600'
     }
   ];
 
@@ -88,6 +96,21 @@ const ServicesPage = () => {
                           className="border border-gray-300 hover:border-gray-400 px-6 py-3 rounded-md font-semibold transition-colors"
                         >
                           Browse Our Products
+                        </Link>
+                      </>
+                    ) : petType.id === 'articles' ? (
+                      <>
+                        <Link 
+                          to="/articles/about" 
+                          className={`${petType.color} ${petType.hoverColor} text-white px-6 py-3 rounded-md font-semibold transition-colors`}
+                        >
+                          Learn More
+                        </Link>
+                        <Link 
+                          to="/articles" 
+                          className="border border-gray-300 hover:border-gray-400 px-6 py-3 rounded-md font-semibold transition-colors"
+                        >
+                          Browse Articles
                         </Link>
                       </>
                     ) : (

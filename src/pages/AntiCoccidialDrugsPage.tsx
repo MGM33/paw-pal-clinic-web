@@ -1,8 +1,10 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import MedicineCard from '../components/medicines/MedicineCard';
 import PoultryDrawer from '../components/medicines/PoultryDrawer';
 
 const AntiCoccidialDrugsPage = () => {
+  const { petType, categoryId } = useParams<{ petType: string; categoryId: string }>();
   React.useEffect(() => {
     document.title = 'PetCare Vet | Anti-Coccidial Drugs';
   }, []);
@@ -62,8 +64,8 @@ const AntiCoccidialDrugsPage = () => {
                 name={medicine.name}
                 description={medicine.description}
                 image={medicine.image}
-                petType="birds"
-                itemType="medicines/anti-coccidial"
+                petType={petType || 'birds'}
+                itemType="medicines/category/anti-coccidial"
               />
             ))}
           </div>

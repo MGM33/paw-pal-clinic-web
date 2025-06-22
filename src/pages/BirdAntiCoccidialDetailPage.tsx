@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 
-const MedicinesData: Record<string, any> = {
+const medicinesData: Record<string, any> = {
   '1': {
     name: 'Amprolium 20%',
     description: 'Treatment of intestinal coccidiosis in chickens and turkeys caused by susceptible Eimeria species.',
@@ -39,7 +39,7 @@ const MedicinesData: Record<string, any> = {
 
 const BirdAntiCoccidialDetailPage = () => {
   const { medicineId } = useParams<{ medicineId: string }>();
-  const medicineData = MedicinesData[medicineId];
+  const medicineData = medicinesData[medicineId];
 
   React.useEffect(() => {
     if (medicineData) {
@@ -78,6 +78,13 @@ const BirdAntiCoccidialDetailPage = () => {
 
           <h1 className="text-3xl font-bold mb-4 text-theme-deepsky text-center">{medicineData.name}</h1>
 
+         
+           {medicineData.type && (
+              <p className="text-sm font-medium text-theme-deepsky mb-2 text-center">
+                Type: <span className="text-gray-600">{medicineData.type}</span>
+              </p>
+            )}
+
           {medicineData.description && (
             <p className="text-gray-600 mb-6 text-center">{medicineData.description}</p>
           )}
@@ -89,6 +96,7 @@ const BirdAntiCoccidialDetailPage = () => {
                 <p className="text-gray-600">{medicineData.composition}</p>
               </div>
             )}
+
 
             {medicineData.indications && (
               <div>

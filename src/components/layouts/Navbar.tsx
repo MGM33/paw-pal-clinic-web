@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Dog, Cat, Bird, Home, Phone, Menu, Settings, Info, Package, Grid3X3 } from 'lucide-react';
+import {
+  Dog, Cat, Bird, Home, Phone, Menu, Settings, Info, Package, Grid3X3, FileText
+} from 'lucide-react';
 import {
   Sheet, SheetTrigger, SheetContent, SheetHeader, SheetTitle
 } from "@/components/ui/sheet";
@@ -16,6 +18,7 @@ const Navbar = () => {
   const location = useLocation();
   const currentPath = location.pathname;
   const [isOpen, setIsOpen] = useState(false);
+  const [lang, setLang] = useState('en');
 
   const isActive = (path: string) => {
     if (path === '/' && currentPath === '/') return true;
@@ -27,10 +30,15 @@ const Navbar = () => {
     return currentPath.startsWith('/dogs') ||
       currentPath.startsWith('/cats') ||
       currentPath.startsWith('/birds') ||
-      currentPath.startsWith('/our-products');
+      currentPath.startsWith('/our-products') ||
+      currentPath.startsWith('/articles');
   };
 
-  const NavLink = ({ to, children, icon: Icon }: { to: string; children: React.ReactNode; icon?: React.ElementType }) => {
+  const NavLink = ({
+    to,
+    children,
+    icon: Icon
+  }: { to: string; children: React.ReactNode; icon?: React.ElementType }) => {
     const active = isActive(to);
     return (
       <Link
@@ -47,43 +55,32 @@ const Navbar = () => {
     );
   };
 
-  // ✅ Language switch logic
-  // const switchLanguage = (lang: string) => {
-  //   const trySwitch = () => {
-  //     const iframe = document.querySelector("iframe.goog-te-menu-frame") as HTMLIFrameElement | null;
-
-  //     if (!iframe) {
-  //       console.log("⏳ Waiting for Google Translate iframe...");
-  //       setTimeout(trySwitch, 500);
-  //       return;
-  //     }
-
-  //     const innerDoc = iframe.contentDocument || iframe.contentWindow?.document;
-  //     const langElements = innerDoc?.querySelectorAll(".goog-te-menu2-item span.text");
-
-  //     if (!langElements || langElements.length === 0) {
-  //       console.log("⏳ Waiting for language options...");
-  //       setTimeout(trySwitch, 500);
-  //       return;
-  //     }
-
-  //     langElements.forEach((el: any) => {
-  //       if (el.innerText.toLowerCase().includes(lang.toLowerCase())) {
-  //         el.click();
-  //         console.log(`✅ Language switched to ${lang}`);
-  //       }
-  //     });
-  //   };
-
-  //   trySwitch();
-  // };
-
   const categories = [
     { to: '/dogs', icon: Dog, name: 'Dogs' },
     { to: '/cats', icon: Cat, name: 'Cats' },
     { to: '/birds', icon: Bird, name: 'Poultry Birds' },
-    { to: '/our-products/about', icon: Package, name: 'Local Brand' }
+    { to: '/our-products/about', icon: Package, name: 'Local Brand' },
+    { to: '/articles/about', icon: FileText, name: 'Articles' },
   ];
+
+  // Language toggle
+  const toggleLanguage = () => {
+  const newLang = lang === 'en' ? 'ar' : 'en';
+  setLang(newLang);
+
+  const tryChangeLang = () => {
+    const select = document.querySelector<HTMLSelectElement>('.goog-te-combo');
+    if (select) {
+      select.value = newLang;
+      select.dispatchEvent(new Event('change'));
+    } else {
+      setTimeout(tryChangeLang, 500); // جرب تاني بعد نص ثانية
+    }
+  };
+
+  tryChangeLang();
+};
+
 
   return (
     <nav className="glass-effect shadow-lg sticky top-0 z-50 border-b border-theme-sky/30">
@@ -93,22 +90,6 @@ const Navbar = () => {
             <div className="text-3xl animate-float">🐾</div>
             <span className="text-3xl font-bold bg-gradient-to-r from-theme-deepsky to-theme-sky bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">VetCare</span>
           </Link>
-
-          {/* 🌐 Language Buttons
-          <div className="flex gap-3">
-            <button
-              onClick={() => switchLanguage("arabic")}
-              className="bg-vet-orange text-white px-3 py-1 rounded hover:bg-vet-darkorange"
-            >
-              🇸🇦 العربية
-            </button>
-            <button
-              onClick={() => switchLanguage("english")}
-              className="bg-gray-300 text-black px-3 py-1 rounded hover:bg-gray-400"
-            >
-              🇺🇸 English
-            </button>
-          </div> */}
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-2 items-center">
@@ -150,6 +131,14 @@ const Navbar = () => {
 
             <NavLink to="/about" icon={Info}>About Us</NavLink>
             <NavLink to="/contact" icon={Phone}>Contact</NavLink>
+
+            {/* Language Switch */}
+            <button
+              onClick={toggleLanguage}
+              className="ml-4 px-4 py-2 rounded-full border border-theme-deepsky text-theme-deepsky hover:bg-theme-deepsky hover:text-white transition-colors"
+            >
+              {lang === 'en' ? 'عربي' : 'English'}
+            </button>
           </div>
 
           {/* Mobile Menu */}
@@ -187,6 +176,14 @@ const Navbar = () => {
 
                   <NavLink to="/about" icon={Info}>About Us</NavLink>
                   <NavLink to="/contact" icon={Phone}>Contact</NavLink>
+
+                  {/* Mobile language switch */}
+                  <button
+                    onClick={toggleLanguage}
+                    className="ml-4 px-4 py-2 rounded-full border border-theme-deepsky text-theme-deepsky hover:bg-theme-deepsky hover:text-white transition-colors"
+                  >
+                    {lang === 'en' ? 'عربي' : 'English'}
+                  </button>
                 </div>
               </SheetContent>
             </Sheet>

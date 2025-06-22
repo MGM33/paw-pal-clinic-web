@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Dog, Cat, Bird, Package } from 'lucide-react';
+import { Dog, Cat, Bird, Package, FileText } from 'lucide-react';
 
 const FeaturedPets = () => {
   const petCategories = [
@@ -40,25 +39,35 @@ const FeaturedPets = () => {
       description: 'Our exclusive collection of premium pet care products.',
       color: 'bg-purple-600',
       hoverColor: 'hover:bg-purple-700'
+    },
+    {
+      id: 'articles/about',
+      name: 'Articles',
+      icon: <FileText size={40} />,
+      image: 'https://images.unsplash.com/photo-1603570419966-9dd6b83a7c4f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      description: 'Educational articles on pet health, nutrition, and care.',
+      color: 'bg-yellow-500',
+      hoverColor: 'hover:bg-yellow-600'
     }
   ];
 
   return (
     <section className="py-16 bg-gradient-to-br from-theme-lightsky/30 to-theme-powder/30">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Our Pet Categories</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <h2 className="text-3xl font-bold text-center mb-12">Our Categories</h2>
+
+        {/* Changed lg:grid-cols-4 → lg:grid-cols-5 */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {petCategories.map((category) => (
-            <Link 
+            <Link
               key={category.id}
-              to={`/${category.id}`} 
+              to={`/${category.id}`}
               className="group bg-white/80 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden transform transition-transform hover:-translate-y-2"
             >
               <div className="relative h-48 overflow-hidden">
-                <img 
-                  src={category.image} 
-                  alt={category.name} 
+                <img
+                  src={category.image}
+                  alt={category.name}
                   className="w-full h-full object-cover transition-transform group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">

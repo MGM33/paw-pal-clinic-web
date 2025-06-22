@@ -4,8 +4,6 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { useTranslation } from "react-i18next";
-import "./i18n"; // 🔑 Import i18n configuration
 
 // Pages
 import Index from "./pages/Index";
@@ -44,7 +42,12 @@ import AntiMycotoxinDrugPage from "./pages/AntimycotoxinDrugPage";
 import AntiCoccidialDrugsPage from "./pages/AntiCoccidialDrugsPage";
 import LocalBrandProductDetailPage from "./pages/LocalBrandProductDetailPage";
 
-// Layout Components
+// Articles
+import ArticlesPage from "./pages/ArticlesPage";
+import ArticlesAboutPage from "./pages/ArticlesAboutPage";
+import ArticleDetailsPage from "./pages/ArticleDetailsPage";
+
+// Layout
 import Navbar from "./components/layouts/Navbar";
 import Footer from "./components/layouts/Footer";
 
@@ -52,36 +55,44 @@ const queryClient = new QueryClient();
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-
   return null;
 };
 
-const LanguageToggle = () => {
-  const { i18n } = useTranslation();
+declare global {
+  interface Window {
+    googleTranslateElementInit: () => void;
+    google: any;
+  }
+}
 
-  const toggleLanguage = () => {
-    const newLang = i18n.language === "en" ? "ar" : "en";
-    i18n.changeLanguage(newLang);
-    document.documentElement.lang = newLang;
-    document.documentElement.dir = newLang === "ar" ? "rtl" : "ltr";
-  };
 
-  return (
-    <button
-      onClick={toggleLanguage}
-      className="fixed top-4 right-4 bg-vet-orange text-white px-3 py-1 rounded-md z-50"
-    >
-      {i18n.language === "en" ? "🇸🇦 العربية" : "🇺🇸 English"}
-    </button>
-  );
-};
 
 const App = () => {
   useEffect(() => {
+    // ✅ Google Translate Script
+    const addTranslateScript = () => {
+      const scriptId = 'google-translate-script';
+      if (!document.getElementById(scriptId)) {
+        const script = document.createElement('script');
+        script.id = scriptId;
+        script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+        document.body.appendChild(script);
+      }
+
+      window.googleTranslateElementInit = () => {
+        new window.google.translate.TranslateElement(
+          { pageLanguage: 'en', autoDisplay: false },
+          'google_translate_element'
+        );
+      };
+    };
+
+    addTranslateScript();
+
+    // ✅ Live Chat (Tidio)
     const script = document.createElement("script");
     script.src = "//code.tidio.co/wbhserfmj8jhuim5jxs0yp5iyrukyei8.js";
     script.async = true;
@@ -96,6 +107,9 @@ const App = () => {
         <BrowserRouter>
           <ScrollToTop />
           <div className="flex flex-col min-h-screen">
+            {/* ✅ Hidden Google Translate div */}
+            <div id="google_translate_element" style={{ display: "none" }}></div>
+
             <Navbar />
             <main className="flex-grow">
               <Routes>
@@ -106,10 +120,17 @@ const App = () => {
                 <Route path="/our-products" element={<LocalBrandPage />} />
                 <Route path="/our-products/about" element={<OurProductsAboutPage />} />
                 <Route path="/our-products/products/:productId" element={<LocalBrandProductDetailPage />} />
+
+                <Route path="/articles" element={<ArticlesPage />} />
+                <Route path="/articles/about" element={<ArticlesAboutPage />} />
+                <Route path="/articles/:articleId" element={<ArticleDetailsPage />} />
+
                 <Route path="/:petType" element={<PetCategoryPage />} />
                 <Route path="/:petType/medicines" element={<MedicineListPage />} />
                 <Route path="/:petType/vaccines" element={<VaccinesPage />} />
                 <Route path="/:petType/cosmetics-supplements" element={<CosmeticsSupplementsPage />} />
+                <Route path="/:petType/medicines/category/:categoryId" element={<MedicineCategoryPage />} />
+
                 <Route path="/birds/medicines/category/antibiotics" element={<MedicineCategoryPage />} />
                 <Route path="/birds/medicines/category/anti-coccidial" element={<AntiCoccidialDrugsPage />} />
                 <Route path="/birds/medicines/category/minerals-vitamins" element={<BirdMineralsVitaminsDetailPage />} />
@@ -120,6 +141,7 @@ const App = () => {
                 <Route path="/birds/medicines/category/immunostimulants" element={<BirdImmunostimulantDetailPage />} />
                 <Route path="/birds/medicines/category/mucolytics-expectorants" element={<MucolyticsDrugPage />} />
                 <Route path="/birds/medicines/category/anti-clostridial" element={<BirdAntiClostridialDetailPage />} />
+
                 <Route path="/birds/medicines/category/antibiotics/:medicineId" element={<BirdAntibioticsDetailPage />} />
                 <Route path="/birds/medicines/category/anti-coccidial/:medicineId" element={<BirdAntiCoccidialDetailPage />} />
                 <Route path="/birds/medicines/category/minerals-vitamins/:medicineId" element={<BirdMineralsVitaminsDetailPage />} />
@@ -130,6 +152,7 @@ const App = () => {
                 <Route path="/birds/medicines/category/immunostimulants/:medicineId" element={<BirdImmunostimulantDetailPage />} />
                 <Route path="/birds/medicines/category/mucolytics-expectorants/:medicineId" element={<BirdMucolyticsExpectorantDetailPage />} />
                 <Route path="/birds/medicines/category/anti-clostridial/:medicineId" element={<BirdAntiClostridialDetailPage />} />
+
                 <Route path="/birds/medicines/:medicineId" element={<BirdMedicineDetailPage />} />
                 <Route path="/dogs/medicines/:medicineId" element={<DogMedicineDetailPage />} />
                 <Route path="/dogs/vaccines/:vaccineId" element={<DogVaccineDetailPage />} />
@@ -137,7 +160,7 @@ const App = () => {
                 <Route path="/cats/medicines/:medicineId" element={<CatMedicineDetailPage />} />
                 <Route path="/cats/vaccines/:vaccineId" element={<CatVaccineDetailPage />} />
                 <Route path="/cats/cosmetics-supplements/:cosmeticId" element={<CatCosmeticsDetailPage />} />
-                <Route path="/:petType/medicines/category/:categoryId" element={<MedicineCategoryPage />} />
+
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>
