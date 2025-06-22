@@ -23,7 +23,7 @@ const ArticleDetailPage = () => {
   return (
     <section className="py-12 px-4 max-w-3xl mx-auto" dir="rtl">
     {article.videoUrl ? (
-  <div className="aspect-w-16 aspect-h-9 mb-6">
+  <div className="aspect-w-16 aspect-h-20 mb-6">
     <iframe
       src={article.videoUrl}
       title={article.title}
