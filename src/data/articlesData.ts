@@ -2,7 +2,8 @@ export const articlesData = [
   {
     id: "1",
     title: "Choosing the Right Food for Your Pet",
-    description: "A comprehensive guide to understanding your pet's dietary needs based on breed, age, and health conditions.",
+    author: "Dr. Sarah Thompson",
+    pdf: "https://example.com/pet-food-guide.pdf",
     image: "https://images.unsplash.com/photo-1598137261030-dc5f7f1b22c7?q=80&w=2070&auto=format&fit=crop",
     content: `### Choosing the Right Food for Your Pet
 
@@ -11,7 +12,8 @@ Feeding your pet isn't just about buying any kibble off the shelf. Factors like 
   {
     id: "2",
     title: "Top Vaccination Tips Every Pet Owner Should Know",
-    description: "Learn about essential vaccinations, their schedules, and how they prevent major diseases in pets.",
+    author: "Dr. Ahmed El-Shazly",
+    pdf: "https://example.com/vaccination-tips.pdf",
     image: "https://images.unsplash.com/photo-1583337130417-3346a1a4a4e6?q=80&w=2070&auto=format&fit=crop",
     content: `### Top Vaccination Tips
 
@@ -20,7 +22,8 @@ Vaccinations are crucial in safeguarding your pet's health. Puppies and kittens 
   {
     id: "3",
     title: "How to Perform a Basic Pet Checkup at Home",
-    description: "Simple steps to monitor your pet’s health at home and identify early signs of illness.",
+    author: "Dr. Maria Galal",
+    pdf: "https://example.com/home-checkup.pdf",
     image: "https://images.unsplash.com/photo-1601758064130-0f27d2b5c9c6?q=80&w=2070&auto=format&fit=crop",
     content: `### Home Checkup Guide
 
