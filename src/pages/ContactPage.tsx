@@ -103,7 +103,7 @@ const ContactPage = () => {
     className="flex items-center text-theme-deepsky font-semibold hover:underline"
   >
     <img
-      src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Phone_font_awesome.svg"
+      src="https://cdn-icons-png.flaticon.com/512/724/724664.png"
       alt="Phone"
       className="w-5 h-5 mr-2"
     />
