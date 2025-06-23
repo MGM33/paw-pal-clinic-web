@@ -67,7 +67,7 @@ const CategorySlideshow = () => {
     icon: <FileText size={40} />,
     link: '/articles/about',
     buttonText: 'View Articles',
-    color: 'bg-Yellow-600'
+    color: 'bg-yellow-600'
   }
   ];
 
