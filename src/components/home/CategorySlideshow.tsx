@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Dog, Cat, Bird, Package } from 'lucide-react';
+import { Dog, Cat, Bird, Package, FileText} from 'lucide-react';
 
 const CategorySlideshow = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
