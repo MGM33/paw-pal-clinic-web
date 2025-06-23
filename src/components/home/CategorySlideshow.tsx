@@ -14,7 +14,7 @@ const CategorySlideshow = () => {
       id: 'hero',
       title: 'Your Pet\'s Health Is Our Priority',
       description: 'Professional veterinary care for your dogs, cats, and birds. We offer quality medical services and treatments with modern facilities and expert care.',
-      image: 'https://images.unsplash.com/photo-1599443015574-be5fe8a05783?q=80&w=1000&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1581888227599-779811939961?q=80&w=1000&auto=format&fit=crop',
       link: '/services',
       buttonText: 'Our Services',
       color: 'bg-theme-deepsky'
