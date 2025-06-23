@@ -86,13 +86,16 @@ const Navbar = () => {
     <nav className="glass-effect shadow-lg sticky top-0 z-50 border-b border-theme-sky/30">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-         <Link to="/" className="flex items-center group">
-  <img
-    src="https://videos.openai.com/vg-assets/assets%2Ftask_01jyds5rqee13989jvj66vr8xj%2F1750661847_img_3.webp?st=2025-06-23T05%3A42%3A23Z&se=2025-06-29T06%3A42%3A23Z&sks=b&skt=2025-06-23T05%3A42%3A23Z&ske=2025-06-29T06%3A42%3A23Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=3d249c53-07fa-4ba4-9b65-0bf8eb4ea46a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=KhATk%2FRmnRyYfF2NolB99CgCfJWICyD0HLQcq88d8ZE%3D&az=oaivgprodscus"
-    alt="VetCare Logo"
-    className="h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
-  />
+      <Link to="/" className="flex items-center group h-12 overflow-hidden">
+  <div className="scale-[1.5]">
+    <img
+      src="https://videos.openai.com/vg-assets/assets%2Ftask_01jyds5rqee13989jvj66vr8xj%2F1750661847_img_3.webp?st=2025-06-23T05%3A42%3A23Z&se=2025-06-29T06%3A42%3A23Z&sks=b&skt=2025-06-23T05%3A42%3A23Z&ske=2025-06-29T06%3A42%3A23Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=3d249c53-07fa-4ba4-9b65-0bf8eb4ea46a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=KhATk%2FRmnRyYfF2NolB99CgCfJWICyD0HLQcq88d8ZE%3D&az=oaivgprodscus"
+      alt="VetCare Logo"
+      className="h-12 w-auto object-contain group-hover:scale-[1.55] transition-transform duration-300"
+    />
+  </div>
 </Link>
+
 
 
           {/* Desktop Navigation */}
