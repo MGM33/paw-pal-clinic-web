@@ -132,7 +132,7 @@ const ContactPage = () => {
 
                   <div>
                     <h3 className="text-lg font-medium mb-2">Email</h3>
-                    <p className="text-gray-600">info@petcarevet.com</p>
+                    <p className="text-gray-600">m.dgamal456@gmail.com</p>
                   </div>
 
                   <div>
