@@ -13,7 +13,7 @@ const Footer = () => {
              <img
   src="https://videos.openai.com/vg-assets/assets%2Ftask_01jydv20e9e66t1jdcyfkzgbjc%2F1750663815_img_3.webp?st=2025-06-23T05%3A41%3A16Z&se=2025-06-29T06%3A41%3A16Z&sks=b&skt=2025-06-23T05%3A41%3A16Z&ske=2025-06-29T06%3A41%3A16Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=3d249c53-07fa-4ba4-9b65-0bf8eb4ea46a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=BCxHrbGoEXJIwWwvM6B9jYZRQGaRPiWhWvW8zq40uHE%3D&az=oaivgprodscus"
   alt="VetCare Logo"
-  className="h-8 w-auto animate-float"
+  className="h-8 w-auto"
 />
 
               <h3 className="text-2xl font-bold">VetCare</h3>
