@@ -17,7 +17,7 @@ const FeaturedPets = () => {
       id: 'cats',
       name: 'Cats',
       icon: <Cat size={40} />,
-      image: 'https://sdmntprpolandcentral.oaiusercontent.com/files/00000000-bd50-620a-97c5-ad2ee09771ef/raw?se=2025-06-23T06%3A42%3A31Z&sp=r&sv=2024-08-04&sr=b&scid=e61505da-f0fc-54b1-870e-16afaf374e5b&skoid=76024c37-11e2-4c92-aa07-7e519fbe2d0f&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-06-23T04%3A30%3A07Z&ske=2025-06-24T04%3A30%3A07Z&sks=b&skv=2024-08-04&sig=5SmujgMJi4db3RktxP7hqdGq1u6bUSOWCN5W8vj6uPc%3D',
+      image: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=2786&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       description: 'Specialized treatments and care for your feline friends.',
       color: 'bg-vet-green',
       hoverColor: 'hover:bg-vet-darkgreen'
