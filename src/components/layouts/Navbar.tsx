@@ -87,7 +87,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
     <Link to="/" className="flex items-center space-x-3 group h-12">
-  <div className="h-full flex items-center">
+ <div className="scale-[1.4]">
     <img
       src="https://videos.openai.com/vg-assets/assets%2Ftask_01jyds5rqee13989jvj66vr8xj%2F1750661847_img_2.webp?st=2025-06-23T05%3A42%3A23Z&se=2025-06-29T06%3A42%3A23Z&sks=b&skt=2025-06-23T05%3A42%3A23Z&ske=2025-06-29T06%3A42%3A23Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=3d249c53-07fa-4ba4-9b65-0bf8eb4ea46a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=hYRXUSxFUXQLTVFuLFiYCUq5e898DNvfXkCVXJRSnzY%3D&az=oaivgprodscus"
       alt="VetCare Logo"
