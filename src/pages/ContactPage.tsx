@@ -104,16 +104,22 @@ const ContactPage = () => {
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-medium mb-2">WhatsApp</h3>
-                    <a
-                      href="https://wa.me/201272151734"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-green-600 font-semibold hover:underline block"
-                    >
-                      +20 127 215 1734
-                    </a>
-                  </div>
+  <h3 className="text-lg font-medium mb-2">WhatsApp</h3>
+  <a
+    href="https://wa.me/201272151734"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center text-green-600 font-semibold hover:underline"
+  >
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+      alt="WhatsApp"
+      className="w-5 h-5 mr-2"
+    />
+    +20 127 215 1734
+  </a>
+</div>
+
 
                   <div>
                     <h3 className="text-lg font-medium mb-2">Email</h3>
