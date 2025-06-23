@@ -52,22 +52,22 @@ const ArticleDetailPage = () => {
         بقلم <span className="font-semibold">{article.author}</span>
       </p>
 
-      <div className="prose max-w-none text-gray-700 text-lg whitespace-pre-wrap mb-8">
-        {article.content}
-      </div>
+      <div className="prose max-w-none text-gray-700 text-lg whitespace-pre-wrap mb-4">
+  {article.content}
+</div>
 
-      {article.pdf && (
-        <div className="mt-6 text-right">
-          <a
-            href={article.pdf}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-theme-deepsky text-white px-6 py-2 rounded-lg shadow hover:bg-theme-sky transition"
-          >
-            📄 عرض المقال الكامل (PDF)
-          </a>
-        </div>
-      )}
+{article.pdf && (
+  <div className="mt-2 text-right">
+    <a
+      href={article.pdf}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-block bg-theme-deepsky text-white px-6 py-2 rounded-lg shadow hover:bg-theme-sky transition"
+    >
+      📄 عرض المقال الكامل (PDF)
+    </a>
+  </div>
+)}
     </section>
   );
 };
