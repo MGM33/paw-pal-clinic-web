@@ -49,7 +49,7 @@ const ArticleDetailPage = () => {
       </h1>
 
       <p className="text-sm text-gray-500 mb-6">
-        بواسطة <span className="font-semibold">{article.author}</span>
+        بقلم <span className="font-semibold">{article.author}</span>
       </p>
 
       <div className="prose max-w-none text-gray-700 text-lg whitespace-pre-wrap mb-8">
@@ -57,7 +57,7 @@ const ArticleDetailPage = () => {
       </div>
 
       {article.pdf && (
-        <div className="mt-6 text-center">
+        <div className="mt-6 text-right">
           <a
             href={article.pdf}
             target="_blank"
