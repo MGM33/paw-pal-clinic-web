@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { FaWhatsapp } from 'react-icons/fa'; // Add this import at the top
 
 const ContactPage = () => {
   React.useEffect(() => {
@@ -49,7 +48,6 @@ const ContactPage = () => {
               <div className="md:w-1/2 p-8">
                 <h2 className="text-2xl font-semibold mb-6">Get In Touch</h2>
 
-                {/* Form */}
                 <form className="space-y-4" onSubmit={handleSubmit}>
                   <input type="hidden" name="_captcha" value="false" />
 
@@ -87,7 +85,6 @@ const ContactPage = () => {
                 )}
               </div>
 
-              {/* Contact Info */}
               <div className="md:w-1/2 bg-gray-100 p-8">
                 <h2 className="text-2xl font-semibold mb-6">Contact Information</h2>
 
@@ -112,9 +109,8 @@ const ContactPage = () => {
                       href="https://wa.me/201272151734"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-green-600 hover:underline font-semibold"
+                      className="text-green-600 font-semibold hover:underline block"
                     >
-                      <FaWhatsapp className="mr-2 text-2xl" />
                       +20 127 215 1734
                     </a>
                   </div>
@@ -142,7 +138,6 @@ const ContactPage = () => {
             </div>
           </div>
 
-          {/* Map */}
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
             <div className="h-96 w-full">
               <iframe
