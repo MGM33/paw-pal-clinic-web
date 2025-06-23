@@ -16,18 +16,21 @@ const ArticlesPage = () => {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {articlesData.map((article) => (
-            <Link
-              key={article.id}
-              to={`/articles/${article.id}`}
-              className="bg-white/90 rounded-xl shadow-lg hover:shadow-xl transition-transform hover:-translate-y-1 overflow-hidden"
-            >
-              <img src={article.image} alt={article.title} className="h-48 w-full object-cover" />
-              <div className="p-5">
-                <h2 className="text-2xl font-bold mb-2 text-theme-deepsky">{article.title}</h2>
-                <p className="text-gray-600 text-sm line-clamp-3">{article.description}</p>
-              </div>
-            </Link>
-          ))}
+  <Link
+    key={article.id}
+    to={`/articles/${article.id}`}
+    className="bg-white/90 rounded-xl shadow-lg hover:shadow-xl transition-transform hover:-translate-y-1 overflow-hidden"
+  >
+    <img src={article.image} alt={article.title} className="h-48 w-full object-cover" />
+    
+    {/* Right-to-left content only */}
+    <div className="p-5" dir="rtl">
+      <h2 className="text-2xl font-bold mb-2 text-theme-deepsky">{article.title}</h2>
+      <p className="text-gray-600 text-sm line-clamp-3">{article.description}</p>
+    </div>
+  </Link>
+))}
+
         </div>
       </div>
     </section>
