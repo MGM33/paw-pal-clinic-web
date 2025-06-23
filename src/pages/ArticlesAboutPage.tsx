@@ -85,7 +85,7 @@ const ArticlesAboutPage = () => {
                 <h3 className="text-2xl font-semibold mb-6">Start Reading Now</h3>
                 <Link 
                   to="/articles"
-                  className="bg-theme-deepsky hover:bg-theme-sky text-white px-8 py-4 rounded-md font-semibold transition-colors inline-block"
+                  className="bg-yellow-600 hover:bg-yellow-700 text-white px-8 py-4 rounded-md font-semibold transition-colors inline-block"
                 >
                   Browse Articles
                 </Link>
