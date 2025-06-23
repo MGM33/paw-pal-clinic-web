@@ -18,13 +18,13 @@ export const articlesData = [
   },
   {
     id: "2",
-    title: "Top Vaccination Tips Every Pet Owner Should Know",
-    author: "Dr. Ahmed El-Shazly",
-    pdf: "https://example.com/vaccination-tips.pdf",
-    image: "https://images.unsplash.com/photo-1583337130417-3346a1a4a4e6?q=80&w=2070&auto=format&fit=crop",
-    content: `### Top Vaccination Tips
-
-Vaccinations are crucial in safeguarding your pet's health. Puppies and kittens need a series of shots during their first year, followed by boosters. This article outlines which vaccines are mandatory and which are optional, based on your pet's lifestyle and risk factors.`
+    title: "هل تواجه صعوبة في إعطاء كلبك الدواء؟",
+    author: "معلومات صح",
+    description: "كيفية إعطاء الدواء للكلب",
+    pdf: "https://sureinfos.com/%D9%83%D9%8A%D9%81%D9%8A%D8%A9-%D8%A5%D8%B9%D8%B7%D8%A7%D8%A1-%D8%A7%D9%84%D8%AF%D9%88%D8%A7%D8%A1-%D9%84%D9%84%D9%83%D9%84%D8%A8/",
+    videoUrl: "https://www.youtube.com/embed/SLJlXMCzGB8?si=xWroPY9YSpDzJWaH",
+    image: "https://www.animaldocs.com.au/wp-content/uploads/2019/01/Administration-of-Medication-dog.jpg",
+    content: `تُعتبر العناية الصحية بالكلب مسؤولية كبيرة تقع على عاتق المربي، ومن أهم جوانب هذه الرعاية إعطاء الدواء عند الحاجة. وعلى الرغم من أن بعض الكلاب قد تتقبل تناول الدواء بسهولة، إلا أن الغالبية العظمى تظهر مقاومة شديدة، مما يجعل المهمة صعبة ومليئة بالتحديات. لذا، من المهم أن يعرف المربي الطرق الذكية والفعّالة لتقديم الدواء للكلب بطريقة تضمن سلامته وراحته النفسية. في هذا المقال، نقدم لك دليلاً شاملاً حول كيفية إعطاء الدواء للكلب بأساليب متنوعة ومجربة.`
   },
   {
     id: "3",
