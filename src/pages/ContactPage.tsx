@@ -96,12 +96,21 @@ const ContactPage = () => {
                     </p>
                   </div>
 
-                  <div>
-                    <h3 className="text-lg font-medium mb-2">Phone</h3>
-                    <a href="tel:+201286472342" className="text-theme-deepsky font-semibold hover:underline block">
-                      +20 128 647 2342
-                    </a>
-                  </div>
+                 <div>
+  <h3 className="text-lg font-medium mb-2">Phone</h3>
+  <a
+    href="tel:+201286472342"
+    className="flex items-center text-theme-deepsky font-semibold hover:underline"
+  >
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Phone_font_awesome.svg"
+      alt="Phone"
+      className="w-5 h-5 mr-2"
+    />
+    0128 647 2342
+  </a>
+</div>
+
 
                   <div>
   <h3 className="text-lg font-medium mb-2">WhatsApp</h3>
@@ -116,7 +125,7 @@ const ContactPage = () => {
       alt="WhatsApp"
       className="w-5 h-5 mr-2"
     />
-    +20 127 215 1734
+    0127 215 1734
   </a>
 </div>
 
