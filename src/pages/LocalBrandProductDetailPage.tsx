@@ -24,7 +24,7 @@ const LocalBrandProductDetailPage = () => {
       'Turmeric Powder (or Curcumin extract)'
     ],
     storage: 'Store in a cool, dry place away from sunlight for up to 6 months.',
-    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=500&fit=crop'
+    image: 'https://i.postimg.cc/L4nGt33S/petwell-cream.jpg'
   };
 
   return (
