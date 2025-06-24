@@ -10,16 +10,14 @@ const ArticlesPage = () => {
     document.title = 'VetCare | Articles';
   }, []);
 
-  // فلترة حسب الفئة
   const filteredArticles = articlesData.filter((article) => {
     if (selectedCategory === 'all') return true;
     if (selectedCategory === 'dogs') return article.id >= 1 && article.id <= 4;
     if (selectedCategory === 'poultry') return article.id >= 5 && article.id <= 9;
-    if (selectedCategory === 'cats') return article.id > 1000; // لسه مفيش بيانات للقطط
+    if (selectedCategory === 'cats') return article.id > 1000; // placeholder for future cats
     return false;
   });
 
-  // الفئات
   const categories = [
     { id: 'all', label: 'كل المقالات' },
     { id: 'dogs', label: 'مقالات الكلاب' },
@@ -28,24 +26,19 @@ const ArticlesPage = () => {
   ];
 
   return (
-    <section className="py-12 bg-gradient-to-br from-theme-lightsky/30 to-theme-powder/30 min-h-screen">
+    <section className="py-12 bg-gradient-to-br from-theme-lightsky/30 to-theme-powder/30 min-h-screen" dir="rtl">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold mb-6 text-center">مقالات الحيوانات</h1>
         <p className="text-center text-gray-600 max-w-2xl mx-auto mb-10">
           تصفح مقالاتنا المتخصصة لمساعدتك في رعاية أصدقائك الكلاب، القطط، أو الدواجن.
         </p>
 
-        {/* أزرار الفئات */}
-        <div
-          className="flex flex-wrap gap-3 mb-10 justify-end"
-          style={{ direction: 'rtl' }}
-        >
+        {/* زرار التصنيفات */}
+        <div className="flex flex-wrap gap-3 mb-10 justify-end">
           {categories.map((cat) => (
             <motion.button
               key={cat.id}
-              onClick={() =>
-                setSelectedCategory((prev) => (prev === cat.id ? 'all' : cat.id))
-              }
+              onClick={() => setSelectedCategory((prev) => (prev === cat.id ? 'all' : cat.id))}
               whileTap={{ scale: 0.95 }}
               className={`px-5 py-2 rounded-full border text-sm transition-all duration-200 font-semibold shadow-sm
                 ${
@@ -60,8 +53,8 @@ const ArticlesPage = () => {
           ))}
         </div>
 
-        {/* عرض المقالات */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" dir="rtl">
+        {/* المقالات */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <AnimatePresence mode="wait">
             {filteredArticles.length > 0 ? (
               filteredArticles.map((article) => (
@@ -74,7 +67,7 @@ const ArticlesPage = () => {
                 >
                   <Link
                     to={`/articles/${article.id}`}
-                    className="bg-white/90 rounded-xl shadow-lg hover:shadow-xl transition-transform hover:-translate-y-1 overflow-hidden"
+                    className="bg-white/90 border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition-transform hover:-translate-y-1 overflow-hidden"
                   >
                     <img
                       src={article.image}
