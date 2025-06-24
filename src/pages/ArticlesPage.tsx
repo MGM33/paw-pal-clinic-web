@@ -19,10 +19,10 @@ const ArticlesPage = () => {
   });
 
   const categories = [
-    { id: 'all', label: 'كل المقالات' },
-    { id: 'dogs', label: 'مقالات الكلاب' },
-    { id: 'poultry', label: 'مقالات الدواجن' },
-    { id: 'cats', label: 'مقالات القطط' },
+     { id: 'cats', label: 'مقالات القطط' },
+     { id: 'poultry', label: 'مقالات الدواجن' },
+     { id: 'dogs', label: 'مقالات الكلاب' },
+     { id: 'all', label: 'كل المقالات' },
   ];
 
   return (
