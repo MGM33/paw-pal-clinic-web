@@ -56,7 +56,9 @@ const ArticlesPage = () => {
         </div>
 
         {/* المقالات */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" dir="rtl">
+      <div
+  className="flex flex-wrap gap-3 mb-10 justify-end"
+  style={{ direction: 'rtl' }}>
           <AnimatePresence mode="wait">
             {filteredArticles.length > 0 ? (
               filteredArticles.map((article) => (
