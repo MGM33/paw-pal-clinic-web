@@ -53,20 +53,20 @@ const LocalBrandProductDetailPage = () => {
             </div>
 
             {/* Button Container */}
-            <div className="flex justify-between items-center gap-4">
-              <a
-                href="/contact" // or use a phone link like href="tel:01000000000"
-                className="bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-lg font-semibold transition"
-              >
-                To order contact us here
-              </a>
-              <Link
-                to="/our-products"
-                className="bg-theme-deepsky hover:bg-theme-sky text-white px-6 py-3 rounded-lg font-semibold transition"
-              >
-                Back
-              </Link>
-            </div>
+           <div className="flex items-center gap-4">
+  <Link
+    to="/contact"
+    className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition"
+  >
+    To order contact us here
+  </Link>
+  <Link
+    to="/our-products"
+    className="bg-theme-deepsky hover:bg-theme-sky text-white px-6 py-3 rounded-lg font-semibold transition"
+  >
+    Back
+  </Link>
+</div>
           </div>
         </div>
 
