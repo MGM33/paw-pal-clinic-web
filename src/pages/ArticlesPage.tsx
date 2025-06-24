@@ -10,14 +10,16 @@ const ArticlesPage = () => {
     document.title = 'VetCare | Articles';
   }, []);
 
+  // فلترة حسب الفئة
   const filteredArticles = articlesData.filter((article) => {
     if (selectedCategory === 'all') return true;
     if (selectedCategory === 'dogs') return article.id >= 1 && article.id <= 4;
     if (selectedCategory === 'poultry') return article.id >= 5 && article.id <= 9;
-    if (selectedCategory === 'cats') return article.id > 1000;
+    if (selectedCategory === 'cats') return article.id > 1000; // لسه مفيش بيانات للقطط
     return false;
   });
 
+  // الفئات
   const categories = [
     { id: 'all', label: 'كل المقالات' },
     { id: 'dogs', label: 'مقالات الكلاب' },
@@ -33,8 +35,11 @@ const ArticlesPage = () => {
           تصفح مقالاتنا المتخصصة لمساعدتك في رعاية أصدقائك الكلاب، القطط، أو الدواجن.
         </p>
 
-        {/* ثابتة من اليمين */}
-        <div className="flex justify-start md:justify-end gap-3 flex-wrap mb-10" dir="rtl">
+        {/* أزرار الفئات */}
+        <div
+          className="flex flex-wrap gap-3 mb-10 justify-end"
+          style={{ direction: 'rtl' }}
+        >
           {categories.map((cat) => (
             <motion.button
               key={cat.id}
@@ -42,7 +47,7 @@ const ArticlesPage = () => {
                 setSelectedCategory((prev) => (prev === cat.id ? 'all' : cat.id))
               }
               whileTap={{ scale: 0.95 }}
-              className={`px-5 py-2 rounded-full border transition-all duration-200 font-semibold shadow-sm
+              className={`px-5 py-2 rounded-full border text-sm transition-all duration-200 font-semibold shadow-sm
                 ${
                   selectedCategory === cat.id
                     ? 'bg-theme-deepsky text-white border-theme-deepsky shadow-md'
@@ -55,10 +60,8 @@ const ArticlesPage = () => {
           ))}
         </div>
 
-        {/* المقالات */}
-      <div
-  className="flex flex-wrap gap-3 mb-10 justify-end"
-  style={{ direction: 'rtl' }}>
+        {/* عرض المقالات */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" dir="rtl">
           <AnimatePresence mode="wait">
             {filteredArticles.length > 0 ? (
               filteredArticles.map((article) => (
