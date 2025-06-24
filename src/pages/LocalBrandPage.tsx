@@ -11,7 +11,7 @@ const LocalBrandPage = () => {
     name: 'Petwell Natural Wound Healing Cream',
     description:
       'Formulated to soothe, protect, and heal minor cuts, bites, and skin irritations. Safe for external use on cats and dogs.',
-    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop',
+    image: 'https://i.postimg.cc/L4nGt33S/petwell-cream.jpg',
   };
 
   return (
