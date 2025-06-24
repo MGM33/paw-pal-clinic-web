@@ -43,11 +43,41 @@ const LocationSection = () => {
                 <div className="bg-theme-deepsky text-white p-3 rounded-full">
                   <Phone size={24} />
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-theme-deepsky">Contact</h3>
-                  <p className="text-gray-600">Phone: (123) 456-7890</p>
-                  <p className="text-gray-600">Email: info@vetcare.com</p>
-                </div>
+              <div className="space-y-2">
+  <a
+    href="tel:+201286472342"
+    className="flex items-center text-theme-deepsky font-semibold hover:underline"
+  >
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/724/724664.png"
+      alt="Phone"
+      className="w-5 h-5 mr-2"
+    />
+    0128 647 2342
+  </a>
+
+  <a
+    href="https://wa.me/201272151734"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center text-green-600 font-semibold hover:underline"
+  >
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+      alt="WhatsApp"
+      className="w-5 h-5 mr-2"
+    />
+    0127 215 1734
+  </a>
+
+  <a
+    href="/contact"
+    className="text-gray-700 font-semibold hover:underline block"
+  >
+    m.dgamal456@gmail.com
+  </a>
+</div>
+
               </div>
             </div>
           </div>
