@@ -25,12 +25,6 @@ const ArticlesPage = () => {
     { id: 'cats', label: 'مقالات القطط' },
   ];
 
-  // عشان نعرض الزرار المحدد في الأول
-  const sortedCategories = [
-    categories.find((c) => c.id === selectedCategory),
-    ...categories.filter((c) => c.id !== selectedCategory),
-  ].filter(Boolean);
-
   return (
     <section className="py-12 bg-gradient-to-br from-theme-lightsky/30 to-theme-powder/30 min-h-screen">
       <div className="container mx-auto px-4">
@@ -39,16 +33,16 @@ const ArticlesPage = () => {
           تصفح مقالاتنا المتخصصة لمساعدتك في رعاية أصدقائك الكلاب، القطط، أو الدواجن.
         </p>
 
-        {/* Buttons with modern style & movement */}
-        <div className="flex justify-end gap-3 flex-wrap flex-row-reverse mb-10 transition-all duration-300">
-          {sortedCategories.map((cat) => (
+        {/* ثابتة من اليمين */}
+        <div className="flex justify-start md:justify-end gap-3 flex-wrap mb-10" dir="rtl">
+          {categories.map((cat) => (
             <motion.button
               key={cat.id}
               onClick={() =>
                 setSelectedCategory((prev) => (prev === cat.id ? 'all' : cat.id))
               }
               whileTap={{ scale: 0.95 }}
-              className={`px-4 py-2 rounded-2xl border transition-all duration-200 font-semibold shadow-sm
+              className={`px-5 py-2 rounded-full border transition-all duration-200 font-semibold shadow-sm
                 ${
                   selectedCategory === cat.id
                     ? 'bg-theme-deepsky text-white border-theme-deepsky shadow-md'
@@ -61,7 +55,7 @@ const ArticlesPage = () => {
           ))}
         </div>
 
-        {/* Articles with animation */}
+        {/* المقالات */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" dir="rtl">
           <AnimatePresence mode="wait">
             {filteredArticles.length > 0 ? (
