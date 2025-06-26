@@ -18,31 +18,31 @@ const AboutPage = () => {
       certifications: "TBD",
       bio: "TBD",
       email: "TBD",
-      phone: "TBD",
+      phone: "01205746907",
       img: "https://i.postimg.cc/P5z0VSvN/Whats-App-Image-2025-06-26-at-11-48-52-c988b566.jpg"
     },
     {
       id: 2,
-      name: "Dr. Mahmoud",
+      name: "Dr. Mahmoud Elmatboly",
       position: "Specialist in Avian Medicine",
       education: "TBD",
       experience: "TBD",
       certifications: "TBD",
       bio: "TBD",
       email: "TBD",
-      phone: "TBD",
+      phone: "01030855811",
       img: "https://source.unsplash.com/random/200x200/?veterinarian-2"
     },
     {
       id: 3,
-      name: "Dr. Fatma",
+      name: "Dr. Fatma Kamal",
       position: "Specialist in Canine & Feline Medicine",
       education: "TBD",
       experience: "TBD",
       certifications: "TBD",
       bio: "TBD",
       email: "TBD",
-      phone: "TBD",
+      phone: "01277531114",
       img: "https://source.unsplash.com/random/200x200/?veterinarian-3"
     },
     {
@@ -54,19 +54,19 @@ const AboutPage = () => {
       certifications: "TBD",
       bio: "TBD",
       email: "TBD",
-      phone: "TBD",
+      phone: "01552496414",
       img: "https://source.unsplash.com/random/200x200/?veterinarian-4"
     },
     {
       id: 5,
-      name: "Dr. Mariam",
+      name: "Dr. Mariam Attah",
       position: "Cosmetics and Local Brand Specialist",
       education: "TBD",
       experience: "TBD",
       certifications: "TBD",
       bio: "TBD",
       email: "TBD",
-      phone: "TBD",
+      phone: "01040656983",
       img: "https://source.unsplash.com/random/200x200/?veterinarian-5"
     }
   ];
