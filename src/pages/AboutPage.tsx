@@ -17,7 +17,7 @@ const AboutPage = () => {
       experience: "TBD",
       certifications: "TBD",
       bio: "TBD",
-      img: "https://source.unsplash.com/random/200x200/?veterinarian-1"
+      img: "https://i.postimg.cc/P5z0VSvN/Whats-App-Image-2025-06-26-at-11-48-52-c988b566.jpg"
     },
     {
       id: 2,
