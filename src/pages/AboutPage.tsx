@@ -78,7 +78,7 @@ const AboutPage = () => {
   };
 
   return (
-    <div className="py-12 relative bg-white">
+    <div className="py-12">
       {/* Modal Overlay */}
       {selectedMember && (
         <div 
