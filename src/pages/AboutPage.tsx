@@ -43,7 +43,7 @@ const AboutPage = () => {
       bio: "TBD",
       email: "TBD",
       phone: "TBD",
-      img: "https://source.unsplash.com/random/200x200/?veterinarian-3"
+      img: "https://i.postimg.cc/HW77r9WP/Fatma.jpg"
     },
     {
       id: 4,
