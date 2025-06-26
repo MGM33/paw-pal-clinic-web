@@ -1,13 +1,137 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 
 const AboutPage = () => {
+  const [selectedMember, setSelectedMember] = useState(null);
+  
   React.useEffect(() => {
     document.title = "PetCare Vet | About Us";
   }, []);
-  
+
+  // Team member data
+  const teamMembers = [
+    {
+      id: 1,
+      name: "Dr. Mohamed Hesham",
+      position: "Specialist in Canine & Feline Medicine",
+      education: "TBD",
+      experience: "TBD",
+      certifications: "TBD",
+      bio: "TBD",
+      img: "https://source.unsplash.com/random/200x200/?veterinarian-1"
+    },
+    {
+      id: 2,
+      name: "Dr. Mahmoud",
+      position: "Specialist in Avian Medicine",
+      education: "TBD",
+      experience: "TBD",
+      certifications: "TBD",
+      bio: "TBD",
+      img: "https://source.unsplash.com/random/200x200/?veterinarian-2"
+    },
+    {
+      id: 3,
+      name: "Dr. Fatma",
+      position: "Specialist in Canine & Feline Medicine",
+      education: "TBD",
+      experience: "TBD",
+      certifications: "TBD",
+      bio: "TBD",
+      img: "https://source.unsplash.com/random/200x200/?veterinarian-3"
+    },
+    {
+      id: 4,
+      name: "Dr. Rodiana Saif",
+      position: "Cosmetics and Local Brand Specialist",
+      education: "TBD",
+      experience: "TBD",
+      certifications: "TBD",
+      bio: "TBD",
+      img: "https://source.unsplash.com/random/200x200/?veterinarian-4"
+    },
+    {
+      id: 5,
+      name: "Dr. Mariam",
+      position: "Cosmetics and Local Brand Specialist",
+      education: "TBD",
+      experience: "TBD",
+      certifications: "TBD",
+      bio: "TBD",
+      img: "https://source.unsplash.com/random/200x200/?veterinarian-5"
+    }
+  ];
+
+  const closeModal = (e) => {
+    if (e.target.id === "modal-backdrop") {
+      setSelectedMember(null);
+    }
+  };
+
   return (
-    <div className="py-12">
+    <div className="py-12 relative">
+      {/* Modal Overlay */}
+      {selectedMember && (
+        <div 
+          id="modal-backdrop"
+          className="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4"
+          onClick={closeModal}
+        >
+          <div className="bg-white rounded-xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="p-6">
+              {/* Close Button */}
+              <button 
+                className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl"
+                onClick={() => setSelectedMember(null)}
+              >
+                &times;
+              </button>
+              
+              {/* Profile Photo */}
+              <div className="flex justify-center">
+                <img 
+                  src={selectedMember.img} 
+                  alt={selectedMember.name} 
+                  className="rounded-full w-40 h-40 object-cover border-4 border-vet-blue"
+                />
+              </div>
+              
+              {/* Name */}
+              <h2 className="text-2xl font-bold text-center mt-4 mb-6">
+                {selectedMember.name}
+              </h2>
+              
+              {/* Details */}
+              <div className="space-y-4">
+                <div>
+                  <h3 className="text-lg font-semibold text-vet-blue">Position</h3>
+                  <p>{selectedMember.position}</p>
+                </div>
+                
+                <div>
+                  <h3 className="text-lg font-semibold text-vet-blue">Education</h3>
+                  <p>{selectedMember.education}</p>
+                </div>
+                
+                <div>
+                  <h3 className="text-lg font-semibold text-vet-blue">Experience</h3>
+                  <p>{selectedMember.experience}</p>
+                </div>
+                
+                <div>
+                  <h3 className="text-lg font-semibold text-vet-blue">Certifications</h3>
+                  <p>{selectedMember.certifications}</p>
+                </div>
+                
+                <div>
+                  <h3 className="text-lg font-semibold text-vet-blue">Bio</h3>
+                  <p className="text-gray-700">{selectedMember.bio}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold mb-8 text-center">About PetCare Vet</h1>
@@ -48,61 +172,23 @@ const AboutPage = () => {
           <div className="bg-white rounded-lg shadow-lg p-8">
             <h2 className="text-2xl font-semibold mb-6">Our Team</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="rounded-full overflow-hidden w-40 h-40 mx-auto mb-4">
-                  <img 
-                    src="https://source.unsplash.com/random/200x200/?veterinarian-1" 
-                    alt="Mohamed Hesham" 
-                    className="w-full h-full object-cover"
-                  />
+              {teamMembers.map((member) => (
+                <div 
+                  key={member.id}
+                  className="text-center border-2 border-gray-200 rounded-xl p-4 transition-all hover:border-vet-blue hover:shadow-md cursor-pointer"
+                  onClick={() => setSelectedMember(member)}
+                >
+                  <div className="rounded-full overflow-hidden w-40 h-40 mx-auto mb-4">
+                    <img 
+                      src={member.img} 
+                      alt={member.name} 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className="text-xl font-medium">{member.name}</h3>
+                  <p className="text-gray-600">{member.position}</p>
                 </div>
-                <h3 className="text-xl font-medium">Dr. Mohamed Hesham</h3>
-                <p className="text-gray-600">Chief Veterinarian</p>
-              </div>
-              <div className="text-center">
-                <div className="rounded-full overflow-hidden w-40 h-40 mx-auto mb-4">
-                  <img 
-                    src="https://source.unsplash.com/random/200x200/?veterinarian-2" 
-                    alt="Mahmoud" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-xl font-medium">Dr. Mahmoud</h3>
-                <p className="text-gray-600">Specialist in Avian Medicine</p>
-              </div>
-              <div className="text-center">
-                <div className="rounded-full overflow-hidden w-40 h-40 mx-auto mb-4">
-                  <img 
-                    src="https://source.unsplash.com/random/200x200/?veterinarian-3" 
-                    alt="Fatma Kamal" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-xl font-medium">Dr. Fatma</h3>
-                <p className="text-gray-600">Feline Medicine Specialist</p>
-              </div>
-              <div className="text-center">
-                <div className="rounded-full overflow-hidden w-40 h-40 mx-auto mb-4">
-                  <img 
-                    src="https://source.unsplash.com/random/200x200/?veterinarian-4" 
-                    alt="Rodiana Saif" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-xl font-medium">Dr. Rodiana Saif</h3>
-                <p className="text-gray-600">Canine Medicine Specialist</p>
-              </div>
-              <div className="text-center md:col-span-2 lg:col-span-1 lg:col-start-2">
-                <div className="rounded-full overflow-hidden w-40 h-40 mx-auto mb-4">
-                  <img 
-                    src="https://source.unsplash.com/random/200x200/?veterinarian-5" 
-                    alt="Team Member 5" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-xl font-medium">Dr. Mariam</h3>
-                <p className="text-gray-600">Veterinary Surgeon</p>
-              </div>
+              ))}
             </div>
           </div>
         </div>
