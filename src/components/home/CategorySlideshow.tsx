@@ -63,7 +63,7 @@ const CategorySlideshow = () => {
     id: 'articles-about',
     title: 'Our Articles',
     description: 'Explore helpful veterinary articles about pet care, vaccinations, nutrition, health tips, and more.',
-    image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jydrc94qeg9sjc1jsshhe165%2F1750661023_img_3.webp?st=2025-06-23T05%3A39%3A52Z&se=2025-06-29T06%3A39%3A52Z&sks=b&skt=2025-06-23T05%3A39%3A52Z&ske=2025-06-29T06%3A39%3A52Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=3d249c53-07fa-4ba4-9b65-0bf8eb4ea46a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=htJ2g9W9tbFa96AoN8YVUxy%2BAU6a07BeWF5tmGhss7w%3D&az=oaivgprodscus',
+    image: 'https://i.postimg.cc/Bv2K7qGM/20250623-0943-Pet-Articles-Companionship-simple-compose-01jydrc9qze699xkd3gqt36y11.png',
     icon: <FileText size={40} />,
     link: '/articles/about',
     buttonText: 'View Articles',
