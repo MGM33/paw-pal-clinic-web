@@ -44,7 +44,7 @@ const FeaturedPets = () => {
       id: 'articles/about',
       name: 'Articles',
       icon: <FileText size={40} />,
-      image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jydmz7gef6nazgc723hnzjj2%2F1750657437_img_2.webp?st=2025-06-23T03%3A49%3A59Z&se=2025-06-29T04%3A49%3A59Z&sks=b&skt=2025-06-23T03%3A49%3A59Z&ske=2025-06-29T04%3A49%3A59Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=3d249c53-07fa-4ba4-9b65-0bf8eb4ea46a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=qzdI1UAiSAXXsFDo8uRxRTeq4lvnYPVIj49XqpWsDhk%3D&az=oaivgprodscus',
+      image: 'https://i.postimg.cc/sgXmLGnK/20250623-0843-Pet-Articles-Showdown-simple-compose-01jydmz82hf5n8g51e43bspm3d.png',
       description: 'Educational articles on pet health, nutrition, and care.',
       color: 'bg-yellow-500',
       hoverColor: 'hover:bg-yellow-600'
