@@ -1,40 +1,22 @@
-
-import React, { useState } from "react";
+import React from "react";
+import { useTranslation } from "react-i18next";
 
 const LanguageToggle = () => {
-  const [currentLang, setCurrentLang] = useState('en');
+  const { i18n } = useTranslation();
 
   const toggleLanguage = () => {
-    const newLang = currentLang === 'en' ? 'ar' : 'en';
-    setCurrentLang(newLang);
-    
-    // Set document properties for RTL support
+    const newLang = i18n.language === "en" ? "ar" : "en";
+    i18n.changeLanguage(newLang);
     document.documentElement.lang = newLang;
-    document.documentElement.dir = newLang === 'ar' ? 'rtl' : 'ltr';
-    
-    // Trigger Google Translate
-    const tryTranslate = () => {
-      const selectElement = document.querySelector('.goog-te-combo') as HTMLSelectElement;
-      if (selectElement) {
-        selectElement.value = newLang;
-        selectElement.dispatchEvent(new Event('change'));
-        console.log(`Language changed to: ${newLang}`);
-      } else {
-        // Retry if Google Translate isn't ready yet
-        setTimeout(tryTranslate, 200);
-      }
-    };
-    
-    // Wait a bit for Google Translate to load
-    setTimeout(tryTranslate, 500);
+    document.documentElement.dir = newLang === "ar" ? "rtl" : "ltr";
   };
 
   return (
     <button
       onClick={toggleLanguage}
-      className="bg-theme-deepsky text-white px-3 py-1 rounded-md hover:bg-theme-sky transition duration-300 text-sm font-medium"
+      className="bg-vet-orange text-white px-3 py-1 rounded-md hover:bg-vet-darkorange transition"
     >
-      {currentLang === "en" ? "عربي" : "English"}
+      {i18n.language === "en" ? "🇸🇦 العربية" : "🇺🇸 English"}
     </button>
   );
 };

@@ -13,12 +13,12 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import LanguageToggle from "./LanguageToggle";
 
 const Navbar = () => {
   const location = useLocation();
   const currentPath = location.pathname;
   const [isOpen, setIsOpen] = useState(false);
+  const [lang, setLang] = useState('en');
 
   const isActive = (path: string) => {
     if (path === '/' && currentPath === '/') return true;
@@ -63,22 +63,42 @@ const Navbar = () => {
     { to: '/articles/about', icon: FileText, name: 'Articles' },
   ];
 
+  // Language toggle
+  const toggleLanguage = () => {
+  const newLang = lang === 'en' ? 'ar' : 'en';
+  setLang(newLang);
+
+  const tryChangeLang = () => {
+    const select = document.querySelector<HTMLSelectElement>('.goog-te-combo');
+    if (select) {
+      select.value = newLang;
+      select.dispatchEvent(new Event('change'));
+    } else {
+      setTimeout(tryChangeLang, 500); // جرب تاني بعد نص ثانية
+    }
+  };
+
+  tryChangeLang();
+};
+
+
   return (
     <nav className="glass-effect shadow-lg sticky top-0 z-50 border-b border-theme-sky/30">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          <Link to="/" className="flex items-center space-x-3 group h-12">
-            <div className="scale-[1.7]">
-              <img
-                src="https://i.postimg.cc/x8SFrpw2/20250623-1030-Vet-Care-Poultry-Logo-simple-compose-01jydv2198e069rax2drgp79rp-1.png"
-                alt="VetCare Logo"
-                className="h-10 w-auto object-contain"
-              />
-            </div>
-            <span className="text-3xl font-bold bg-gradient-to-r from-theme-deepsky to-theme-sky bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
-              VetCare
-            </span>
-          </Link>
+ <Link to="/" className="flex items-center space-x-3 group h-12">
+ <div className="scale-[1.7]">
+    <img
+      src="https://i.postimg.cc/x8SFrpw2/20250623-1030-Vet-Care-Poultry-Logo-simple-compose-01jydv2198e069rax2drgp79rp-1.png"
+      alt="VetCare Logo"
+      className="h-10 w-auto object-contain"
+    />
+  </div>
+  <span className="text-3xl font-bold bg-gradient-to-r from-theme-deepsky to-theme-sky bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
+    VetCare
+  </span>
+</Link>
+
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-2 items-center">
@@ -121,8 +141,13 @@ const Navbar = () => {
             <NavLink to="/about" icon={Info}>About Us</NavLink>
             <NavLink to="/contact" icon={Phone}>Contact</NavLink>
 
-            {/* Improved Language Toggle */}
-            <LanguageToggle />
+            {/* Language Switch */}
+            <button
+              onClick={toggleLanguage}
+              className="ml-4 px-4 py-2 rounded-full border border-theme-deepsky text-theme-deepsky hover:bg-theme-deepsky hover:text-white transition-colors"
+            >
+              {lang === 'en' ? 'عربي' : 'English'}
+            </button>
           </div>
 
           {/* Mobile Menu */}
@@ -136,14 +161,15 @@ const Navbar = () => {
               <SheetContent side="top" className="px-4 py-6 glass-effect">
                 <SheetHeader>
                   <SheetTitle className="text-center text-theme-deepsky flex items-center justify-center space-x-2">
-                    <div className="flex items-center space-x-2">
-                      <img
-                        src="https://i.postimg.cc/x8SFrpw2/20250623-1030-Vet-Care-Poultry-Logo-simple-compose-01jydv2198e069rax2drgp79rp-1.png"
-                        alt="VetCare Logo"
-                        className="h-6 w-auto object-contain"
-                      />
-                      <span className="text-lg font-semibold text-theme-deepsky">VetCare Menu</span>
-                    </div>
+                 <div className="flex items-center space-x-2">
+  <img
+    src="https://i.postimg.cc/x8SFrpw2/20250623-1030-Vet-Care-Poultry-Logo-simple-compose-01jydv2198e069rax2drgp79rp-1.png"
+    alt="VetCare Logo"
+    className="h-6 w-auto object-contain"
+  />
+  <span className="text-lg font-semibold text-theme-deepsky">VetCare Menu</span>
+</div>
+
                   </SheetTitle>
                 </SheetHeader>
                 <div className="flex flex-col space-y-3 mt-4">
@@ -167,8 +193,13 @@ const Navbar = () => {
                   <NavLink to="/about" icon={Info}>About Us</NavLink>
                   <NavLink to="/contact" icon={Phone}>Contact</NavLink>
 
-                  {/* Mobile language toggle */}
-                  <LanguageToggle />
+                  {/* Mobile language switch */}
+                  <button
+                    onClick={toggleLanguage}
+                    className="ml-4 px-4 py-2 rounded-full border border-theme-deepsky text-theme-deepsky hover:bg-theme-deepsky hover:text-white transition-colors"
+                  >
+                    {lang === 'en' ? 'عربي' : 'English'}
+                  </button>
                 </div>
               </SheetContent>
             </Sheet>

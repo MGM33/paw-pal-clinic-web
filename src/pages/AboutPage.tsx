@@ -71,8 +71,8 @@ const AboutPage = () => {
     }
   ];
 
-  const closeModal = (e: React.MouseEvent) => {
-    if ((e.target as HTMLElement).id === "modal-backdrop") {
+  const closeModal = (e) => {
+    if (e.target.id === "modal-backdrop") {
       setSelectedMember(null);
     }
   };
@@ -243,13 +243,13 @@ const AboutPage = () => {
       </div>
       
       {/* Hidden scrollbar styles */}
-      <style>{`
+      <style jsx>{`
         .scrollbar-hide {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
         }
         .scrollbar-hide::-webkit-scrollbar {
-          display: none;
+          display: none;  /* Chrome, Safari and Opera */
         }
       `}</style>
     </div>
