@@ -18,21 +18,23 @@ const LanguageToggle = () => {
       if (selectElement) {
         selectElement.value = newLang;
         selectElement.dispatchEvent(new Event('change'));
+        console.log(`Language changed to: ${newLang}`);
       } else {
         // Retry if Google Translate isn't ready yet
-        setTimeout(tryTranslate, 100);
+        setTimeout(tryTranslate, 200);
       }
     };
     
-    tryTranslate();
+    // Wait a bit for Google Translate to load
+    setTimeout(tryTranslate, 500);
   };
 
   return (
     <button
       onClick={toggleLanguage}
-      className="bg-theme-deepsky text-white px-3 py-1 rounded-md hover:bg-theme-sky transition duration-300"
+      className="bg-theme-deepsky text-white px-3 py-1 rounded-md hover:bg-theme-sky transition duration-300 text-sm font-medium"
     >
-      {currentLang === "en" ? "🇸🇦 العربية" : "🇺🇸 English"}
+      {currentLang === "en" ? "عربي" : "English"}
     </button>
   );
 };

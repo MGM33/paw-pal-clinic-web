@@ -70,32 +70,37 @@ declare global {
 
 const App = () => {
   useEffect(() => {
-    // ✅ Google Translate Script with improved integration
-    const addTranslateScript = () => {
+    // Initialize Google Translate
+    const initializeGoogleTranslate = () => {
       const scriptId = 'google-translate-script';
       if (!document.getElementById(scriptId)) {
         const script = document.createElement('script');
         script.id = scriptId;
         script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-        document.body.appendChild(script);
+        script.async = true;
+        document.head.appendChild(script);
       }
 
       window.googleTranslateElementInit = () => {
-        new window.google.translate.TranslateElement(
-          { 
-            pageLanguage: 'en', 
-            includedLanguages: 'en,ar',
-            layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
-            autoDisplay: false 
-          },
-          'google_translate_element'
-        );
+        if (window.google && window.google.translate) {
+          new window.google.translate.TranslateElement(
+            { 
+              pageLanguage: 'en', 
+              includedLanguages: 'en,ar',
+              layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
+              autoDisplay: false,
+              multilanguagePage: true
+            },
+            'google_translate_element'
+          );
+          console.log('Google Translate initialized');
+        }
       };
     };
 
-    addTranslateScript();
+    initializeGoogleTranslate();
 
-    // ✅ Live Chat (Tidio)
+    // Initialize Tidio chat
     const script = document.createElement("script");
     script.src = "//code.tidio.co/wbhserfmj8jhuim5jxs0yp5iyrukyei8.js";
     script.async = true;
@@ -110,15 +115,21 @@ const App = () => {
         <BrowserRouter>
           <ScrollToTop />
           <div className="flex flex-col min-h-screen">
-            {/* ✅ Completely hidden Google Translate div */}
-            <div id="google_translate_element" style={{ 
-              position: 'fixed',
-              top: '-1000px',
-              left: '-1000px',
-              visibility: 'hidden',
-              opacity: 0,
-              zIndex: -1
-            }}></div>
+            {/* Completely hidden Google Translate element */}
+            <div 
+              id="google_translate_element" 
+              style={{ 
+                position: 'absolute',
+                top: '-10000px',
+                left: '-10000px',
+                visibility: 'hidden',
+                opacity: 0,
+                zIndex: -999999,
+                width: '1px',
+                height: '1px',
+                overflow: 'hidden'
+              }}
+            ></div>
 
             <Navbar />
             <main className="flex-grow">

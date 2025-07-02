@@ -13,9 +13,10 @@ const ArticlesPage = () => {
   // تصفية المقالات حسب التصنيف
   const filteredArticles = articlesData.filter((article) => {
     if (selectedCategory === 'all') return true;
-    if (selectedCategory === 'dogs') return article.id >= 1 && article.id <= 4;
-    if (selectedCategory === 'poultry') return article.id >= 5 && article.id <= 9;
-    if (selectedCategory === 'cats') return article.id > 1000;
+    const articleId = Number(article.id);
+    if (selectedCategory === 'dogs') return articleId >= 1 && articleId <= 4;
+    if (selectedCategory === 'poultry') return articleId >= 5 && articleId <= 9;
+    if (selectedCategory === 'cats') return articleId > 1000;
     return false;
   });
 
