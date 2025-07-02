@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Dog, Cat, Bird, Package } from 'lucide-react';
@@ -170,7 +171,7 @@ const getPetColor = () => {
                       to={`/${petType}/cosmetics-supplements`}
                       className={`${getPetColor()} text-white px-6 py-4 rounded-md font-semibold transition-colors block`}
                     >
-                      Cosmetics & Supplements
+                      Supplements & External Drugs
                     </Link>
                   </div>
                 )}

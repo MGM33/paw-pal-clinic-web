@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Dog, Cat, Bird, Package, FileText } from 'lucide-react'; // ✅ Added FileText
@@ -139,7 +140,7 @@ const ServicesPage = () => {
                               to={`/${petType.id}/cosmetics-supplements`} 
                               className="border border-gray-300 hover:border-gray-400 px-6 py-3 rounded-md font-semibold transition-colors"
                             >
-                              Cosmetics & Supplements
+                              Supplements & External Drugs
                             </Link>
                           </>
                         )}

@@ -1,7 +1,6 @@
 
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Link, useLocation } from 'react-router-dom';
 
 interface CategoryNavigationProps {
   petType: string;
@@ -9,32 +8,47 @@ interface CategoryNavigationProps {
 }
 
 const CategoryNavigation: React.FC<CategoryNavigationProps> = ({ petType, currentCategory }) => {
-  const navigate = useNavigate();
+  const location = useLocation();
 
-  const categories = [
-    { id: 'medicines', label: 'Medicines' },
-    { id: 'vaccines', label: 'Vaccines' },
-    { id: 'cosmetics-supplements', label: 'Cosmetics & Supplements' }
-  ];
+  const getNavItems = () => {
+    const baseItems = [
+      {
+        id: 'medicines',
+        label: 'Medicines',
+        path: `/${petType}/medicines`
+      },
+      {
+        id: 'vaccines',
+        label: 'Vaccines',
+        path: `/${petType}/vaccines`
+      },
+      {
+        id: 'cosmetics-supplements',
+        label: 'Supplements & External Drugs',
+        path: `/${petType}/cosmetics-supplements`
+      }
+    ];
 
-  const handleCategoryChange = (categoryId: string) => {
-    navigate(`/${petType}/${categoryId}`);
+    return baseItems;
   };
 
+  const navItems = getNavItems();
+
   return (
-    <div className="mb-6">
-      <Select value={currentCategory} onValueChange={handleCategoryChange}>
-        <SelectTrigger className="w-64 mx-auto">
-          <SelectValue placeholder="Select a category" />
-        </SelectTrigger>
-        <SelectContent>
-          {categories.map((category) => (
-            <SelectItem key={category.id} value={category.id}>
-              {category.label}
-            </SelectItem>
-          ))}
-        </SelectContent>
-      </Select>
+    <div className="flex justify-center space-x-1 bg-gray-100 p-1 rounded-lg inline-flex">
+      {navItems.map((item) => (
+        <Link
+          key={item.id}
+          to={item.path}
+          className={`px-4 py-2 rounded-md font-medium transition-colors ${
+            currentCategory === item.id
+              ? 'bg-white text-blue-600'
+              : 'text-gray-600 hover:text-gray-900'
+          }`}
+        >
+          {item.label}
+        </Link>
+      ))}
     </div>
   );
 };
