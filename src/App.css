@@ -1,3 +1,4 @@
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -40,7 +41,8 @@
 .read-the-docs {
   color: #888;
 }
-/* Hide the Google Translate top banner completely */
+
+/* Complete Google Translate widget hiding */
 body .goog-te-banner-frame.skiptranslate {
   display: none !important;
 }
@@ -49,17 +51,38 @@ body {
   top: 0px !important;
 }
 
-/* Optional: Hide the google translate logo at bottom right */
 .goog-logo-link,
-.goog-te-gadget span {
+.goog-te-gadget span,
+.goog-te-gadget,
+.goog-te-combo,
+#google_translate_element {
   display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  position: fixed !important;
+  top: -9999px !important;
+  left: -9999px !important;
+  z-index: -9999 !important;
 }
 
-/* Optional: Prevent page shifting */
 .goog-te-banner-frame {
   display: none !important;
 }
 
-.goog-te-combo {
-  margin: 0 !important;
+/* Prevent any Google Translate UI from showing */
+.goog-te-menu-value,
+.goog-te-menu-frame,
+.goog-te-menu,
+.goog-te-ftab {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Hide the translate select dropdown completely */
+select.goog-te-combo {
+  display: none !important;
+  visibility: hidden !important;
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
 }

@@ -68,11 +68,9 @@ declare global {
   }
 }
 
-
-
 const App = () => {
   useEffect(() => {
-    // ✅ Google Translate Script
+    // ✅ Google Translate Script with improved integration
     const addTranslateScript = () => {
       const scriptId = 'google-translate-script';
       if (!document.getElementById(scriptId)) {
@@ -84,7 +82,12 @@ const App = () => {
 
       window.googleTranslateElementInit = () => {
         new window.google.translate.TranslateElement(
-          { pageLanguage: 'en', autoDisplay: false },
+          { 
+            pageLanguage: 'en', 
+            includedLanguages: 'en,ar',
+            layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false 
+          },
           'google_translate_element'
         );
       };
@@ -107,8 +110,15 @@ const App = () => {
         <BrowserRouter>
           <ScrollToTop />
           <div className="flex flex-col min-h-screen">
-            {/* ✅ Hidden Google Translate div */}
-            <div id="google_translate_element" style={{ display: "none" }}></div>
+            {/* ✅ Completely hidden Google Translate div */}
+            <div id="google_translate_element" style={{ 
+              position: 'fixed',
+              top: '-1000px',
+              left: '-1000px',
+              visibility: 'hidden',
+              opacity: 0,
+              zIndex: -1
+            }}></div>
 
             <Navbar />
             <main className="flex-grow">
