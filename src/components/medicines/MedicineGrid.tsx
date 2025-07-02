@@ -1,4 +1,3 @@
-
 import React from 'react';
 import PoultryMedicineCategories from './PoultryMedicineCategories';
 import DogMedicineCard from './DogMedicineCard';
@@ -6,9 +5,10 @@ import CatMedicineCard from './CatMedicineCard';
 
 interface MedicineGridProps {
   petType: string;
+  selectedCategory?: string;
 }
 
-const MedicineGrid: React.FC<MedicineGridProps> = ({ petType }) => {
+const MedicineGrid: React.FC<MedicineGridProps> = ({ petType, selectedCategory = 'all' }) => {
   // For birds, show categories instead of individual medicines
   if (petType === 'birds') {
     return <PoultryMedicineCategories />;
@@ -108,11 +108,30 @@ const MedicineGrid: React.FC<MedicineGridProps> = ({ petType }) => {
       ];
     }
     
-    // Default fallback (shouldn't be reached for valid pet types)
     return [];
   };
 
+  const filterMedicinesByCategory = (medicines: any[], category: string) => {
+    if (category === 'all') return medicines;
+    
+    const categoryRanges: { [key: string]: [number, number] } = {
+      'anti-inflammatories': [1, 8],
+      'anti-parasitics': [9, 15],
+      'anti-fungals': [16, 18],
+      'antibiotics': [19, 29],
+      'antihistaminic': [30, 34],
+      'mucolytics': [35, 38],
+      'diuretic': [39, 42]
+    };
+    
+    const range = categoryRanges[category];
+    if (!range) return medicines;
+    
+    return medicines.filter(medicine => medicine.id >= range[0] && medicine.id <= range[1]);
+  };
+
   const medicines = getMedicinesForPetType();
+  const filteredMedicines = filterMedicinesByCategory(medicines, selectedCategory);
 
   const renderMedicineCard = (medicine: any) => {
     if (petType === 'dogs') {
@@ -141,7 +160,7 @@ const MedicineGrid: React.FC<MedicineGridProps> = ({ petType }) => {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-      {medicines.map((medicine) => renderMedicineCard(medicine))}
+      {filteredMedicines.map((medicine) => renderMedicineCard(medicine))}
     </div>
   );
 };
