@@ -1,22 +1,36 @@
-import React from "react";
-import { useTranslation } from "react-i18next";
+
+import React, { useState } from "react";
 
 const LanguageToggle = () => {
-  const { i18n } = useTranslation();
+  const [currentLang, setCurrentLang] = useState('en');
 
   const toggleLanguage = () => {
-    const newLang = i18n.language === "en" ? "ar" : "en";
-    i18n.changeLanguage(newLang);
-    document.documentElement.lang = newLang;
-    document.documentElement.dir = newLang === "ar" ? "rtl" : "ltr";
+    const newLang = currentLang === 'en' ? 'ar' : 'en';
+    setCurrentLang(newLang);
+    
+    // Set document direction for RTL/LTR
+    document.documentElement.dir = newLang === 'ar' ? 'rtl' : 'ltr';
+    
+    // Trigger Google Translate
+    const tryChangeLang = () => {
+      const select = document.querySelector<HTMLSelectElement>('.goog-te-combo');
+      if (select) {
+        select.value = newLang;
+        select.dispatchEvent(new Event('change'));
+      } else {
+        setTimeout(tryChangeLang, 500);
+      }
+    };
+    
+    tryChangeLang();
   };
 
   return (
     <button
       onClick={toggleLanguage}
-      className="bg-vet-orange text-white px-3 py-1 rounded-md hover:bg-vet-darkorange transition"
+      className="ml-4 px-4 py-2 rounded-full border border-theme-deepsky text-theme-deepsky hover:bg-theme-deepsky hover:text-white transition-colors"
     >
-      {i18n.language === "en" ? "🇸🇦 العربية" : "🇺🇸 English"}
+      {currentLang === 'en' ? 'عربي' : 'English'}
     </button>
   );
 };

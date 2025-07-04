@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Dog, Cat, Bird, Package, FileText } from 'lucide-react';
+import { Dog, Cat, Bird, BookOpen, FileText } from 'lucide-react';
 
 const FeaturedPets = () => {
   const petCategories = [
@@ -32,15 +33,6 @@ const FeaturedPets = () => {
       hoverColor: 'hover:bg-vet-darkorange'
     },
     {
-      id: 'our-products/about',
-      name: 'Our Products',
-      icon: <Package size={40} />,
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      description: 'Our exclusive collection of premium pet care products.',
-      color: 'bg-purple-600',
-      hoverColor: 'hover:bg-purple-700'
-    },
-    {
       id: 'articles/about',
       name: 'Articles',
       icon: <FileText size={40} />,
@@ -48,6 +40,15 @@ const FeaturedPets = () => {
       description: 'Educational articles on pet health, nutrition, and care.',
       color: 'bg-yellow-500',
       hoverColor: 'hover:bg-yellow-600'
+    },
+    {
+      id: 'resources/about',
+      name: 'Resources',
+      icon: <BookOpen size={40} />,
+      image: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=1000&auto=format&fit=crop',
+      description: 'Professional veterinary books and reference materials.',
+      color: 'bg-purple-600',
+      hoverColor: 'hover:bg-purple-700'
     }
   ];
 

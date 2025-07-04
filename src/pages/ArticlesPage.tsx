@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { articlesData } from '@/data/articlesData';
@@ -12,9 +13,9 @@ const ArticlesPage = () => {
   // تصفية المقالات حسب التصنيف
   const filteredArticles = articlesData.filter((article) => {
     if (selectedCategory === 'all') return true;
-    if (selectedCategory === 'dogs') return article.id >= 1 && article.id <= 4;
-    if (selectedCategory === 'poultry') return article.id >= 5 && article.id <= 9;
-    if (selectedCategory === 'cats') return article.id > 1000;
+    if (selectedCategory === 'dogs') return Number(article.id) >= 1 && Number(article.id) <= 4;
+    if (selectedCategory === 'poultry') return Number(article.id) >= 5 && Number(article.id) <= 9;
+    if (selectedCategory === 'cats') return Number(article.id) > 1000;
     return false;
   });
 

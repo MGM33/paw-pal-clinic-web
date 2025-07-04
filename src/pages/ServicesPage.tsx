@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Dog, Cat, Bird, Package, FileText } from 'lucide-react'; // ✅ Added FileText
+import { Dog, Cat, Bird, BookOpen, FileText } from 'lucide-react';
 
 const ServicesPage = () => {
   React.useEffect(() => {
@@ -37,15 +37,6 @@ const ServicesPage = () => {
       hoverColor: 'hover:bg-vet-darkorange'
     },
     {
-      id: 'our-products',
-      name: 'Our Products',
-      icon: <Package size={64} className="text-white" />,
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      description: 'Our exclusive line of veterinary products, specially formulated and created by our team for optimal pet health and care.',
-      color: 'bg-purple-600',
-      hoverColor: 'hover:bg-purple-700'
-    },
-    {
       id: 'articles',
       name: 'Articles',
       icon: <FileText size={64} className="text-white" />,
@@ -53,6 +44,15 @@ const ServicesPage = () => {
       description: 'Explore helpful veterinary articles about pet care, vaccinations, nutrition, health tips, and more. Written by professionals to keep your pet safe and happy.',
       color: 'bg-yellow-500',
       hoverColor: 'hover:bg-yellow-600'
+    },
+    {
+      id: 'resources',
+      name: 'Resources',
+      icon: <BookOpen size={64} className="text-white" />,
+      image: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=1000&auto=format&fit=crop',
+      description: 'Our comprehensive library of veterinary books and reference materials that form the foundation of our expertise and knowledge.',
+      color: 'bg-purple-600',
+      hoverColor: 'hover:bg-purple-700'
     }
   ];
 
@@ -84,19 +84,19 @@ const ServicesPage = () => {
                   </div>
                   <p className="text-gray-600 mb-8 text-lg">{petType.description}</p>
                   <div className="flex flex-wrap gap-4">
-                    {petType.id === 'our-products' ? (
+                    {petType.id === 'resources' ? (
                       <>
                         <Link 
-                          to="/our-products/about" 
+                          to="/resources/about" 
                           className={`${petType.color} ${petType.hoverColor} text-white px-6 py-3 rounded-md font-semibold transition-colors`}
                         >
                           Learn More
                         </Link>
                         <Link 
-                          to="/our-products" 
+                          to="/resources" 
                           className="border border-gray-300 hover:border-gray-400 px-6 py-3 rounded-md font-semibold transition-colors"
                         >
-                          Browse Our Products
+                          Browse Resources
                         </Link>
                       </>
                     ) : petType.id === 'articles' ? (

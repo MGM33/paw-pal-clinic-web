@@ -1,7 +1,8 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
-  Dog, Cat, Bird, Home, Phone, Menu, Settings, Info, Package, Grid3X3, FileText
+  Dog, Cat, Bird, Home, Phone, Menu, Settings, Info, BookOpen, Grid3X3, FileText
 } from 'lucide-react';
 import {
   Sheet, SheetTrigger, SheetContent, SheetHeader, SheetTitle
@@ -30,7 +31,7 @@ const Navbar = () => {
     return currentPath.startsWith('/dogs') ||
       currentPath.startsWith('/cats') ||
       currentPath.startsWith('/birds') ||
-      currentPath.startsWith('/our-products') ||
+      currentPath.startsWith('/resources') ||
       currentPath.startsWith('/articles');
   };
 
@@ -59,46 +60,47 @@ const Navbar = () => {
     { to: '/dogs', icon: Dog, name: 'Dogs' },
     { to: '/cats', icon: Cat, name: 'Cats' },
     { to: '/birds', icon: Bird, name: 'Poultry Birds' },
-    { to: '/our-products/about', icon: Package, name: 'Local Brand' },
     { to: '/articles/about', icon: FileText, name: 'Articles' },
+    { to: '/resources/about', icon: BookOpen, name: 'Resources' },
   ];
 
   // Language toggle
   const toggleLanguage = () => {
-  const newLang = lang === 'en' ? 'ar' : 'en';
-  setLang(newLang);
+    const newLang = lang === 'en' ? 'ar' : 'en';
+    setLang(newLang);
+    
+    // Set document direction for RTL/LTR
+    document.documentElement.dir = newLang === 'ar' ? 'rtl' : 'ltr';
 
-  const tryChangeLang = () => {
-    const select = document.querySelector<HTMLSelectElement>('.goog-te-combo');
-    if (select) {
-      select.value = newLang;
-      select.dispatchEvent(new Event('change'));
-    } else {
-      setTimeout(tryChangeLang, 500); // جرب تاني بعد نص ثانية
-    }
+    const tryChangeLang = () => {
+      const select = document.querySelector<HTMLSelectElement>('.goog-te-combo');
+      if (select) {
+        select.value = newLang;
+        select.dispatchEvent(new Event('change'));
+      } else {
+        setTimeout(tryChangeLang, 500);
+      }
+    };
+
+    tryChangeLang();
   };
-
-  tryChangeLang();
-};
-
 
   return (
     <nav className="glass-effect shadow-lg sticky top-0 z-50 border-b border-theme-sky/30">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
- <Link to="/" className="flex items-center space-x-3 group h-12">
- <div className="scale-[1.7]">
-    <img
-      src="https://i.postimg.cc/x8SFrpw2/20250623-1030-Vet-Care-Poultry-Logo-simple-compose-01jydv2198e069rax2drgp79rp-1.png"
-      alt="VetCare Logo"
-      className="h-10 w-auto object-contain"
-    />
-  </div>
-  <span className="text-3xl font-bold bg-gradient-to-r from-theme-deepsky to-theme-sky bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
-    VetCare
-  </span>
-</Link>
-
+          <Link to="/" className="flex items-center space-x-3 group h-12">
+            <div className="scale-[1.7]">
+              <img
+                src="https://i.postimg.cc/x8SFrpw2/20250623-1030-Vet-Care-Poultry-Logo-simple-compose-01jydv2198e069rax2drgp79rp-1.png"
+                alt="VetCare Logo"
+                className="h-10 w-auto object-contain"
+              />
+            </div>
+            <span className="text-3xl font-bold bg-gradient-to-r from-theme-deepsky to-theme-sky bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
+              VetCare
+            </span>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-2 items-center">
@@ -161,15 +163,14 @@ const Navbar = () => {
               <SheetContent side="top" className="px-4 py-6 glass-effect">
                 <SheetHeader>
                   <SheetTitle className="text-center text-theme-deepsky flex items-center justify-center space-x-2">
-                 <div className="flex items-center space-x-2">
-  <img
-    src="https://i.postimg.cc/x8SFrpw2/20250623-1030-Vet-Care-Poultry-Logo-simple-compose-01jydv2198e069rax2drgp79rp-1.png"
-    alt="VetCare Logo"
-    className="h-6 w-auto object-contain"
-  />
-  <span className="text-lg font-semibold text-theme-deepsky">VetCare Menu</span>
-</div>
-
+                    <div className="flex items-center space-x-2">
+                      <img
+                        src="https://i.postimg.cc/x8SFrpw2/20250623-1030-Vet-Care-Poultry-Logo-simple-compose-01jydv2198e069rax2drgp79rp-1.png"
+                        alt="VetCare Logo"
+                        className="h-6 w-auto object-contain"
+                      />
+                      <span className="text-lg font-semibold text-theme-deepsky">VetCare Menu</span>
+                    </div>
                   </SheetTitle>
                 </SheetHeader>
                 <div className="flex flex-col space-y-3 mt-4">

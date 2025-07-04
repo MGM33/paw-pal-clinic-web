@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Dog, Cat, Bird, Package, FileText} from 'lucide-react';
+import { Dog, Cat, Bird, BookOpen, FileText} from 'lucide-react';
 
 const CategorySlideshow = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -50,25 +50,25 @@ const CategorySlideshow = () => {
       color: 'bg-orange-500'
     },
     {
-      id: 'local-brand',
-      title: 'Premium Local Products',
-      description: 'Our exclusive veterinary products created with care and backed by years of expertise.',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      icon: <Package size={40} />,
-      link: '/our-products/about',
-      buttonText: 'View Products',
-      color: 'bg-purple-600'
+      id: 'articles-about',
+      title: 'Educational Articles',
+      description: 'Explore helpful veterinary articles about pet care, vaccinations, nutrition, health tips, and more.',
+      image: 'https://i.postimg.cc/Bv2K7qGM/20250623-0943-Pet-Articles-Companionship-simple-compose-01jydrc9qze699xkd3gqt36y11.png',
+      icon: <FileText size={40} />,
+      link: '/articles/about',
+      buttonText: 'View Articles',
+      color: 'bg-yellow-600'
     },
-{
-    id: 'articles-about',
-    title: 'Our Articles',
-    description: 'Explore helpful veterinary articles about pet care, vaccinations, nutrition, health tips, and more.',
-    image: 'https://i.postimg.cc/Bv2K7qGM/20250623-0943-Pet-Articles-Companionship-simple-compose-01jydrc9qze699xkd3gqt36y11.png',
-    icon: <FileText size={40} />,
-    link: '/articles/about',
-    buttonText: 'View Articles',
-    color: 'bg-yellow-600'
-  }
+    {
+      id: 'resources-about',
+      title: 'Professional Resources',
+      description: 'Our comprehensive library of veterinary books and reference materials that guide our expertise.',
+      image: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=1000&auto=format&fit=crop',
+      icon: <BookOpen size={40} />,
+      link: '/resources/about',
+      buttonText: 'View Resources',
+      color: 'bg-purple-600'
+    }
   ];
 
   const nextSlide = () => {

@@ -1,8 +1,7 @@
 
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Dog, Cat, Bird, Package } from 'lucide-react';
-import LocalBrandPage from './LocalBrandPage';
+import { Dog, Cat, Bird } from 'lucide-react';
 
 const PetCategoryPage = () => {
   const { petType } = useParams<{ petType: string }>();
@@ -15,16 +14,10 @@ const PetCategoryPage = () => {
         return 'Cat';
       case 'birds':
         return 'Poultry Bird';
-      case 'our-products':
-        return 'Our Products';
       default:
         return 'Pet';
     }
   };
-
-  if (petType === 'our-products') {
-    return <LocalBrandPage />;
-  }
 
   React.useEffect(() => {
     document.title = `PetCare Vet | ${getPetTypeTitle()} Care - Veterinary Medicines`;
@@ -39,7 +32,7 @@ const PetCategoryPage = () => {
       case 'birds':
         return <Bird size={48} className="text-vet-orange" />;
       default:
-        return <Package size={48} className="text-purple-600" />;
+        return <Dog size={48} className="text-vet-blue" />;
     }
   };
 
@@ -55,18 +48,19 @@ const PetCategoryPage = () => {
         return "https://images.unsplash.com/photo-1599443015574-be5fe8a05783?q=80&w=1000&auto=format&fit=crop";
     }
   };
-const getPetColor = () => {
-  switch (petType) {
-    case 'dogs':
-      return 'bg-vet-blue';
-    case 'cats':
-      return 'bg-vet-green';
-    case 'birds':
-      return 'bg-vet-orange';
-    default:
-      return 'bg-purple-600';
-  }
-};
+
+  const getPetColor = () => {
+    switch (petType) {
+      case 'dogs':
+        return 'bg-vet-blue';
+      case 'cats':
+        return 'bg-vet-green';
+      case 'birds':
+        return 'bg-vet-orange';
+      default:
+        return 'bg-vet-blue';
+    }
+  };
 
   const vetDrugs = petType === 'birds'
   ? [
@@ -86,7 +80,6 @@ const getPetColor = () => {
       "Mucolytics",
       "Diuretic"
     ];
-
 
   return (
     <div className="py-12 bg-gradient-to-br from-theme-lightsky/30 to-theme-powder/30 min-h-screen">

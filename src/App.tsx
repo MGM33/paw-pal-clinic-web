@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -15,9 +16,12 @@ import MedicineListPage from "./pages/MedicineListPage";
 import MedicineCategoryPage from "./pages/MedicineCategoryPage";
 import VaccinesPage from "./pages/VaccinesPage";
 import CosmeticsSupplementsPage from "./pages/CosmeticsSupplementsPage";
-import LocalBrandPage from "./pages/LocalBrandPage";
 import NotFound from "./pages/NotFound";
-import OurProductsAboutPage from "./pages/OurProductsAboutPage";
+
+// Resources Pages
+import ResourcesPage from "./pages/ResourcesPage";
+import ResourcesAboutPage from "./pages/ResourcesAboutPage";
+import BookDetailPage from "./pages/BookDetailPage";
 
 // Detail Pages
 import DogMedicineDetailPage from "./pages/DogMedicineDetailPage";
@@ -40,7 +44,6 @@ import BirdAntiClostridialDetailPage from "./pages/BirdAntiClostridialDetailPage
 import MucolyticsDrugPage from "./pages/MucolyticsDrugPage";
 import AntiMycotoxinDrugPage from "./pages/AntimycotoxinDrugPage";
 import AntiCoccidialDrugsPage from "./pages/AntiCoccidialDrugsPage";
-import LocalBrandProductDetailPage from "./pages/LocalBrandProductDetailPage";
 
 // Articles
 import ArticlesPage from "./pages/ArticlesPage";
@@ -68,8 +71,6 @@ declare global {
   }
 }
 
-
-
 const App = () => {
   useEffect(() => {
     // ✅ Google Translate Script
@@ -84,7 +85,12 @@ const App = () => {
 
       window.googleTranslateElementInit = () => {
         new window.google.translate.TranslateElement(
-          { pageLanguage: 'en', autoDisplay: false },
+          { 
+            pageLanguage: 'en', 
+            includedLanguages: 'en,ar',
+            layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false 
+          },
           'google_translate_element'
         );
       };
@@ -117,9 +123,11 @@ const App = () => {
                 <Route path="/services" element={<ServicesPage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
-                <Route path="/our-products" element={<LocalBrandPage />} />
-                <Route path="/our-products/about" element={<OurProductsAboutPage />} />
-                <Route path="/our-products/products/:productId" element={<LocalBrandProductDetailPage />} />
+                
+                {/* Resources Routes */}
+                <Route path="/resources" element={<ResourcesPage />} />
+                <Route path="/resources/about" element={<ResourcesAboutPage />} />
+                <Route path="/resources/books/:bookId" element={<BookDetailPage />} />
 
                 <Route path="/articles" element={<ArticlesPage />} />
                 <Route path="/articles/about" element={<ArticlesAboutPage />} />
