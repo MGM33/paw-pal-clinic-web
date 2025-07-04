@@ -56,14 +56,14 @@ const ResourcesPage = () => {
               className="group bg-white/80 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden"
             >
               {/* Book Cover */}
-              <div className="relative h-80 w-full bg-white flex items-center justify-center overflow-hidden">
-              <img
-                src={book.cover}
-                alt={book.title}
-                className="w-full h-full object-contain p-2 transition-transform duration-300 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
-              </div>
+             <div className="relative h-80 w-full bg-white flex items-center justify-center overflow-hidden">
+  <img
+    src={book.cover}
+    alt={book.title}
+    className="w-full h-full object-contain p-2 transition-transform duration-300 group-hover:scale-105"
+  />
+</div>
+
               
               {/* Book Details */}
               <div className="p-6 bg-white/90 backdrop-blur-sm">
