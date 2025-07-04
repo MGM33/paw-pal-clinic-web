@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { BookOpen } from 'lucide-react';
@@ -11,45 +10,21 @@ const ResourcesPage = () => {
   const books = [
     {
       id: 1,
-      title: 'Veterinary Medicine Handbook',
-      author: 'Dr. Sarah Johnson',
-      cover: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=1000&auto=format&fit=crop',
-      description: 'Comprehensive guide to modern veterinary practices and treatments.'
+      title: 'WSAVA List of Essential Medicines for Cats and Dogs',
+      cover: 'https://i.postimg.cc/vHq0y9bt/WASAVA-image.png',
+      description: 'A comprehensive list of essential medicines for the treatment of cats and dogs.'
     },
     {
       id: 2,
-      title: 'Small Animal Internal Medicine',
-      author: 'Dr. Michael Roberts',
-      cover: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop',
-      description: 'Essential reference for diagnosing and treating small animals.'
+      title: 'Manual of Commonly Used Drugs in Pet Practice',
+      cover: 'https://i.postimg.cc/x87Nx0VM/UVAS.png',
+      description: 'Prepared by DVM students, this guide lists common drugs used in pet veterinary practice.'
     },
     {
       id: 3,
-      title: 'Poultry Health Management',
-      author: 'Dr. Emily Chen',
-      cover: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=1000&auto=format&fit=crop',
-      description: 'Complete guide to maintaining healthy poultry populations.'
-    },
-    {
-      id: 4,
-      title: 'Veterinary Pharmacology',
-      author: 'Dr. David Wilson',
-      cover: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1000&auto=format&fit=crop',
-      description: 'Understanding drug mechanisms and therapeutic applications.'
-    },
-    {
-      id: 5,
-      title: 'Animal Nutrition Fundamentals',
-      author: 'Dr. Lisa Martinez',
-      cover: 'https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=1000&auto=format&fit=crop',
-      description: 'Nutritional requirements and feeding strategies for animals.'
-    },
-    {
-      id: 6,
-      title: 'Veterinary Surgery Techniques',
-      author: 'Dr. James Thompson',
-      cover: 'https://images.unsplash.com/photo-1520637836862-4d197d17c24a?q=80&w=1000&auto=format&fit=crop',
-      description: 'Modern surgical procedures and post-operative care.'
+      title: 'Medicines for Pets',
+      cover: 'https://i.postimg.cc/dVRDdR38/medicine-for-pets.png',
+      description: 'A science investigation pack to teach children (ages 9–11) how pet medicines are made.'
     }
   ];
 
@@ -80,7 +55,7 @@ const ResourcesPage = () => {
               to={`/resources/books/${book.id}`}
               className="group bg-white/80 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden"
             >
-              {/* Book Cover with proper book dimensions */}
+              {/* Book Cover */}
               <div className="relative h-80 w-full bg-gradient-to-b from-gray-100 to-gray-200 overflow-hidden">
                 <img
                   src={book.cover}
@@ -95,9 +70,6 @@ const ResourcesPage = () => {
                 <h3 className="text-lg font-bold text-gray-800 mb-2 group-hover:text-theme-deepsky transition-colors duration-300">
                   {book.title}
                 </h3>
-                <p className="text-sm text-gray-600 mb-2 font-medium">
-                  by {book.author}
-                </p>
                 <p className="text-sm text-gray-600 line-clamp-3">
                   {book.description}
                 </p>
