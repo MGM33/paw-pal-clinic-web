@@ -1,10 +1,10 @@
+
 import { useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { SearchProvider } from "./contexts/SearchContext";
 
 // Pages
 import Index from "./pages/Index";
@@ -108,75 +108,73 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <SearchProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
-            <ScrollToTop />
-            <div className="flex flex-col min-h-screen">
-              {/* ✅ Hidden Google Translate div */}
-              <div id="google_translate_element" style={{ display: "none" }}></div>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <ScrollToTop />
+          <div className="flex flex-col min-h-screen">
+            {/* ✅ Hidden Google Translate div */}
+            <div id="google_translate_element" style={{ display: "none" }}></div>
 
-              <Navbar />
-              <main className="flex-grow">
-                <Routes>
-                  <Route path="/" element={<Index />} />
-                  <Route path="/services" element={<ServicesPage />} />
-                  <Route path="/about" element={<AboutPage />} />
-                  <Route path="/contact" element={<ContactPage />} />
-                  
-                  {/* Resources Routes */}
-                  <Route path="/resources" element={<ResourcesPage />} />
-                  <Route path="/resources/about" element={<ResourcesAboutPage />} />
-                  <Route path="/resources/books/:bookId" element={<BookDetailPage />} />
+            <Navbar />
+            <main className="flex-grow">
+              <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                
+                {/* Resources Routes */}
+                <Route path="/resources" element={<ResourcesPage />} />
+                <Route path="/resources/about" element={<ResourcesAboutPage />} />
+                <Route path="/resources/books/:bookId" element={<BookDetailPage />} />
 
-                  <Route path="/articles" element={<ArticlesPage />} />
-                  <Route path="/articles/about" element={<ArticlesAboutPage />} />
-                  <Route path="/articles/:articleId" element={<ArticleDetailsPage />} />
+                <Route path="/articles" element={<ArticlesPage />} />
+                <Route path="/articles/about" element={<ArticlesAboutPage />} />
+                <Route path="/articles/:articleId" element={<ArticleDetailsPage />} />
 
-                  <Route path="/:petType" element={<PetCategoryPage />} />
-                  <Route path="/:petType/medicines" element={<MedicineListPage />} />
-                  <Route path="/:petType/vaccines" element={<VaccinesPage />} />
-                  <Route path="/:petType/cosmetics-supplements" element={<CosmeticsSupplementsPage />} />
-                  <Route path="/:petType/medicines/category/:categoryId" element={<MedicineCategoryPage />} />
+                <Route path="/:petType" element={<PetCategoryPage />} />
+                <Route path="/:petType/medicines" element={<MedicineListPage />} />
+                <Route path="/:petType/vaccines" element={<VaccinesPage />} />
+                <Route path="/:petType/cosmetics-supplements" element={<CosmeticsSupplementsPage />} />
+                <Route path="/:petType/medicines/category/:categoryId" element={<MedicineCategoryPage />} />
 
-                  <Route path="/birds/medicines/category/antibiotics" element={<MedicineCategoryPage />} />
-                  <Route path="/birds/medicines/category/anti-coccidial" element={<AntiCoccidialDrugsPage />} />
-                  <Route path="/birds/medicines/category/minerals-vitamins" element={<BirdMineralsVitaminsDetailPage />} />
-                  <Route path="/birds/medicines/category/anti-stress" element={<BirdAntiStressDetailPage />} />
-                  <Route path="/birds/medicines/category/hepatorenal-tonics" element={<BirdHepatoRenalTonicDetailPage />} />
-                  <Route path="/birds/medicines/category/anti-mycotoxin" element={<AntiMycotoxinDrugPage />} />
-                  <Route path="/birds/medicines/category/growth-promotors" element={<BirdGrowthPromotorDetailPage />} />
-                  <Route path="/birds/medicines/category/immunostimulants" element={<BirdImmunostimulantDetailPage />} />
-                  <Route path="/birds/medicines/category/mucolytics-expectorants" element={<MucolyticsDrugPage />} />
-                  <Route path="/birds/medicines/category/anti-clostridial" element={<BirdAntiClostridialDetailPage />} />
+                <Route path="/birds/medicines/category/antibiotics" element={<MedicineCategoryPage />} />
+                <Route path="/birds/medicines/category/anti-coccidial" element={<AntiCoccidialDrugsPage />} />
+                <Route path="/birds/medicines/category/minerals-vitamins" element={<BirdMineralsVitaminsDetailPage />} />
+                <Route path="/birds/medicines/category/anti-stress" element={<BirdAntiStressDetailPage />} />
+                <Route path="/birds/medicines/category/hepatorenal-tonics" element={<BirdHepatoRenalTonicDetailPage />} />
+                <Route path="/birds/medicines/category/anti-mycotoxin" element={<AntiMycotoxinDrugPage />} />
+                <Route path="/birds/medicines/category/growth-promotors" element={<BirdGrowthPromotorDetailPage />} />
+                <Route path="/birds/medicines/category/immunostimulants" element={<BirdImmunostimulantDetailPage />} />
+                <Route path="/birds/medicines/category/mucolytics-expectorants" element={<MucolyticsDrugPage />} />
+                <Route path="/birds/medicines/category/anti-clostridial" element={<BirdAntiClostridialDetailPage />} />
 
-                  <Route path="/birds/medicines/category/antibiotics/:medicineId" element={<BirdAntibioticsDetailPage />} />
-                  <Route path="/birds/medicines/category/anti-coccidial/:medicineId" element={<BirdAntiCoccidialDetailPage />} />
-                  <Route path="/birds/medicines/category/minerals-vitamins/:medicineId" element={<BirdMineralsVitaminsDetailPage />} />
-                  <Route path="/birds/medicines/category/anti-stress/:medicineId" element={<BirdAntiStressDetailPage />} />
-                  <Route path="/birds/medicines/category/hepatorenal-tonics/:medicineId" element={<BirdHepatoRenalTonicDetailPage />} />
-                  <Route path="/birds/medicines/category/anti-mycotoxin/:medicineId" element={<BirdAntiMycotoxinDetailPage />} />
-                  <Route path="/birds/medicines/category/growth-promotors/:medicineId" element={<BirdGrowthPromotorDetailPage />} />
-                  <Route path="/birds/medicines/category/immunostimulants/:medicineId" element={<BirdImmunostimulantDetailPage />} />
-                  <Route path="/birds/medicines/category/mucolytics-expectorants/:medicineId" element={<BirdMucolyticsExpectorantDetailPage />} />
-                  <Route path="/birds/medicines/category/anti-clostridial/:medicineId" element={<BirdAntiClostridialDetailPage />} />
+                <Route path="/birds/medicines/category/antibiotics/:medicineId" element={<BirdAntibioticsDetailPage />} />
+                <Route path="/birds/medicines/category/anti-coccidial/:medicineId" element={<BirdAntiCoccidialDetailPage />} />
+                <Route path="/birds/medicines/category/minerals-vitamins/:medicineId" element={<BirdMineralsVitaminsDetailPage />} />
+                <Route path="/birds/medicines/category/anti-stress/:medicineId" element={<BirdAntiStressDetailPage />} />
+                <Route path="/birds/medicines/category/hepatorenal-tonics/:medicineId" element={<BirdHepatoRenalTonicDetailPage />} />
+                <Route path="/birds/medicines/category/anti-mycotoxin/:medicineId" element={<BirdAntiMycotoxinDetailPage />} />
+                <Route path="/birds/medicines/category/growth-promotors/:medicineId" element={<BirdGrowthPromotorDetailPage />} />
+                <Route path="/birds/medicines/category/immunostimulants/:medicineId" element={<BirdImmunostimulantDetailPage />} />
+                <Route path="/birds/medicines/category/mucolytics-expectorants/:medicineId" element={<BirdMucolyticsExpectorantDetailPage />} />
+                <Route path="/birds/medicines/category/anti-clostridial/:medicineId" element={<BirdAntiClostridialDetailPage />} />
 
-                  <Route path="/birds/medicines/:medicineId" element={<BirdMedicineDetailPage />} />
-                  <Route path="/dogs/medicines/:medicineId" element={<DogMedicineDetailPage />} />
-                  <Route path="/dogs/vaccines/:vaccineId" element={<DogVaccineDetailPage />} />
-                  <Route path="/dogs/cosmetics-supplements/:cosmeticId" element={<DogCosmeticsDetailPage />} />
-                  <Route path="/cats/medicines/:medicineId" element={<CatMedicineDetailPage />} />
-                  <Route path="/cats/vaccines/:vaccineId" element={<CatVaccineDetailPage />} />
-                  <Route path="/cats/cosmetics-supplements/:cosmeticId" element={<CatCosmeticsDetailPage />} />
+                <Route path="/birds/medicines/:medicineId" element={<BirdMedicineDetailPage />} />
+                <Route path="/dogs/medicines/:medicineId" element={<DogMedicineDetailPage />} />
+                <Route path="/dogs/vaccines/:vaccineId" element={<DogVaccineDetailPage />} />
+                <Route path="/dogs/cosmetics-supplements/:cosmeticId" element={<DogCosmeticsDetailPage />} />
+                <Route path="/cats/medicines/:medicineId" element={<CatMedicineDetailPage />} />
+                <Route path="/cats/vaccines/:vaccineId" element={<CatVaccineDetailPage />} />
+                <Route path="/cats/cosmetics-supplements/:cosmeticId" element={<CatCosmeticsDetailPage />} />
 
-                  <Route path="*" element={<NotFound />} />
-                </Routes>
-              </main>
-              <Footer />
-            </div>
-          </BrowserRouter>
-        </SearchProvider>
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </main>
+            <Footer />
+          </div>
+        </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
   );
