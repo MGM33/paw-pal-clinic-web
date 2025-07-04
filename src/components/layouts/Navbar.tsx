@@ -14,6 +14,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import SearchBar from '../search/SearchBar';
 
 const Navbar = () => {
   const location = useLocation();
@@ -103,57 +104,70 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-2 items-center">
-            <NavLink to="/" icon={Home}>Home</NavLink>
-            <NavLink to="/services" icon={Settings}>Services</NavLink>
+          <div className="hidden lg:flex items-center space-x-4">
+            {/* Search Bar */}
+            <div className="flex-shrink-0">
+              <SearchBar />
+            </div>
+            
+            <div className="flex space-x-2 items-center">
+              <NavLink to="/" icon={Home}>Home</NavLink>
+              <NavLink to="/services" icon={Settings}>Services</NavLink>
 
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger
-                    className={`relative flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 font-medium bg-transparent border-none hover:bg-theme-lightsky/20 data-[state=open]:bg-theme-lightsky/20 ${isCategoryActive()
-                      ? 'bg-theme-sky/30 text-theme-deepsky shadow-md scale-105'
-                      : 'text-gray-700 hover:text-theme-deepsky hover:scale-105'
-                      }`}
-                  >
-                    <Grid3X3 size={18} />
-                    <span>Categories</span>
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className="grid w-48 gap-2 p-4 glass-effect border border-theme-sky/20">
-                      {categories.map((category) => (
-                        <Link
-                          key={category.to}
-                          to={category.to}
-                          className={`flex items-center space-x-2 rounded-lg p-3 text-sm transition-all duration-300 hover:scale-105 ${isActive(category.to)
-                            ? 'bg-theme-sky/30 text-theme-deepsky shadow-sm'
-                            : 'hover:bg-theme-sky/20 hover:text-theme-deepsky'
-                            }`}
-                        >
-                          <category.icon size={16} />
-                          <span>{category.name}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
+              <NavigationMenu>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger
+                      className={`relative flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 font-medium bg-transparent border-none hover:bg-theme-lightsky/20 data-[state=open]:bg-theme-lightsky/20 ${isCategoryActive()
+                        ? 'bg-theme-sky/30 text-theme-deepsky shadow-md scale-105'
+                        : 'text-gray-700 hover:text-theme-deepsky hover:scale-105'
+                        }`}
+                    >
+                      <Grid3X3 size={18} />
+                      <span>Categories</span>
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <div className="grid w-48 gap-2 p-4 glass-effect border border-theme-sky/20">
+                        {categories.map((category) => (
+                          <Link
+                            key={category.to}
+                            to={category.to}
+                            className={`flex items-center space-x-2 rounded-lg p-3 text-sm transition-all duration-300 hover:scale-105 ${isActive(category.to)
+                              ? 'bg-theme-sky/30 text-theme-deepsky shadow-sm'
+                              : 'hover:bg-theme-sky/20 hover:text-theme-deepsky'
+                              }`}
+                          >
+                            <category.icon size={16} />
+                            <span>{category.name}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
 
-            <NavLink to="/about" icon={Info}>About Us</NavLink>
-            <NavLink to="/contact" icon={Phone}>Contact</NavLink>
+              <NavLink to="/about" icon={Info}>About Us</NavLink>
+              <NavLink to="/contact" icon={Phone}>Contact</NavLink>
 
-            {/* Language Switch */}
-            <button
-              onClick={toggleLanguage}
-              className="ml-4 px-4 py-2 rounded-full border border-theme-deepsky text-theme-deepsky hover:bg-theme-deepsky hover:text-white transition-colors"
-            >
-              {lang === 'en' ? 'عربي' : 'English'}
-            </button>
+              {/* Language Switch */}
+              <button
+                onClick={toggleLanguage}
+                className="ml-4 px-4 py-2 rounded-full border border-theme-deepsky text-theme-deepsky hover:bg-theme-deepsky hover:text-white transition-colors"
+              >
+                {lang === 'en' ? 'عربي' : 'English'}
+              </button>
+            </div>
           </div>
 
-          {/* Mobile Menu */}
-          <div className="md:hidden">
+          {/* Mobile Search and Menu */}
+          <div className="lg:hidden flex items-center space-x-2">
+            {/* Mobile Search Bar */}
+            <div className="hidden sm:block">
+              <SearchBar />
+            </div>
+            
+            {/* Mobile Menu */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <button className="text-gray-700 focus:outline-none hover:text-theme-deepsky transition-colors duration-300 p-2 rounded-lg hover:bg-theme-lightsky/20">
@@ -173,6 +187,12 @@ const Navbar = () => {
                     </div>
                   </SheetTitle>
                 </SheetHeader>
+                
+                {/* Mobile Search Bar in Sheet */}
+                <div className="mb-4 sm:hidden">
+                  <SearchBar />
+                </div>
+                
                 <div className="flex flex-col space-y-3 mt-4">
                   <NavLink to="/" icon={Home}>Home</NavLink>
                   <NavLink to="/services" icon={Settings}>Services</NavLink>
