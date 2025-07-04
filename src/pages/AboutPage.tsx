@@ -12,12 +12,10 @@ const AboutPage = () => {
     {
       id: 1,
       name: "Dr. Mohamed Hesham",
-      position: "Specialist in Canine & Feline Medicine", 
-      education: "TBD",
-      experience: "TBD",
-      certifications: "TBD",
-      bio: "TBD",
-      email: "TBD",
+      position: "Specialist in Canine & Feline Internal Medicine", 
+      education: "Faculty of veterinay medicine pharma program",
+      address: "Ard Elgameaat - Ismailia - Egypt",
+      email: "mohamedhesham@gmail.com",
       phone: "01205746907",
       img: "https://i.postimg.cc/P5z0VSvN/Whats-App-Image-2025-06-26-at-11-48-52-c988b566.jpg"
     },
@@ -25,49 +23,41 @@ const AboutPage = () => {
       id: 2,
       name: "Dr. Mahmoud Elmatboly",
       position: "Specialist in Avian Medicine",
-      education: "TBD", 
-      experience: "TBD",
-      certifications: "TBD",
-      bio: "TBD",
-      email: "TBD",
+      education: "Faculty of veterinay medicine pharma program", 
+      address: "Damitta - Egypt",
+      email: "mahmoudelmatbolt47@gmail.com",
       phone: "01030855811",
-      img: "https://source.unsplash.com/random/200x200/?veterinarian-2"
+      img: "https://i.postimg.cc/RZBWppn3/Mahmoud.jpg"
     },
     {
       id: 3,
       name: "Dr. Fatma Kamal",
-      position: "Specialist in Canine & Feline Medicine",
-      education: "TBD",
-      experience: "TBD", 
-      certifications: "TBD",
-      bio: "TBD",
-      email: "TBD",
+      position: "Specialist in Canine & Feline Internal Medicine",
+      education: "Faculty of veterinay medicine pharma program",
+      address: "Ismailia - Egypt", 
+      email: "fk6146715@gmail.com",
       phone: "01277531114",
-      img: "https://source.unsplash.com/random/200x200/?veterinarian-3"
+      img: "https://i.postimg.cc/FKnsvT1V/Fatma.jpg"
     },
     {
       id: 4,
-      name: "Dr. Rodiana Saif",
-      position: "Cosmetics and Local Brand Specialist",
-      education: "TBD",
-      experience: "TBD",
-      certifications: "TBD",
-      bio: "TBD",
-      email: "TBD",
+      name: "Dr. Rodaina Saif",
+      position: "Specialist in Canine & Feline External Medicine",
+      education: "Faculty of veterinay medicine pharma program",
+      address: "El-arish - North Sinai - Egypt",
+      email: "dodasaif40@gmail.com",
       phone: "01552496414",
-      img: "https://source.unsplash.com/random/200x200/?veterinarian-4"
+      img: "https://i.postimg.cc/s2L0sWzh/Rodaina.jpg"
     },
     {
       id: 5,
       name: "Dr. Mariam Attah",
-      position: "Cosmetics and Local Brand Specialist",
-      education: "TBD",
-      experience: "TBD",
-      certifications: "TBD",
-      bio: "TBD",
-      email: "TBD",
+      position: "Specialist in Canine & Feline External Medicine",
+      education: "Faculty of veterinay medicine pharma program",
+      address: "Port-said - Egypt",
+      email: "mariamattaf511@gmail.com",
       phone: "01040656983",
-      img: "https://source.unsplash.com/random/200x200/?veterinarian-5"
+      img: "https://i.postimg.cc/5tfFyK4c/Mariam.jpg"
     }
   ];
 
@@ -148,19 +138,10 @@ const AboutPage = () => {
                   </div>
                   
                   <div className="border-b border-gray-200 pb-3">
-                    <h3 className="text-lg font-semibold text-gray-800 mb-1">Experience</h3>
-                    <p className="text-gray-600">{selectedMember.experience}</p>
+                    <h3 className="text-lg font-semibold text-gray-800 mb-1">Address</h3>
+                    <p className="text-gray-600">{selectedMember.address}</p>
                   </div>
-                  
-                  <div className="border-b border-gray-200 pb-3">
-                    <h3 className="text-lg font-semibold text-gray-800 mb-1">Certifications</h3>
-                    <p className="text-gray-600">{selectedMember.certifications}</p>
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-800 mb-1">Bio</h3>
-                    <p className="text-gray-700">{selectedMember.bio}</p>
-                  </div>
+                
                 </div>
               </div>
             </div>
