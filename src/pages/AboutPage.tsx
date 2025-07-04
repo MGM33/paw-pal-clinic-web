@@ -15,7 +15,7 @@ const AboutPage = () => {
       position: "Specialist in Canine & Feline Internal Medicine", 
       education: "Faculty of veterinay medicine pharma program",
       address: "Ard Elgameaat - Ismailia - Egypt",
-      email: "mohamedhesham@gmail.com",
+      email: "madhesham@gmail.com",
       phone: "01205746907",
       img: "https://i.postimg.cc/P5z0VSvN/Whats-App-Image-2025-06-26-at-11-48-52-c988b566.jpg"
     },
