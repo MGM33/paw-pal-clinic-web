@@ -12,7 +12,7 @@ const AboutPage = () => {
     {
       id: 1,
       name: "Dr. Mohamed Hesham",
-      position: "Specialist in Canine & Feline Medicine",
+      position: "Specialist in Canine & Feline Medicine", 
       education: "TBD",
       experience: "TBD",
       certifications: "TBD",
@@ -25,7 +25,7 @@ const AboutPage = () => {
       id: 2,
       name: "Dr. Mahmoud Elmatboly",
       position: "Specialist in Avian Medicine",
-      education: "TBD",
+      education: "TBD", 
       experience: "TBD",
       certifications: "TBD",
       bio: "TBD",
@@ -38,7 +38,7 @@ const AboutPage = () => {
       name: "Dr. Fatma Kamal",
       position: "Specialist in Canine & Feline Medicine",
       education: "TBD",
-      experience: "TBD",
+      experience: "TBD", 
       certifications: "TBD",
       bio: "TBD",
       email: "TBD",
@@ -211,29 +211,33 @@ const AboutPage = () => {
               {teamMembers.map((member) => (
                 <div 
                   key={member.id}
-                  className="text-center rounded-xl p-5 transition-all duration-300 cursor-pointer group relative overflow-hidden bg-white border border-gray-200 hover:border-vet-blue hover:shadow-lg"
+                  className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer overflow-hidden border border-gray-200 group"
                   onClick={() => setSelectedMember(member)}
                 >
-                  <div className="transform group-hover:-translate-y-2 transition-transform duration-500">
-                    <div className="relative inline-block">
-                      <div 
-                        className="rounded-full overflow-hidden w-36 h-36 mx-auto mb-5 border-4 border-gray-100 group-hover:border-vet-blue/30 shadow-lg transform group-hover:scale-105 transition-all duration-500"
-                      >
-                        <img 
-                          src={member.img} 
-                          alt={member.name} 
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div className="absolute inset-0 rounded-full border-4 border-transparent group-hover:border-vet-blue/20 transition-all duration-700 animate-ping opacity-0 group-hover:opacity-70"></div>
-                    </div>
-                    
-                    <h3 className="text-xl font-bold text-gray-800 mb-1 group-hover:text-vet-blue transition-colors">
+                  {/* Large Image Section */}
+                  <div className="relative h-72 overflow-hidden">
+                    <img 
+                      src={member.img} 
+                      alt={member.name} 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  
+                  {/* Details Section - Bottom of Card */}
+                  <div className="p-4 bg-white">
+                    <h3 className="text-lg font-bold text-gray-800 mb-1 group-hover:text-vet-blue transition-colors">
                       {member.name}
                     </h3>
-                    <p className="text-gray-600 group-hover:text-gray-800 transition-colors">
+                    <p className="text-sm text-gray-600 mb-2">
                       {member.position}
                     </p>
+                    <div className="flex items-center text-xs text-gray-500">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                      </svg>
+                      {member.phone}
+                    </div>
                   </div>
                 </div>
               ))}
@@ -243,18 +247,17 @@ const AboutPage = () => {
       </div>
       
       {/* Hidden scrollbar styles */}
-    <style>
-  {`
-    .scrollbar-hide {
-      -ms-overflow-style: none;  /* IE and Edge */
-      scrollbar-width: none;  /* Firefox */
-    }
-    .scrollbar-hide::-webkit-scrollbar {
-      display: none;  /* Chrome, Safari and Opera */
-    }
-  `}
-</style>
-
+      <style>
+        {`
+          .scrollbar-hide {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+          }
+          .scrollbar-hide::-webkit-scrollbar {
+            display: none;  /* Chrome, Safari and Opera */
+          }
+        `}
+      </style>
     </div>
   );
 };
