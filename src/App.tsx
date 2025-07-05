@@ -73,7 +73,7 @@ declare global {
 
 const App = () => {
   useEffect(() => {
-    // ✅ Google Translate Script
+    // Google Translate Script
     const addTranslateScript = () => {
       const scriptId = 'google-translate-script';
       if (!document.getElementById(scriptId)) {
@@ -98,7 +98,7 @@ const App = () => {
 
     addTranslateScript();
 
-    // ✅ Live Chat (Tidio)
+    // Live Chat (Tidio)
     const script = document.createElement("script");
     script.src = "//code.tidio.co/wbhserfmj8jhuim5jxs0yp5iyrukyei8.js";
     script.async = true;
@@ -113,9 +113,6 @@ const App = () => {
         <BrowserRouter>
           <ScrollToTop />
           <div className="flex flex-col min-h-screen">
-            {/* ✅ Hidden Google Translate div */}
-            <div id="google_translate_element" style={{ display: "none" }}></div>
-
             <Navbar />
             <main className="flex-grow">
               <Routes>
