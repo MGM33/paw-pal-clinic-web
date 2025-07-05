@@ -73,7 +73,7 @@ declare global {
 
 const App = () => {
   useEffect(() => {
-    // Google Translate Script
+        // ✅ Google Translate Script
     const addTranslateScript = () => {
       const scriptId = 'google-translate-script';
       if (!document.getElementById(scriptId)) {
@@ -85,12 +85,7 @@ const App = () => {
 
       window.googleTranslateElementInit = () => {
         new window.google.translate.TranslateElement(
-          { 
-            pageLanguage: 'en', 
-            includedLanguages: 'en,ar',
-            layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
-            autoDisplay: false 
-          },
+          { pageLanguage: 'en', autoDisplay: false },
           'google_translate_element'
         );
       };
