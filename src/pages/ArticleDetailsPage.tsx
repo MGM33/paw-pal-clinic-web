@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { articlesData } from '@/data/articlesData';
@@ -41,33 +42,32 @@ const ArticleDetailPage = () => {
   />
 )}
 
-
-
-
       <h1 className="text-4xl font-bold text-theme-deepsky mb-2">
         {article.title}
       </h1>
 
-      <p className="text-sm text-gray-500 mb-6">
-        بقلم <span className="font-semibold">{article.author}</span>
-      </p>
+      {article.author && (
+        <p className="text-sm text-gray-500 mb-6">
+          بقلم <span className="font-semibold">{article.author}</span>
+        </p>
+      )}
 
       <div className="prose max-w-none text-gray-700 text-lg whitespace-pre-wrap mb-4">
-  {article.content}
-</div>
+        {article.content}
+      </div>
 
-{article.pdf && (
-  <div className="mt-2 text-right">
-    <a
-      href={article.pdf}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-block bg-theme-deepsky text-white px-6 py-2 rounded-lg shadow hover:bg-theme-sky transition"
-    >
-      📄 عرض المقال الكامل (PDF)
-    </a>
-  </div>
-)}
+      {article.pdf && (
+        <div className="mt-2 text-right">
+          <a
+            href={article.pdf}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-theme-deepsky text-white px-6 py-2 rounded-lg shadow hover:bg-theme-sky transition"
+          >
+            📄 عرض المقال الكامل
+          </a>
+        </div>
+      )}
     </section>
   );
 };
