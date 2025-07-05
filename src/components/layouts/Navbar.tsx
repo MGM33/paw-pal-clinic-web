@@ -64,26 +64,23 @@ const Navbar = () => {
     { to: '/resources/about', icon: BookOpen, name: 'Resources' },
   ];
 
-  // Language toggle
+ // Language toggle
   const toggleLanguage = () => {
-    const newLang = lang === 'en' ? 'ar' : 'en';
-    setLang(newLang);
-    
-    // Set document direction for RTL/LTR
-    document.documentElement.dir = newLang === 'ar' ? 'rtl' : 'ltr';
+  const newLang = lang === 'en' ? 'ar' : 'en';
+  setLang(newLang);
 
-    const tryChangeLang = () => {
-      const select = document.querySelector<HTMLSelectElement>('.goog-te-combo');
-      if (select) {
-        select.value = newLang;
-        select.dispatchEvent(new Event('change'));
-      } else {
-        setTimeout(tryChangeLang, 500);
-      }
-    };
-
-    tryChangeLang();
+  const tryChangeLang = () => {
+    const select = document.querySelector<HTMLSelectElement>('.goog-te-combo');
+    if (select) {
+      select.value = newLang;
+      select.dispatchEvent(new Event('change'));
+    } else {
+      setTimeout(tryChangeLang, 500); // جرب تاني بعد نص ثانية
+    }
   };
+
+  tryChangeLang();
+};
 
   return (
     <nav className="glass-effect shadow-lg sticky top-0 z-50 border-b border-theme-sky/30">
@@ -143,7 +140,7 @@ const Navbar = () => {
             <NavLink to="/about" icon={Info}>About Us</NavLink>
             <NavLink to="/contact" icon={Phone}>Contact</NavLink>
 
-            {/* Language Switch */}
+               {/* Language Switch */}
             <button
               onClick={toggleLanguage}
               className="ml-4 px-4 py-2 rounded-full border border-theme-deepsky text-theme-deepsky hover:bg-theme-deepsky hover:text-white transition-colors"
@@ -194,7 +191,7 @@ const Navbar = () => {
                   <NavLink to="/about" icon={Info}>About Us</NavLink>
                   <NavLink to="/contact" icon={Phone}>Contact</NavLink>
 
-                  {/* Mobile language switch */}
+                   {/* Mobile language switch */}
                   <button
                     onClick={toggleLanguage}
                     className="ml-4 px-4 py-2 rounded-full border border-theme-deepsky text-theme-deepsky hover:bg-theme-deepsky hover:text-white transition-colors"
