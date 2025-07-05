@@ -1,20 +1,20 @@
 
 import React, { useState, useEffect } from 'react';
-import { Users, Heart, Award, Clock } from 'lucide-react';
+import { Package, Heart, BookOpen, Database } from 'lucide-react';
 
 const StatsSection = () => {
   const [counts, setCounts] = useState({
-    patients: 0,
-    treatments: 0,
-    awards: 0,
-    experience: 0
+    medicines: 0,
+    categories: 0,
+    resources: 0,
+    references: 0
   });
 
   const finalCounts = {
-    patients: 5000,
-    treatments: 15000,
-    awards: 25,
-    experience: 15
+    medicines: 300,
+    categories: 15,
+    resources: 25,
+    references: 50
   };
 
   useEffect(() => {
@@ -45,31 +45,31 @@ const StatsSection = () => {
 
   const stats = [
     {
-      icon: <Users size={40} />,
-      count: counts.patients,
+      icon: <Package size={40} />,
+      count: counts.medicines,
       suffix: '+',
-      label: 'Happy Patients',
+      label: 'Medicine Entries',
       color: 'text-blue-500'
     },
     {
       icon: <Heart size={40} />,
-      count: counts.treatments,
+      count: counts.categories,
       suffix: '+',
-      label: 'Successful Treatments',
+      label: 'Categories Covered',
       color: 'text-red-500'
     },
     {
-      icon: <Award size={40} />,
-      count: counts.awards,
+      icon: <BookOpen size={40} />,
+      count: counts.resources,
       suffix: '+',
-      label: 'Awards Won',
+      label: 'Educational Resources',
       color: 'text-yellow-500'
     },
     {
-      icon: <Clock size={40} />,
-      count: counts.experience,
+      icon: <Database size={40} />,
+      count: counts.references,
       suffix: '+',
-      label: 'Years Experience',
+      label: 'Reference Materials',
       color: 'text-green-500'
     }
   ];
@@ -78,8 +78,8 @@ const StatsSection = () => {
     <section className="py-16 gradient-bg">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white mb-4 animate-fade-in-up">Our Achievements</h2>
-          <p className="text-lg text-white/90 max-w-2xl mx-auto">Numbers that speak for our commitment to excellence in veterinary care.</p>
+          <h2 className="text-4xl font-bold text-white mb-4 animate-fade-in-up">Our Database</h2>
+          <p className="text-lg text-white/90 max-w-2xl mx-auto">Comprehensive collection of veterinary medicine information and educational resources.</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

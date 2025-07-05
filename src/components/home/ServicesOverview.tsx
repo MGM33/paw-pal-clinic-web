@@ -6,27 +6,27 @@ const ServicesOverview = () => {
   const services = [
     {
       id: 1,
-      title: 'Veterinary Consultation',
-      description: 'Professional consultation with our experienced veterinarians.',
-      icon: '🩺'
-    },
-    {
-      id: 2,
-      title: 'Medical Treatment',
-      description: 'Comprehensive medical care for all types of pets.',
+      title: 'Medicine Database',
+      description: 'Comprehensive database of veterinary medicines with detailed information.',
       icon: '💊'
     },
     {
+      id: 2,
+      title: 'Educational Resources',
+      description: 'Articles, guides, and reference materials for veterinary medicine learning.',
+      icon: '📚'
+    },
+    {
       id: 3,
-      title: 'Surgical Procedures',
-      description: 'Advanced surgical treatments with state-of-the-art equipment.',
-      icon: '🔬'
+      title: 'Search & Reference',
+      description: 'Advanced search functionality to quickly find specific medicine information.',
+      icon: '🔍'
     },
     {
       id: 4,
-      title: 'Preventive Care',
-      description: 'Regular check-ups and vaccines to keep your pets healthy.',
-      icon: '🛡️'
+      title: 'Category Navigation',
+      description: 'Organized medicine categories for easy browsing and discovery.',
+      icon: '📋'
     }
   ];
 
@@ -34,8 +34,8 @@ const ServicesOverview = () => {
     <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Our Services</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">We provide a wide range of veterinary services to ensure your pets receive the best care possible.</p>
+          <h2 className="text-3xl font-bold mb-4">Our Features</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">Explore our comprehensive veterinary medicine database and educational resources designed to support learning and reference needs.</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -53,7 +53,7 @@ const ServicesOverview = () => {
             to="/services" 
             className="inline-block bg-vet-blue hover:bg-vet-darkblue text-white px-6 py-3 rounded-md font-semibold transition-colors"
           >
-            View All Services
+            Explore Database
           </Link>
         </div>
       </div>

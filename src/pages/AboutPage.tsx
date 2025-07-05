@@ -1,19 +1,20 @@
+
 import React, { useState } from 'react';
 
 const AboutPage = () => {
   const [selectedMember, setSelectedMember] = useState(null);
   
   React.useEffect(() => {
-    document.title = "PetCare Vet | About Us";
+    document.title = "VetCare | About Our Project";
   }, []);
 
-  // Team member data with TBD fields
+  // Team member data
   const teamMembers = [
     {
       id: 1,
       name: "Dr. Mohamed Hesham",
       position: "Specialist in Canine & Feline Internal Medicine", 
-      education: "Faculty of veterinay medicine pharma program",
+      education: "Faculty of veterinary medicine pharma program",
       address: "Ard Elgameaat - Ismailia - Egypt",
       email: "madhesham@gmail.com",
       phone: "01205746907",
@@ -23,7 +24,7 @@ const AboutPage = () => {
       id: 2,
       name: "Dr. Mahmoud Elmatboly",
       position: "Specialist in Avian Medicine",
-      education: "Faculty of veterinay medicine pharma program", 
+      education: "Faculty of veterinary medicine pharma program", 
       address: "Damitta - Egypt",
       email: "mahmoudelmatbolt47@gmail.com",
       phone: "01030855811",
@@ -33,7 +34,7 @@ const AboutPage = () => {
       id: 3,
       name: "Dr. Fatma Kamal",
       position: "Specialist in Canine & Feline Internal Medicine",
-      education: "Faculty of veterinay medicine pharma program",
+      education: "Faculty of veterinary medicine pharma program",
       address: "Ismailia - Egypt", 
       email: "fk6146715@gmail.com",
       phone: "01277531114",
@@ -43,7 +44,7 @@ const AboutPage = () => {
       id: 4,
       name: "Dr. Rodaina Saif",
       position: "Specialist in Canine & Feline External Medicine",
-      education: "Faculty of veterinay medicine pharma program",
+      education: "Faculty of veterinary medicine pharma program",
       address: "El-arish - North Sinai - Egypt",
       email: "dodasaif40@gmail.com",
       phone: "01552496414",
@@ -53,7 +54,7 @@ const AboutPage = () => {
       id: 5,
       name: "Dr. Mariam Attah",
       position: "Specialist in Canine & Feline External Medicine",
-      education: "Faculty of veterinay medicine pharma program",
+      education: "Faculty of veterinary medicine pharma program",
       address: "Port-said - Egypt",
       email: "mariamattaf511@gmail.com",
       phone: "01040656983",
@@ -151,25 +152,21 @@ const AboutPage = () => {
 
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-8 text-center text-gray-800">About PetCare Vet</h1>
+          <h1 className="text-4xl font-bold mb-8 text-center text-gray-800">About VetCare</h1>
           
           <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-12 border border-gray-100">
             <img 
               src="https://images.unsplash.com/photo-1581888227599-779811939961?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-              alt="Veterinary Clinic" 
+              alt="Veterinary Medicine Research" 
               className="w-full h-80 object-cover"
             />
             <div className="p-8">
-              <h2 className="text-2xl font-semibold mb-4 text-gray-800">Our Story</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-gray-800">Our Project</h2>
               <p className="text-gray-600 mb-6">
-                PetCare Vet was founded in 2005 with a mission to provide exceptional veterinary care to all animals. 
-                What started as a small clinic has now grown into a comprehensive veterinary center specializing in 
-                the care of dogs, cats, and birds.
+                VetCare is a comprehensive veterinary medicine database developed to provide accessible and reliable information about medicines for dogs, cats, and poultry birds. Our platform serves as an educational resource for veterinary medicine students, professionals, and animal care enthusiasts.
               </p>
               <p className="text-gray-600">
-                Our team of experienced veterinarians and staff are dedicated to providing the highest quality medical 
-                care for your beloved pets. We understand that pets are family members, and we treat each one with the 
-                same level of care and attention we would give our own.
+                This platform was created to bridge the gap in veterinary medicine information accessibility, providing a centralized database where users can easily search, browse, and learn about various veterinary pharmaceuticals and their applications.
               </p>
             </div>
           </div>
@@ -177,17 +174,15 @@ const AboutPage = () => {
           <div className="bg-white rounded-xl shadow-lg p-8 mb-12 border border-gray-100">
             <h2 className="text-2xl font-semibold mb-4 text-gray-800">Our Mission</h2>
             <p className="text-gray-600 mb-6">
-              Our mission is to enhance the quality of life for pets through preventive care, early disease 
-              detection, and effective medical treatments. We strive to educate pet owners about proper animal 
-              care and nutrition to ensure their pets live long, healthy lives.
+              Our mission is to create a comprehensive, user-friendly database of veterinary medicines that serves as a valuable educational resource. We aim to make veterinary pharmaceutical information more accessible to students, researchers, and anyone interested in animal healthcare.
             </p>
             <div className="border-l-4 border-vet-blue pl-4 italic text-gray-600">
-              "We believe that every pet deserves access to quality healthcare and compassionate treatment."
+              "Advancing veterinary education through accessible and comprehensive medicine information."
             </div>
           </div>
           
           <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
-            <h2 className="text-2xl font-semibold mb-6 text-gray-800">Our Team</h2>
+            <h2 className="text-2xl font-semibold mb-6 text-gray-800">Project Contributors</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {teamMembers.map((member) => (
                 <div 

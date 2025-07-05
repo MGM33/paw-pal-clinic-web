@@ -21,14 +21,14 @@ const HeroSection = () => {
       {/* Content */}
       <div className="container relative z-10 mx-auto px-4 h-full flex items-center">
         <div className="text-white max-w-2xl">
-          <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 font-serif">Your Pet's Health Is Our Priority</h1>
-          <p className="text-xl md:text-2xl mb-8 font-light">Professional veterinary care for your dogs, cats, and birds. We offer quality medical services and treatments.</p>
+          <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 font-serif">Comprehensive Veterinary Medicine Database</h1>
+          <p className="text-xl md:text-2xl mb-8 font-light">Explore our extensive collection of veterinary medicines for dogs, cats, and poultry birds with detailed information and educational resources.</p>
           <div className="flex flex-wrap gap-4">
             <Link 
               to="/services" 
               className="bg-white text-vet-blue hover:bg-gray-100 px-8 py-3 rounded-md font-semibold transition-colors text-lg"
             >
-              Our Services
+              Browse Database
             </Link>
             <Link 
               to="/contact" 

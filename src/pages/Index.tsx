@@ -5,13 +5,12 @@ import FeaturedPets from '../components/home/FeaturedPets';
 import ServicesOverview from '../components/home/ServicesOverview';
 import Features from '../components/home/Features';
 import StatsSection from '../components/home/StatsSection';
-import Testimonials from '../components/home/Testimonials';
 import LocationSection from '../components/home/LocationSection';
 
 const Index = () => {
   // Set page title
   React.useEffect(() => {
-    document.title = "VetCare | Professional Veterinary Services";
+    document.title = "VetCare | Veterinary Medicine Reference";
   }, []);
   
   return (
@@ -21,7 +20,6 @@ const Index = () => {
       <FeaturedPets />
       <StatsSection />
       <ServicesOverview />
-      <Testimonials />
       <LocationSection />
     </div>
   );
