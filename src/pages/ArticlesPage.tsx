@@ -13,13 +13,30 @@ const ArticlesPage = () => {
   // تصفية المقالات حسب التصنيف
   const filteredArticles = articlesData.filter((article) => {
     if (selectedCategory === 'all') return true;
-    if (selectedCategory === 'dogs') return Number(article.id) >= 1 && Number(article.id) <= 4;
+    if (selectedCategory === 'ehc') return article.id.startsWith('ehc-');
+    if (selectedCategory === 'dogs') {
+      // Dogs category includes: dogs-only articles (1-4) + both cats and dogs articles (1001-1042 except cats-only)
+      const numId = Number(article.id);
+      if (numId >= 1 && numId <= 4) return true; // Dogs only
+      if (numId >= 1001) {
+        // Check if it's cats-only (specific IDs for cats only)
+        const catsOnlyIds = [1014, 1018, 1039]; // Liver disease in cats, diabetes in cats, cat behavior
+        return !catsOnlyIds.includes(numId);
+      }
+      return false;
+    }
     if (selectedCategory === 'poultry') return Number(article.id) >= 5 && Number(article.id) <= 9;
-    if (selectedCategory === 'cats') return Number(article.id) > 1000;
+    if (selectedCategory === 'cats') {
+      // Cats category includes: cats-only articles + both cats and dogs articles (1001-1042)
+      const numId = Number(article.id);
+      if (numId >= 1001) return true; // All new articles are for cats or both
+      return false;
+    }
     return false;
   });
 
   const categories = [
+     { id: 'ehc', label: 'الدلائل الإرشادية للمجلس الصحي المصري' },
      { id: 'cats', label: 'مقالات القطط' },
      { id: 'poultry', label: 'مقالات الدواجن' },
      { id: 'dogs', label: 'مقالات الكلاب' },
