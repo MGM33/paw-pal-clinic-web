@@ -4,7 +4,7 @@ export const articlesData = [
     id: "ehc-1",
     title: "الدلائل الإرشادية للمجلس الصحي المصري",
     description: "منصة LMS التابعة للمجلس الصحي المصري (EHC) تضم دليلاً شاملاً ومعتمدًا رسميًا للإرشادات الطبية البيطرية في مصر. تشمل هذه الإرشادات بروتوكولات علاجية يتم إعدادها بتنسيق من لجنة الخبراء، موجهة للأطباء البيطريين وطلاب الامتياز، وتركز على مجالات متنوعة",
-    image: "https://www.ehc.gov.eg/assets/images/logo.png",
+    image: "https://i.postimg.cc/vmpbXVJ6/article-ehc-1.png",
     pdf: "https://lms.ehc.gov.eg/lms/course/index.php?categoryid=12",
     content: `الهدف: توحيد المعايير العلاجية والوقائية في الطب البيطري المصري، وضمان التحديث المستمر للممارسات السريرية الحيوانية.
 
