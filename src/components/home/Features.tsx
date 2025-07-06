@@ -42,8 +42,8 @@ const Features = () => {
     },
     {
       icon: <Search size={40} />,
-      title: "Easy Search",
-      description: "Quick and efficient search functionality to find specific medicines and information.",
+      title: "Easy Access",
+      description: "Quick and efficient access to our specific medicines and information.",
       color: "bg-indigo-500"
     },
     {
