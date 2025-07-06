@@ -18,7 +18,7 @@ const BirdHepatoRenalTonicDetailPage = () => {
       composition: 'Choline bitartarte 50gm, Vitamin B12 30gm, Vitamin C 30gm, Sorbitol 50gm, Methionine 10gm, Lysine 20gm, Ammonium chloride 250gm, Propylene glycol 50gm, Halfa bar ext. 3000gm.',
       dosage: '1ml/liter drinking water as advised by vet.',
       sideEffects: 'None reported when used as directed.',
-      image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&h=400&fit=crop&sig=hepatorenal1'
+      image: 'https://i.postimg.cc/dV2xgTZy/26.jpg'
     },
     {
       id: '2',
@@ -29,7 +29,7 @@ const BirdHepatoRenalTonicDetailPage = () => {
       composition: 'B1 10,000 mg, B2 2,000 mg, B6 2,000 mg, Pantothenic Acid 5,000 mg, C 50,000 mg, Niacin 30,000 mg, Sodium Chloride 150g, Potassium Sulfate 150g, Sorbitol 42g.',
       dosage: '1–2 g/liter drinking water for 3–5 days.',
       sideEffects: 'None.',
-      image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=600&h=400&fit=crop&sig=hepatorenal2'
+      image: 'https://i.postimg.cc/8zGSFGhL/27.jpg'
     },
     {
       id: '3',
@@ -40,7 +40,7 @@ const BirdHepatoRenalTonicDetailPage = () => {
       composition: 'Vitamin C 5000mg, B1 10000mg, B2 4000mg, Pantothenic Acid 5000mg, Niacin 20mg, Potassium 45000mg, Magnesium 42000mg, Sorbitol 500mg.',
       dosage: '1 g/liter drinking water for 3–5 days.',
       sideEffects: 'None.',
-      image: 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=600&h=400&fit=crop&sig=hepatorenal3'
+      image: 'https://i.postimg.cc/hPTnPv7S/28.jpg'
     },
     {
       id: '4',
@@ -51,7 +51,7 @@ const BirdHepatoRenalTonicDetailPage = () => {
       composition: 'Methionine 7.9g, Choline 5.625g, Betaine 6g, Lysine 1.6g, Artichoke Extract 3g, Sorbitol 35g, Potassium sorbate, Sodium hydroxide.',
       dosage: '1–2 ml/10kg live weight for 5–10 days.',
       sideEffects: 'None when used as prescribed.',
-      image: 'https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=600&h=400&fit=crop&sig=hepatorenal4'
+      image: 'https://i.postimg.cc/JhKdzVq7/29.jpg'
     },
     {
       id: '5',
@@ -62,7 +62,7 @@ const BirdHepatoRenalTonicDetailPage = () => {
       composition: 'Sorbitol 100gm, Niacin 30gm, L-carnitine 35gm, Betaine HCl 70mg, Choline 75gm, Silymarin 15gm, Methionine 40gm, Vit E, B1, B2, B9, B12.',
       dosage: '1ml/L drinking water.',
       sideEffects: 'None known.',
-      image: 'https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=600&h=400&fit=crop&sig=hepatorenal5'
+      image: 'https://i.postimg.cc/Dz7Mhy1Y/30.jpg'
     }
   ];
 
