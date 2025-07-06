@@ -1,11 +1,8 @@
 
 import React from 'react';
-import { useParams } from 'react-router-dom';
 import PoultryDrawer from '../components/medicines/PoultryDrawer';
 
 const BirdAntiStressCategoryPage = () => {
-  const { petType, categoryId } = useParams<{ petType: string; categoryId: string }>();
-
   React.useEffect(() => {
     document.title = 'VetCare | Anti-stress';
   }, []);

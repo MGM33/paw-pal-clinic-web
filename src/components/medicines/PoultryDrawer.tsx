@@ -18,8 +18,9 @@ const PoultryDrawer = () => {
   const categories = [
     { id: 'antibiotics', name: 'Antibiotics' },
     { id: 'anti-coccidial', name: 'Anti-coccidial drugs' },
-    { id: 'anti-mycotoxin', name: 'Anti-mycotoxin' },
-    { id: 'mucolytics-expectorants', name: 'Mucolytics & Expectorants' }, 
+    { id: 'minerals-vitamins', name: 'Minerals & Vitamins & Growth Promoters' },
+    { id: 'hepato-renal-tonic', name: 'Hepato Renal Tonic' },
+    { id: 'anti-stress', name: 'Anti-stress' }
   ];
 
   return (

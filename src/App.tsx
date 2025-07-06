@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -132,26 +131,15 @@ const App = () => {
                 <Route path="/:petType/medicines/category/:categoryId" element={<MedicineCategoryPage />} />
 
                 <Route path="/birds/medicines/category/antibiotics" element={<MedicineCategoryPage />} />
-                <Route path="/birds/medicines/category/anti-coccidial" element={<AntiCoccidialDrugsPage />} />
-                <Route path="/birds/medicines/category/minerals-vitamins" element={<BirdMineralsVitaminsDetailPage />} />
-                <Route path="/birds/medicines/category/anti-stress" element={<BirdAntiStressDetailPage />} />
-                <Route path="/birds/medicines/category/hepatorenal-tonics" element={<BirdHepatoRenalTonicDetailPage />} />
-                <Route path="/birds/medicines/category/anti-mycotoxin" element={<AntiMycotoxinDrugPage />} />
-                <Route path="/birds/medicines/category/growth-promotors" element={<BirdGrowthPromotorDetailPage />} />
-                <Route path="/birds/medicines/category/immunostimulants" element={<BirdImmunostimulantDetailPage />} />
-                <Route path="/birds/medicines/category/mucolytics-expectorants" element={<MucolyticsDrugPage />} />
-                <Route path="/birds/medicines/category/anti-clostridial" element={<BirdAntiClostridialDetailPage />} />
+                <Route path="/birds/medicines/category/anti-coccidial" element={<BirdAntiCoccidialCategoryPage />} />
+                <Route path="/birds/medicines/category/minerals-vitamins" element={<BirdMineralsVitaminsCategoryPage />} />
+                <Route path="/birds/medicines/category/hepato-renal-tonic" element={<BirdHepatoRenalTonicCategoryPage />} />
+                <Route path="/birds/medicines/category/anti-stress" element={<BirdAntiStressCategoryPage />} />
 
                 <Route path="/birds/medicines/category/antibiotics/:medicineId" element={<BirdAntibioticsDetailPage />} />
                 <Route path="/birds/medicines/category/anti-coccidial/:medicineId" element={<BirdAntiCoccidialDetailPage />} />
                 <Route path="/birds/medicines/category/minerals-vitamins/:medicineId" element={<BirdMineralsVitaminsDetailPage />} />
-                <Route path="/birds/medicines/category/anti-stress/:medicineId" element={<BirdAntiStressDetailPage />} />
-                <Route path="/birds/medicines/category/hepatorenal-tonics/:medicineId" element={<BirdHepatoRenalTonicDetailPage />} />
-                <Route path="/birds/medicines/category/anti-mycotoxin/:medicineId" element={<BirdAntiMycotoxinDetailPage />} />
-                <Route path="/birds/medicines/category/growth-promotors/:medicineId" element={<BirdGrowthPromotorDetailPage />} />
-                <Route path="/birds/medicines/category/immunostimulants/:medicineId" element={<BirdImmunostimulantDetailPage />} />
-                <Route path="/birds/medicines/category/mucolytics-expectorants/:medicineId" element={<BirdMucolyticsExpectorantDetailPage />} />
-                <Route path="/birds/medicines/category/anti-clostridial/:medicineId" element={<BirdAntiClostridialDetailPage />} />
+                <Route path="/birds/medicines/category/hepato-renal-tonic/:medicineId" element={<BirdHepatoRenalTonicDetailPage />} />
 
                 <Route path="/birds/medicines/:medicineId" element={<BirdMedicineDetailPage />} />
                 <Route path="/dogs/medicines/:medicineId" element={<DogMedicineDetailPage />} />
