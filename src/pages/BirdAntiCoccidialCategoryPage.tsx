@@ -18,7 +18,7 @@ const BirdAntiCoccidialCategoryPage = () => {
     description:
       'Treats intestinal coccidiosis in chickens and turkeys caused by Eimeria spp.',
     image:
-      'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&h=400&fit=crop&sig=anti1',
+      'https://i.postimg.cc/2SbtGKr2/1.jpg',
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ const BirdAntiCoccidialCategoryPage = () => {
     description:
       'Prevents coccidiosis in broiler chickens, turkeys, and rabbits caused by Eimeria.',
     image:
-      'https://images.unsplash.com/photo-1576671081837-49000212a370?w=600&h=400&fit=crop&sig=anti2',
+      'https://i.postimg.cc/TwGHR2m4/2.jpg',
   },
   {
     id: 3,
@@ -34,7 +34,7 @@ const BirdAntiCoccidialCategoryPage = () => {
     description:
       'Used to treat caecal and intestinal coccidiosis in poultry; effective against Eimeria.',
     image:
-      'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&h=400&fit=crop&sig=anti3',
+      'https://i.postimg.cc/QxP4FJ15/3.jpg',
   },
   {
     id: 4,
@@ -42,7 +42,7 @@ const BirdAntiCoccidialCategoryPage = () => {
     description:
       'Treats intestinal and caecal coccidiosis in broilers and turkeys caused by Eimeria.',
     image:
-      'https://images.unsplash.com/photo-1612296727714-6d1afc787330?w=600&h=400&fit=crop&sig=anti4',
+      'https://i.postimg.cc/k5NfhrZF/4.jpg',
   },
   {
     id: 5,
@@ -50,7 +50,7 @@ const BirdAntiCoccidialCategoryPage = () => {
     description:
       'Used in calves, dogs, and cats for treating coccidiosis caused by Eimeria.',
     image:
-      'https://images.unsplash.com/photo-1631390723393-6fcd3b1ff9da?w=600&h=400&fit=crop&sig=anti5',
+      'https://i.postimg.cc/BQdpSQfB/5.jpg',
   },
   {
     id: 6,
@@ -58,7 +58,7 @@ const BirdAntiCoccidialCategoryPage = () => {
     description:
       'Treats coccidiosis and colibacillosis in calves, lambs, and poultry.',
     image:
-      'https://images.unsplash.com/photo-1632848622851-9d0eb10f11b5?w=600&h=400&fit=crop&sig=anti6',
+      'https://i.postimg.cc/XvgkkfGs/6.jpg',
   },
   {
     id: 7,
@@ -66,7 +66,7 @@ const BirdAntiCoccidialCategoryPage = () => {
     description:
       'Coccidiosis treatment in poultry and turkeys; also effective against enteric infections.',
     image:
-      'https://images.unsplash.com/photo-1600959907703-263876a539d4?w=600&h=400&fit=crop&sig=anti7',
+      'https://i.postimg.cc/cCPRLT2L/7.jpg',
   },
   {
     id: 8,
@@ -74,7 +74,7 @@ const BirdAntiCoccidialCategoryPage = () => {
     description:
       'Highly effective anticoccidial for chickens and turkeys; acts on multiple Eimeria stages.',
     image:
-      'https://images.unsplash.com/photo-1590706485533-674ad2c9b260?w=600&h=400&fit=crop&sig=anti8',
+      'https://i.postimg.cc/TPTr1K7g/8.jpg',
   },
   {
     id: 9,
@@ -82,7 +82,7 @@ const BirdAntiCoccidialCategoryPage = () => {
     description:
       'Treats coccidiosis in broiler chickens caused by E. tenella, E. acervulina, E. maxima, etc.',
     image:
-      'https://images.unsplash.com/photo-1628157588553-7f6d76f4c05e?w=600&h=400&fit=crop&sig=anti9',
+      'https://i.postimg.cc/SxfggFHL/9.jpg',
   },
 ];
 
