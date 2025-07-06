@@ -16,85 +16,85 @@ const BirdMineralsVitaminsCategoryPage = () => {
     id: 1,
     name: 'OMEGRAN',
     description: 'A good eggshell enhancer. Improves growth, boosts immunity, and relieves stress in birds.',
-    image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&h=400&fit=crop&sig=vitamin1'
+    image: 'https://i.postimg.cc/G2WPcqZh/10.jpg'
   },
   {
     id: 2,
     name: 'BUNSH',
     description: 'Used for phosphorus deficiency, infertility, anemia, and to increase egg and milk production.',
-    image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=600&h=400&fit=crop&sig=vitamin2'
+    image: 'https://i.postimg.cc/yYvJjLvg/11.jpg'
   },
   {
     id: 3,
     name: 'POWER',
     description: 'Improves immunity and promotes growth. Covers vitamin and mineral deficiencies.',
-    image: 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=600&h=400&fit=crop&sig=vitamin3'
+    image: 'https://i.postimg.cc/xdbc0nYM/12.jpg'
   },
   {
     id: 4,
     name: 'NEW HIGH PHOS',
     description: 'Treats mineral salt imbalances and skeletal issues, enhances egg, milk, and meat production.',
-    image: 'https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=600&h=400&fit=crop&sig=vitamin4'
+    image: 'https://i.postimg.cc/DZkm0HyD/13.jpg'
   },
   {
     id: 5,
     name: 'Mineral Salt Mixture',
     description: 'Prevents vitamin deficiencies and heat stress. Enhances fertility, immunity, and bone formation.',
-    image: 'https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=600&h=400&fit=crop&sig=vitamin5'
+    image: 'https://i.postimg.cc/Wzs36ZZw/14.jpg'
   },
   {
     id: 6,
     name: 'PRIMOVET',
     description: 'Vitamin & amino acid blend for vitality, growth, and immune support after vaccination or infection.',
-    image: 'https://images.unsplash.com/photo-1466721591366-2d5fba72006d?w=600&h=400&fit=crop&sig=vitamin6'
+    image: 'https://i.postimg.cc/PJKq6qzs/15.jpg'
   },
   {
     id: 7,
     name: 'E+Selenium',
     description: 'Treats crazy chick disease, improves fertility, egg production, immunity, and meat quality.',
-    image: 'https://images.unsplash.com/photo-1501286353178-1ec881214838?w=600&h=400&fit=crop&sig=vitamin7'
+    image: 'https://i.postimg.cc/sD6X7vg5/16.jpg'
   },
   {
     id: 8,
     name: 'DE-CAL-PHOS',
     description: 'Prevents rickets, improves feed conversion, fertility, and reduces egg breakage and joint issues.',
-    image: 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=600&h=400&fit=crop&sig=vitamin8'
+    image: 'https://i.postimg.cc/k4mXqSTP/19.jpg'
   },
   {
     id: 9,
     name: 'AD3E',
     description: 'Replaces vitamin A, D, E deficiencies and improves resistance to stress and shell quality.',
-    image: 'https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=600&h=400&fit=crop&sig=vitamin9'
+    image: 'https://i.postimg.cc/W38jVHD0/20.jpg'
   },
   {
     id: 10,
     name: 'Zymocytin',
     description: 'Digestive enzyme and amino acid mix. Enhances feed conversion, growth, and immunity.',
-    image: 'https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=600&h=400&fit=crop&sig=vitamin10'
+    image: 'https://i.postimg.cc/05txHh1s/21.jpg'
   },
   {
     id: 11,
     name: 'PHOSPHOPLUS',
     description: 'Prevents mineral deficiency, improves conversion rates, bone health, fertility, and shell quality.',
-    image: 'https://images.unsplash.com/photo-1466721591366-2d5fba72006d?w=600&h=400&fit=crop&sig=vitamin11'
+    image: 'https://i.postimg.cc/hGqqdBT9/22.jpg'
   },
   {
     id: 12,
     name: 'Multivit PLUS',
     description: 'Covers vitamin and amino acid needs, prevents rickets, improves shell and feed conversion.',
-    image: 'https://images.unsplash.com/photo-1501286353178-1ec881214838?w=600&h=400&fit=crop&sig=vitamin12'
+    image: 'https://i.postimg.cc/7LNjJTxk/23.jpg'
   },
   {
     id: 13,
     name: 'Tripli-Care',
     description: 'Contains A, D3, and E vitamins to support growth, bones, immune system, and fertility.',
-    image: 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=600&h=400&fit=crop&sig=vitamin13'
+    image: 'https://i.postimg.cc/wvfP08y4/24.jpg'
   },
   {
     id: 14,
     name: 'E VITA-SL',
     description: 'Vitamin E and Selenium antioxidant blend. Protects cell structures, boosts immunity.',
-    image: 'https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=600&h=400&fit=crop&sig=vitamin14'
+    image: 'https://i.postimg.cc/BbjzzY2S/25.jpg'
   }
 ];
 
