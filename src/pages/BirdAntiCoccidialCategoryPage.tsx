@@ -12,15 +12,79 @@ const BirdAntiCoccidialCategoryPage = () => {
   }, []);
 
   const medicines = [
-    { id: 1, name: 'Amprolium 20%', description: 'Treatment of intestinal coccidiosis in chickens and turkeys.', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&h=400&fit=crop&sig=anticoccidial1' },
-    { id: 2, name: 'DICLOSOL', description: 'Prevention of coccidiosis in broiler chickens and turkeys.', image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=600&h=400&fit=crop&sig=anticoccidial2' },
-    { id: 3, name: 'PROCOX', description: 'Effective treatment for caecal and intestinal coccidiosis.', image: 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=600&h=400&fit=crop&sig=anticoccidial3' },
-    { id: 4, name: 'Toltrazuril Plus', description: 'Advanced anti-coccidial for severe coccidiosis cases.', image: 'https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=600&h=400&fit=crop&sig=anticoccidial4' },
-    { id: 5, name: 'Coccidiosan Pro', description: 'Broad-spectrum anti-coccidial for poultry flocks.', image: 'https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=600&h=400&fit=crop&sig=anticoccidial5' },
-    { id: 6, name: 'DiclazVet Formula', description: 'Preventive treatment against multiple Eimeria species.', image: 'https://images.unsplash.com/photo-1466721591366-2d5fba72006d?w=600&h=400&fit=crop&sig=anticoccidial6' },
-    { id: 7, name: 'CocciGuard Max', description: 'Maximum protection against coccidiosis outbreaks.', image: 'https://images.unsplash.com/photo-1501286353178-1ec881214838?w=600&h=400&fit=crop&sig=anticoccidial7' },
-    { id: 8, name: 'SalinomycinPlus', description: 'Ionophore-based anti-coccidial for broiler chickens.', image: 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=600&h=400&fit=crop&sig=anticoccidial8' }
-  ];
+   {
+    id: 1,
+    name: 'Amprolium 20% W.S.P.',
+    description:
+      'Treats intestinal coccidiosis in chickens and turkeys caused by Eimeria spp.',
+    image:
+      'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&h=400&fit=crop&sig=anti1',
+  },
+  {
+    id: 2,
+    name: 'DICLOSOL',
+    description:
+      'Prevents coccidiosis in broiler chickens, turkeys, and rabbits caused by Eimeria.',
+    image:
+      'https://images.unsplash.com/photo-1576671081837-49000212a370?w=600&h=400&fit=crop&sig=anti2',
+  },
+  {
+    id: 3,
+    name: 'PROCOX',
+    description:
+      'Used to treat caecal and intestinal coccidiosis in poultry; effective against Eimeria.',
+    image:
+      'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&h=400&fit=crop&sig=anti3',
+  },
+  {
+    id: 4,
+    name: 'NOR-COX',
+    description:
+      'Treats intestinal and caecal coccidiosis in broilers and turkeys caused by Eimeria.',
+    image:
+      'https://images.unsplash.com/photo-1612296727714-6d1afc787330?w=600&h=400&fit=crop&sig=anti4',
+  },
+  {
+    id: 5,
+    name: 'Amprolium 20% El-Nasr',
+    description:
+      'Used in calves, dogs, and cats for treating coccidiosis caused by Eimeria.',
+    image:
+      'https://images.unsplash.com/photo-1631390723393-6fcd3b1ff9da?w=600&h=400&fit=crop&sig=anti5',
+  },
+  {
+    id: 6,
+    name: 'COCCICURE',
+    description:
+      'Treats coccidiosis and colibacillosis in calves, lambs, and poultry.',
+    image:
+      'https://images.unsplash.com/photo-1632848622851-9d0eb10f11b5?w=600&h=400&fit=crop&sig=anti6',
+  },
+  {
+    id: 7,
+    name: 'Sulphaquinoxaline Sodium',
+    description:
+      'Coccidiosis treatment in poultry and turkeys; also effective against enteric infections.',
+    image:
+      'https://images.unsplash.com/photo-1600959907703-263876a539d4?w=600&h=400&fit=crop&sig=anti7',
+  },
+  {
+    id: 8,
+    name: 'TOLTRACOX',
+    description:
+      'Highly effective anticoccidial for chickens and turkeys; acts on multiple Eimeria stages.',
+    image:
+      'https://images.unsplash.com/photo-1590706485533-674ad2c9b260?w=600&h=400&fit=crop&sig=anti8',
+  },
+  {
+    id: 9,
+    name: 'AMERIL',
+    description:
+      'Treats coccidiosis in broiler chickens caused by E. tenella, E. acervulina, E. maxima, etc.',
+    image:
+      'https://images.unsplash.com/photo-1628157588553-7f6d76f4c05e?w=600&h=400&fit=crop&sig=anti9',
+  },
+];
 
   return (
     <div className="py-12 bg-gray-50">
