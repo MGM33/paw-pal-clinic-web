@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -43,6 +44,12 @@ import BirdAntiClostridialDetailPage from "./pages/BirdAntiClostridialDetailPage
 import MucolyticsDrugPage from "./pages/MucolyticsDrugPage";
 import AntiMycotoxinDrugPage from "./pages/AntimycotoxinDrugPage";
 import AntiCoccidialDrugsPage from "./pages/AntiCoccidialDrugsPage";
+
+// Bird Category Pages
+import BirdAntiCoccidialCategoryPage from "./pages/BirdAntiCoccidialCategoryPage";
+import BirdMineralsVitaminsCategoryPage from "./pages/BirdMineralsVitaminsCategoryPage";
+import BirdHepatoRenalTonicCategoryPage from "./pages/BirdHepatoRenalTonicCategoryPage";
+import BirdAntiStressCategoryPage from "./pages/BirdAntiStressCategoryPage";
 
 // Articles
 import ArticlesPage from "./pages/ArticlesPage";
