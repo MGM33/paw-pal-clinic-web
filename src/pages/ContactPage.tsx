@@ -1,4 +1,6 @@
+
 import React, { useState } from 'react';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 const ContactPage = () => {
   React.useEffect(() => {
@@ -7,6 +9,18 @@ const ContactPage = () => {
 
   const [notification, setNotification] = useState('');
   const [loading, setLoading] = useState(false);
+  const [selectedSubject, setSelectedSubject] = useState('');
+  const [customSubject, setCustomSubject] = useState('');
+
+  const subjectOptions = [
+    'General Inquiry',
+    'Medicine Information Request',
+    'Veterinary Consultation',
+    'Technical Support',
+    'Partnership Opportunity',
+    'Feedback & Suggestions',
+    'Other'
+  ];
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -15,6 +29,10 @@ const ContactPage = () => {
 
     const form = e.target;
     const formData = new FormData(form);
+    
+    // Use custom subject if "Other" is selected
+    const finalSubject = selectedSubject === 'Other' ? customSubject : selectedSubject;
+    formData.set('_subject', finalSubject);
 
     try {
       const response = await fetch('https://formsubmit.co/ajax/m.dgamal456@gmail.com', {
@@ -26,6 +44,8 @@ const ContactPage = () => {
       if (response.ok) {
         setNotification('Thank you! We will reply to you as soon as possible.');
         form.reset();
+        setSelectedSubject('');
+        setCustomSubject('');
       } else {
         const data = await response.json();
         setNotification(data.message || 'Oops! Something went wrong.');
@@ -53,26 +73,77 @@ const ContactPage = () => {
 
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                    <input type="text" id="name" name="name" required className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-vet-blue" />
+                    <input 
+                      type="text" 
+                      id="name" 
+                      name="name" 
+                      required 
+                      placeholder="Enter your full name"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-vet-blue" 
+                    />
                   </div>
 
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                    <input type="email" id="email" name="email" required className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-vet-blue" />
+                    <input 
+                      type="email" 
+                      id="email" 
+                      name="email" 
+                      required 
+                      placeholder="Enter your email address"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-vet-blue" 
+                    />
                   </div>
 
                   <div>
                     <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Subject</label>
-                    <input type="text" id="subject" name="_subject" required className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-vet-blue" />
+                    <Select value={selectedSubject} onValueChange={setSelectedSubject}>
+                      <SelectTrigger className="w-full">
+                        <SelectValue placeholder="Select a subject" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {subjectOptions.map((option) => (
+                          <SelectItem key={option} value={option}>
+                            {option}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
                   </div>
+
+                  {selectedSubject === 'Other' && (
+                    <div>
+                      <label htmlFor="customSubject" className="block text-sm font-medium text-gray-700 mb-1">Custom Subject</label>
+                      <input 
+                        type="text" 
+                        id="customSubject" 
+                        value={customSubject}
+                        onChange={(e) => setCustomSubject(e.target.value)}
+                        required 
+                        placeholder="Type your subject here"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-vet-blue" 
+                      />
+                    </div>
+                  )}
 
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                    <textarea id="message" name="message" rows={5} required className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-vet-blue"></textarea>
+                    <textarea 
+                      id="message" 
+                      name="message" 
+                      rows={5} 
+                      required 
+                      placeholder="Write your message here..."
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-vet-blue"
+                    ></textarea>
                   </div>
 
                   <div>
-                    <button type="submit" disabled={loading} className="bg-vet-blue hover:bg-vet-darkblue text-white px-6 py-3 rounded-md font-semibold transition-colors disabled:opacity-50">
+                    <button 
+                      type="submit" 
+                      disabled={loading || !selectedSubject} 
+                      className="bg-vet-blue hover:bg-vet-darkblue text-white px-6 py-3 rounded-md font-semibold transition-colors disabled:opacity-50"
+                    >
                       {loading ? 'Sending...' : 'Send Message'}
                     </button>
                   </div>
@@ -156,7 +227,7 @@ const ContactPage = () => {
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
             <div className="h-96 w-full">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3433.32581284351!2d32.267235870015476!3d30.624774064139142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f85981bc0575c9%3A0x79c5e695041c526d!2z2YPZhNmK2Kkg2KfZhNi32Kgg2KfZhNio2YrYt9ix2Yk!5e0!3m2!1sen!2seg!4v1749036344795!5m2!1sen!2seg"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3433.32581284351!2d32.267235870015476!3d30.624774064139142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f85981bc0575c9%3A0x79c5e695041c526d!2z2YPZhNmK2Kkg2KfZhNi32Kkg2KfZhNio2YrYt9ix2Yk!5e0!3m2!1sen!2seg!4v1749036344795!5m2!1sen!2seg"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

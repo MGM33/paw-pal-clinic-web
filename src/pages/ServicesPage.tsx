@@ -139,7 +139,7 @@ const ServicesPage = () => {
                             to={`/${petType.id}/cosmetics-supplements`} 
                             className="border border-gray-300 hover:border-gray-400 px-3 py-2 rounded-md text-xs font-semibold transition-colors"
                           >
-                            Supplements
+                            Supplements & External Drugs
                           </Link>
                         </>
                       )}

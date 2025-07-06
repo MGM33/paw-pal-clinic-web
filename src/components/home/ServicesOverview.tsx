@@ -18,8 +18,8 @@ const ServicesOverview = () => {
     },
     {
       id: 3,
-      title: 'Search & Reference',
-      description: 'Advanced search functionality to quickly find specific medicine information.',
+      title: 'Professional Reference',
+      description: 'Quick access to reliable veterinary medicine information and dosage guidelines.',
       icon: '🔍'
     },
     {
