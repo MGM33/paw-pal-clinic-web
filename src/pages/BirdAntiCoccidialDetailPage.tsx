@@ -14,7 +14,7 @@ const medicinesData: Record<string, any> = {
       'Efficacy may be reduced if administered with products containing vitamin B-complex.',
     withdrawalTime:
       'Chickens (broilers, pullets, layers, breeder hens): Meat & offal - 0 days, Eggs - 0 days; Turkeys: Meat & Offal - 0 days.',
-    image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&h=400&fit=crop&sig=anti1'
+    image: 'https://i.postimg.cc/2SbtGKr2/1.jpg'
   },
   '2': {
     name: 'DICLOSOL',
@@ -25,7 +25,7 @@ const medicinesData: Record<string, any> = {
     dosage: '1 ml per 10 liters of drinking water, single dose.',
     sideEffects: 'Contraindicated in hypersensitive animals; not for layers.',
     withdrawalTime: 'Broiler chickens: 0 days; Turkeys: 0 days; Rabbits: 1 day.',
-    image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=600&h=400&fit=crop&sig=anti2'
+    image: 'https://i.postimg.cc/TwGHR2m4/2.jpg'
   },
   '3': {
     name: 'PROCOX',
@@ -34,7 +34,7 @@ const medicinesData: Record<string, any> = {
     indications:
       'Used for treatment of caecal and intestinal coccidiosis in poultry. Effective against E. tenella, E. acervulina, E. brunetti, E. necara.',
     dosage: '0.5-1 ml per liter of drinking water for 3-5 days.',
-    image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&h=400&fit=crop&sig=anti3'
+    image: 'https://i.postimg.cc/QxP4FJ15/3.jpg'
   },
   '4': {
     name: 'NOR-COX',
@@ -45,7 +45,7 @@ const medicinesData: Record<string, any> = {
       'Used for intestinal and caecal coccidiosis in broiler chickens and turkeys.',
     dosage: '2 gm/10 kg body weight or 2 gm/1 liter of drinking water for 3-5 days.',
     withdrawalTime: 'Broiler chickens and turkeys: 14 days.',
-    image: 'https://images.unsplash.com/photo-1612296727714-6d1afc787330?w=600&h=400&fit=crop&sig=anti4'
+    image: 'https://i.postimg.cc/k5NfhrZF/4.jpg'
   },
   '5': {
     name: 'Amprolium 20% El-Nasr',
@@ -54,7 +54,7 @@ const medicinesData: Record<string, any> = {
     indications:
       'Used in pre-ruminating calves, dogs and cats for treatment of coccidiosis.',
     dosage: '1g/L in drinking water for 3-5 days.',
-    image: 'https://images.unsplash.com/photo-1631390723393-6fcd3b1ff9da?w=600&h=400&fit=crop&sig=anti5'
+    image: 'https://i.postimg.cc/BQdpSQfB/5.jpg'
   },
   '6': {
     name: 'COCCICURE',
@@ -67,7 +67,7 @@ const medicinesData: Record<string, any> = {
       '0.5-1 gm per liter of drinking water for 3 days, then suspend for 2 days.',
     withdrawalTime: 'Meat: 10 days.',
     sideEffects: 'Not used in layers.',
-    image: 'https://images.unsplash.com/photo-1632848622851-9d0eb10f11b5?w=600&h=400&fit=crop&sig=anti6'
+    image: 'https://i.postimg.cc/XvgkkfGs/6.jpg'
   },
   '7': {
     name: 'Sulphaquinoxaline Sodium',
@@ -79,7 +79,7 @@ const medicinesData: Record<string, any> = {
       'Broiler chicken & guinea fowl: 2 gm/L; Turkey: 1 gm/8.3 kg b.w. or 5 gm/4 L drinking water.',
     withdrawalTime:
       'Stop 10 days before slaughter for animals producing meat.',
-    image: 'https://images.unsplash.com/photo-1600959907703-263876a539d4?w=600&h=400&fit=crop&sig=anti7'
+    image: 'https://i.postimg.cc/cCPRLT2L/7.jpg'
   },
   '8': {
     name: 'TOLTRACOX',
@@ -91,7 +91,7 @@ const medicinesData: Record<string, any> = {
       '280 ml/1000 kg b.w. daily for 2 days; ~3 ml/L of drinking water.',
     sideEffects:
       'Large prolonged doses may cause gastrointestinal distress and rashes.',
-    image: 'https://images.unsplash.com/photo-1590706485533-674ad2c9b260?w=600&h=400&fit=crop&sig=anti8'
+    image: 'https://i.postimg.cc/TPTr1K7g/8.jpg'
   },
   '9': {
     name: 'AMERIL',
@@ -103,7 +103,7 @@ const medicinesData: Record<string, any> = {
     dosage:
       'Treatment: 1 ml/L for 5-7 days; Mild: 0.5 ml/L; Follow-up: 0.25 ml/L for 5-7 days.',
     sideEffects: 'Not for birds producing eggs for human consumption.',
-    image: 'https://images.unsplash.com/photo-1628157588553-7f6d76f4c05e?w=600&h=400&fit=crop&sig=anti9'
+    image: 'https://i.postimg.cc/SxfggFHL/9.jpg'
   }
 };
 
