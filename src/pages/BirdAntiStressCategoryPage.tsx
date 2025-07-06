@@ -8,11 +8,11 @@ const BirdAntiStressCategoryPage = () => {
   }, []);
 
   const medicines = [
-    { id: 1, name: 'StressRelief Pro', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&h=400&fit=crop&sig=stress1' },
-    { id: 2, name: 'CalmPoultry Plus', image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=600&h=400&fit=crop&sig=stress2' },
-    { id: 3, name: 'AntiStress Formula', image: 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=600&h=400&fit=crop&sig=stress3' },
-    { id: 4, name: 'RelaxVet Solution', image: 'https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=600&h=400&fit=crop&sig=stress4' },
-    { id: 5, name: 'StressFree Tonic', image: 'https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=600&h=400&fit=crop&sig=stress5' }
+    { id: 1, name: 'Sacrolyte', image: 'https://i.postimg.cc/W33YDWWG/31.jpg' },
+    { id: 2, name: 'Electro cool', image: 'https://i.postimg.cc/KzHqtPwd/32.jpg' },
+    { id: 3, name: 'C-tall', image: 'https://i.postimg.cc/Sj0gvyyd/33.jpg' },
+    { id: 4, name: 'Heat Free P', image: 'https://i.postimg.cc/FF2m43zW/34.jpg' },
+    { id: 5, name: 'Astreen', image: 'https://i.postimg.cc/VsS1pDf0/35.jpg' }
   ];
 
   return (
