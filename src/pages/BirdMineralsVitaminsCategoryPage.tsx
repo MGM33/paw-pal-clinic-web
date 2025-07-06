@@ -12,21 +12,92 @@ const BirdMineralsVitaminsCategoryPage = () => {
   }, []);
 
   const medicines = [
-    { id: 1, name: 'VitaGrow Plus', description: 'Complete vitamin and mineral supplement for optimal poultry growth.', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&h=400&fit=crop&sig=vitamins1' },
-    { id: 2, name: 'PoultryMin Essential', description: 'Essential minerals for bone development and egg production.', image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=600&h=400&fit=crop&sig=vitamins2' },
-    { id: 3, name: 'GrowthMax Pro', description: 'Advanced growth promoter for faster weight gain in broilers.', image: 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=600&h=400&fit=crop&sig=vitamins3' },
-    { id: 4, name: 'CalciPlus Forte', description: 'Calcium and phosphorus supplement for strong shell formation.', image: 'https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=600&h=400&fit=crop&sig=vitamins4' },
-    { id: 5, name: 'AviVit Complex', description: 'Multi-vitamin complex for enhanced immune system in poultry.', image: 'https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=600&h=400&fit=crop&sig=vitamins5' },
-    { id: 6, name: 'FeatherGlow Supplement', description: 'Improves feather quality and overall appearance.', image: 'https://images.unsplash.com/photo-1466721591366-2d5fba72006d?w=600&h=400&fit=crop&sig=vitamins6' },
-    { id: 7, name: 'EggShell Optimizer', description: 'Specialized formula for improved egg shell thickness.', image: 'https://images.unsplash.com/photo-1501286353178-1ec881214838?w=600&h=400&fit=crop&sig=vitamins7' },
-    { id: 8, name: 'BroilerBoost Premium', description: 'Premium growth promoter for commercial broiler production.', image: 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=600&h=400&fit=crop&sig=vitamins8' },
-    { id: 9, name: 'LayerVit Plus', description: 'Vitamin supplement specifically designed for laying hens.', image: 'https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=600&h=400&fit=crop&sig=vitamins9' },
-    { id: 10, name: 'ZincPro Poultry', description: 'Zinc supplement for improved immunity and growth.', image: 'https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=600&h=400&fit=crop&sig=vitamins10' },
-    { id: 11, name: 'IronMax Formula', description: 'Iron supplement to prevent anemia in poultry flocks.', image: 'https://images.unsplash.com/photo-1466721591366-2d5fba72006d?w=600&h=400&fit=crop&sig=vitamins11' },
-    { id: 12, name: 'SeleniumPlus Guard', description: 'Selenium supplement for antioxidant protection.', image: 'https://images.unsplash.com/photo-1501286353178-1ec881214838?w=600&h=400&fit=crop&sig=vitamins12' },
-    { id: 13, name: 'VitaE Concentrate', description: 'Vitamin E concentrate for reproductive health in breeders.', image: 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=600&h=400&fit=crop&sig=vitamins13' },
-    { id: 14, name: 'MineralMix Complete', description: 'Complete mineral mixture for all-round poultry health.', image: 'https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=600&h=400&fit=crop&sig=vitamins14' }
-  ];
+  {
+    id: 1,
+    name: 'OMEGRAN',
+    description: 'A good eggshell enhancer. Improves growth, boosts immunity, and relieves stress in birds.',
+    image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&h=400&fit=crop&sig=vitamin1'
+  },
+  {
+    id: 2,
+    name: 'BUNSH',
+    description: 'Used for phosphorus deficiency, infertility, anemia, and to increase egg and milk production.',
+    image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=600&h=400&fit=crop&sig=vitamin2'
+  },
+  {
+    id: 3,
+    name: 'POWER',
+    description: 'Improves immunity and promotes growth. Covers vitamin and mineral deficiencies.',
+    image: 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=600&h=400&fit=crop&sig=vitamin3'
+  },
+  {
+    id: 4,
+    name: 'NEW HIGH PHOS',
+    description: 'Treats mineral salt imbalances and skeletal issues, enhances egg, milk, and meat production.',
+    image: 'https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=600&h=400&fit=crop&sig=vitamin4'
+  },
+  {
+    id: 5,
+    name: 'Mineral Salt Mixture',
+    description: 'Prevents vitamin deficiencies and heat stress. Enhances fertility, immunity, and bone formation.',
+    image: 'https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=600&h=400&fit=crop&sig=vitamin5'
+  },
+  {
+    id: 6,
+    name: 'PRIMOVET',
+    description: 'Vitamin & amino acid blend for vitality, growth, and immune support after vaccination or infection.',
+    image: 'https://images.unsplash.com/photo-1466721591366-2d5fba72006d?w=600&h=400&fit=crop&sig=vitamin6'
+  },
+  {
+    id: 7,
+    name: 'E+Selenium',
+    description: 'Treats crazy chick disease, improves fertility, egg production, immunity, and meat quality.',
+    image: 'https://images.unsplash.com/photo-1501286353178-1ec881214838?w=600&h=400&fit=crop&sig=vitamin7'
+  },
+  {
+    id: 8,
+    name: 'DE-CAL-PHOS',
+    description: 'Prevents rickets, improves feed conversion, fertility, and reduces egg breakage and joint issues.',
+    image: 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=600&h=400&fit=crop&sig=vitamin8'
+  },
+  {
+    id: 9,
+    name: 'AD3E',
+    description: 'Replaces vitamin A, D, E deficiencies and improves resistance to stress and shell quality.',
+    image: 'https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=600&h=400&fit=crop&sig=vitamin9'
+  },
+  {
+    id: 10,
+    name: 'Zymocytin',
+    description: 'Digestive enzyme and amino acid mix. Enhances feed conversion, growth, and immunity.',
+    image: 'https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=600&h=400&fit=crop&sig=vitamin10'
+  },
+  {
+    id: 11,
+    name: 'PHOSPHOPLUS',
+    description: 'Prevents mineral deficiency, improves conversion rates, bone health, fertility, and shell quality.',
+    image: 'https://images.unsplash.com/photo-1466721591366-2d5fba72006d?w=600&h=400&fit=crop&sig=vitamin11'
+  },
+  {
+    id: 12,
+    name: 'Multivit PLUS',
+    description: 'Covers vitamin and amino acid needs, prevents rickets, improves shell and feed conversion.',
+    image: 'https://images.unsplash.com/photo-1501286353178-1ec881214838?w=600&h=400&fit=crop&sig=vitamin12'
+  },
+  {
+    id: 13,
+    name: 'Tripli-Care',
+    description: 'Contains A, D3, and E vitamins to support growth, bones, immune system, and fertility.',
+    image: 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=600&h=400&fit=crop&sig=vitamin13'
+  },
+  {
+    id: 14,
+    name: 'E VITA-SL',
+    description: 'Vitamin E and Selenium antioxidant blend. Protects cell structures, boosts immunity.',
+    image: 'https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=600&h=400&fit=crop&sig=vitamin14'
+  }
+];
+
 
   return (
     <div className="py-12 bg-gray-50">
