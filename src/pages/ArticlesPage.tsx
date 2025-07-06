@@ -36,11 +36,11 @@ const ArticlesPage = () => {
   });
 
   const categories = [
+     { id: 'all', label: 'كل المقالات' },
      { id: 'ehc', label: 'الدلائل الإرشادية للمجلس الصحي المصري' },
+     { id: 'dogs', label: 'مقالات الكلاب' },
      { id: 'cats', label: 'مقالات القطط' },
      { id: 'poultry', label: 'مقالات الدواجن' },
-     { id: 'dogs', label: 'مقالات الكلاب' },
-     { id: 'all', label: 'كل المقالات' },
   ];
 
   return (

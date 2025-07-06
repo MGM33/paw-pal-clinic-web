@@ -32,23 +32,30 @@ const PoultryMedicineCategories = () => {
       color: 'bg-green-500',
       hoverColor: 'hover:bg-green-600'
     },
-    
     {
-      id: 'anti-mycotoxin',
-      name: 'Anti-mycotoxin',
-      icon: <AlertTriangle size={32} />,
-      description: 'Protection against mycotoxin contamination',
-      color: 'bg-red-500',
-      hoverColor: 'hover:bg-red-600'
+      id: 'minerals-vitamins',
+      name: 'Minerals & Vitamin & Growth promoters',
+      icon: <TrendingUp size={32} />,
+      description: 'Essential nutrients and growth enhancement for poultry',
+      color: 'bg-purple-500',
+      hoverColor: 'hover:bg-purple-600'
     },
     {
-      id: 'mucolytics-expectorants',
-      name: 'Mucolytics & Expectorants',
-      icon: <Wind size={32} />,
-      description: 'Respiratory support medicines',
-      color: 'bg-cyan-500',
-      hoverColor: 'hover:bg-cyan-600'
+      id: 'hepato-renal-tonic',
+      name: 'Hepato Renal Tonic',
+      icon: <Heart size={32} />,
+      description: 'Liver and kidney support medicines for poultry',
+      color: 'bg-orange-500',
+      hoverColor: 'hover:bg-orange-600'
     },
+    {
+      id: 'anti-stress',
+      name: 'Anti-stress',
+      icon: <Activity size={32} />,
+      description: 'Stress management solutions for poultry',
+      color: 'bg-indigo-500',
+      hoverColor: 'hover:bg-indigo-600'
+    }
   ];
 
   return (

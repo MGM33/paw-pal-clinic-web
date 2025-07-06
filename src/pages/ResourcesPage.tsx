@@ -1,8 +1,9 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BookOpen } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 
 const ResourcesPage = () => {
   useEffect(() => {
@@ -35,7 +36,7 @@ const ResourcesPage = () => {
     "Giguère, S. (2013). Antimicrobial Therapy in Veterinary Medicine. 5th ed. Wiley-Blackwell.",
     "Hnilica, K. A., & Patterson, A. P. (2016). Small Animal Dermatology: A Color Atlas and Therapeutic Guide. 4th ed. Elsevier.",
     "Banovic, F., & Olivry, T. (2020). \"Dermatological Use of Topical Corticosteroids in Veterinary Medicine.\" Veterinary Dermatology, 31(2), 85-e14. https://doi.org/10.1111/vde.12827",
-    "Little, S. E., et al. (2021). \"Ectoparasites and Vector-Borne Diseases of Pets.\" Compendium: Continuing Education for Veterinarians, 43(3), 10–21.",
+    "Little, S. E., et al. (2021). \"Ectoparasites and Vector-Borne diseases of Pets.\" Compendium: Continuing Education for Veterinarians, 43(3), 10–21.",
     "Rosychuk, R. A. W. (2019). \"Malassezia dermatitis in dogs.\" Compendium on Continuing Education, 41(6), 321-329.",
     "Panaphut, T., et al. (2020). \"Formulation and evaluation of herbal wound healing cream.\" Veterinary World, 13(10), 2070–2077. https://doi.org/10.14202/vetworld.2020.2070-2077",
     "FDA Center for Veterinary Medicine. (2023). Guidance for Industry: Veterinary Drug Labeling Requirements. https://www.fda.gov/animal-veterinary",
@@ -86,14 +87,13 @@ const ResourcesPage = () => {
               className="group bg-white/80 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden"
             >
               {/* Book Cover */}
-             <div className="relative h-80 w-full bg-white flex items-center justify-center overflow-hidden">
-  <img
-    src={book.cover}
-    alt={book.title}
-    className="w-full h-full object-contain p-2 transition-transform duration-300 group-hover:scale-105"
-  />
-</div>
-
+              <div className="relative h-80 w-full bg-white flex items-center justify-center overflow-hidden">
+                <img
+                  src={book.cover}
+                  alt={book.title}
+                  className="w-full h-full object-contain p-2 transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
               
               {/* Book Details */}
               <div className="p-6 bg-white/90 backdrop-blur-sm">
@@ -108,23 +108,33 @@ const ResourcesPage = () => {
           ))}
 
           {/* More Resources Card */}
-          <Card className="bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-            <CardHeader>
-              <CardTitle className="text-lg font-bold text-theme-deepsky">More Resources</CardTitle>
-              <CardDescription>
-                Additional reference materials and online resources
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="max-h-80 overflow-y-auto">
-              <div className="space-y-3">
+          <Dialog>
+            <DialogTrigger asChild>
+              <Card className="bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer">
+                <CardHeader>
+                  <CardTitle className="text-lg font-bold text-theme-deepsky">More Resources</CardTitle>
+                  <CardDescription>
+                    Additional reference materials and online resources
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="flex items-center justify-center h-32">
+                  <BookOpen size={48} className="text-theme-deepsky opacity-50" />
+                </CardContent>
+              </Card>
+            </DialogTrigger>
+            <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+              <DialogHeader>
+                <DialogTitle className="text-xl font-bold text-theme-deepsky">Additional Resources</DialogTitle>
+              </DialogHeader>
+              <div className="space-y-3 mt-4">
                 {moreResources.map((resource, index) => (
                   <div key={index} className="text-sm text-gray-700 border-b border-gray-200 pb-2 last:border-b-0">
                     {resource}
                   </div>
                 ))}
               </div>
-            </CardContent>
-          </Card>
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
     </div>
