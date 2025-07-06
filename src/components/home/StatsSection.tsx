@@ -11,10 +11,10 @@ const StatsSection = () => {
   });
 
   const finalCounts = {
-    medicines: 300,
-    categories: 15,
-    resources: 25,
-    references: 50
+    medicines: 200,
+    categories: 5,
+    resources: 50,
+    references: 25
   };
 
   useEffect(() => {
@@ -62,7 +62,7 @@ const StatsSection = () => {
       icon: <BookOpen size={40} />,
       count: counts.resources,
       suffix: '+',
-      label: 'Educational Resources',
+      label: 'Educational Articles',
       color: 'text-yellow-500'
     },
     {
