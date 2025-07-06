@@ -12,12 +12,38 @@ const BirdHepatoRenalTonicCategoryPage = () => {
   }, []);
 
   const medicines = [
-    { id: 1, name: 'LiverGuard Pro', description: 'Advanced hepatoprotective tonic for poultry liver health.', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&h=400&fit=crop&sig=hepato1' },
-    { id: 2, name: 'RenalCare Plus', description: 'Kidney support formula for optimal renal function in birds.', image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=600&h=400&fit=crop&sig=hepato2' },
-    { id: 3, name: 'HepatoRenal Max', description: 'Dual-action tonic for liver and kidney detoxification.', image: 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=600&h=400&fit=crop&sig=hepato3' },
-    { id: 4, name: 'DetoxiVet Forte', description: 'Powerful detoxification support for poultry organs.', image: 'https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=600&h=400&fit=crop&sig=hepato4' },
-    { id: 5, name: 'OrganShield Tonic', description: 'Complete organ protection and regeneration formula.', image: 'https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=600&h=400&fit=crop&sig=hepato5' }
-  ];
+  {
+    id: 1,
+    name: 'Protech',
+    description: 'Diuretic and liver stimulant. Used in gout, Gambier disease, immune stimulation, and after sulfa or antibiotic treatments.',
+    image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&h=400&fit=crop&sig=hepato1'
+  },
+  {
+    id: 2,
+    name: 'RUN-X',
+    description: 'Potent liver tonic and diuretic. Helpful in infections (bacterial, viral, fungal), vitamin deficiencies, stress, and dehydration.',
+    image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=600&h=400&fit=crop&sig=hepato2'
+  },
+  {
+    id: 3,
+    name: 'R.N.X',
+    description: 'Flushes kidneys, prevents stone formation and vitamin B deficiency. Supports immunity, growth, and reduces stress symptoms.',
+    image: 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=600&h=400&fit=crop&sig=hepato3'
+  },
+  {
+    id: 4,
+    name: 'HEPARENOL',
+    description: 'Enhances liver and intestinal function for better digestion and toxin elimination during intense production periods.',
+    image: 'https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=600&h=400&fit=crop&sig=hepato4'
+  },
+  {
+    id: 5,
+    name: 'Mega Beial',
+    description: 'Liver protection, detox support, improves metabolism and liver enzymes, enhances weight gain and disease resistance.',
+    image: 'https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=600&h=400&fit=crop&sig=hepato5'
+  }
+];
+
 
   return (
     <div className="py-12 bg-gray-50">
