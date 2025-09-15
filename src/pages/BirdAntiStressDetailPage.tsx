@@ -20,7 +20,7 @@ const BirdAntiStressDetailPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-theme-lightsky/30 to-theme-powder/30 py-12">
+    <div className="min-h-screen transparent-section py-12">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="glass-effect rounded-lg overflow-hidden">

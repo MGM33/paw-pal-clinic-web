@@ -13,7 +13,7 @@ const CatMedicineCard: React.FC<CatMedicineCardProps> = ({ id, name, description
   return (
     <Link 
       to={`/cats/medicines/${id}`} 
-      className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow"
+      className="glass-effect rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow"
     >
       <div className="h-48 overflow-hidden">
         <img

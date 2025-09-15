@@ -55,7 +55,7 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-white to-theme-lightsky/30">
+    <section className="py-16 transparent-section">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-theme-deepsky mb-4 animate-fade-in-up">Why Choose VetCare?</h2>

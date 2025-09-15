@@ -40,7 +40,7 @@ const MedicineCard: React.FC<MedicineCardProps> = ({
   return (
     <Link 
       to={getDetailRoute()} 
-      className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow"
+      className="glass-effect rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow"
     >
       <div className="w-full h-48 flex justify-center items-center overflow-hidden rounded-md bg-gray-100">
   <img

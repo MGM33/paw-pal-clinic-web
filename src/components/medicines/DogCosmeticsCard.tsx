@@ -13,7 +13,7 @@ const DogCosmeticsCard: React.FC<DogCosmeticsCardProps> = ({ id, name, descripti
   return (
     <Link 
       to={`/dogs/cosmetics-supplements/${id}`} 
-      className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow"
+      className="glass-effect rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow"
     >
       <div className="h-48 overflow-hidden">
         <img

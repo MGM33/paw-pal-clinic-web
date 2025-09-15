@@ -100,9 +100,9 @@ const BirdMineralsVitaminsCategoryPage = () => {
 
 
   return (
-    <div className="py-12 bg-gray-50">
+    <div className="py-12 transparent-section">
       <div className="container mx-auto px-4">
-        <div className="bg-gradient-to-r from-vet-orange to-vet-darkorange text-white py-12 rounded-lg mb-8">
+        <div className="glass-effect text-white py-12 rounded-lg mb-8">
           <div className="container mx-auto px-4">
             <div className="flex justify-between items-center">
               <div>
@@ -114,7 +114,7 @@ const BirdMineralsVitaminsCategoryPage = () => {
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow-lg p-8">
+        <div className="glass-effect rounded-lg shadow-lg p-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {medicines.map((medicine) => (
               <MedicineCard

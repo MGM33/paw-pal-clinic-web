@@ -4,7 +4,7 @@ import { MapPin, Clock, Phone, Mail } from 'lucide-react';
 
 const LocationSection = () => {
   return (
-    <section className="py-16 bg-gradient-to-r from-theme-lightsky to-theme-powder">
+    <section className="py-16 transparent-section">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-theme-deepsky mb-4 animate-fade-in-up">Visit Our Clinic</h2>

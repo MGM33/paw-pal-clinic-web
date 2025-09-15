@@ -72,7 +72,7 @@ const Testimonials = () => {
         </div>
         
         <div className="relative max-w-4xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-2xl p-8 hover-lift">
+          <div className="glass-effect rounded-2xl shadow-2xl p-8 hover-lift">
             <Quote className="text-theme-sky text-6xl mb-6 mx-auto" />
             
             <div className="text-center">

@@ -13,7 +13,7 @@ const CatVaccineCard: React.FC<CatVaccineCardProps> = ({ id, name, description, 
   return (
     <Link 
       to={`/cats/vaccines/${id}`} 
-      className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow"
+      className="glass-effect rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow"
     >
       <div className="h-48 overflow-hidden">
         <img

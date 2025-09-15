@@ -393,7 +393,7 @@ const BirdAntibioticsDetailPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-theme-lightsky/30 to-theme-powder/30 py-12 px-4">
+    <div className="min-h-screen transparent-section py-12 px-4">
       <div className="max-w-3xl mx-auto">
         <div className="glass-effect rounded-lg overflow-hidden p-6">
           {/* Image on top */}

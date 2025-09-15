@@ -53,7 +53,7 @@ const FeaturedPets = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-theme-lightsky/30 to-theme-powder/30">
+    <section className="py-16 transparent-section">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">Our Categories</h2>
 
@@ -63,7 +63,7 @@ const FeaturedPets = () => {
             <Link
               key={category.id}
               to={`/${category.id}`}
-              className="group bg-white/80 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden transform transition-transform hover:-translate-y-2"
+              className="group glass-effect rounded-lg shadow-lg overflow-hidden transform transition-transform hover:-translate-y-2"
             >
               <div className="relative h-48 overflow-hidden">
                 <img

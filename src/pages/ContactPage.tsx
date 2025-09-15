@@ -63,7 +63,7 @@ const ContactPage = () => {
         <div className="max-w-5xl mx-auto">
           <h1 className="text-4xl font-bold mb-8 text-center">Contact Us</h1>
 
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-8">
+          <div className="glass-effect rounded-lg shadow-lg overflow-hidden mb-8">
             <div className="md:flex">
               <div className="md:w-1/2 p-8">
                 <h2 className="text-2xl font-semibold mb-6">Get In Touch</h2>
@@ -156,7 +156,7 @@ const ContactPage = () => {
                 )}
               </div>
 
-              <div className="md:w-1/2 bg-gray-100 p-8">
+              <div className="md:w-1/2 glass-effect p-8">
                 <h2 className="text-2xl font-semibold mb-6">Contact Information</h2>
 
                 <div className="space-y-4">
