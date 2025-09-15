@@ -83,7 +83,7 @@ const Navbar = () => {
 };
 
   return (
-    <nav className="glass-effect shadow-lg sticky top-0 z-50 border-b border-theme-sky/30">
+    <nav className="bg-white/10 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-white/20">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <Link to="/" className="flex items-center space-x-3 group h-12">
@@ -117,7 +117,7 @@ const Navbar = () => {
                     <span>Categories</span>
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="grid w-48 gap-2 p-4 glass-effect border border-theme-sky/20">
+                    <div className="grid w-48 gap-2 p-4 bg-white/10 backdrop-blur-md border border-white/20">
                       {categories.map((category) => (
                         <Link
                           key={category.to}
@@ -157,7 +157,7 @@ const Navbar = () => {
                   <Menu className="w-6 h-6" />
                 </button>
               </SheetTrigger>
-              <SheetContent side="top" className="px-4 py-6 glass-effect">
+              <SheetContent side="top" className="px-4 py-6 bg-white/10 backdrop-blur-md">
                 <SheetHeader>
                   <SheetTitle className="text-center text-theme-deepsky flex items-center justify-center space-x-2">
                     <div className="flex items-center space-x-2">
