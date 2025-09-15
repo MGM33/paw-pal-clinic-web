@@ -90,8 +90,13 @@
   }
 
   body {
-    @apply bg-gradient-to-br from-theme-lightsky to-theme-powder text-foreground;
+    @apply text-foreground;
     min-height: 100vh;
+    background-image: url('/src/assets/site-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
   }
 }
 
